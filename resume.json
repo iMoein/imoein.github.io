@@ -504,11 +504,11 @@
       "eyebrow": "سایت شخصی",
       "heroName": "معین قزلباش",
       "heroTitle": "Infrastructure Architect • DevOps Leader • Data & Business Technology Strategist",
-      "heroStatement": "زیرساخت‌های مقیاس‌پذیر، داده‌های قابل تصمیم‌گیری و فناوری همسو با اهداف کسب‌وکار می‌سازم.",
+      "heroStatement": "",
       "intro": [
-        "بیش از ۱۰ سال است که در نقطه تلاقی فناوری، داده و کسب‌وکار فعالیت می‌کنم.",
-        "در طول این سال‌ها از مدیریت پروژه‌های رسانه‌ای و پلتفرم‌های پخش زنده گرفته تا توسعه محصولات گردشگری، معماری زیرساخت‌های سازمانی، تحلیل داده و راهبری تیم‌های فناوری را تجربه کرده‌ام.",
-        "امروز تمرکز اصلی من بر طراحی زیرساخت‌های مقیاس‌پذیر، اتوماسیون فرایندهای عملیاتی، مهندسی داده و ایجاد راهکارهای فناوری برای رشد کسب‌وکارها است."
+        "من معین قزلباش هستم؛ متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل پیچیده کسب‌وکار با کمک فناوری.",
+        "مسیر حرفه‌ای من از صنعت رسانه و پخش زنده اینترنتی آغاز شد؛ جایی که با چالش‌های زیرساختی، مدیریت ترافیک بالا و ارائه سرویس‌های پایدار در مقیاس بزرگ آشنا شدم. همین تجربه باعث شد علاقه‌ام به معماری سیستم‌ها، شبکه، سرورها و عملکرد زیرساخت‌ها شکل بگیرد",
+        "در ادامه مسیر، وارد صنعت گردشگری و فناوری سفر شدم و فرصت همکاری با شرکت‌هایی را پیدا کردم که روزانه حجم بالایی از تراکنش‌ها، داده‌ها و تعاملات مشتریان را مدیریت می‌کردند. در این سال‌ها نقش‌های مختلفی از مدیر پروژه و مدیر محصول تا مدیر توسعه کسب‌وکار، مدیر داده و مدیر زیرساخت را تجربه کرده‌ام. این تنوع تجربه به من کمک کرده است تا فناوری را صرفاً از زاویه فنی نبینم، بلکه آن را به‌عنوان ابزاری برای رشد، سودآوری و توسعه کسب‌وکار در نظر بگیرم."
       ],
       "sections": {
         "whatIDo": "چه کاری انجام می‌دهم؟",
@@ -580,7 +580,7 @@
       "eyebrow": "Personal Website",
       "heroName": "Moein Ghezelbash",
       "heroTitle": "Infrastructure Architect • DevOps Leader • Data & Business Technology Strategist",
-      "heroStatement": "I build scalable technology platforms where infrastructure, data and business strategy meet.",
+      "heroStatement": "",
       "intro": [
         "For more than 10 years, I have worked at the intersection of technology, data, and business.",
         "My experience spans digital broadcasting platforms, travel products, enterprise infrastructure architecture, data analysis, and technology team leadership.",
