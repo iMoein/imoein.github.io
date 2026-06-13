@@ -2,9 +2,108 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>وب‌سایت من</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" id="meta-description" content="معین قزلباش معمار زیرساخت، رهبر DevOps و استراتژیست داده و فناوری کسب‌وکار.">
+  <meta name="keywords" content="معین قزلباش, Moein Ghezelbash, Infrastructure Architect, DevOps Leader, Data Engineering, Business Intelligence, Travel Technology">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" id="canonical-url" href="https://imoein.com/">
+  <link rel="alternate" hreflang="fa" href="https://imoein.com/?lang=fa">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://imoein.com/">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" id="og-url" content="https://imoein.com/">
+  <meta property="og:title" id="og-title" content="معین قزلباش | Infrastructure Architect & DevOps Leader">
+  <meta property="og:description" id="og-description" content="معمار زیرساخت، رهبر DevOps و استراتژیست داده و فناوری کسب‌وکار.">
+  <meta property="og:site_name" content="Moein Ghezelbash">
+  <meta property="og:locale" id="og-locale" content="fa_IR">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" id="twitter-title" content="معین قزلباش | Infrastructure Architect & DevOps Leader">
+  <meta name="twitter:description" id="twitter-description" content="معمار زیرساخت، رهبر DevOps و استراتژیست داده و فناوری کسب‌وکار.">
+  <title>معین قزلباش | Infrastructure Architect & DevOps Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json" id="person-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Moein Ghezelbash",
+      "alternateName": "معین قزلباش",
+      "jobTitle": "Infrastructure Architect, DevOps Leader, Data & Business Technology Strategist",
+      "url": "https://imoein.com/",
+      "sameAs": ["https://www.linkedin.com/in/moeinghezelbash/", "https://github.com/imoein"],
+      "knowsAbout": ["Infrastructure Architecture", "DevOps", "Data Engineering", "Business Intelligence", "Travel Technology", "Digital Transformation"]
+    }
+  </script>
 </head>
 <body>
-  <h1>سلام، این سایت من روی GitHub Pages است</h1>
+  <header class="hero home-hero">
+    <div class="container hero-card">
+      <div class="top-actions">
+        <div class="eyebrow" id="eyebrow">سایت شخصی</div>
+        <div class="locale-switcher" id="locale-switcher" aria-label="Language switcher"></div>
+      </div>
+      <div class="hero-content">
+        <div>
+          <h1 id="home-name">معین قزلباش</h1>
+          <div class="hero-subtitles" id="hero-subtitles"></div>
+        </div>
+        <div class="profile-frame" aria-hidden="true">
+          <img id="profile-photo" alt="" hidden>
+          <span id="profile-initials">مق</span>
+        </div>
+      </div>
+      <p id="app-error" role="alert"></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid two-col home-intro" aria-label="Professional introduction">
+      <div>
+        <div class="section-title"><h2 id="about-title">درباره من</h2></div>
+        <div class="card summary about-card" id="intro"></div>
+      </div>
+      <aside class="card info-card sticky-card">
+        <h3 id="social-title">شبکه‌های اجتماعی</h3>
+        <div class="social-grid" id="social-links"></div>
+        <h3 id="resume-title">رزومه آنلاین</h3>
+        <div class="download-bar" id="downloads"></div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="what-title">
+      <div class="section-title"><h2 id="what-title">چه کاری انجام می‌دهم؟</h2></div>
+      <div class="grid action-grid" id="what-i-do"></div>
+    </section>
+
+    <section aria-labelledby="expertise-title">
+      <div class="section-title"><h2 id="expertise-title">حوزه‌های تخصصی</h2></div>
+      <div class="grid expertise-grid" id="expertise"></div>
+    </section>
+
+    <section class="grid two-col home-status" aria-labelledby="experience-title">
+      <div>
+        <div class="section-title"><h2 id="experience-title">تجربه حرفه‌ای</h2></div>
+        <div class="card" id="experience-summary"></div>
+      </div>
+      <div>
+        <div class="section-title"><h2 id="current-title">در حال حاضر</h2></div>
+        <div class="card" id="current-focus"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="philosophy-title">
+      <div class="section-title"><h2 id="philosophy-title">فلسفه کاری من</h2></div>
+      <div class="card summary" id="philosophy"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Moein Ghezelbash.</div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
