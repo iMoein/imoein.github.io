@@ -127,8 +127,25 @@
             "Enhanced database performance and system reliability."
           ],
           "logo": {
-            "src": "assets/logos/channelead.svg",
-            "text": "CL"
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
           }
         },
         {
@@ -148,8 +165,30 @@
             "Supported infrastructure operations for enterprise-level hospitality clients."
           ],
           "logo": {
-            "src": "assets/logos/faraz-raya.svg",
-            "text": "FR"
+            "src": "assets/logo/faraz-raya.svg",
+            "text": "FR",
+            "candidates": [
+              "assets/logo/faraz-raya.svg",
+              "assets/logo/faraz-raya.png",
+              "assets/logo/faraz-raya.jpg",
+              "assets/logo/faraz-raya.jpeg",
+              "assets/logo/faraz-raya.webp",
+              "assets/logo/farazraya.svg",
+              "assets/logo/farazraya.png",
+              "assets/logo/farazraya.jpg",
+              "assets/logo/farazraya.jpeg",
+              "assets/logo/farazraya.webp",
+              "assets/logo/faraz.svg",
+              "assets/logo/faraz.png",
+              "assets/logo/faraz.jpg",
+              "assets/logo/faraz.jpeg",
+              "assets/logo/faraz.webp",
+              "assets/logo/faraz-raya-technology.svg",
+              "assets/logo/faraz-raya-technology.png",
+              "assets/logo/faraz-raya-technology.jpg",
+              "assets/logo/faraz-raya-technology.jpeg",
+              "assets/logo/faraz-raya-technology.webp"
+            ]
           }
         },
         {
@@ -168,8 +207,25 @@
             "Established reporting frameworks for shareholders and executive stakeholders."
           ],
           "logo": {
-            "src": "assets/logos/channelead.svg",
-            "text": "CL"
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
           }
         },
         {
@@ -188,23 +244,99 @@
             "Contributed to business intelligence and operational reporting initiatives."
           ],
           "logo": {
-            "src": "assets/logos/alibaba-travels.svg",
-            "text": "AT"
+            "src": "assets/logo/alibaba.svg",
+            "text": "AT",
+            "candidates": [
+              "assets/logo/alibaba.svg",
+              "assets/logo/alibaba.png",
+              "assets/logo/alibaba.jpg",
+              "assets/logo/alibaba.jpeg",
+              "assets/logo/alibaba.webp",
+              "assets/logo/alibaba-travels.svg",
+              "assets/logo/alibaba-travels.png",
+              "assets/logo/alibaba-travels.jpg",
+              "assets/logo/alibaba-travels.jpeg",
+              "assets/logo/alibaba-travels.webp",
+              "assets/logo/alibabatravels.svg",
+              "assets/logo/alibabatravels.png",
+              "assets/logo/alibabatravels.jpg",
+              "assets/logo/alibabatravels.jpeg",
+              "assets/logo/alibabatravels.webp"
+            ]
           }
         },
         {
-          "role": "Technology & Finance Consultant",
-          "company": "Freelance Consulting Projects (3Click.com & Kavir Motor)",
+          "role": "Technology Consultant",
+          "company": "3Click.com",
           "period": "2020",
           "description": [
-            "Conducted infrastructure assessments, security reviews, and operational improvement projects.",
-            "Supported financial system integrations and online payment process optimization.",
-            "Provided technology recommendations for business process improvements."
+            "Conducted infrastructure assessments, security reviews, and operational improvement projects for online travel services.",
+            "Reviewed technology workflows and provided recommendations for improving business process reliability.",
+            "Supported online payment process optimization from a technology and operations perspective."
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logos/kavir-motor.svg",
-            "text": "KM"
+            "src": "assets/logo/3click.jpeg",
+            "text": "3C",
+            "candidates": [
+              "assets/logo/3click.svg",
+              "assets/logo/3click.png",
+              "assets/logo/3click.jpg",
+              "assets/logo/3click.jpeg",
+              "assets/logo/3click.webp",
+              "assets/logo/threeclick.svg",
+              "assets/logo/threeclick.png",
+              "assets/logo/threeclick.jpg",
+              "assets/logo/threeclick.jpeg",
+              "assets/logo/threeclick.webp",
+              "assets/logo/seclick.svg",
+              "assets/logo/seclick.png",
+              "assets/logo/seclick.jpg",
+              "assets/logo/seclick.jpeg",
+              "assets/logo/seclick.webp",
+              "assets/logo/se-click.svg",
+              "assets/logo/se-click.png",
+              "assets/logo/se-click.jpg",
+              "assets/logo/se-click.jpeg",
+              "assets/logo/se-click.webp"
+            ]
+          }
+        },
+        {
+          "role": "Finance Systems Consultant",
+          "company": "Kavir Motor",
+          "period": "2020",
+          "description": [
+            "Supported financial system integration initiatives and online payment process optimization.",
+            "Reviewed finance-related operational workflows and identified improvement opportunities.",
+            "Provided technology recommendations for improving financial and operational processes."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/kavirmotor.jpeg",
+            "text": "KM",
+            "candidates": [
+              "assets/logo/kavirmotor.svg",
+              "assets/logo/kavirmotor.png",
+              "assets/logo/kavirmotor.jpg",
+              "assets/logo/kavirmotor.jpeg",
+              "assets/logo/kavirmotor.webp",
+              "assets/logo/kavir-motor.svg",
+              "assets/logo/kavir-motor.png",
+              "assets/logo/kavir-motor.jpg",
+              "assets/logo/kavir-motor.jpeg",
+              "assets/logo/kavir-motor.webp",
+              "assets/logo/kavir.svg",
+              "assets/logo/kavir.png",
+              "assets/logo/kavir.jpg",
+              "assets/logo/kavir.jpeg",
+              "assets/logo/kavir.webp",
+              "assets/logo/kavirmotor-logo.svg",
+              "assets/logo/kavirmotor-logo.png",
+              "assets/logo/kavirmotor-logo.jpg",
+              "assets/logo/kavirmotor-logo.jpeg",
+              "assets/logo/kavirmotor-logo.webp"
+            ]
           }
         },
         {
@@ -221,8 +353,25 @@
             "Maintained service availability during peak traffic events."
           ],
           "logo": {
-            "src": "assets/logos/livefm.svg",
-            "text": "LF"
+            "src": "assets/logo/livefm.svg",
+            "text": "LF",
+            "candidates": [
+              "assets/logo/livefm.svg",
+              "assets/logo/livefm.png",
+              "assets/logo/livefm.jpg",
+              "assets/logo/livefm.jpeg",
+              "assets/logo/livefm.webp",
+              "assets/logo/live-fm.svg",
+              "assets/logo/live-fm.png",
+              "assets/logo/live-fm.jpg",
+              "assets/logo/live-fm.jpeg",
+              "assets/logo/live-fm.webp",
+              "assets/logo/livefm-broadcasting.svg",
+              "assets/logo/livefm-broadcasting.png",
+              "assets/logo/livefm-broadcasting.jpg",
+              "assets/logo/livefm-broadcasting.jpeg",
+              "assets/logo/livefm-broadcasting.webp"
+            ]
           }
         }
       ],
@@ -367,8 +516,25 @@
             "بهبود عملکرد سامانه‌ها و کاهش وابستگی به فرایندهای دستی."
           ],
           "logo": {
-            "src": "assets/logos/channelead.svg",
-            "text": "CL"
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
           }
         },
         {
@@ -388,8 +554,30 @@
             "بهبود فرآیندهای نگهداری و پشتیبانی سرویس‌ها."
           ],
           "logo": {
-            "src": "assets/logos/faraz-raya.svg",
-            "text": "FR"
+            "src": "assets/logo/faraz-raya.svg",
+            "text": "FR",
+            "candidates": [
+              "assets/logo/faraz-raya.svg",
+              "assets/logo/faraz-raya.png",
+              "assets/logo/faraz-raya.jpg",
+              "assets/logo/faraz-raya.jpeg",
+              "assets/logo/faraz-raya.webp",
+              "assets/logo/farazraya.svg",
+              "assets/logo/farazraya.png",
+              "assets/logo/farazraya.jpg",
+              "assets/logo/farazraya.jpeg",
+              "assets/logo/farazraya.webp",
+              "assets/logo/faraz.svg",
+              "assets/logo/faraz.png",
+              "assets/logo/faraz.jpg",
+              "assets/logo/faraz.jpeg",
+              "assets/logo/faraz.webp",
+              "assets/logo/faraz-raya-technology.svg",
+              "assets/logo/faraz-raya-technology.png",
+              "assets/logo/faraz-raya-technology.jpg",
+              "assets/logo/faraz-raya-technology.jpeg",
+              "assets/logo/faraz-raya-technology.webp"
+            ]
           }
         },
         {
@@ -409,8 +597,25 @@
             "ارتقای فرایندهای گزارش‌گیری و تصمیم‌سازی مدیریتی."
           ],
           "logo": {
-            "src": "assets/logos/channelead.svg",
-            "text": "CL"
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
           }
         },
         {
@@ -430,23 +635,99 @@
             "توسعه ابزارهای تحلیلی برای تیم‌های عملیاتی."
           ],
           "logo": {
-            "src": "assets/logos/alibaba-travels.svg",
-            "text": "AT"
+            "src": "assets/logo/alibaba.svg",
+            "text": "AT",
+            "candidates": [
+              "assets/logo/alibaba.svg",
+              "assets/logo/alibaba.png",
+              "assets/logo/alibaba.jpg",
+              "assets/logo/alibaba.jpeg",
+              "assets/logo/alibaba.webp",
+              "assets/logo/alibaba-travels.svg",
+              "assets/logo/alibaba-travels.png",
+              "assets/logo/alibaba-travels.jpg",
+              "assets/logo/alibaba-travels.jpeg",
+              "assets/logo/alibaba-travels.webp",
+              "assets/logo/alibabatravels.svg",
+              "assets/logo/alibabatravels.png",
+              "assets/logo/alibabatravels.jpg",
+              "assets/logo/alibabatravels.jpeg",
+              "assets/logo/alibabatravels.webp"
+            ]
           }
         },
         {
-          "role": "مشاور فناوری و سیستم‌های مالی",
-          "company": "سه کلیک و کویر موتور",
+          "role": "مشاور فناوری",
+          "company": "سه کلیک",
           "period": "سال ۱۳۹۹",
           "description": [
-            "ارزیابی زیرساخت و امنیت سامانه‌ها.",
-            "بهینه‌سازی فرایندهای مالی و پرداخت الکترونیک.",
-            "ارائه راهکارهای فناوری برای بهبود عملکرد سازمانی."
+            "ارزیابی زیرساخت و امنیت سامانه‌ها در حوزه خدمات آنلاین گردشگری.",
+            "بررسی جریان‌های عملیاتی و ارائه پیشنهادهای فنی برای افزایش پایداری فرایندهای کسب‌وکار.",
+            "همکاری در بهینه‌سازی فرایندهای پرداخت آنلاین از منظر فناوری و عملیات."
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logos/kavir-motor.svg",
-            "text": "KM"
+            "src": "assets/logo/3click.jpeg",
+            "text": "3C",
+            "candidates": [
+              "assets/logo/3click.svg",
+              "assets/logo/3click.png",
+              "assets/logo/3click.jpg",
+              "assets/logo/3click.jpeg",
+              "assets/logo/3click.webp",
+              "assets/logo/threeclick.svg",
+              "assets/logo/threeclick.png",
+              "assets/logo/threeclick.jpg",
+              "assets/logo/threeclick.jpeg",
+              "assets/logo/threeclick.webp",
+              "assets/logo/seclick.svg",
+              "assets/logo/seclick.png",
+              "assets/logo/seclick.jpg",
+              "assets/logo/seclick.jpeg",
+              "assets/logo/seclick.webp",
+              "assets/logo/se-click.svg",
+              "assets/logo/se-click.png",
+              "assets/logo/se-click.jpg",
+              "assets/logo/se-click.jpeg",
+              "assets/logo/se-click.webp"
+            ]
+          }
+        },
+        {
+          "role": "مشاور سیستم‌های مالی",
+          "company": "کویر موتور",
+          "period": "سال ۱۳۹۹",
+          "description": [
+            "پشتیبانی از پروژه‌های یکپارچه‌سازی سیستم‌های مالی و بهینه‌سازی پرداخت الکترونیک.",
+            "بررسی فرایندهای عملیاتی مرتبط با سیستم‌های مالی و شناسایی فرصت‌های بهبود.",
+            "ارائه راهکارهای فناوری برای بهبود فرایندهای مالی و عملیاتی."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/kavirmotor.jpeg",
+            "text": "KM",
+            "candidates": [
+              "assets/logo/kavirmotor.svg",
+              "assets/logo/kavirmotor.png",
+              "assets/logo/kavirmotor.jpg",
+              "assets/logo/kavirmotor.jpeg",
+              "assets/logo/kavirmotor.webp",
+              "assets/logo/kavir-motor.svg",
+              "assets/logo/kavir-motor.png",
+              "assets/logo/kavir-motor.jpg",
+              "assets/logo/kavir-motor.jpeg",
+              "assets/logo/kavir-motor.webp",
+              "assets/logo/kavir.svg",
+              "assets/logo/kavir.png",
+              "assets/logo/kavir.jpg",
+              "assets/logo/kavir.jpeg",
+              "assets/logo/kavir.webp",
+              "assets/logo/kavirmotor-logo.svg",
+              "assets/logo/kavirmotor-logo.png",
+              "assets/logo/kavirmotor-logo.jpg",
+              "assets/logo/kavirmotor-logo.jpeg",
+              "assets/logo/kavirmotor-logo.webp"
+            ]
           }
         },
         {
@@ -463,8 +744,25 @@
             "حفظ پایداری سرویس در رویدادهای پرترافیک."
           ],
           "logo": {
-            "src": "assets/logos/livefm.svg",
-            "text": "LF"
+            "src": "assets/logo/livefm.svg",
+            "text": "LF",
+            "candidates": [
+              "assets/logo/livefm.svg",
+              "assets/logo/livefm.png",
+              "assets/logo/livefm.jpg",
+              "assets/logo/livefm.jpeg",
+              "assets/logo/livefm.webp",
+              "assets/logo/live-fm.svg",
+              "assets/logo/live-fm.png",
+              "assets/logo/live-fm.jpg",
+              "assets/logo/live-fm.jpeg",
+              "assets/logo/live-fm.webp",
+              "assets/logo/livefm-broadcasting.svg",
+              "assets/logo/livefm-broadcasting.png",
+              "assets/logo/livefm-broadcasting.jpg",
+              "assets/logo/livefm-broadcasting.jpeg",
+              "assets/logo/livefm-broadcasting.webp"
+            ]
           }
         }
       ],
@@ -510,39 +808,57 @@
   "socialLinks": [
     {
       "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/moeinghezelbash/"
+      "url": "https://www.linkedin.com/in/moeinghezelbash/",
+      "icon": "in",
+      "enabled": true
     },
     {
       "label": "GitHub",
-      "url": "https://github.com/imoein"
+      "url": "https://github.com/imoein",
+      "icon": "gh",
+      "enabled": true
     },
     {
       "label": "WhatsApp",
-      "url": "https://wa.me/989120137435"
+      "url": "https://wa.me/989120137435",
+      "icon": "wa",
+      "enabled": true
     },
     {
       "label": "X",
-      "url": "https://x.com/imoein"
+      "url": "https://x.com/imoein",
+      "icon": "𝕏",
+      "enabled": true
     },
     {
       "label": "Instagram",
-      "url": "https://www.instagram.com/imoein/"
+      "url": "https://www.instagram.com/imoein/",
+      "icon": "ig",
+      "enabled": true
     },
     {
       "label": "Telegram",
-      "url": "https://t.me/imoein"
+      "url": "https://t.me/imoein",
+      "icon": "tg",
+      "enabled": true
     },
     {
       "label": "TikTok",
-      "url": "https://www.tiktok.com/@imoein"
+      "url": "https://www.tiktok.com/@imoein",
+      "icon": "tt",
+      "enabled": true
     },
     {
       "label": "Threads",
-      "url": "https://www.threads.net/@imoein"
+      "url": "https://www.threads.net/@imoein",
+      "icon": "th",
+      "enabled": true
     },
     {
       "label": "Facebook",
-      "url": "https://www.facebook.com/imoein"
+      "url": "https://www.facebook.com/imoein",
+      "icon": "fb",
+      "enabled": true
     }
   ],
   "home": {
@@ -596,7 +912,8 @@
         "Channelead",
         "Alibaba Travels",
         "Faraz Raya",
-        "KAVIR Motor",
+        "سه کلیک",
+        "کویر موتور",
         "LiveFM Broadcasting"
       ],
       "roles": "در این مسیر مسئولیت‌هایی مانند مدیر زیرساخت و داده، مدیر توسعه کسب‌وکار، مدیر محصول، مشاور فنی و مدیر پروژه را بر عهده داشته‌ام.",
@@ -616,8 +933,8 @@
         "AI-driven Business Systems"
       ],
       "resumeLinks": {
-        "fa": "مشاهده رزومه فارسی",
-        "en": "View English Resume"
+        "fa": "مشاهده فارسی",
+        "en": "مشاهده انگلیسی"
       },
       "seo": {
         "description": "معین قزلباش متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل کسب‌وکار است."
@@ -681,7 +998,11 @@
       ],
       "heroSubtitles": [
         "مدیر عملیات فناوری — زیرساخت، سیستم‌های کسب‌وکار و اتوماسیون فرایندها"
-      ]
+      ],
+      "resumeDownloadLinks": {
+        "fa": "دانلود فارسی",
+        "en": "دانلود انگلیسی"
+      }
     },
     "en": {
       "dir": "ltr",
@@ -733,6 +1054,7 @@
         "Channelead",
         "Alibaba Travels",
         "Faraz Raya",
+        "3Click.com",
         "KAVIR Motor",
         "LiveFM Broadcasting"
       ],
@@ -753,8 +1075,8 @@
         "AI-driven Business Systems"
       ],
       "resumeLinks": {
-        "fa": "Persian Resume",
-        "en": "English Resume"
+        "fa": "View FA",
+        "en": "View EN"
       },
       "seo": {
         "description": "Moein Ghezelbash is an infrastructure, data, and technology specialist with 10+ years of experience designing scalable systems and digital products."
@@ -818,7 +1140,21 @@
       ],
       "heroSubtitles": [
         "Technical Operations Manager — Infrastructure • Business Systems • Process Automation"
-      ]
+      ],
+      "resumeDownloadLinks": {
+        "fa": "Download FA",
+        "en": "Download EN"
+      }
     }
+  },
+  "profileImageCandidates": [
+    "assets/profile.jpg",
+    "assets/profile.jpeg",
+    "assets/profile.png",
+    "assets/profile.webp"
+  ],
+  "resumeDownloads": {
+    "fa": "resume/معین قزلباش.pdf",
+    "en": "resume/MOEIN GHEZELBASH.pdf"
   }
 }

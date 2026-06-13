@@ -51,25 +51,34 @@ const renderLocaleSwitcher = () => {
 const renderProfileImage = (data, content) => {
   const image = $("#profile-photo");
   const initials = $("#profile-initials");
+  const candidates = data.profileImageCandidates || [data.profileImage].filter(Boolean);
   initials.textContent = content.heroName
     .split(/\s+/)
     .slice(0, 2)
     .map((part) => part[0])
     .join("");
 
-  if (!data.profileImage) {
+  if (!candidates.length) {
     image.hidden = true;
     initials.hidden = false;
     return;
   }
 
-  image.src = data.profileImage;
+  let candidateIndex = 0;
+  const tryNextImage = () => {
+    if (candidateIndex >= candidates.length) {
+      image.hidden = true;
+      initials.hidden = false;
+      return;
+    }
+    image.src = candidates[candidateIndex];
+    candidateIndex += 1;
+  };
+
   image.hidden = false;
   initials.hidden = true;
-  image.onerror = () => {
-    image.hidden = true;
-    initials.hidden = false;
-  };
+  image.onerror = tryNextImage;
+  tryNextImage();
 };
 
 const renderSeo = (content) => {
@@ -132,26 +141,78 @@ const renderAbout = (content) => {
 const renderSocialLinks = (links) => {
   const target = $("#social-links");
   clear(target);
-  links.forEach(({ label, url }) => {
+  links.filter((item) => item.enabled !== false).forEach(({ label, url, icon }) => {
     const link = document.createElement("a");
     link.href = url;
-    link.textContent = label;
     link.target = "_blank";
     link.rel = "noreferrer";
+    const mark = document.createElement("span");
+    mark.className = "social-icon";
+    mark.textContent = icon || label.slice(0, 2);
+    const text = document.createElement("span");
+    text.textContent = label;
+    link.append(mark, text);
     target.appendChild(link);
   });
 };
 
-const renderResumeLinks = (content, resumeFiles) => {
+const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
   const downloads = $("#downloads");
   clear(downloads);
   ["fa", "en"].forEach((locale) => {
     const link = document.createElement("a");
+    link.className = "resume-link view-link";
     link.href = resumeFiles[locale];
     link.textContent = content.resumeLinks[locale];
     link.target = "_blank";
     downloads.appendChild(link);
   });
+  ["fa", "en"].forEach((locale) => {
+    const link = document.createElement("a");
+    link.className = "resume-link download-link";
+    link.href = resumeDownloads[locale];
+    link.textContent = content.resumeDownloadLinks[locale];
+    link.download = "";
+    downloads.appendChild(link);
+  });
+};
+
+const companyInitials = (company) => company
+  .split(/\s+|&|-/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((part) => part[0])
+  .join("")
+  .toUpperCase();
+
+const renderCompanyLogo = (logo, company) => {
+  const box = document.createElement("span");
+  box.className = "brand-logo";
+  const fallback = document.createElement("span");
+  fallback.textContent = logo?.text || companyInitials(company);
+  const candidates = logo?.candidates?.length ? logo.candidates : [logo?.src].filter(Boolean);
+
+  if (!candidates.length) {
+    box.appendChild(fallback);
+    return box;
+  }
+
+  const image = document.createElement("img");
+  image.alt = `${company} logo`;
+  let candidateIndex = 0;
+  const tryNextLogo = () => {
+    if (candidateIndex >= candidates.length) {
+      image.remove();
+      if (!box.contains(fallback)) box.appendChild(fallback);
+      return;
+    }
+    image.src = candidates[candidateIndex];
+    candidateIndex += 1;
+  };
+  image.onerror = tryNextLogo;
+  box.appendChild(image);
+  tryNextLogo();
+  return box;
 };
 
 const renderCards = (selector, items, className = "card") => {
@@ -182,10 +243,26 @@ const renderCards = (selector, items, className = "card") => {
   });
 };
 
-const renderExperienceSummary = (content) => {
+const renderExperienceSummary = (content, data) => {
   const target = $("#experience-summary");
   clear(target);
-  target.appendChild(createList(content.brands, "brand-list"));
+  const companies = new Map();
+  data.locales[state.locale].experience.forEach((job) => {
+    if (!companies.has(job.company)) {
+      companies.set(job.company, job.logo);
+    }
+  });
+
+  const brandList = document.createElement("div");
+  brandList.className = "brand-logo-list";
+  companies.forEach((logo, company) => {
+    const item = document.createElement("article");
+    item.className = "brand-logo-item";
+    item.append(renderCompanyLogo(logo, company), document.createTextNode(company));
+    brandList.appendChild(item);
+  });
+  target.appendChild(brandList);
+
   const roles = document.createElement("p");
   roles.textContent = content.roles;
   target.appendChild(roles);
@@ -216,10 +293,10 @@ const renderHome = () => {
 
   renderAbout(content);
   renderSocialLinks(data.socialLinks);
-  renderResumeLinks(content, data.resumeFiles);
+  renderResumeLinks(content, data.resumeFiles, data.resumeDownloads);
   renderCards("#what-i-do", content.whatIDo, "card action-card");
   renderCards("#expertise", content.expertise, "card expertise-card");
-  renderExperienceSummary(content);
+  renderExperienceSummary(content, data);
   renderCards("#current-focus", content.current, "focus-pill");
   renderParagraphs("#philosophy", content.philosophy);
   $("#year").textContent = new Date().getFullYear();
