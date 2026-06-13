@@ -458,5 +458,197 @@
       }
     }
   },
-  "profileImage": "assets/profile.jpg"
+  "profileImage": "assets/profile.jpg",
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/moeinghezelbash/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/imoein"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/989120137435"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/imoein"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/imoein/"
+    },
+    {
+      "label": "Telegram",
+      "url": "https://t.me/imoein"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@imoein"
+    },
+    {
+      "label": "Threads",
+      "url": "https://www.threads.net/@imoein"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/imoein"
+    }
+  ],
+  "home": {
+    "fa": {
+      "dir": "rtl",
+      "lang": "fa",
+      "eyebrow": "سایت شخصی",
+      "heroName": "معین قزلباش",
+      "heroTitle": "Infrastructure Architect • DevOps Leader • Data & Business Technology Strategist",
+      "heroStatement": "زیرساخت‌های مقیاس‌پذیر، داده‌های قابل تصمیم‌گیری و فناوری همسو با اهداف کسب‌وکار می‌سازم.",
+      "intro": [
+        "بیش از ۱۰ سال است که در نقطه تلاقی فناوری، داده و کسب‌وکار فعالیت می‌کنم.",
+        "در طول این سال‌ها از مدیریت پروژه‌های رسانه‌ای و پلتفرم‌های پخش زنده گرفته تا توسعه محصولات گردشگری، معماری زیرساخت‌های سازمانی، تحلیل داده و راهبری تیم‌های فناوری را تجربه کرده‌ام.",
+        "امروز تمرکز اصلی من بر طراحی زیرساخت‌های مقیاس‌پذیر، اتوماسیون فرایندهای عملیاتی، مهندسی داده و ایجاد راهکارهای فناوری برای رشد کسب‌وکارها است."
+      ],
+      "sections": {
+        "whatIDo": "چه کاری انجام می‌دهم؟",
+        "expertise": "حوزه‌های تخصصی",
+        "experience": "تجربه حرفه‌ای",
+        "philosophy": "فلسفه کاری من",
+        "current": "در حال حاضر",
+        "social": "شبکه‌های اجتماعی",
+        "resume": "رزومه آنلاین"
+      },
+      "whatIDo": [
+        "زیرساخت‌های پایدار و مقیاس‌پذیر طراحی کنند.",
+        "فرآیندهای DevOps و استقرار نرم‌افزار را خودکارسازی کنند.",
+        "داده‌های پراکنده را به اطلاعات قابل تصمیم‌گیری تبدیل کنند.",
+        "عملکرد پایگاه‌های داده و سرویس‌های حیاتی را بهینه کنند.",
+        "محصولات دیجیتال را از ایده تا اجرا هدایت کنند.",
+        "فناوری را در راستای اهداف تجاری و درآمدزایی به کار بگیرند."
+      ],
+      "expertise": [
+        {
+          "title": "زیرساخت و معماری سیستم",
+          "body": "طراحی و مدیریت زیرساخت‌های مبتنی بر Linux، Docker، Virtualization، Cloud Services و Network Architecture برای سازمان‌های در حال رشد."
+        },
+        {
+          "title": "DevOps و اتوماسیون",
+          "body": "پیاده‌سازی CI/CD، Infrastructure Automation، Monitoring و بهینه‌سازی چرخه توسعه و انتشار نرم‌افزار."
+        },
+        {
+          "title": "داده و هوش تجاری",
+          "body": "طراحی ETL Pipeline، بهینه‌سازی پایگاه‌های داده MySQL و MariaDB، توسعه داشبوردهای تحلیلی و سیستم‌های تصمیم‌یار مبتنی بر داده."
+        },
+        {
+          "title": "مدیریت محصول و توسعه کسب‌وکار",
+          "body": "تجربه توسعه محصولات B2B در صنعت گردشگری، مدیریت تأمین‌کنندگان، API Integration و طراحی فرآیندهای مقیاس‌پذیر."
+        }
+      ],
+      "brands": [
+        "Channelead",
+        "Alibaba Travels",
+        "Faraz Raya",
+        "KAVIR Motor",
+        "LiveFM Broadcasting"
+      ],
+      "roles": "در این مسیر مسئولیت‌هایی مانند مدیر زیرساخت و داده، مدیر توسعه کسب‌وکار، مدیر محصول، مشاور فنی و مدیر پروژه را بر عهده داشته‌ام.",
+      "philosophy": [
+        "فناوری زمانی ارزشمند است که بتواند یک مسئله واقعی را حل کند.",
+        "من اعتقاد دارم بهترین راهکارها زمانی شکل می‌گیرند که زیرساخت، داده و نیازهای کسب‌وکار در کنار یکدیگر دیده شوند. به همین دلیل همیشه تلاش کرده‌ام میان تیم‌های فنی، مدیریتی و تجاری پل ارتباطی ایجاد کنم و راهکارهایی ارائه دهم که هم از نظر فنی قابل اتکا باشند و هم از نظر اقتصادی ارزش‌آفرین."
+      ],
+      "current": [
+        "Cloud & Infrastructure Architecture",
+        "DevOps Leadership",
+        "Data Engineering",
+        "Business Intelligence",
+        "Travel Technology",
+        "Digital Transformation",
+        "Startup Advisory"
+      ],
+      "resumeLinks": {
+        "fa": "مشاهده رزومه فارسی",
+        "en": "View English Resume"
+      },
+      "seo": {
+        "description": "معین قزلباش معمار زیرساخت، رهبر DevOps و استراتژیست داده و فناوری کسب‌وکار با تجربه در گردشگری، BI، زیرساخت و تحول دیجیتال."
+      }
+    },
+    "en": {
+      "dir": "ltr",
+      "lang": "en",
+      "eyebrow": "Personal Website",
+      "heroName": "Moein Ghezelbash",
+      "heroTitle": "Infrastructure Architect • DevOps Leader • Data & Business Technology Strategist",
+      "heroStatement": "I build scalable technology platforms where infrastructure, data and business strategy meet.",
+      "intro": [
+        "For more than 10 years, I have worked at the intersection of technology, data, and business.",
+        "My experience spans digital broadcasting platforms, travel products, enterprise infrastructure architecture, data analysis, and technology team leadership.",
+        "Today, I focus on scalable infrastructure, operational automation, data engineering, and technology solutions that support business growth."
+      ],
+      "sections": {
+        "whatIDo": "What I do",
+        "expertise": "Areas of Expertise",
+        "experience": "Professional Experience",
+        "philosophy": "Work Philosophy",
+        "current": "Currently Interested In",
+        "social": "Social Links",
+        "resume": "Online Resume"
+      },
+      "whatIDo": [
+        "Design stable and scalable infrastructure.",
+        "Automate DevOps and software delivery processes.",
+        "Turn scattered data into decision-ready information.",
+        "Optimize databases and mission-critical services.",
+        "Lead digital products from idea to execution.",
+        "Align technology with commercial and revenue goals."
+      ],
+      "expertise": [
+        {
+          "title": "Infrastructure & System Architecture",
+          "body": "Designing and operating Linux, Docker, virtualization, cloud services, and network architecture for growing organizations."
+        },
+        {
+          "title": "DevOps & Automation",
+          "body": "Implementing CI/CD, infrastructure automation, monitoring, and software delivery optimization."
+        },
+        {
+          "title": "Data & Business Intelligence",
+          "body": "Designing ETL pipelines, optimizing MySQL and MariaDB databases, and building analytical dashboards and decision-support systems."
+        },
+        {
+          "title": "Product Management & Business Development",
+          "body": "Building B2B travel products, supplier operations, API integrations, and scalable operating processes."
+        }
+      ],
+      "brands": [
+        "Channelead",
+        "Alibaba Travels",
+        "Faraz Raya",
+        "KAVIR Motor",
+        "LiveFM Broadcasting"
+      ],
+      "roles": "Across this path, I have worked as an infrastructure and data leader, business development manager, product manager, technical consultant, and project manager.",
+      "philosophy": [
+        "Technology is valuable when it solves a real problem.",
+        "I believe the best solutions are created when infrastructure, data, and business needs are considered together. I build bridges between technical, management, and commercial teams to deliver reliable and economically valuable solutions."
+      ],
+      "current": [
+        "Cloud & Infrastructure Architecture",
+        "DevOps Leadership",
+        "Data Engineering",
+        "Business Intelligence",
+        "Travel Technology",
+        "Digital Transformation",
+        "Startup Advisory"
+      ],
+      "resumeLinks": {
+        "fa": "Persian Resume",
+        "en": "English Resume"
+      },
+      "seo": {
+        "description": "Moein Ghezelbash is an Infrastructure Architect, DevOps Leader, and Data & Business Technology Strategist focused on scalable platforms, BI, travel technology, and digital transformation."
+      }
+    }
+  }
 }

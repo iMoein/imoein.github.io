@@ -179,3 +179,52 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
   .timeline-item { gap: 9px; }
   .period { padding-top: 0; }
 }
+
+.hero-statement {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: var(--complement);
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  font-weight: 800;
+  line-height: 1.6;
+}
+
+.home-intro .info-card h3 { margin: 0 0 12px; color: var(--brand); }
+.social-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 22px; }
+.social-grid a, .focus-pill {
+  display: block;
+  text-decoration: none;
+  color: var(--brand);
+  border: 1px solid rgba(16,42,67,0.12);
+  border-radius: 16px;
+  padding: 10px 12px;
+  background: rgba(255,255,255,0.72);
+  font-weight: 700;
+}
+.social-grid a:hover { color: #fff; background: var(--primary); border-color: var(--primary); }
+.action-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.action-card { border-inline-start: 5px solid var(--primary); font-weight: 700; }
+.expertise-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.expertise-card p { color: var(--muted); line-height: 1.8; }
+.brand-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; margin: 0 0 18px; list-style: none; }
+.brand-list li { color: #fff; background: var(--brand); border-radius: 999px; padding: 8px 12px; }
+#current-focus { display: flex; flex-wrap: wrap; gap: 10px; }
+#current-focus .focus-pill { margin: 0; }
+.resume-page { background: var(--bg); }
+.printable-resume { padding: 42px 0 64px; }
+.printable-resume > h1 { color: var(--brand); letter-spacing: -0.03em; }
+.printable-resume .lead { color: var(--muted); font-size: 1.15rem; font-weight: 700; }
+.printable-resume .contact { display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0 30px; }
+.printable-resume .contact span, .printable-resume .contact a { color: var(--brand); text-decoration: none; background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 8px 12px; }
+.printable-resume > h2 { margin-top: 34px; color: var(--brand); border-bottom: 2px solid var(--primary); padding-bottom: 8px; }
+.printable-resume .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.printable-resume .job { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 18px; margin-bottom: 18px; }
+
+@media (max-width: 1050px) {
+  .expertise-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 800px) {
+  .action-grid, .expertise-grid, .printable-resume .grid, .printable-resume .job { grid-template-columns: 1fr; }
+  .social-grid { grid-template-columns: 1fr; }
+}

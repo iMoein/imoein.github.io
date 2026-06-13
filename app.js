@@ -2,13 +2,11 @@ const $ = (selector) => document.querySelector(selector);
 
 const state = {
   data: null,
-  locale: new URLSearchParams(window.location.search).get("lang") || localStorage.getItem("resume-locale") || "en"
+  locale: new URLSearchParams(window.location.search).get("lang") || localStorage.getItem("site-locale") || "fa"
 };
 
 const clear = (element) => {
-  while (element.firstChild) {
-    element.removeChild(element.firstChild);
-  }
+  while (element.firstChild) element.removeChild(element.firstChild);
 };
 
 const createList = (items, className = "clean") => {
@@ -31,89 +29,29 @@ const createButton = (text, onClick, isActive = false) => {
   return button;
 };
 
-const getEmailAddress = (contact) => `${contact.email.user}@${contact.email.domainParts.join(".")}`;
-
 const setMetaContent = (selector, value) => {
   const element = $(selector);
-  if (element) {
-    element.setAttribute("content", value);
-  }
+  if (element) element.setAttribute("content", value);
 };
 
 const setLinkHref = (selector, value) => {
   const element = $(selector);
-  if (element) {
-    element.setAttribute("href", value);
-  }
+  if (element) element.setAttribute("href", value);
 };
 
 const renderLocaleSwitcher = () => {
   const switcher = $("#locale-switcher");
   clear(switcher);
   switcher.append(
-    createButton("EN", () => setLocale("en"), state.locale === "en"),
-    createButton("فا", () => setLocale("fa"), state.locale === "fa")
+    createButton("فا", () => setLocale("fa"), state.locale === "fa"),
+    createButton("EN", () => setLocale("en"), state.locale === "en")
   );
-};
-
-const renderContact = (content, contact) => {
-  const contactBar = $("#contact");
-  clear(contactBar);
-  contactBar.setAttribute("aria-label", content.navLabel);
-
-  const emailAddress = getEmailAddress(contact);
-  const phoneText = state.locale === "fa" ? contact.phone.fa : contact.phone.international;
-  const entries = [
-    { type: "span", text: content.profile.location },
-    { type: "a", text: phoneText, href: `tel:${contact.phone.international}` },
-    { type: "button", text: contact.email.display, action: (element) => {
-      const link = document.createElement("a");
-      link.href = `mailto:${emailAddress}`;
-      link.textContent = emailAddress;
-      element.textContent = emailAddress;
-      element.replaceWith(link);
-    } },
-    { type: "a", text: contact.linkedin.label, href: contact.linkedin.url }
-  ];
-
-  entries.forEach(({ type, text, href, action }) => {
-    const element = document.createElement(type);
-    element.textContent = text;
-    if (type === "button") {
-      element.type = "button";
-      element.className = "contact-button";
-      element.setAttribute("aria-label", "Reveal email address");
-      element.addEventListener("click", () => action(element), { once: true });
-    }
-    if (href) {
-      element.href = href;
-      if (href.startsWith("http")) {
-        element.target = "_blank";
-        element.rel = "noreferrer";
-      }
-    }
-    contactBar.appendChild(element);
-  });
-};
-
-const renderResumeLinks = (content, resumeFiles) => {
-  const downloads = $("#downloads");
-  clear(downloads);
-  const label = document.createElement("span");
-  label.textContent = content.downloadLabel;
-  downloads.appendChild(label);
-
-  const link = document.createElement("a");
-  link.href = resumeFiles[state.locale];
-  link.textContent = content.downloadLinks[state.locale];
-  link.target = "_blank";
-  downloads.appendChild(link);
 };
 
 const renderProfileImage = (data, content) => {
   const image = $("#profile-photo");
   const initials = $("#profile-initials");
-  initials.textContent = content.profile.name
+  initials.textContent = content.heroName
     .split(/\s+/)
     .slice(0, 2)
     .map((part) => part[0])
@@ -135,9 +73,9 @@ const renderProfileImage = (data, content) => {
 };
 
 const renderSeo = (content) => {
-  const title = `${content.profile.name} | ${content.profile.title}`;
-  const description = content.seo?.description || content.summary[0];
-  const url = `https://imoein.com/${state.locale === "fa" ? "?lang=fa" : ""}`;
+  const title = `${content.heroName} | ${content.heroTitle}`;
+  const description = content.seo.description;
+  const url = `https://imoein.com/${state.locale === "en" ? "?lang=en" : ""}`;
 
   document.title = title;
   setMetaContent("#meta-description", description);
@@ -150,115 +88,118 @@ const renderSeo = (content) => {
   setLinkHref("#canonical-url", url);
 };
 
-const renderSideSection = (selector, items, className = "clean") => {
+const renderParagraphs = (selector, paragraphs) => {
   const target = $(selector);
   clear(target);
-  target.appendChild(createList(items, className));
+  paragraphs.forEach((text) => {
+    const p = document.createElement("p");
+    p.textContent = text;
+    target.appendChild(p);
+  });
 };
 
-const renderResume = () => {
+const renderSocialLinks = (links) => {
+  const target = $("#social-links");
+  clear(target);
+  links.forEach(({ label, url }) => {
+    const link = document.createElement("a");
+    link.href = url;
+    link.textContent = label;
+    link.target = "_blank";
+    link.rel = "noreferrer";
+    target.appendChild(link);
+  });
+};
+
+const renderResumeLinks = (content, resumeFiles) => {
+  const downloads = $("#downloads");
+  clear(downloads);
+  ["fa", "en"].forEach((locale) => {
+    const link = document.createElement("a");
+    link.href = resumeFiles[locale];
+    link.textContent = content.resumeLinks[locale];
+    link.target = "_blank";
+    downloads.appendChild(link);
+  });
+};
+
+const renderCards = (selector, items, className = "card") => {
+  const target = $(selector);
+  clear(target);
+  items.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = className;
+    if (typeof item === "string") {
+      card.textContent = item;
+    } else {
+      const title = document.createElement("h3");
+      title.textContent = item.title;
+      const body = document.createElement("p");
+      body.textContent = item.body;
+      card.append(title, body);
+    }
+    target.appendChild(card);
+  });
+};
+
+const renderExperienceSummary = (content) => {
+  const target = $("#experience-summary");
+  clear(target);
+  target.appendChild(createList(content.brands, "brand-list"));
+  const roles = document.createElement("p");
+  roles.textContent = content.roles;
+  target.appendChild(roles);
+};
+
+const renderHome = () => {
   const { data } = state;
-  const content = data.locales[state.locale] || data.locales[data.defaultLocale];
+  const content = data.home[state.locale] || data.home.fa;
   document.documentElement.lang = content.lang;
   document.documentElement.dir = content.dir;
   document.body.className = `locale-${content.lang}`;
+
   renderSeo(content);
-
   renderLocaleSwitcher();
-  $("#eyebrow").textContent = content.eyebrow;
-  $("#name").textContent = content.profile.name;
-  $("#role").textContent = content.profile.title;
-  $("#tagline").textContent = content.profile.tagline;
   renderProfileImage(data, content);
-  renderContact(content, data.contact);
-  renderResumeLinks(content, data.resumeFiles);
 
-  $("#summary-title").textContent = content.sections.summary;
-  $("#competencies-title").textContent = content.sections.competencies;
+  $("#eyebrow").textContent = content.eyebrow;
+  $("#home-name").textContent = content.heroName;
+  $("#home-title").textContent = content.heroTitle;
+  $("#hero-statement").textContent = content.heroStatement;
+  $("#social-title").textContent = content.sections.social;
+  $("#resume-title").textContent = content.sections.resume;
+  $("#what-title").textContent = content.sections.whatIDo;
+  $("#expertise-title").textContent = content.sections.expertise;
   $("#experience-title").textContent = content.sections.experience;
-  $("#technologies-title").textContent = content.sections.technologies;
-  $("#education-title").textContent = content.sections.education;
-  $("#certificates-title").textContent = content.sections.certificates;
-  $("#languages-title").textContent = content.sections.languages;
+  $("#philosophy-title").textContent = content.sections.philosophy;
+  $("#current-title").textContent = content.sections.current;
 
-  const summary = $("#summary");
-  clear(summary);
-  content.summary.forEach((paragraph) => {
-    const p = document.createElement("p");
-    p.textContent = paragraph;
-    summary.appendChild(p);
-  });
-
-  const competencies = $("#competencies");
-  clear(competencies);
-  content.competencies.forEach(({ group, items }) => {
-    const card = document.createElement("article");
-    card.className = "card competency";
-    const heading = document.createElement("h3");
-    heading.textContent = group;
-    card.append(heading, createList(items, "tag-list"));
-    competencies.appendChild(card);
-  });
-
-  const timeline = $("#experience");
-  clear(timeline);
-  content.experience.forEach((job) => {
-    const item = document.createElement("article");
-    item.className = "timeline-item";
-
-    const period = document.createElement("div");
-    period.className = "period";
-    period.textContent = job.period;
-
-    const body = document.createElement("div");
-    body.className = "card job";
-    const role = document.createElement("h3");
-    role.textContent = job.role;
-    const company = document.createElement("div");
-    company.className = "company";
-    company.textContent = job.company;
-    body.append(role, company, createList(job.description));
-
-    if (job.achievements.length) {
-      const achievements = document.createElement("div");
-      achievements.className = "achievements";
-      const achievementsTitle = document.createElement("strong");
-      achievementsTitle.textContent = content.sections.achievements;
-      achievements.append(achievementsTitle, createList(job.achievements));
-      body.appendChild(achievements);
-    }
-
-    item.append(period, body);
-    timeline.appendChild(item);
-  });
-
-  renderSideSection("#technologies", content.technologies, "tag-list");
-  renderSideSection("#education", content.education);
-  renderSideSection("#certificates", content.certificates, "tag-list");
-  renderSideSection("#languages", content.languages, "tag-list");
+  renderParagraphs("#intro", content.intro);
+  renderSocialLinks(data.socialLinks);
+  renderResumeLinks(content, data.resumeFiles);
+  renderCards("#what-i-do", content.whatIDo, "card action-card");
+  renderCards("#expertise", content.expertise, "card expertise-card");
+  renderExperienceSummary(content);
+  renderCards("#current-focus", content.current, "focus-pill");
+  renderParagraphs("#philosophy", content.philosophy);
   $("#year").textContent = new Date().getFullYear();
-  $("#footer-text").textContent = content.footer;
 };
 
 const setLocale = (locale) => {
   state.locale = locale;
-  localStorage.setItem("resume-locale", locale);
-  renderResume();
+  localStorage.setItem("site-locale", locale);
+  renderHome();
 };
 
 fetch("resume.json")
   .then((response) => {
-    if (!response.ok) {
-      throw new Error("Resume data could not be loaded.");
-    }
+    if (!response.ok) throw new Error("Site data could not be loaded.");
     return response.json();
   })
   .then((data) => {
     state.data = data;
-    if (!data.locales[state.locale]) {
-      state.locale = data.defaultLocale;
-    }
-    renderResume();
+    if (!data.home[state.locale]) state.locale = "fa";
+    renderHome();
   })
   .catch((error) => {
     $("#app-error").textContent = error.message;
