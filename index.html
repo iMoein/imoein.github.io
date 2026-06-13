@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +7,20 @@
   <title>Moein Ghezelbash | Technical Operations Manager</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="hero">
     <div class="container hero-card">
-      <div class="eyebrow">Resume Portfolio</div>
+      <div class="top-actions">
+        <div class="eyebrow" id="eyebrow">Resume Portfolio</div>
+        <div class="locale-switcher" id="locale-switcher" aria-label="Language switcher"></div>
+      </div>
       <h1 id="name">MOEIN GHEZELBASH</h1>
-      <h2><span id="role">Technical Operations Manager</span> — <span id="tagline">Infrastructure • Business Systems • Process Automation</span></h2>
+      <h2><span id="role">Technical Operations Manager</span><small id="tagline">Infrastructure • Business Systems • Process Automation</small></h2>
       <nav class="contact-bar" id="contact" aria-label="Contact information"></nav>
+      <div class="download-bar" id="downloads"></div>
       <p id="app-error" role="alert"></p>
     </div>
   </header>
@@ -24,20 +28,24 @@
   <main class="container">
     <section class="grid two-col" aria-label="Professional overview">
       <div>
-        <div class="section-title"><h2>Professional Summary</h2></div>
+        <div class="section-title"><h2 id="summary-title">Professional Summary</h2></div>
         <div class="card summary" id="summary"></div>
       </div>
       <aside>
         <div class="side-card card">
-          <h3>Selected Technologies</h3>
+          <h3 id="technologies-title">Selected Technologies</h3>
           <div id="technologies"></div>
         </div>
         <div class="side-card card">
-          <h3>Education</h3>
+          <h3 id="education-title">Education</h3>
           <div id="education"></div>
         </div>
         <div class="side-card card">
-          <h3>Languages</h3>
+          <h3 id="certificates-title">Certificates</h3>
+          <div id="certificates"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="languages-title">Languages</h3>
           <div id="languages"></div>
         </div>
       </aside>
@@ -55,7 +63,7 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year"></span> Moein Ghezelbash. Built for GitHub Pages.</div>
+    <div class="container">© <span id="year"></span> Moein Ghezelbash. <span id="footer-text">Built for GitHub Pages.</span></div>
   </footer>
 
   <script src="app.js"></script>

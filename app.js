@@ -1,5 +1,16 @@
 const $ = (selector) => document.querySelector(selector);
 
+const state = {
+  data: null,
+  locale: new URLSearchParams(window.location.search).get("lang") || localStorage.getItem("resume-locale") || "en"
+};
+
+const clear = (element) => {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+};
+
 const createList = (items, className = "clean") => {
   const ul = document.createElement("ul");
   ul.className = className;
@@ -11,18 +22,55 @@ const createList = (items, className = "clean") => {
   return ul;
 };
 
-const renderContact = ({ location, email, phone, linkedin }) => {
-  const contact = $("#contact");
+const createButton = (text, onClick, isActive = false) => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = text;
+  button.className = isActive ? "active" : "";
+  button.addEventListener("click", onClick);
+  return button;
+};
+
+const getEmailAddress = (contact) => `${contact.email.user}@${contact.email.domainParts.join(".")}`;
+
+const renderLocaleSwitcher = () => {
+  const switcher = $("#locale-switcher");
+  clear(switcher);
+  switcher.append(
+    createButton("EN", () => setLocale("en"), state.locale === "en"),
+    createButton("فا", () => setLocale("fa"), state.locale === "fa")
+  );
+};
+
+const renderContact = (content, contact) => {
+  const contactBar = $("#contact");
+  clear(contactBar);
+  contactBar.setAttribute("aria-label", content.navLabel);
+
+  const emailAddress = getEmailAddress(contact);
+  const phoneText = state.locale === "fa" ? contact.phone.fa : contact.phone.international;
   const entries = [
-    { type: "span", text: location },
-    { type: "a", text: email, href: `mailto:${email}` },
-    { type: "a", text: phone, href: `tel:${phone}` },
-    { type: "a", text: linkedin.label, href: linkedin.url }
+    { type: "span", text: content.profile.location },
+    { type: "a", text: phoneText, href: `tel:${contact.phone.international}` },
+    { type: "button", text: contact.email.display, action: (element) => {
+      const link = document.createElement("a");
+      link.href = `mailto:${emailAddress}`;
+      link.textContent = emailAddress;
+      element.textContent = emailAddress;
+      element.replaceWith(link);
+    } },
+    { type: "a", text: contact.linkedin.label, href: contact.linkedin.url }
   ];
 
-  entries.forEach(({ type, text, href }) => {
+  entries.forEach(({ type, text, href, action }) => {
     const element = document.createElement(type);
     element.textContent = text;
+    if (type === "button") {
+      element.type = "button";
+      element.className = "contact-button";
+      element.setAttribute("aria-label", "Reveal email address");
+      element.addEventListener("click", () => action(element), { once: true });
+    }
     if (href) {
       element.href = href;
       if (href.startsWith("http")) {
@@ -30,37 +78,78 @@ const renderContact = ({ location, email, phone, linkedin }) => {
         element.rel = "noreferrer";
       }
     }
-    contact.appendChild(element);
+    contactBar.appendChild(element);
   });
 };
 
-const renderResume = (data) => {
-  document.title = `${data.profile.name} | ${data.profile.title}`;
-  $("#name").textContent = data.profile.name;
-  $("#role").textContent = data.profile.title;
-  $("#tagline").textContent = data.profile.tagline;
-  renderContact(data.profile);
+const renderResumeLinks = (content, resumeFiles) => {
+  const downloads = $("#downloads");
+  clear(downloads);
+  const label = document.createElement("span");
+  label.textContent = content.downloadLabel;
+  downloads.appendChild(label);
+
+  Object.entries(resumeFiles).forEach(([locale, href]) => {
+    const link = document.createElement("a");
+    link.href = href;
+    link.textContent = content.downloadLinks[locale];
+    link.target = "_blank";
+    downloads.appendChild(link);
+  });
+};
+
+const renderSideSection = (selector, items, className = "clean") => {
+  const target = $(selector);
+  clear(target);
+  target.appendChild(createList(items, className));
+};
+
+const renderResume = () => {
+  const { data } = state;
+  const content = data.locales[state.locale] || data.locales[data.defaultLocale];
+  document.documentElement.lang = content.lang;
+  document.documentElement.dir = content.dir;
+  document.body.className = `locale-${content.lang}`;
+  document.title = `${content.profile.name} | ${content.profile.title}`;
+
+  renderLocaleSwitcher();
+  $("#eyebrow").textContent = content.eyebrow;
+  $("#name").textContent = content.profile.name;
+  $("#role").textContent = content.profile.title;
+  $("#tagline").textContent = content.profile.tagline;
+  renderContact(content, data.contact);
+  renderResumeLinks(content, data.resumeFiles);
+
+  $("#summary-title").textContent = content.sections.summary;
+  $("#competencies-title").textContent = content.sections.competencies;
+  $("#experience-title").textContent = content.sections.experience;
+  $("#technologies-title").textContent = content.sections.technologies;
+  $("#education-title").textContent = content.sections.education;
+  $("#certificates-title").textContent = content.sections.certificates;
+  $("#languages-title").textContent = content.sections.languages;
 
   const summary = $("#summary");
-  data.summary.forEach((paragraph) => {
+  clear(summary);
+  content.summary.forEach((paragraph) => {
     const p = document.createElement("p");
     p.textContent = paragraph;
     summary.appendChild(p);
   });
 
   const competencies = $("#competencies");
-  data.competencies.forEach(({ group, items }) => {
+  clear(competencies);
+  content.competencies.forEach(({ group, items }) => {
     const card = document.createElement("article");
     card.className = "card competency";
     const heading = document.createElement("h3");
     heading.textContent = group;
-    card.appendChild(heading);
-    card.appendChild(createList(items, "tag-list"));
+    card.append(heading, createList(items, "tag-list"));
     competencies.appendChild(card);
   });
 
   const timeline = $("#experience");
-  data.experience.forEach((job) => {
+  clear(timeline);
+  content.experience.forEach((job) => {
     const item = document.createElement("article");
     item.className = "timeline-item";
 
@@ -75,16 +164,14 @@ const renderResume = (data) => {
     const company = document.createElement("div");
     company.className = "company";
     company.textContent = job.company;
-    body.append(role, company);
-    body.appendChild(createList(job.description));
+    body.append(role, company, createList(job.description));
 
     if (job.achievements.length) {
       const achievements = document.createElement("div");
       achievements.className = "achievements";
       const achievementsTitle = document.createElement("strong");
-      achievementsTitle.textContent = "Key Achievements";
-      achievements.appendChild(achievementsTitle);
-      achievements.appendChild(createList(job.achievements));
+      achievementsTitle.textContent = content.sections.achievements;
+      achievements.append(achievementsTitle, createList(job.achievements));
       body.appendChild(achievements);
     }
 
@@ -92,10 +179,18 @@ const renderResume = (data) => {
     timeline.appendChild(item);
   });
 
-  $("#technologies").appendChild(createList(data.technologies, "tag-list"));
-  $("#education").appendChild(createList(data.education));
-  $("#languages").appendChild(createList(data.languages, "tag-list"));
+  renderSideSection("#technologies", content.technologies, "tag-list");
+  renderSideSection("#education", content.education);
+  renderSideSection("#certificates", content.certificates, "tag-list");
+  renderSideSection("#languages", content.languages, "tag-list");
   $("#year").textContent = new Date().getFullYear();
+  $("#footer-text").textContent = content.footer;
+};
+
+const setLocale = (locale) => {
+  state.locale = locale;
+  localStorage.setItem("resume-locale", locale);
+  renderResume();
 };
 
 fetch("resume.json")
@@ -105,7 +200,13 @@ fetch("resume.json")
     }
     return response.json();
   })
-  .then(renderResume)
+  .then((data) => {
+    state.data = data;
+    if (!data.locales[state.locale]) {
+      state.locale = data.defaultLocale;
+    }
+    renderResume();
+  })
   .catch((error) => {
     $("#app-error").textContent = error.message;
   });
