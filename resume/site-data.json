@@ -886,7 +886,7 @@
         "expertise": "حوزه‌های تخصصی",
         "experience": "تجربه حرفه‌ای",
         "philosophy": "فلسفه کاری من",
-        "current": "در حال حاضر",
+        "current": "حوزه‌های تخصصی فعلی",
         "social": "شبکه‌های اجتماعی",
         "resume": "رزومه آنلاین",
         "about": "درباره من"
@@ -931,15 +931,15 @@
         "من اعتقاد دارم بهترین راهکارها زمانی شکل می‌گیرند که زیرساخت، داده و نیازهای کسب‌وکار در کنار یکدیگر دیده شوند. به همین دلیل همیشه تلاش کرده‌ام میان تیم‌های فنی، مدیریتی و تجاری پل ارتباطی ایجاد کنم و راهکارهایی ارائه دهم که هم از نظر فنی قابل اتکا باشند و هم از نظر اقتصادی ارزش‌آفرین."
       ],
       "current": [
-        "Infrastructure Architecture",
         "Platform Engineering",
-        "DevOps & Automation",
+        "Infrastructure Architecture",
         "Data Engineering",
+        "DevOps & Automation",
+        "Cloud & Server Infrastructure",
         "Business Intelligence",
-        "Cloud Technologies",
-        "Digital Transformation",
         "Travel Technology",
-        "AI-driven Business Systems"
+        "Digital Transformation",
+        "Automation & AI-assisted Workflows"
       ],
       "resumeLinks": {
         "fa": "مشاهده فارسی",
