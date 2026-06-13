@@ -1,6 +1,6 @@
 const root = document.querySelector('#resume-root');
 const locale = document.documentElement.lang || 'en';
-const dataUrl = '../resume.json';
+const dataUrl = 'site-data.json';
 
 const create = (tag, text, className) => {
   const element = document.createElement(tag);

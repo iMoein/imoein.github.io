@@ -319,7 +319,7 @@ const setLocale = (locale) => {
   renderHome();
 };
 
-fetch("resume.json")
+fetch("resume/site-data.json")
   .then((response) => {
     if (!response.ok) throw new Error("Site data could not be loaded.");
     return response.json();
