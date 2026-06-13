@@ -266,44 +266,76 @@
           }
         },
         {
-          "role": "Technology & Finance Consultant",
-          "company": "Freelance Consulting Projects (3Click.com & Kavir Motor)",
+          "role": "Technology Consultant",
+          "company": "3Click.com",
           "period": "2020",
           "description": [
-            "Conducted infrastructure assessments, security reviews, and operational improvement projects.",
-            "Supported financial system integrations and online payment process optimization.",
-            "Provided technology recommendations for business process improvements."
+            "Conducted infrastructure assessments, security reviews, and operational improvement projects for online travel services.",
+            "Reviewed technology workflows and provided recommendations for improving business process reliability.",
+            "Supported online payment process optimization from a technology and operations perspective."
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/kavir-motor.svg",
-            "text": "KM",
+            "src": "assets/logo/3click.jpeg",
+            "text": "3C",
             "candidates": [
-              "assets/logo/kavir-motor.svg",
-              "assets/logo/kavir-motor.png",
-              "assets/logo/kavir-motor.jpg",
-              "assets/logo/kavir-motor.jpeg",
-              "assets/logo/kavir-motor.webp",
-              "assets/logo/kavirmotor.svg",
-              "assets/logo/kavirmotor.png",
-              "assets/logo/kavirmotor.jpg",
-              "assets/logo/kavirmotor.jpeg",
-              "assets/logo/kavirmotor.webp",
-              "assets/logo/kavir.svg",
-              "assets/logo/kavir.png",
-              "assets/logo/kavir.jpg",
-              "assets/logo/kavir.jpeg",
-              "assets/logo/kavir.webp",
               "assets/logo/3click.svg",
               "assets/logo/3click.png",
               "assets/logo/3click.jpg",
               "assets/logo/3click.jpeg",
               "assets/logo/3click.webp",
+              "assets/logo/threeclick.svg",
+              "assets/logo/threeclick.png",
+              "assets/logo/threeclick.jpg",
+              "assets/logo/threeclick.jpeg",
+              "assets/logo/threeclick.webp",
               "assets/logo/seclick.svg",
               "assets/logo/seclick.png",
               "assets/logo/seclick.jpg",
               "assets/logo/seclick.jpeg",
-              "assets/logo/seclick.webp"
+              "assets/logo/seclick.webp",
+              "assets/logo/se-click.svg",
+              "assets/logo/se-click.png",
+              "assets/logo/se-click.jpg",
+              "assets/logo/se-click.jpeg",
+              "assets/logo/se-click.webp"
+            ]
+          }
+        },
+        {
+          "role": "Finance Systems Consultant",
+          "company": "Kavir Motor",
+          "period": "2020",
+          "description": [
+            "Supported financial system integration initiatives and online payment process optimization.",
+            "Reviewed finance-related operational workflows and identified improvement opportunities.",
+            "Provided technology recommendations for improving financial and operational processes."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/kavirmotor.jpeg",
+            "text": "KM",
+            "candidates": [
+              "assets/logo/kavirmotor.svg",
+              "assets/logo/kavirmotor.png",
+              "assets/logo/kavirmotor.jpg",
+              "assets/logo/kavirmotor.jpeg",
+              "assets/logo/kavirmotor.webp",
+              "assets/logo/kavir-motor.svg",
+              "assets/logo/kavir-motor.png",
+              "assets/logo/kavir-motor.jpg",
+              "assets/logo/kavir-motor.jpeg",
+              "assets/logo/kavir-motor.webp",
+              "assets/logo/kavir.svg",
+              "assets/logo/kavir.png",
+              "assets/logo/kavir.jpg",
+              "assets/logo/kavir.jpeg",
+              "assets/logo/kavir.webp",
+              "assets/logo/kavirmotor-logo.svg",
+              "assets/logo/kavirmotor-logo.png",
+              "assets/logo/kavirmotor-logo.jpg",
+              "assets/logo/kavirmotor-logo.jpeg",
+              "assets/logo/kavirmotor-logo.webp"
             ]
           }
         },
@@ -625,44 +657,76 @@
           }
         },
         {
-          "role": "مشاور فناوری و سیستم‌های مالی",
-          "company": "سه کلیک و کویر موتور",
+          "role": "مشاور فناوری",
+          "company": "سه کلیک",
           "period": "سال ۱۳۹۹",
           "description": [
-            "ارزیابی زیرساخت و امنیت سامانه‌ها.",
-            "بهینه‌سازی فرایندهای مالی و پرداخت الکترونیک.",
-            "ارائه راهکارهای فناوری برای بهبود عملکرد سازمانی."
+            "ارزیابی زیرساخت و امنیت سامانه‌ها در حوزه خدمات آنلاین گردشگری.",
+            "بررسی جریان‌های عملیاتی و ارائه پیشنهادهای فنی برای افزایش پایداری فرایندهای کسب‌وکار.",
+            "همکاری در بهینه‌سازی فرایندهای پرداخت آنلاین از منظر فناوری و عملیات."
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/kavir-motor.svg",
-            "text": "KM",
+            "src": "assets/logo/3click.jpeg",
+            "text": "3C",
             "candidates": [
-              "assets/logo/kavir-motor.svg",
-              "assets/logo/kavir-motor.png",
-              "assets/logo/kavir-motor.jpg",
-              "assets/logo/kavir-motor.jpeg",
-              "assets/logo/kavir-motor.webp",
-              "assets/logo/kavirmotor.svg",
-              "assets/logo/kavirmotor.png",
-              "assets/logo/kavirmotor.jpg",
-              "assets/logo/kavirmotor.jpeg",
-              "assets/logo/kavirmotor.webp",
-              "assets/logo/kavir.svg",
-              "assets/logo/kavir.png",
-              "assets/logo/kavir.jpg",
-              "assets/logo/kavir.jpeg",
-              "assets/logo/kavir.webp",
               "assets/logo/3click.svg",
               "assets/logo/3click.png",
               "assets/logo/3click.jpg",
               "assets/logo/3click.jpeg",
               "assets/logo/3click.webp",
+              "assets/logo/threeclick.svg",
+              "assets/logo/threeclick.png",
+              "assets/logo/threeclick.jpg",
+              "assets/logo/threeclick.jpeg",
+              "assets/logo/threeclick.webp",
               "assets/logo/seclick.svg",
               "assets/logo/seclick.png",
               "assets/logo/seclick.jpg",
               "assets/logo/seclick.jpeg",
-              "assets/logo/seclick.webp"
+              "assets/logo/seclick.webp",
+              "assets/logo/se-click.svg",
+              "assets/logo/se-click.png",
+              "assets/logo/se-click.jpg",
+              "assets/logo/se-click.jpeg",
+              "assets/logo/se-click.webp"
+            ]
+          }
+        },
+        {
+          "role": "مشاور سیستم‌های مالی",
+          "company": "کویر موتور",
+          "period": "سال ۱۳۹۹",
+          "description": [
+            "پشتیبانی از پروژه‌های یکپارچه‌سازی سیستم‌های مالی و بهینه‌سازی پرداخت الکترونیک.",
+            "بررسی فرایندهای عملیاتی مرتبط با سیستم‌های مالی و شناسایی فرصت‌های بهبود.",
+            "ارائه راهکارهای فناوری برای بهبود فرایندهای مالی و عملیاتی."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/kavirmotor.jpeg",
+            "text": "KM",
+            "candidates": [
+              "assets/logo/kavirmotor.svg",
+              "assets/logo/kavirmotor.png",
+              "assets/logo/kavirmotor.jpg",
+              "assets/logo/kavirmotor.jpeg",
+              "assets/logo/kavirmotor.webp",
+              "assets/logo/kavir-motor.svg",
+              "assets/logo/kavir-motor.png",
+              "assets/logo/kavir-motor.jpg",
+              "assets/logo/kavir-motor.jpeg",
+              "assets/logo/kavir-motor.webp",
+              "assets/logo/kavir.svg",
+              "assets/logo/kavir.png",
+              "assets/logo/kavir.jpg",
+              "assets/logo/kavir.jpeg",
+              "assets/logo/kavir.webp",
+              "assets/logo/kavirmotor-logo.svg",
+              "assets/logo/kavirmotor-logo.png",
+              "assets/logo/kavirmotor-logo.jpg",
+              "assets/logo/kavirmotor-logo.jpeg",
+              "assets/logo/kavirmotor-logo.webp"
             ]
           }
         },
@@ -830,7 +894,8 @@
         "Channelead",
         "Alibaba Travels",
         "Faraz Raya",
-        "KAVIR Motor",
+        "سه کلیک",
+        "کویر موتور",
         "LiveFM Broadcasting"
       ],
       "roles": "در این مسیر مسئولیت‌هایی مانند مدیر زیرساخت و داده، مدیر توسعه کسب‌وکار، مدیر محصول، مشاور فنی و مدیر پروژه را بر عهده داشته‌ام.",
@@ -967,6 +1032,7 @@
         "Channelead",
         "Alibaba Travels",
         "Faraz Raya",
+        "3Click.com",
         "KAVIR Motor",
         "LiveFM Broadcasting"
       ],
