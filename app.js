@@ -89,13 +89,35 @@ const renderResumeLinks = (content, resumeFiles) => {
   label.textContent = content.downloadLabel;
   downloads.appendChild(label);
 
-  Object.entries(resumeFiles).forEach(([locale, href]) => {
-    const link = document.createElement("a");
-    link.href = href;
-    link.textContent = content.downloadLinks[locale];
-    link.target = "_blank";
-    downloads.appendChild(link);
-  });
+  const link = document.createElement("a");
+  link.href = resumeFiles[state.locale];
+  link.textContent = content.downloadLinks[state.locale];
+  link.target = "_blank";
+  downloads.appendChild(link);
+};
+
+const renderProfileImage = (data, content) => {
+  const image = $("#profile-photo");
+  const initials = $("#profile-initials");
+  initials.textContent = content.profile.name
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("");
+
+  if (!data.profileImage) {
+    image.hidden = true;
+    initials.hidden = false;
+    return;
+  }
+
+  image.src = data.profileImage;
+  image.hidden = false;
+  initials.hidden = true;
+  image.onerror = () => {
+    image.hidden = true;
+    initials.hidden = false;
+  };
 };
 
 const renderSideSection = (selector, items, className = "clean") => {
@@ -117,6 +139,7 @@ const renderResume = () => {
   $("#name").textContent = content.profile.name;
   $("#role").textContent = content.profile.title;
   $("#tagline").textContent = content.profile.tagline;
+  renderProfileImage(data, content);
   renderContact(content, data.contact);
   renderResumeLinks(content, data.resumeFiles);
 

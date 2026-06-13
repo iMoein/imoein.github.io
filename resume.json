@@ -7,7 +7,10 @@
   "contact": {
     "email": {
       "user": "moeinghezelbash",
-      "domainParts": ["gmail", "com"],
+      "domainParts": [
+        "gmail",
+        "com"
+      ],
       "display": "moeinghezelbash [at] gmail [dot] com"
     },
     "phone": {
@@ -52,24 +55,185 @@
         "Strong background in infrastructure management, business intelligence, product delivery, vendor integrations, and operational process optimization."
       ],
       "competencies": [
-        {"group": "Technology Operations", "items": ["IT Infrastructure Management", "Linux Server Administration", "Virtualization Platforms", "Network Design & Planning", "Service Monitoring", "Business Continuity & Reliability"]},
-        {"group": "Process Automation", "items": ["CI/CD Workflows", "Deployment Automation", "Bash Scripting", "Workflow Optimization", "Operational Efficiency Improvement"]},
-        {"group": "Data & Business Intelligence", "items": ["ETL Pipelines", "Business Intelligence", "Apache Superset", "Data Aggregation", "MySQL", "MariaDB"]},
-        {"group": "Business Systems", "items": ["CRM Implementation", "API Integrations", "Business Process Design", "Vendor & Supplier Management", "B2B Platform Operations"]},
-        {"group": "Leadership & Management", "items": ["Project Management", "Stakeholder Management", "Budget Planning", "Cross-Functional Team Leadership", "Strategic Planning", "Operational Governance"]}
+        {
+          "group": "Technology Operations",
+          "items": [
+            "IT Infrastructure Management",
+            "Linux Server Administration",
+            "Virtualization Platforms",
+            "Network Design & Planning",
+            "Service Monitoring",
+            "Business Continuity & Reliability"
+          ]
+        },
+        {
+          "group": "Process Automation",
+          "items": [
+            "CI/CD Workflows",
+            "Deployment Automation",
+            "Bash Scripting",
+            "Workflow Optimization",
+            "Operational Efficiency Improvement"
+          ]
+        },
+        {
+          "group": "Data & Business Intelligence",
+          "items": [
+            "ETL Pipelines",
+            "Business Intelligence",
+            "Apache Superset",
+            "Data Aggregation",
+            "MySQL",
+            "MariaDB"
+          ]
+        },
+        {
+          "group": "Business Systems",
+          "items": [
+            "CRM Implementation",
+            "API Integrations",
+            "Business Process Design",
+            "Vendor & Supplier Management",
+            "B2B Platform Operations"
+          ]
+        },
+        {
+          "group": "Leadership & Management",
+          "items": [
+            "Project Management",
+            "Stakeholder Management",
+            "Budget Planning",
+            "Cross-Functional Team Leadership",
+            "Strategic Planning",
+            "Operational Governance"
+          ]
+        }
       ],
       "experience": [
-        {"role": "Director of Infrastructure & Technology Operations", "company": "Channelead", "period": "Apr 2024 – Present", "description": ["Led infrastructure strategy and operations supporting high-volume B2B travel technology platforms.", "Managed system architecture, database operations, monitoring, and operational reliability initiatives.", "Worked closely with software engineering teams during the development and launch of new products and services.", "Built ETL pipelines and business intelligence capabilities to support operational and commercial decision-making.", "Introduced automation processes that reduced manual operational workloads."], "achievements": ["Implemented scalable infrastructure supporting large-scale B2B transactions.", "Improved reporting and analytics capabilities through BI platform integration.", "Enhanced database performance and system reliability."]},
-        {"role": "Technical Operations & Infrastructure Consultant", "company": "Faraz Raya Technology Analysts", "period": "Apr 2024 – Present", "description": ["Designed and implemented virtualization and infrastructure environments supporting hospitality and enterprise software deployments.", "Managed business-critical services including mail systems, customer environments, and cloud-based service platforms.", "Developed deployment automation solutions that improved software installation and update processes across customer infrastructures.", "Established operational monitoring practices and supported development teams in improving release management processes.", "Collaborated with executive stakeholders and investors to ensure operational stability and technology alignment."], "achievements": ["Automated software deployment and maintenance procedures for customer environments.", "Improved operational visibility through centralized monitoring and reporting.", "Supported infrastructure operations for enterprise-level hospitality clients."]},
-        {"role": "Business Development Manager", "company": "Channelead", "period": "Dec 2020 – Mar 2024", "description": ["Led business operations and expansion initiatives for a B2B hotel booking platform.", "Managed supplier integrations, API partnerships, and operational processes.", "Designed data-driven pricing and inventory management strategies.", "Coordinated business planning, budgeting, and executive reporting activities."], "achievements": ["Expanded supplier ecosystem through multiple successful integrations.", "Reduced booking conflicts through improved inventory aggregation processes.", "Established reporting frameworks for shareholders and executive stakeholders."]},
-        {"role": "Product Manager", "company": "Alibaba Travels Co.", "period": "Apr 2016 – Oct 2018", "description": ["Managed financial and operational technology initiatives supporting online travel services.", "Led CRM implementation and customer support optimization projects.", "Coordinated infrastructure-related projects including network planning, business continuity initiatives, and office expansion programs.", "Participated in business intelligence initiatives to improve operational reporting and decision-making."], "achievements": ["Improved customer service operations through CRM optimization.", "Supported large-scale infrastructure and operational transition projects.", "Contributed to business intelligence and operational reporting initiatives."]},
-        {"role": "Technology & Finance Consultant", "company": "Freelance Consulting Projects (3Click.com & Kavir Motor)", "period": "2020", "description": ["Conducted infrastructure assessments, security reviews, and operational improvement projects.", "Supported financial system integrations and online payment process optimization.", "Provided technology recommendations for business process improvements."], "achievements": []},
-        {"role": "Project Manager", "company": "LiveFM Broadcasting", "period": "Jun 2012 – Mar 2016", "description": ["Managed the development and operation of cloud-based digital broadcasting services.", "Coordinated infrastructure planning for high-traffic live streaming events.", "Led project execution across technical and operational teams."], "achievements": ["Successfully delivered large-scale online broadcasting projects.", "Maintained service availability during peak traffic events."]}
+        {
+          "role": "Director of Infrastructure & Technology Operations",
+          "company": "Channelead",
+          "period": "Apr 2024 – Present",
+          "description": [
+            "Led infrastructure strategy and operations supporting high-volume B2B travel technology platforms.",
+            "Managed system architecture, database operations, monitoring, and operational reliability initiatives.",
+            "Worked closely with software engineering teams during the development and launch of new products and services.",
+            "Built ETL pipelines and business intelligence capabilities to support operational and commercial decision-making.",
+            "Introduced automation processes that reduced manual operational workloads."
+          ],
+          "achievements": [
+            "Implemented scalable infrastructure supporting large-scale B2B transactions.",
+            "Improved reporting and analytics capabilities through BI platform integration.",
+            "Enhanced database performance and system reliability."
+          ]
+        },
+        {
+          "role": "Technical Operations & Infrastructure Consultant",
+          "company": "Faraz Raya Technology Analysts",
+          "period": "Apr 2024 – Present",
+          "description": [
+            "Designed and implemented virtualization and infrastructure environments supporting hospitality and enterprise software deployments.",
+            "Managed business-critical services including mail systems, customer environments, and cloud-based service platforms.",
+            "Developed deployment automation solutions that improved software installation and update processes across customer infrastructures.",
+            "Established operational monitoring practices and supported development teams in improving release management processes.",
+            "Collaborated with executive stakeholders and investors to ensure operational stability and technology alignment."
+          ],
+          "achievements": [
+            "Automated software deployment and maintenance procedures for customer environments.",
+            "Improved operational visibility through centralized monitoring and reporting.",
+            "Supported infrastructure operations for enterprise-level hospitality clients."
+          ]
+        },
+        {
+          "role": "Business Development Manager",
+          "company": "Channelead",
+          "period": "Dec 2020 – Mar 2024",
+          "description": [
+            "Led business operations and expansion initiatives for a B2B hotel booking platform.",
+            "Managed supplier integrations, API partnerships, and operational processes.",
+            "Designed data-driven pricing and inventory management strategies.",
+            "Coordinated business planning, budgeting, and executive reporting activities."
+          ],
+          "achievements": [
+            "Expanded supplier ecosystem through multiple successful integrations.",
+            "Reduced booking conflicts through improved inventory aggregation processes.",
+            "Established reporting frameworks for shareholders and executive stakeholders."
+          ]
+        },
+        {
+          "role": "Product Manager",
+          "company": "Alibaba Travels Co.",
+          "period": "Apr 2016 – Oct 2018",
+          "description": [
+            "Managed financial and operational technology initiatives supporting online travel services.",
+            "Led CRM implementation and customer support optimization projects.",
+            "Coordinated infrastructure-related projects including network planning, business continuity initiatives, and office expansion programs.",
+            "Participated in business intelligence initiatives to improve operational reporting and decision-making."
+          ],
+          "achievements": [
+            "Improved customer service operations through CRM optimization.",
+            "Supported large-scale infrastructure and operational transition projects.",
+            "Contributed to business intelligence and operational reporting initiatives."
+          ]
+        },
+        {
+          "role": "Technology & Finance Consultant",
+          "company": "Freelance Consulting Projects (3Click.com & Kavir Motor)",
+          "period": "2020",
+          "description": [
+            "Conducted infrastructure assessments, security reviews, and operational improvement projects.",
+            "Supported financial system integrations and online payment process optimization.",
+            "Provided technology recommendations for business process improvements."
+          ],
+          "achievements": []
+        },
+        {
+          "role": "Project Manager",
+          "company": "LiveFM Broadcasting",
+          "period": "Jun 2012 – Mar 2016",
+          "description": [
+            "Managed the development and operation of cloud-based digital broadcasting services.",
+            "Coordinated infrastructure planning for high-traffic live streaming events.",
+            "Led project execution across technical and operational teams."
+          ],
+          "achievements": [
+            "Successfully delivered large-scale online broadcasting projects.",
+            "Maintained service availability during peak traffic events."
+          ]
+        }
       ],
-      "technologies": ["Linux", "Microtik", "Docker", "MySQL / MariaDB", "Postgres", "Apache Superset", "Git", "GitHub / GitLab", "CI/CD", "Bash", "Node.js", "REST API", "Virtualization", "Monitoring", "CRM", "CMS"],
-      "education": ["Associate Degree in Software Engineering (Islamic Azad University)", "Professional Diploma in Reservation & Customer Service (IranAir Training Center)"],
-      "certificates": ["Docker Fundamentals", "Kubernetes Fundamentals", "Amadeus", "Gabriel"],
-      "languages": ["Persian (Native)", "English (Professional Working Proficiency)"],
+      "technologies": [
+        "Linux",
+        "Microtik",
+        "Docker",
+        "MySQL / MariaDB",
+        "Postgres",
+        "Apache Superset",
+        "Git",
+        "GitHub / GitLab",
+        "CI/CD",
+        "Bash",
+        "Node.js",
+        "REST API",
+        "Virtualization",
+        "Monitoring",
+        "CRM",
+        "CMS"
+      ],
+      "education": [
+        "Associate Degree in Software Engineering (Islamic Azad University)",
+        "Professional Diploma in Reservation & Customer Service (IranAir Training Center)"
+      ],
+      "certificates": [
+        "Docker Fundamentals",
+        "Kubernetes Fundamentals",
+        "Amadeus",
+        "Gabriel"
+      ],
+      "languages": [
+        "Persian (Native)",
+        "English (Professional Working Proficiency)"
+      ],
       "footer": "Built for GitHub Pages."
     },
     "fa": {
@@ -78,30 +242,215 @@
       "navLabel": "اطلاعات تماس",
       "eyebrow": "رزومه آنلاین",
       "downloadLabel": "دانلود رزومه",
-      "downloadLinks": {"en": "رزومه انگلیسی", "fa": "رزومه فارسی"},
-      "profile": {"name": "معین قزلباش", "title": "مدیر عملیات فناوری", "tagline": "زیرساخت، سیستم‌های کسب‌وکار و اتوماسیون فرایندها", "location": "تهران"},
-      "sections": {"summary": "درباره من", "competencies": "شایستگی‌های کلیدی", "experience": "سوابق حرفه‌ای", "technologies": "فناوری‌ها و ابزارها", "education": "تحصیلات", "certificates": "گواهینامه‌ها", "languages": "زبان‌ها", "achievements": "دستاوردها"},
-      "summary": ["مدیر عملیات فناوری با بیش از ۱۰ سال تجربه در راهبری زیرساخت‌های فناوری اطلاعات، توسعه سیستم‌های کسب‌وکار، مدیریت پروژه‌های فناوری و بهینه‌سازی فرایندهای عملیاتی در صنایع گردشگری، تجارت الکترونیک و فناوری.", "در طول فعالیت حرفه‌ای خود مسئول طراحی و استقرار زیرساخت‌های سازمانی، مدیریت سامانه‌های عملیاتی، توسعه پلتفرم‌های B2B، هدایت پروژه‌های تحول دیجیتال و بهبود فرایندهای کسب‌وکار بوده‌ام.", "تجربه من در نقطه تلاقی فناوری، عملیات و کسب‌وکار شکل گرفته است و همواره تلاش کرده‌ام با ایجاد زیرساخت‌های پایدار، بهبود بهره‌وری سازمانی و اتوماسیون فرایندها، ارزش عملیاتی و اقتصادی بیشتری برای سازمان‌ها ایجاد کنم."],
+      "downloadLinks": {
+        "en": "رزومه انگلیسی",
+        "fa": "رزومه فارسی"
+      },
+      "profile": {
+        "name": "معین قزلباش",
+        "title": "مدیر عملیات فناوری",
+        "tagline": "زیرساخت، سیستم‌های کسب‌وکار و اتوماسیون فرایندها",
+        "location": "تهران"
+      },
+      "sections": {
+        "summary": "درباره من",
+        "competencies": "شایستگی‌های کلیدی",
+        "experience": "سوابق حرفه‌ای",
+        "technologies": "فناوری‌ها و ابزارها",
+        "education": "تحصیلات",
+        "certificates": "گواهینامه‌ها",
+        "languages": "زبان‌ها",
+        "achievements": "دستاوردها"
+      },
+      "summary": [
+        "مدیر عملیات فناوری با بیش از ۱۰ سال تجربه در راهبری زیرساخت‌های فناوری اطلاعات، توسعه سیستم‌های کسب‌وکار، مدیریت پروژه‌های فناوری و بهینه‌سازی فرایندهای عملیاتی در صنایع گردشگری، تجارت الکترونیک و فناوری.",
+        "در طول فعالیت حرفه‌ای خود مسئول طراحی و استقرار زیرساخت‌های سازمانی، مدیریت سامانه‌های عملیاتی، توسعه پلتفرم‌های B2B، هدایت پروژه‌های تحول دیجیتال و بهبود فرایندهای کسب‌وکار بوده‌ام.",
+        "تجربه من در نقطه تلاقی فناوری، عملیات و کسب‌وکار شکل گرفته است و همواره تلاش کرده‌ام با ایجاد زیرساخت‌های پایدار، بهبود بهره‌وری سازمانی و اتوماسیون فرایندها، ارزش عملیاتی و اقتصادی بیشتری برای سازمان‌ها ایجاد کنم."
+      ],
       "competencies": [
-        {"group": "عملیات و زیرساخت فناوری", "items": ["مدیریت زیرساخت فناوری اطلاعات", "مدیریت سرورهای لینوکس", "مجازی‌سازی و مدیریت منابع", "طراحی و مدیریت شبکه", "پایش و مانیتورینگ سرویس‌ها", "افزایش پایداری و دسترس‌پذیری سیستم‌ها"]},
-        {"group": "اتوماسیون و بهبود فرایندها", "items": ["طراحی و پیاده‌سازی CI/CD", "اتوماسیون استقرار نرم‌افزار", "Bash Scripting", "بهینه‌سازی گردش کار", "کاهش فعالیت‌های دستی و تکرارشونده"]},
-        {"group": "داده و هوش تجاری", "items": ["طراحی و توسعه ETL", "هوش تجاری (BI)", "Apache Superset", "تحلیل و تجمیع داده", "MySQL", "MariaDB"]},
-        {"group": "سیستم‌های کسب‌وکار", "items": ["طراحی و توسعه فرایندهای B2B", "مدیریت و استقرار CRM", "یکپارچه‌سازی API", "طراحی فرایندهای عملیاتی", "مدیریت تأمین‌کنندگان و شرکای تجاری"]},
-        {"group": "مدیریت و رهبری", "items": ["مدیریت پروژه", "مدیریت ذی‌نفعان", "برنامه‌ریزی بودجه", "رهبری تیم‌های میان‌وظیفه‌ای", "برنامه‌ریزی استراتژیک", "مدیریت عملیات"]}
+        {
+          "group": "عملیات و زیرساخت فناوری",
+          "items": [
+            "مدیریت زیرساخت فناوری اطلاعات",
+            "مدیریت سرورهای لینوکس",
+            "مجازی‌سازی و مدیریت منابع",
+            "طراحی و مدیریت شبکه",
+            "پایش و مانیتورینگ سرویس‌ها",
+            "افزایش پایداری و دسترس‌پذیری سیستم‌ها"
+          ]
+        },
+        {
+          "group": "اتوماسیون و بهبود فرایندها",
+          "items": [
+            "طراحی و پیاده‌سازی CI/CD",
+            "اتوماسیون استقرار نرم‌افزار",
+            "Bash Scripting",
+            "بهینه‌سازی گردش کار",
+            "کاهش فعالیت‌های دستی و تکرارشونده"
+          ]
+        },
+        {
+          "group": "داده و هوش تجاری",
+          "items": [
+            "طراحی و توسعه ETL",
+            "هوش تجاری (BI)",
+            "Apache Superset",
+            "تحلیل و تجمیع داده",
+            "MySQL",
+            "MariaDB"
+          ]
+        },
+        {
+          "group": "سیستم‌های کسب‌وکار",
+          "items": [
+            "طراحی و توسعه فرایندهای B2B",
+            "مدیریت و استقرار CRM",
+            "یکپارچه‌سازی API",
+            "طراحی فرایندهای عملیاتی",
+            "مدیریت تأمین‌کنندگان و شرکای تجاری"
+          ]
+        },
+        {
+          "group": "مدیریت و رهبری",
+          "items": [
+            "مدیریت پروژه",
+            "مدیریت ذی‌نفعان",
+            "برنامه‌ریزی بودجه",
+            "رهبری تیم‌های میان‌وظیفه‌ای",
+            "برنامه‌ریزی استراتژیک",
+            "مدیریت عملیات"
+          ]
+        }
       ],
       "experience": [
-        {"role": "مدیر عملیات فناوری و زیرساخت", "company": "Channelead", "period": "فروردین ۱۴۰۳ تاکنون", "description": ["راهبری زیرساخت فناوری موردنیاز پلتفرم‌های B2B با حجم بالای تراکنش.", "همکاری مستقیم با تیم‌های فنی برای توسعه و استقرار محصولات جدید.", "طراحی و پیاده‌سازی فرایندهای داده و گزارش‌گیری مدیریتی.", "توسعه ابزارهای اتوماسیون جهت بهبود بهره‌وری تیم‌های عملیاتی.", "مدیریت عملکرد پایگاه‌های داده و افزایش پایداری سرویس‌ها."], "achievements": ["ایجاد زیرساخت مقیاس‌پذیر برای سرویس‌های B2B.", "توسعه ابزارهای هوش تجاری برای تحلیل عملکرد کسب‌وکار.", "بهبود عملکرد سامانه‌ها و کاهش وابستگی به فرایندهای دستی."]},
-        {"role": "مشاور زیرساخت و عملیات فناوری", "company": "تحلیلگران فناوران فراز رایا", "period": "فروردین ۱۴۰۳ تاکنون", "description": ["طراحی و استقرار زیرساخت‌های مجازی‌سازی و شبکه.", "راه‌اندازی و نگهداری سرویس‌های حیاتی سازمانی.", "توسعه ابزارهای اتوماسیون برای نصب، بروزرسانی و نگهداری سامانه‌ها.", "همکاری با مدیران ارشد و سرمایه‌گذاران جهت ارزیابی عملکرد فنی پروژه‌ها.", "استقرار فرآیندهای پایش و کنترل عملکرد سرویس‌ها."], "achievements": ["کاهش زمان استقرار و بروزرسانی سامانه‌های مشتریان.", "افزایش قابلیت اطمینان زیرساخت‌های عملیاتی.", "بهبود فرآیندهای نگهداری و پشتیبانی سرویس‌ها."]},
-        {"role": "مدیر توسعه کسب‌وکار", "company": "Channelead", "period": "آذر ۱۳۹۹ تا اسفند ۱۴۰۲", "description": ["مدیریت توسعه پلتفرم رزرو هتل B2B.", "راهبری پروژه‌های اتصال به تأمین‌کنندگان و شرکای تجاری.", "طراحی مدل‌های قیمت‌گذاری و مدیریت موجودی.", "تدوین بودجه و گزارش‌های مدیریتی برای سهامداران.", "توسعه فرایندهای مبتنی بر داده برای بهبود عملکرد تجاری."], "achievements": ["توسعه شبکه تأمین‌کنندگان و شرکای تجاری.", "کاهش خطاهای رزرو از طریق بهبود مدل‌های تجمیع داده.", "ارتقای فرایندهای گزارش‌گیری و تصمیم‌سازی مدیریتی."]},
-        {"role": "مدیر محصول", "company": "علی‌بابا", "period": "فروردین ۱۳۹۵ تا مهر ۱۳۹۷", "description": ["مدیریت پروژه‌های نرم‌افزاری حوزه مالی و عملیاتی.", "راهبری استقرار و توسعه سامانه CRM.", "همکاری با تیم‌های فنی در پروژه‌های زیرساختی و بهبود پایداری سرویس‌ها.", "مدیریت پروژه‌های توسعه شبکه، مراکز تماس و زیرساخت‌های پشتیبان.", "مشارکت در پروژه‌های هوش تجاری و گزارش‌گیری مدیریتی."], "achievements": ["بهبود عملکرد مرکز تماس و فرایندهای پشتیبانی مشتریان.", "اجرای موفق پروژه‌های توسعه زیرساخت و انتقال سرویس‌ها.", "توسعه ابزارهای تحلیلی برای تیم‌های عملیاتی."]},
-        {"role": "مشاور فناوری و سیستم‌های مالی", "company": "سه کلیک و کویر موتور", "period": "سال ۱۳۹۹", "description": ["ارزیابی زیرساخت و امنیت سامانه‌ها.", "بهینه‌سازی فرایندهای مالی و پرداخت الکترونیک.", "ارائه راهکارهای فناوری برای بهبود عملکرد سازمانی."], "achievements": []},
-        {"role": "مدیر پروژه", "company": "LiveFM Broadcasting", "period": "خرداد ۱۳۹۱ تا اسفند ۱۳۹۴", "description": ["مدیریت توسعه پلتفرم پخش زنده اینترنتی.", "راهبری زیرساخت رسانه‌های دیجیتال.", "مدیریت اجرای پروژه‌های پخش رویدادهای آنلاین پرترافیک."], "achievements": ["اجرای موفق سرویس‌های پخش زنده در مقیاس بالا.", "حفظ پایداری سرویس در رویدادهای پرترافیک."]}
+        {
+          "role": "مدیر عملیات فناوری و زیرساخت",
+          "company": "Channelead",
+          "period": "فروردین ۱۴۰۳ تاکنون",
+          "description": [
+            "راهبری زیرساخت فناوری موردنیاز پلتفرم‌های B2B با حجم بالای تراکنش.",
+            "همکاری مستقیم با تیم‌های فنی برای توسعه و استقرار محصولات جدید.",
+            "طراحی و پیاده‌سازی فرایندهای داده و گزارش‌گیری مدیریتی.",
+            "توسعه ابزارهای اتوماسیون جهت بهبود بهره‌وری تیم‌های عملیاتی.",
+            "مدیریت عملکرد پایگاه‌های داده و افزایش پایداری سرویس‌ها."
+          ],
+          "achievements": [
+            "ایجاد زیرساخت مقیاس‌پذیر برای سرویس‌های B2B.",
+            "توسعه ابزارهای هوش تجاری برای تحلیل عملکرد کسب‌وکار.",
+            "بهبود عملکرد سامانه‌ها و کاهش وابستگی به فرایندهای دستی."
+          ]
+        },
+        {
+          "role": "مشاور زیرساخت و عملیات فناوری",
+          "company": "تحلیلگران فناوران فراز رایا",
+          "period": "فروردین ۱۴۰۳ تاکنون",
+          "description": [
+            "طراحی و استقرار زیرساخت‌های مجازی‌سازی و شبکه.",
+            "راه‌اندازی و نگهداری سرویس‌های حیاتی سازمانی.",
+            "توسعه ابزارهای اتوماسیون برای نصب، بروزرسانی و نگهداری سامانه‌ها.",
+            "همکاری با مدیران ارشد و سرمایه‌گذاران جهت ارزیابی عملکرد فنی پروژه‌ها.",
+            "استقرار فرآیندهای پایش و کنترل عملکرد سرویس‌ها."
+          ],
+          "achievements": [
+            "کاهش زمان استقرار و بروزرسانی سامانه‌های مشتریان.",
+            "افزایش قابلیت اطمینان زیرساخت‌های عملیاتی.",
+            "بهبود فرآیندهای نگهداری و پشتیبانی سرویس‌ها."
+          ]
+        },
+        {
+          "role": "مدیر توسعه کسب‌وکار",
+          "company": "Channelead",
+          "period": "آذر ۱۳۹۹ تا اسفند ۱۴۰۲",
+          "description": [
+            "مدیریت توسعه پلتفرم رزرو هتل B2B.",
+            "راهبری پروژه‌های اتصال به تأمین‌کنندگان و شرکای تجاری.",
+            "طراحی مدل‌های قیمت‌گذاری و مدیریت موجودی.",
+            "تدوین بودجه و گزارش‌های مدیریتی برای سهامداران.",
+            "توسعه فرایندهای مبتنی بر داده برای بهبود عملکرد تجاری."
+          ],
+          "achievements": [
+            "توسعه شبکه تأمین‌کنندگان و شرکای تجاری.",
+            "کاهش خطاهای رزرو از طریق بهبود مدل‌های تجمیع داده.",
+            "ارتقای فرایندهای گزارش‌گیری و تصمیم‌سازی مدیریتی."
+          ]
+        },
+        {
+          "role": "مدیر محصول",
+          "company": "علی‌بابا",
+          "period": "فروردین ۱۳۹۵ تا مهر ۱۳۹۷",
+          "description": [
+            "مدیریت پروژه‌های نرم‌افزاری حوزه مالی و عملیاتی.",
+            "راهبری استقرار و توسعه سامانه CRM.",
+            "همکاری با تیم‌های فنی در پروژه‌های زیرساختی و بهبود پایداری سرویس‌ها.",
+            "مدیریت پروژه‌های توسعه شبکه، مراکز تماس و زیرساخت‌های پشتیبان.",
+            "مشارکت در پروژه‌های هوش تجاری و گزارش‌گیری مدیریتی."
+          ],
+          "achievements": [
+            "بهبود عملکرد مرکز تماس و فرایندهای پشتیبانی مشتریان.",
+            "اجرای موفق پروژه‌های توسعه زیرساخت و انتقال سرویس‌ها.",
+            "توسعه ابزارهای تحلیلی برای تیم‌های عملیاتی."
+          ]
+        },
+        {
+          "role": "مشاور فناوری و سیستم‌های مالی",
+          "company": "سه کلیک و کویر موتور",
+          "period": "سال ۱۳۹۹",
+          "description": [
+            "ارزیابی زیرساخت و امنیت سامانه‌ها.",
+            "بهینه‌سازی فرایندهای مالی و پرداخت الکترونیک.",
+            "ارائه راهکارهای فناوری برای بهبود عملکرد سازمانی."
+          ],
+          "achievements": []
+        },
+        {
+          "role": "مدیر پروژه",
+          "company": "LiveFM Broadcasting",
+          "period": "خرداد ۱۳۹۱ تا اسفند ۱۳۹۴",
+          "description": [
+            "مدیریت توسعه پلتفرم پخش زنده اینترنتی.",
+            "راهبری زیرساخت رسانه‌های دیجیتال.",
+            "مدیریت اجرای پروژه‌های پخش رویدادهای آنلاین پرترافیک."
+          ],
+          "achievements": [
+            "اجرای موفق سرویس‌های پخش زنده در مقیاس بالا.",
+            "حفظ پایداری سرویس در رویدادهای پرترافیک."
+          ]
+        }
       ],
-      "technologies": ["Linux", "Microtik", "Docker", "MySQL / MariaDB", "Postgres", "Apache Superset", "Git", "GitHub / GitLab", "CI/CD", "Bash", "Node.js", "REST API", "Virtualization", "Monitoring", "CRM", "CMS"],
-      "education": ["کاردانی مهندسی نرم‌افزار — دانشگاه آزاد اسلامی", "دیپلم تخصصی رزرو و خدمات مشتریان — مرکز آموزش ایران‌ایر"],
-      "certificates": ["Docker Fundamentals", "Kubernetes Fundamentals", "Amadeus", "Gabriel"],
-      "languages": ["فارسی (زبان مادری)", "انگلیسی (سطح حرفه‌ای)"],
+      "technologies": [
+        "Linux",
+        "Microtik",
+        "Docker",
+        "MySQL / MariaDB",
+        "Postgres",
+        "Apache Superset",
+        "Git",
+        "GitHub / GitLab",
+        "CI/CD",
+        "Bash",
+        "Node.js",
+        "REST API",
+        "Virtualization",
+        "Monitoring",
+        "CRM",
+        "CMS"
+      ],
+      "education": [
+        "کاردانی مهندسی نرم‌افزار — دانشگاه آزاد اسلامی",
+        "دیپلم تخصصی رزرو و خدمات مشتریان — مرکز آموزش ایران‌ایر"
+      ],
+      "certificates": [
+        "Docker Fundamentals",
+        "Kubernetes Fundamentals",
+        "Amadeus",
+        "Gabriel"
+      ],
+      "languages": [
+        "فارسی (زبان مادری)",
+        "انگلیسی (سطح حرفه‌ای)"
+      ],
       "footer": "ساخته‌شده برای GitHub Pages."
     }
-  }
+  },
+  "profileImage": "assets/profile.jpg"
 }
