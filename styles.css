@@ -369,3 +369,4 @@ html[dir="rtl"] .resume-section-title::after { background: linear-gradient(270de
 .download-bar .download-link { color: var(--brand); background: rgba(216,195,165,.28); border-color: rgba(184,115,51,.28); }
 .download-bar .download-link:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 @media (max-width: 360px) { .download-bar { grid-template-columns: 1fr; } }
+.social-icon img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }

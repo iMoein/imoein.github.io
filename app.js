@@ -141,14 +141,25 @@ const renderAbout = (content) => {
 const renderSocialLinks = (links) => {
   const target = $("#social-links");
   clear(target);
-  links.filter((item) => item.enabled !== false).forEach(({ label, url, icon }) => {
+  links.filter((item) => item.enabled !== false).forEach(({ label, url, icon, iconSrc }) => {
     const link = document.createElement("a");
     link.href = url;
     link.target = "_blank";
     link.rel = "noreferrer";
     const mark = document.createElement("span");
     mark.className = "social-icon";
-    mark.textContent = icon || label.slice(0, 2);
+    if (iconSrc) {
+      const image = document.createElement("img");
+      image.src = iconSrc;
+      image.alt = "";
+      image.onerror = () => {
+        image.remove();
+        mark.textContent = icon || label.slice(0, 2);
+      };
+      mark.appendChild(image);
+    } else {
+      mark.textContent = icon || label.slice(0, 2);
+    }
     const text = document.createElement("span");
     text.textContent = label;
     link.append(mark, text);

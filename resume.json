@@ -810,55 +810,64 @@
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/moeinghezelbash/",
       "icon": "in",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/linkedin.png"
     },
     {
       "label": "GitHub",
       "url": "https://github.com/imoein",
       "icon": "gh",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/github.png"
     },
     {
       "label": "WhatsApp",
       "url": "https://wa.me/989120137435",
       "icon": "wa",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/whatsapp.png"
     },
     {
       "label": "X",
       "url": "https://x.com/imoein",
       "icon": "𝕏",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/twitter.png"
     },
     {
       "label": "Instagram",
       "url": "https://www.instagram.com/imoein/",
       "icon": "ig",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/instagram.png"
     },
     {
       "label": "Telegram",
       "url": "https://t.me/imoein",
       "icon": "tg",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/telegram.png"
     },
     {
       "label": "TikTok",
       "url": "https://www.tiktok.com/@imoein",
       "icon": "tt",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/tiktok.png"
     },
     {
       "label": "Threads",
       "url": "https://www.threads.net/@imoein",
       "icon": "th",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/threads.png"
     },
     {
       "label": "Facebook",
       "url": "https://www.facebook.com/imoein",
       "icon": "fb",
-      "enabled": true
+      "enabled": true,
+      "iconSrc": "assets/social/facebook.png"
     }
   ],
   "home": {
