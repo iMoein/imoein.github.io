@@ -1,10 +1,81 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>وب‌سایت من</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Moein Ghezelbash - Technical Operations Manager specializing in infrastructure, business systems, and process automation.">
+  <title>Moein Ghezelbash | Technical Operations Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>سلام، این سایت من روی GitHub Pages است</h1>
+  <header class="hero">
+    <div class="container hero-card">
+      <div class="top-actions">
+        <div class="eyebrow" id="eyebrow">Resume Portfolio</div>
+        <div class="locale-switcher" id="locale-switcher" aria-label="Language switcher"></div>
+      </div>
+      <div class="hero-content">
+        <div>
+          <h1 id="name">MOEIN GHEZELBASH</h1>
+          <h2><span id="role">Technical Operations Manager</span><small id="tagline">Infrastructure • Business Systems • Process Automation</small></h2>
+        </div>
+        <div class="profile-frame" aria-hidden="true">
+          <img id="profile-photo" alt="" hidden>
+          <span id="profile-initials">MG</span>
+        </div>
+      </div>
+      <p id="app-error" role="alert"></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid two-col" aria-label="Professional overview">
+      <div>
+        <div class="section-title"><h2 id="summary-title">Professional Summary</h2></div>
+        <div class="card summary" id="summary"></div>
+        <div class="card info-card">
+          <nav class="contact-bar" id="contact" aria-label="Contact information"></nav>
+          <div class="download-bar" id="downloads"></div>
+        </div>
+      </div>
+      <aside>
+        <div class="side-card card">
+          <h3 id="technologies-title">Selected Technologies</h3>
+          <div id="technologies"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="education-title">Education</h3>
+          <div id="education"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="certificates-title">Certificates</h3>
+          <div id="certificates"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="languages-title">Languages</h3>
+          <div id="languages"></div>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="competencies-title">
+      <div class="section-title"><h2 id="competencies-title">Core Competencies</h2></div>
+      <div class="grid cards" id="competencies"></div>
+    </section>
+
+    <section aria-labelledby="experience-title">
+      <div class="section-title"><h2 id="experience-title">Professional Experience</h2></div>
+      <div class="timeline" id="experience"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Moein Ghezelbash. <span id="footer-text">Built for GitHub Pages.</span></div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
