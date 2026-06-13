@@ -1,0 +1,1169 @@
+{
+  "defaultLocale": "en",
+  "resumeFiles": {
+    "en": "resume/moein-ghezelbash-en.html",
+    "fa": "resume/moein-ghezelbash-fa.html"
+  },
+  "contact": {
+    "email": {
+      "user": "moeinghezelbash",
+      "domainParts": [
+        "gmail",
+        "com"
+      ],
+      "display": "moeinghezelbash [at] gmail [dot] com"
+    },
+    "phone": {
+      "international": "+989120137435",
+      "fa": "۰۹۱۲۰۱۳۷۴۳۵"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/moeinghezelbash/"
+    }
+  },
+  "locales": {
+    "en": {
+      "dir": "ltr",
+      "lang": "en",
+      "navLabel": "Contact information",
+      "eyebrow": "Resume Portfolio",
+      "downloadLabel": "Download resume",
+      "downloadLinks": {
+        "en": "English resume",
+        "fa": "Persian resume"
+      },
+      "profile": {
+        "name": "MOEIN GHEZELBASH",
+        "title": "Technical Operations Manager",
+        "tagline": "Infrastructure • Business Systems • Process Automation",
+        "location": "Tehran, Iran"
+      },
+      "sections": {
+        "summary": "Professional Summary",
+        "competencies": "Core Competencies",
+        "experience": "Professional Experience",
+        "technologies": "Selected Technologies",
+        "education": "Education",
+        "certificates": "Certificates",
+        "languages": "Languages",
+        "achievements": "Key Achievements"
+      },
+      "summary": [
+        "Technical Operations Manager with 10+ years of experience leading technology operations, infrastructure modernization, business systems implementation, and digital platform development across travel, hospitality, e-commerce, and technology sectors.",
+        "Experienced in bridging the gap between technology, business, and operations by leading infrastructure projects, business-critical platforms, process automation initiatives, and cross-functional teams. Proven track record in building scalable systems, improving operational efficiency, managing stakeholders, and supporting business growth through technology-driven solutions.",
+        "Strong background in infrastructure management, business intelligence, product delivery, vendor integrations, and operational process optimization."
+      ],
+      "competencies": [
+        {
+          "group": "Technology Operations",
+          "items": [
+            "IT Infrastructure Management",
+            "Linux Server Administration",
+            "Virtualization Platforms",
+            "Network Design & Planning",
+            "Service Monitoring",
+            "Business Continuity & Reliability"
+          ]
+        },
+        {
+          "group": "Process Automation",
+          "items": [
+            "CI/CD Workflows",
+            "Deployment Automation",
+            "Bash Scripting",
+            "Workflow Optimization",
+            "Operational Efficiency Improvement"
+          ]
+        },
+        {
+          "group": "Data & Business Intelligence",
+          "items": [
+            "ETL Pipelines",
+            "Business Intelligence",
+            "Apache Superset",
+            "Data Aggregation",
+            "MySQL",
+            "MariaDB"
+          ]
+        },
+        {
+          "group": "Business Systems",
+          "items": [
+            "CRM Implementation",
+            "API Integrations",
+            "Business Process Design",
+            "Vendor & Supplier Management",
+            "B2B Platform Operations"
+          ]
+        },
+        {
+          "group": "Leadership & Management",
+          "items": [
+            "Project Management",
+            "Stakeholder Management",
+            "Budget Planning",
+            "Cross-Functional Team Leadership",
+            "Strategic Planning",
+            "Operational Governance"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "role": "Director of Infrastructure & Technology Operations",
+          "company": "Channelead",
+          "period": "Apr 2024 – Present",
+          "description": [
+            "Led infrastructure strategy and operations supporting high-volume B2B travel technology platforms.",
+            "Managed system architecture, database operations, monitoring, and operational reliability initiatives.",
+            "Worked closely with software engineering teams during the development and launch of new products and services.",
+            "Built ETL pipelines and business intelligence capabilities to support operational and commercial decision-making.",
+            "Introduced automation processes that reduced manual operational workloads."
+          ],
+          "achievements": [
+            "Implemented scalable infrastructure supporting large-scale B2B transactions.",
+            "Improved reporting and analytics capabilities through BI platform integration.",
+            "Enhanced database performance and system reliability."
+          ],
+          "logo": {
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
+          }
+        },
+        {
+          "role": "Technical Operations & Infrastructure Consultant",
+          "company": "Faraz Raya Technology Analysts",
+          "period": "Apr 2024 – Present",
+          "description": [
+            "Designed and implemented virtualization and infrastructure environments supporting hospitality and enterprise software deployments.",
+            "Managed business-critical services including mail systems, customer environments, and cloud-based service platforms.",
+            "Developed deployment automation solutions that improved software installation and update processes across customer infrastructures.",
+            "Established operational monitoring practices and supported development teams in improving release management processes.",
+            "Collaborated with executive stakeholders and investors to ensure operational stability and technology alignment."
+          ],
+          "achievements": [
+            "Automated software deployment and maintenance procedures for customer environments.",
+            "Improved operational visibility through centralized monitoring and reporting.",
+            "Supported infrastructure operations for enterprise-level hospitality clients."
+          ],
+          "logo": {
+            "src": "assets/logo/faraz-raya.svg",
+            "text": "FR",
+            "candidates": [
+              "assets/logo/faraz-raya.svg",
+              "assets/logo/faraz-raya.png",
+              "assets/logo/faraz-raya.jpg",
+              "assets/logo/faraz-raya.jpeg",
+              "assets/logo/faraz-raya.webp",
+              "assets/logo/farazraya.svg",
+              "assets/logo/farazraya.png",
+              "assets/logo/farazraya.jpg",
+              "assets/logo/farazraya.jpeg",
+              "assets/logo/farazraya.webp",
+              "assets/logo/faraz.svg",
+              "assets/logo/faraz.png",
+              "assets/logo/faraz.jpg",
+              "assets/logo/faraz.jpeg",
+              "assets/logo/faraz.webp",
+              "assets/logo/faraz-raya-technology.svg",
+              "assets/logo/faraz-raya-technology.png",
+              "assets/logo/faraz-raya-technology.jpg",
+              "assets/logo/faraz-raya-technology.jpeg",
+              "assets/logo/faraz-raya-technology.webp"
+            ]
+          }
+        },
+        {
+          "role": "Business Development Manager",
+          "company": "Channelead",
+          "period": "Dec 2020 – Mar 2024",
+          "description": [
+            "Led business operations and expansion initiatives for a B2B hotel booking platform.",
+            "Managed supplier integrations, API partnerships, and operational processes.",
+            "Designed data-driven pricing and inventory management strategies.",
+            "Coordinated business planning, budgeting, and executive reporting activities."
+          ],
+          "achievements": [
+            "Expanded supplier ecosystem through multiple successful integrations.",
+            "Reduced booking conflicts through improved inventory aggregation processes.",
+            "Established reporting frameworks for shareholders and executive stakeholders."
+          ],
+          "logo": {
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
+          }
+        },
+        {
+          "role": "Product Manager",
+          "company": "Alibaba Travels Co.",
+          "period": "Apr 2016 – Oct 2018",
+          "description": [
+            "Managed financial and operational technology initiatives supporting online travel services.",
+            "Led CRM implementation and customer support optimization projects.",
+            "Coordinated infrastructure-related projects including network planning, business continuity initiatives, and office expansion programs.",
+            "Participated in business intelligence initiatives to improve operational reporting and decision-making."
+          ],
+          "achievements": [
+            "Improved customer service operations through CRM optimization.",
+            "Supported large-scale infrastructure and operational transition projects.",
+            "Contributed to business intelligence and operational reporting initiatives."
+          ],
+          "logo": {
+            "src": "assets/logo/alibaba.svg",
+            "text": "AT",
+            "candidates": [
+              "assets/logo/alibaba.svg",
+              "assets/logo/alibaba.png",
+              "assets/logo/alibaba.jpg",
+              "assets/logo/alibaba.jpeg",
+              "assets/logo/alibaba.webp",
+              "assets/logo/alibaba-travels.svg",
+              "assets/logo/alibaba-travels.png",
+              "assets/logo/alibaba-travels.jpg",
+              "assets/logo/alibaba-travels.jpeg",
+              "assets/logo/alibaba-travels.webp",
+              "assets/logo/alibabatravels.svg",
+              "assets/logo/alibabatravels.png",
+              "assets/logo/alibabatravels.jpg",
+              "assets/logo/alibabatravels.jpeg",
+              "assets/logo/alibabatravels.webp"
+            ]
+          }
+        },
+        {
+          "role": "Technology Consultant",
+          "company": "3Click.com",
+          "period": "2020",
+          "description": [
+            "Conducted infrastructure assessments, security reviews, and operational improvement projects for online travel services.",
+            "Reviewed technology workflows and provided recommendations for improving business process reliability.",
+            "Supported online payment process optimization from a technology and operations perspective."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/3click.jpeg",
+            "text": "3C",
+            "candidates": [
+              "assets/logo/3click.svg",
+              "assets/logo/3click.png",
+              "assets/logo/3click.jpg",
+              "assets/logo/3click.jpeg",
+              "assets/logo/3click.webp",
+              "assets/logo/threeclick.svg",
+              "assets/logo/threeclick.png",
+              "assets/logo/threeclick.jpg",
+              "assets/logo/threeclick.jpeg",
+              "assets/logo/threeclick.webp",
+              "assets/logo/seclick.svg",
+              "assets/logo/seclick.png",
+              "assets/logo/seclick.jpg",
+              "assets/logo/seclick.jpeg",
+              "assets/logo/seclick.webp",
+              "assets/logo/se-click.svg",
+              "assets/logo/se-click.png",
+              "assets/logo/se-click.jpg",
+              "assets/logo/se-click.jpeg",
+              "assets/logo/se-click.webp"
+            ]
+          }
+        },
+        {
+          "role": "Finance Systems Consultant",
+          "company": "Kavir Motor",
+          "period": "2020",
+          "description": [
+            "Supported financial system integration initiatives and online payment process optimization.",
+            "Reviewed finance-related operational workflows and identified improvement opportunities.",
+            "Provided technology recommendations for improving financial and operational processes."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/kavirmotor.jpeg",
+            "text": "KM",
+            "candidates": [
+              "assets/logo/kavirmotor.svg",
+              "assets/logo/kavirmotor.png",
+              "assets/logo/kavirmotor.jpg",
+              "assets/logo/kavirmotor.jpeg",
+              "assets/logo/kavirmotor.webp",
+              "assets/logo/kavir-motor.svg",
+              "assets/logo/kavir-motor.png",
+              "assets/logo/kavir-motor.jpg",
+              "assets/logo/kavir-motor.jpeg",
+              "assets/logo/kavir-motor.webp",
+              "assets/logo/kavir.svg",
+              "assets/logo/kavir.png",
+              "assets/logo/kavir.jpg",
+              "assets/logo/kavir.jpeg",
+              "assets/logo/kavir.webp",
+              "assets/logo/kavirmotor-logo.svg",
+              "assets/logo/kavirmotor-logo.png",
+              "assets/logo/kavirmotor-logo.jpg",
+              "assets/logo/kavirmotor-logo.jpeg",
+              "assets/logo/kavirmotor-logo.webp"
+            ]
+          }
+        },
+        {
+          "role": "Project Manager",
+          "company": "LiveFM Broadcasting",
+          "period": "Jun 2012 – Mar 2016",
+          "description": [
+            "Managed the development and operation of cloud-based digital broadcasting services.",
+            "Coordinated infrastructure planning for high-traffic live streaming events.",
+            "Led project execution across technical and operational teams."
+          ],
+          "achievements": [
+            "Successfully delivered large-scale online broadcasting projects.",
+            "Maintained service availability during peak traffic events."
+          ],
+          "logo": {
+            "src": "assets/logo/livefm.svg",
+            "text": "LF",
+            "candidates": [
+              "assets/logo/livefm.svg",
+              "assets/logo/livefm.png",
+              "assets/logo/livefm.jpg",
+              "assets/logo/livefm.jpeg",
+              "assets/logo/livefm.webp",
+              "assets/logo/live-fm.svg",
+              "assets/logo/live-fm.png",
+              "assets/logo/live-fm.jpg",
+              "assets/logo/live-fm.jpeg",
+              "assets/logo/live-fm.webp",
+              "assets/logo/livefm-broadcasting.svg",
+              "assets/logo/livefm-broadcasting.png",
+              "assets/logo/livefm-broadcasting.jpg",
+              "assets/logo/livefm-broadcasting.jpeg",
+              "assets/logo/livefm-broadcasting.webp"
+            ]
+          }
+        }
+      ],
+      "technologies": [
+        "Linux",
+        "Microtik",
+        "Docker",
+        "MySQL / MariaDB",
+        "Postgres",
+        "Apache Superset",
+        "Git",
+        "GitHub / GitLab",
+        "CI/CD",
+        "Bash",
+        "Node.js",
+        "REST API",
+        "Virtualization",
+        "Monitoring",
+        "CRM",
+        "CMS"
+      ],
+      "education": [
+        "Associate Degree in Software Engineering (Islamic Azad University)",
+        "Professional Diploma in Reservation & Customer Service (IranAir Training Center)"
+      ],
+      "certificates": [
+        "Docker Fundamentals",
+        "Kubernetes Fundamentals",
+        "Amadeus",
+        "Gabriel"
+      ],
+      "languages": [
+        "Persian (Native)",
+        "English (Professional Working Proficiency)"
+      ],
+      "footer": "Built for GitHub Pages.",
+      "seo": {
+        "description": "Moein Ghezelbash is a Technical Operations Manager in Tehran specializing in infrastructure modernization, business systems, process automation, BI, and B2B travel technology platforms."
+      }
+    },
+    "fa": {
+      "dir": "rtl",
+      "lang": "fa",
+      "navLabel": "اطلاعات تماس",
+      "eyebrow": "رزومه آنلاین",
+      "downloadLabel": "دانلود رزومه",
+      "downloadLinks": {
+        "en": "رزومه انگلیسی",
+        "fa": "رزومه فارسی"
+      },
+      "profile": {
+        "name": "معین قزلباش",
+        "title": "مدیر عملیات فناوری",
+        "tagline": "زیرساخت، سیستم‌های کسب‌وکار و اتوماسیون فرایندها",
+        "location": "تهران"
+      },
+      "sections": {
+        "summary": "درباره من",
+        "competencies": "شایستگی‌های کلیدی",
+        "experience": "سوابق حرفه‌ای",
+        "technologies": "فناوری‌ها و ابزارها",
+        "education": "تحصیلات",
+        "certificates": "گواهینامه‌ها",
+        "languages": "زبان‌ها",
+        "achievements": "دستاوردها"
+      },
+      "summary": [
+        "مدیر عملیات فناوری با بیش از ۱۰ سال تجربه در راهبری زیرساخت‌های فناوری اطلاعات، توسعه سیستم‌های کسب‌وکار، مدیریت پروژه‌های فناوری و بهینه‌سازی فرایندهای عملیاتی در صنایع گردشگری، تجارت الکترونیک و فناوری.",
+        "در طول فعالیت حرفه‌ای خود مسئول طراحی و استقرار زیرساخت‌های سازمانی، مدیریت سامانه‌های عملیاتی، توسعه پلتفرم‌های B2B، هدایت پروژه‌های تحول دیجیتال و بهبود فرایندهای کسب‌وکار بوده‌ام.",
+        "تجربه من در نقطه تلاقی فناوری، عملیات و کسب‌وکار شکل گرفته است و همواره تلاش کرده‌ام با ایجاد زیرساخت‌های پایدار، بهبود بهره‌وری سازمانی و اتوماسیون فرایندها، ارزش عملیاتی و اقتصادی بیشتری برای سازمان‌ها ایجاد کنم."
+      ],
+      "competencies": [
+        {
+          "group": "عملیات و زیرساخت فناوری",
+          "items": [
+            "مدیریت زیرساخت فناوری اطلاعات",
+            "مدیریت سرورهای لینوکس",
+            "مجازی‌سازی و مدیریت منابع",
+            "طراحی و مدیریت شبکه",
+            "پایش و مانیتورینگ سرویس‌ها",
+            "افزایش پایداری و دسترس‌پذیری سیستم‌ها"
+          ]
+        },
+        {
+          "group": "اتوماسیون و بهبود فرایندها",
+          "items": [
+            "طراحی و پیاده‌سازی CI/CD",
+            "اتوماسیون استقرار نرم‌افزار",
+            "Bash Scripting",
+            "بهینه‌سازی گردش کار",
+            "کاهش فعالیت‌های دستی و تکرارشونده"
+          ]
+        },
+        {
+          "group": "داده و هوش تجاری",
+          "items": [
+            "طراحی و توسعه ETL",
+            "هوش تجاری (BI)",
+            "Apache Superset",
+            "تحلیل و تجمیع داده",
+            "MySQL",
+            "MariaDB"
+          ]
+        },
+        {
+          "group": "سیستم‌های کسب‌وکار",
+          "items": [
+            "طراحی و توسعه فرایندهای B2B",
+            "مدیریت و استقرار CRM",
+            "یکپارچه‌سازی API",
+            "طراحی فرایندهای عملیاتی",
+            "مدیریت تأمین‌کنندگان و شرکای تجاری"
+          ]
+        },
+        {
+          "group": "مدیریت و رهبری",
+          "items": [
+            "مدیریت پروژه",
+            "مدیریت ذی‌نفعان",
+            "برنامه‌ریزی بودجه",
+            "رهبری تیم‌های میان‌وظیفه‌ای",
+            "برنامه‌ریزی استراتژیک",
+            "مدیریت عملیات"
+          ]
+        }
+      ],
+      "experience": [
+        {
+          "role": "مدیر عملیات فناوری و زیرساخت",
+          "company": "Channelead",
+          "period": "فروردین ۱۴۰۳ تاکنون",
+          "description": [
+            "راهبری زیرساخت فناوری موردنیاز پلتفرم‌های B2B با حجم بالای تراکنش.",
+            "همکاری مستقیم با تیم‌های فنی برای توسعه و استقرار محصولات جدید.",
+            "طراحی و پیاده‌سازی فرایندهای داده و گزارش‌گیری مدیریتی.",
+            "توسعه ابزارهای اتوماسیون جهت بهبود بهره‌وری تیم‌های عملیاتی.",
+            "مدیریت عملکرد پایگاه‌های داده و افزایش پایداری سرویس‌ها."
+          ],
+          "achievements": [
+            "ایجاد زیرساخت مقیاس‌پذیر برای سرویس‌های B2B.",
+            "توسعه ابزارهای هوش تجاری برای تحلیل عملکرد کسب‌وکار.",
+            "بهبود عملکرد سامانه‌ها و کاهش وابستگی به فرایندهای دستی."
+          ],
+          "logo": {
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
+          }
+        },
+        {
+          "role": "مشاور زیرساخت و عملیات فناوری",
+          "company": "تحلیلگران فناوران فراز رایا",
+          "period": "فروردین ۱۴۰۳ تاکنون",
+          "description": [
+            "طراحی و استقرار زیرساخت‌های مجازی‌سازی و شبکه.",
+            "راه‌اندازی و نگهداری سرویس‌های حیاتی سازمانی.",
+            "توسعه ابزارهای اتوماسیون برای نصب، بروزرسانی و نگهداری سامانه‌ها.",
+            "همکاری با مدیران ارشد و سرمایه‌گذاران جهت ارزیابی عملکرد فنی پروژه‌ها.",
+            "استقرار فرآیندهای پایش و کنترل عملکرد سرویس‌ها."
+          ],
+          "achievements": [
+            "کاهش زمان استقرار و بروزرسانی سامانه‌های مشتریان.",
+            "افزایش قابلیت اطمینان زیرساخت‌های عملیاتی.",
+            "بهبود فرآیندهای نگهداری و پشتیبانی سرویس‌ها."
+          ],
+          "logo": {
+            "src": "assets/logo/faraz-raya.svg",
+            "text": "FR",
+            "candidates": [
+              "assets/logo/faraz-raya.svg",
+              "assets/logo/faraz-raya.png",
+              "assets/logo/faraz-raya.jpg",
+              "assets/logo/faraz-raya.jpeg",
+              "assets/logo/faraz-raya.webp",
+              "assets/logo/farazraya.svg",
+              "assets/logo/farazraya.png",
+              "assets/logo/farazraya.jpg",
+              "assets/logo/farazraya.jpeg",
+              "assets/logo/farazraya.webp",
+              "assets/logo/faraz.svg",
+              "assets/logo/faraz.png",
+              "assets/logo/faraz.jpg",
+              "assets/logo/faraz.jpeg",
+              "assets/logo/faraz.webp",
+              "assets/logo/faraz-raya-technology.svg",
+              "assets/logo/faraz-raya-technology.png",
+              "assets/logo/faraz-raya-technology.jpg",
+              "assets/logo/faraz-raya-technology.jpeg",
+              "assets/logo/faraz-raya-technology.webp"
+            ]
+          }
+        },
+        {
+          "role": "مدیر توسعه کسب‌وکار",
+          "company": "Channelead",
+          "period": "آذر ۱۳۹۹ تا اسفند ۱۴۰۲",
+          "description": [
+            "مدیریت توسعه پلتفرم رزرو هتل B2B.",
+            "راهبری پروژه‌های اتصال به تأمین‌کنندگان و شرکای تجاری.",
+            "طراحی مدل‌های قیمت‌گذاری و مدیریت موجودی.",
+            "تدوین بودجه و گزارش‌های مدیریتی برای سهامداران.",
+            "توسعه فرایندهای مبتنی بر داده برای بهبود عملکرد تجاری."
+          ],
+          "achievements": [
+            "توسعه شبکه تأمین‌کنندگان و شرکای تجاری.",
+            "کاهش خطاهای رزرو از طریق بهبود مدل‌های تجمیع داده.",
+            "ارتقای فرایندهای گزارش‌گیری و تصمیم‌سازی مدیریتی."
+          ],
+          "logo": {
+            "src": "assets/logo/samyarsafar.svg",
+            "text": "CL",
+            "candidates": [
+              "assets/logo/samyarsafar.svg",
+              "assets/logo/samyarsafar.png",
+              "assets/logo/samyarsafar.jpg",
+              "assets/logo/samyarsafar.jpeg",
+              "assets/logo/samyarsafar.webp",
+              "assets/logo/samyar-safar.svg",
+              "assets/logo/samyar-safar.png",
+              "assets/logo/samyar-safar.jpg",
+              "assets/logo/samyar-safar.jpeg",
+              "assets/logo/samyar-safar.webp",
+              "assets/logo/channelead.svg",
+              "assets/logo/channelead.png",
+              "assets/logo/channelead.jpg",
+              "assets/logo/channelead.jpeg",
+              "assets/logo/channelead.webp"
+            ]
+          }
+        },
+        {
+          "role": "مدیر محصول",
+          "company": "علی‌بابا",
+          "period": "فروردین ۱۳۹۵ تا مهر ۱۳۹۷",
+          "description": [
+            "مدیریت پروژه‌های نرم‌افزاری حوزه مالی و عملیاتی.",
+            "راهبری استقرار و توسعه سامانه CRM.",
+            "همکاری با تیم‌های فنی در پروژه‌های زیرساختی و بهبود پایداری سرویس‌ها.",
+            "مدیریت پروژه‌های توسعه شبکه، مراکز تماس و زیرساخت‌های پشتیبان.",
+            "مشارکت در پروژه‌های هوش تجاری و گزارش‌گیری مدیریتی."
+          ],
+          "achievements": [
+            "بهبود عملکرد مرکز تماس و فرایندهای پشتیبانی مشتریان.",
+            "اجرای موفق پروژه‌های توسعه زیرساخت و انتقال سرویس‌ها.",
+            "توسعه ابزارهای تحلیلی برای تیم‌های عملیاتی."
+          ],
+          "logo": {
+            "src": "assets/logo/alibaba.svg",
+            "text": "AT",
+            "candidates": [
+              "assets/logo/alibaba.svg",
+              "assets/logo/alibaba.png",
+              "assets/logo/alibaba.jpg",
+              "assets/logo/alibaba.jpeg",
+              "assets/logo/alibaba.webp",
+              "assets/logo/alibaba-travels.svg",
+              "assets/logo/alibaba-travels.png",
+              "assets/logo/alibaba-travels.jpg",
+              "assets/logo/alibaba-travels.jpeg",
+              "assets/logo/alibaba-travels.webp",
+              "assets/logo/alibabatravels.svg",
+              "assets/logo/alibabatravels.png",
+              "assets/logo/alibabatravels.jpg",
+              "assets/logo/alibabatravels.jpeg",
+              "assets/logo/alibabatravels.webp"
+            ]
+          }
+        },
+        {
+          "role": "مشاور فناوری",
+          "company": "سه کلیک",
+          "period": "سال ۱۳۹۹",
+          "description": [
+            "ارزیابی زیرساخت و امنیت سامانه‌ها در حوزه خدمات آنلاین گردشگری.",
+            "بررسی جریان‌های عملیاتی و ارائه پیشنهادهای فنی برای افزایش پایداری فرایندهای کسب‌وکار.",
+            "همکاری در بهینه‌سازی فرایندهای پرداخت آنلاین از منظر فناوری و عملیات."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/3click.jpeg",
+            "text": "3C",
+            "candidates": [
+              "assets/logo/3click.svg",
+              "assets/logo/3click.png",
+              "assets/logo/3click.jpg",
+              "assets/logo/3click.jpeg",
+              "assets/logo/3click.webp",
+              "assets/logo/threeclick.svg",
+              "assets/logo/threeclick.png",
+              "assets/logo/threeclick.jpg",
+              "assets/logo/threeclick.jpeg",
+              "assets/logo/threeclick.webp",
+              "assets/logo/seclick.svg",
+              "assets/logo/seclick.png",
+              "assets/logo/seclick.jpg",
+              "assets/logo/seclick.jpeg",
+              "assets/logo/seclick.webp",
+              "assets/logo/se-click.svg",
+              "assets/logo/se-click.png",
+              "assets/logo/se-click.jpg",
+              "assets/logo/se-click.jpeg",
+              "assets/logo/se-click.webp"
+            ]
+          }
+        },
+        {
+          "role": "مشاور سیستم‌های مالی",
+          "company": "کویر موتور",
+          "period": "سال ۱۳۹۹",
+          "description": [
+            "پشتیبانی از پروژه‌های یکپارچه‌سازی سیستم‌های مالی و بهینه‌سازی پرداخت الکترونیک.",
+            "بررسی فرایندهای عملیاتی مرتبط با سیستم‌های مالی و شناسایی فرصت‌های بهبود.",
+            "ارائه راهکارهای فناوری برای بهبود فرایندهای مالی و عملیاتی."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/kavirmotor.jpeg",
+            "text": "KM",
+            "candidates": [
+              "assets/logo/kavirmotor.svg",
+              "assets/logo/kavirmotor.png",
+              "assets/logo/kavirmotor.jpg",
+              "assets/logo/kavirmotor.jpeg",
+              "assets/logo/kavirmotor.webp",
+              "assets/logo/kavir-motor.svg",
+              "assets/logo/kavir-motor.png",
+              "assets/logo/kavir-motor.jpg",
+              "assets/logo/kavir-motor.jpeg",
+              "assets/logo/kavir-motor.webp",
+              "assets/logo/kavir.svg",
+              "assets/logo/kavir.png",
+              "assets/logo/kavir.jpg",
+              "assets/logo/kavir.jpeg",
+              "assets/logo/kavir.webp",
+              "assets/logo/kavirmotor-logo.svg",
+              "assets/logo/kavirmotor-logo.png",
+              "assets/logo/kavirmotor-logo.jpg",
+              "assets/logo/kavirmotor-logo.jpeg",
+              "assets/logo/kavirmotor-logo.webp"
+            ]
+          }
+        },
+        {
+          "role": "مدیر پروژه",
+          "company": "LiveFM Broadcasting",
+          "period": "خرداد ۱۳۹۱ تا اسفند ۱۳۹۴",
+          "description": [
+            "مدیریت توسعه پلتفرم پخش زنده اینترنتی.",
+            "راهبری زیرساخت رسانه‌های دیجیتال.",
+            "مدیریت اجرای پروژه‌های پخش رویدادهای آنلاین پرترافیک."
+          ],
+          "achievements": [
+            "اجرای موفق سرویس‌های پخش زنده در مقیاس بالا.",
+            "حفظ پایداری سرویس در رویدادهای پرترافیک."
+          ],
+          "logo": {
+            "src": "assets/logo/livefm.svg",
+            "text": "LF",
+            "candidates": [
+              "assets/logo/livefm.svg",
+              "assets/logo/livefm.png",
+              "assets/logo/livefm.jpg",
+              "assets/logo/livefm.jpeg",
+              "assets/logo/livefm.webp",
+              "assets/logo/live-fm.svg",
+              "assets/logo/live-fm.png",
+              "assets/logo/live-fm.jpg",
+              "assets/logo/live-fm.jpeg",
+              "assets/logo/live-fm.webp",
+              "assets/logo/livefm-broadcasting.svg",
+              "assets/logo/livefm-broadcasting.png",
+              "assets/logo/livefm-broadcasting.jpg",
+              "assets/logo/livefm-broadcasting.jpeg",
+              "assets/logo/livefm-broadcasting.webp"
+            ]
+          }
+        }
+      ],
+      "technologies": [
+        "Linux",
+        "Microtik",
+        "Docker",
+        "MySQL / MariaDB",
+        "Postgres",
+        "Apache Superset",
+        "Git",
+        "GitHub / GitLab",
+        "CI/CD",
+        "Bash",
+        "Node.js",
+        "REST API",
+        "Virtualization",
+        "Monitoring",
+        "CRM",
+        "CMS"
+      ],
+      "education": [
+        "کاردانی مهندسی نرم‌افزار — دانشگاه آزاد اسلامی",
+        "دیپلم تخصصی رزرو و خدمات مشتریان — مرکز آموزش ایران‌ایر"
+      ],
+      "certificates": [
+        "Docker Fundamentals",
+        "Kubernetes Fundamentals",
+        "Amadeus",
+        "Gabriel"
+      ],
+      "languages": [
+        "فارسی (زبان مادری)",
+        "انگلیسی (سطح حرفه‌ای)"
+      ],
+      "footer": "ساخته‌شده برای GitHub Pages.",
+      "seo": {
+        "description": "معین قزلباش مدیر عملیات فناوری در تهران با تخصص در زیرساخت فناوری اطلاعات، سیستم‌های کسب‌وکار، اتوماسیون فرایندها، هوش تجاری و پلتفرم‌های B2B است."
+      }
+    }
+  },
+  "profileImage": "assets/profile.jpg",
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/moeinghezelbash/",
+      "icon": "in",
+      "enabled": true,
+      "iconSrc": "assets/social/linkedin.png"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/imoein",
+      "icon": "gh",
+      "enabled": true,
+      "iconSrc": "assets/social/github.png"
+    },
+    {
+      "label": "WhatsApp",
+      "url": "https://wa.me/989120137435",
+      "icon": "wa",
+      "enabled": true,
+      "iconSrc": "assets/social/whatsapp.png"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/imoein",
+      "icon": "𝕏",
+      "enabled": true,
+      "iconSrc": "assets/social/twitter.png"
+    },
+    {
+      "label": "Instagram",
+      "url": "https://www.instagram.com/imoein/",
+      "icon": "ig",
+      "enabled": true,
+      "iconSrc": "assets/social/instagram.png"
+    },
+    {
+      "label": "Telegram",
+      "url": "https://t.me/imoein",
+      "icon": "tg",
+      "enabled": true,
+      "iconSrc": "assets/social/telegram.png"
+    },
+    {
+      "label": "TikTok",
+      "url": "https://www.tiktok.com/@imoein",
+      "icon": "tt",
+      "enabled": true,
+      "iconSrc": "assets/social/tiktok.png"
+    },
+    {
+      "label": "Threads",
+      "url": "https://www.threads.net/@imoein",
+      "icon": "th",
+      "enabled": true,
+      "iconSrc": "assets/social/threads.png"
+    },
+    {
+      "label": "Facebook",
+      "url": "https://www.facebook.com/imoein",
+      "icon": "fb",
+      "enabled": true,
+      "iconSrc": "assets/social/facebook.png"
+    }
+  ],
+  "home": {
+    "fa": {
+      "dir": "rtl",
+      "lang": "fa",
+      "eyebrow": "سایت شخصی",
+      "heroName": "معین قزلباش",
+      "heroTitle": "",
+      "heroStatement": "",
+      "intro": [
+        "من معین قزلباش هستم؛ متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل پیچیده کسب‌وکار با کمک فناوری."
+      ],
+      "sections": {
+        "whatIDo": "چه کاری انجام می‌دهم؟",
+        "expertise": "حوزه‌های تخصصی",
+        "experience": "تجربه حرفه‌ای",
+        "philosophy": "فلسفه کاری من",
+        "current": "در حال حاضر",
+        "social": "شبکه‌های اجتماعی",
+        "resume": "رزومه آنلاین",
+        "about": "درباره من"
+      },
+      "whatIDo": [
+        "زیرساخت‌های پایدار و مقیاس‌پذیر طراحی کنند.",
+        "فرآیندهای DevOps و استقرار نرم‌افزار را خودکارسازی کنند.",
+        "داده‌های پراکنده را به اطلاعات قابل تصمیم‌گیری تبدیل کنند.",
+        "عملکرد پایگاه‌های داده و سرویس‌های حیاتی را بهینه کنند.",
+        "محصولات دیجیتال را از ایده تا اجرا هدایت کنند.",
+        "فناوری را در راستای اهداف تجاری و درآمدزایی به کار بگیرند."
+      ],
+      "expertise": [
+        {
+          "title": "زیرساخت و معماری سیستم",
+          "body": "طراحی و مدیریت زیرساخت‌های مبتنی بر Linux، Docker، Virtualization، Cloud Services و Network Architecture برای سازمان‌های در حال رشد."
+        },
+        {
+          "title": "DevOps و اتوماسیون",
+          "body": "پیاده‌سازی CI/CD، Infrastructure Automation، Monitoring و بهینه‌سازی چرخه توسعه و انتشار نرم‌افزار."
+        },
+        {
+          "title": "داده و هوش تجاری",
+          "body": "طراحی ETL Pipeline، بهینه‌سازی پایگاه‌های داده MySQL و MariaDB، توسعه داشبوردهای تحلیلی و سیستم‌های تصمیم‌یار مبتنی بر داده."
+        },
+        {
+          "title": "مدیریت محصول و توسعه کسب‌وکار",
+          "body": "تجربه توسعه محصولات B2B در صنعت گردشگری، مدیریت تأمین‌کنندگان، API Integration و طراحی فرآیندهای مقیاس‌پذیر."
+        }
+      ],
+      "brands": [
+        "Channelead",
+        "Alibaba Travels",
+        "Faraz Raya",
+        "سه کلیک",
+        "کویر موتور",
+        "LiveFM Broadcasting"
+      ],
+      "roles": "در این مسیر مسئولیت‌هایی مانند مدیر زیرساخت و داده، مدیر توسعه کسب‌وکار، مدیر محصول، مشاور فنی و مدیر پروژه را بر عهده داشته‌ام.",
+      "philosophy": [
+        "فناوری زمانی ارزشمند است که بتواند یک مسئله واقعی را حل کند.",
+        "من اعتقاد دارم بهترین راهکارها زمانی شکل می‌گیرند که زیرساخت، داده و نیازهای کسب‌وکار در کنار یکدیگر دیده شوند. به همین دلیل همیشه تلاش کرده‌ام میان تیم‌های فنی، مدیریتی و تجاری پل ارتباطی ایجاد کنم و راهکارهایی ارائه دهم که هم از نظر فنی قابل اتکا باشند و هم از نظر اقتصادی ارزش‌آفرین."
+      ],
+      "current": [
+        "Infrastructure Architecture",
+        "Platform Engineering",
+        "DevOps & Automation",
+        "Data Engineering",
+        "Business Intelligence",
+        "Cloud Technologies",
+        "Digital Transformation",
+        "Travel Technology",
+        "AI-driven Business Systems"
+      ],
+      "resumeLinks": {
+        "fa": "مشاهده فارسی",
+        "en": "مشاهده انگلیسی"
+      },
+      "seo": {
+        "description": "معین قزلباش متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل کسب‌وکار است."
+      },
+      "introTitle": "درباره من",
+      "aboutBlocks": [
+        {
+          "title": "درباره من",
+          "paragraphs": [
+            "من معین قزلباش هستم؛ متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل پیچیده کسب‌وکار با کمک فناوری.",
+            "مسیر حرفه‌ای من از صنعت رسانه و پخش زنده اینترنتی آغاز شد؛ جایی که با چالش‌های زیرساختی، مدیریت ترافیک بالا و ارائه سرویس‌های پایدار در مقیاس بزرگ آشنا شدم. همین تجربه باعث شد علاقه‌ام به معماری سیستم‌ها، شبکه، سرورها و عملکرد زیرساخت‌ها شکل بگیرد.",
+            "در ادامه مسیر، وارد صنعت گردشگری و فناوری سفر شدم و فرصت همکاری با شرکت‌هایی را پیدا کردم که روزانه حجم بالایی از تراکنش‌ها، داده‌ها و تعاملات مشتریان را مدیریت می‌کردند. در این سال‌ها نقش‌های مختلفی از مدیر پروژه و مدیر محصول تا مدیر توسعه کسب‌وکار، مدیر داده و مدیر زیرساخت را تجربه کرده‌ام. این تنوع تجربه به من کمک کرده است تا فناوری را صرفاً از زاویه فنی نبینم، بلکه آن را به‌عنوان ابزاری برای رشد، سودآوری و توسعه کسب‌وکار در نظر بگیرم."
+          ],
+          "items": [
+            "زیرساخت و معماری فناوری",
+            "داده و تحلیل کسب‌وکار",
+            "توسعه محصولات و مدل‌های درآمدی"
+          ]
+        },
+        {
+          "title": "تجربه‌ای فراتر از فناوری",
+          "paragraphs": [
+            "بخش مهمی از فعالیت حرفه‌ای من صرفاً به پیاده‌سازی زیرساخت یا توسعه نرم‌افزار محدود نبوده است.",
+            "در سال‌های گذشته در طراحی مدل‌های B2B صنعت گردشگری، مدیریت ارتباط با تأمین‌کنندگان، طراحی فرآیندهای عملیاتی، تحلیل داده‌های فروش، بودجه‌بندی، ارائه گزارش به سهامداران و همکاری مستقیم با مدیران ارشد و سرمایه‌گذاران نیز نقش داشته‌ام.",
+            "این تجربه باعث شده است هنگام طراحی یک راهکار فنی، تنها به عملکرد سیستم فکر نکنم؛ بلکه اثر آن بر درآمد، بهره‌وری، مقیاس‌پذیری و آینده کسب‌وکار را نیز در نظر بگیرم."
+          ]
+        },
+        {
+          "title": "نگاه من به فناوری",
+          "paragraphs": [
+            "من معتقدم فناوری زمانی ارزشمند است که بتواند مشکلات واقعی را حل کند.",
+            "راهکارهای فنی پیچیده اگر منجر به کاهش هزینه، افزایش بهره‌وری، بهبود تجربه مشتری یا ایجاد فرصت‌های جدید درآمدی نشوند، ارزش واقعی خود را از دست می‌دهند.",
+            "به همین دلیل در تمام پروژه‌هایی که روی آن‌ها کار کرده‌ام، تلاش کرده‌ام میان نیازهای کسب‌وکار و راهکارهای فنی تعادل برقرار کنم؛ از طراحی زیرساخت‌های سازمانی و پلتفرم‌های ابری گرفته تا توسعه سیستم‌های تحلیلی، اتوماسیون فرآیندها و ابزارهای تصمیم‌سازی مبتنی بر داده."
+          ]
+        },
+        {
+          "title": "آنچه امروز روی آن تمرکز دارم",
+          "paragraphs": [
+            "امروزه تمرکز حرفه‌ای من بر حوزه‌های زیر است:"
+          ],
+          "items": [
+            "Infrastructure Architecture",
+            "Platform Engineering",
+            "DevOps & Automation",
+            "Data Engineering",
+            "Business Intelligence",
+            "Cloud Technologies",
+            "Digital Transformation",
+            "Travel Technology",
+            "AI-driven Business Systems"
+          ]
+        },
+        {
+          "title": "فراتر از شغل",
+          "paragraphs": [
+            "من فردی هستم که به یادگیری مداوم اعتقاد دارد. بخش قابل توجهی از دانش فعلی‌ام حاصل تجربه عملی، ساختن، شکست خوردن و دوباره ساختن بوده است.",
+            "علاقه‌مند به فناوری، تحلیل داده، صنعت گردشگری، مدل‌های کسب‌وکار، استارتاپ‌ها و سیستم‌های مقیاس‌پذیر هستم. از حل مسائل پیچیده لذت می‌برم و معمولاً زمانی بیشترین انگیزه را دارم که با چالشی روبه‌رو شوم که نیازمند ترکیب دانش فنی، تحلیل داده و تفکر استراتژیک باشد.",
+            "امروز خودم را صرفاً یک مدیر زیرساخت، تحلیلگر داده یا مدیر محصول نمی‌دانم؛ بلکه فردی می‌دانم که تلاش می‌کند میان فناوری، داده و کسب‌وکار پلی مؤثر ایجاد کند و از این مسیر ارزش واقعی خلق کند."
+          ]
+        }
+      ],
+      "heroSubtitles": [
+        "مدیر عملیات فناوری — زیرساخت، سیستم‌های کسب‌وکار و اتوماسیون فرایندها"
+      ],
+      "resumeDownloadLinks": {
+        "fa": "دانلود فارسی",
+        "en": "دانلود انگلیسی"
+      }
+    },
+    "en": {
+      "dir": "ltr",
+      "lang": "en",
+      "eyebrow": "Personal Website",
+      "heroName": "Moein Ghezelbash",
+      "heroTitle": "",
+      "heroStatement": "",
+      "intro": [
+        "I am Moein Ghezelbash, an infrastructure, data, and technology specialist with more than a decade of experience designing scalable systems, developing digital products, and solving complex business problems with technology."
+      ],
+      "sections": {
+        "whatIDo": "What I do",
+        "expertise": "Areas of Expertise",
+        "experience": "Professional Experience",
+        "philosophy": "Work Philosophy",
+        "current": "Currently Interested In",
+        "social": "Social Links",
+        "resume": "Online Resume",
+        "about": "About Me"
+      },
+      "whatIDo": [
+        "Design stable and scalable infrastructure.",
+        "Automate DevOps and software delivery processes.",
+        "Turn scattered data into decision-ready information.",
+        "Optimize databases and mission-critical services.",
+        "Lead digital products from idea to execution.",
+        "Align technology with commercial and revenue goals."
+      ],
+      "expertise": [
+        {
+          "title": "Infrastructure & System Architecture",
+          "body": "Designing and operating Linux, Docker, virtualization, cloud services, and network architecture for growing organizations."
+        },
+        {
+          "title": "DevOps & Automation",
+          "body": "Implementing CI/CD, infrastructure automation, monitoring, and software delivery optimization."
+        },
+        {
+          "title": "Data & Business Intelligence",
+          "body": "Designing ETL pipelines, optimizing MySQL and MariaDB databases, and building analytical dashboards and decision-support systems."
+        },
+        {
+          "title": "Product Management & Business Development",
+          "body": "Building B2B travel products, supplier operations, API integrations, and scalable operating processes."
+        }
+      ],
+      "brands": [
+        "Channelead",
+        "Alibaba Travels",
+        "Faraz Raya",
+        "3Click.com",
+        "KAVIR Motor",
+        "LiveFM Broadcasting"
+      ],
+      "roles": "Across this path, I have worked as an infrastructure and data leader, business development manager, product manager, technical consultant, and project manager.",
+      "philosophy": [
+        "Technology is valuable when it solves a real problem.",
+        "I believe the best solutions are created when infrastructure, data, and business needs are considered together. I build bridges between technical, management, and commercial teams to deliver reliable and economically valuable solutions."
+      ],
+      "current": [
+        "Infrastructure Architecture",
+        "Platform Engineering",
+        "DevOps & Automation",
+        "Data Engineering",
+        "Business Intelligence",
+        "Cloud Technologies",
+        "Digital Transformation",
+        "Travel Technology",
+        "AI-driven Business Systems"
+      ],
+      "resumeLinks": {
+        "fa": "View FA",
+        "en": "View EN"
+      },
+      "seo": {
+        "description": "Moein Ghezelbash is an infrastructure, data, and technology specialist with 10+ years of experience designing scalable systems and digital products."
+      },
+      "introTitle": "About Me",
+      "aboutBlocks": [
+        {
+          "title": "About Me",
+          "paragraphs": [
+            "I am Moein Ghezelbash, an infrastructure, data, and technology specialist with more than a decade of experience designing scalable systems, developing digital products, and solving complex business problems with technology.",
+            "My professional path started in digital media and live streaming, where I learned to handle infrastructure challenges, high traffic, and reliable large-scale services. That experience shaped my interest in system architecture, networks, servers, and infrastructure performance.",
+            "Later, I moved into travel technology and worked with businesses that manage high volumes of transactions, data, and customer interactions. I have worked across project management, product management, business development, data, and infrastructure leadership, which helped me see technology as a tool for growth, profitability, and business development."
+          ],
+          "items": [
+            "Technology infrastructure and architecture",
+            "Data and business analysis",
+            "Product development and revenue models"
+          ]
+        },
+        {
+          "title": "Beyond Technology",
+          "paragraphs": [
+            "A significant part of my work has gone beyond infrastructure implementation or software delivery.",
+            "I have contributed to B2B travel models, supplier management, operating process design, sales data analysis, budgeting, shareholder reporting, and direct collaboration with executives and investors.",
+            "This experience helps me consider revenue, productivity, scalability, and the future of the business whenever I design a technical solution."
+          ]
+        },
+        {
+          "title": "How I Think About Technology",
+          "paragraphs": [
+            "I believe technology is valuable when it solves real problems.",
+            "Complex technical solutions lose their value if they do not reduce cost, improve productivity, improve customer experience, or create new revenue opportunities.",
+            "In every project, I try to balance business needs with technical solutions, from enterprise infrastructure and cloud platforms to analytics systems, process automation, and data-driven decision tools."
+          ]
+        },
+        {
+          "title": "What I Focus On Today",
+          "paragraphs": [
+            "Today my professional focus is on:"
+          ],
+          "items": [
+            "Infrastructure Architecture",
+            "Platform Engineering",
+            "DevOps & Automation",
+            "Data Engineering",
+            "Business Intelligence",
+            "Cloud Technologies",
+            "Digital Transformation",
+            "Travel Technology",
+            "AI-driven Business Systems"
+          ]
+        },
+        {
+          "title": "Beyond the Job",
+          "paragraphs": [
+            "I believe in continuous learning. Much of what I know today comes from hands-on experience, building, failing, and building again.",
+            "I am interested in technology, data analysis, travel, business models, startups, and scalable systems. I enjoy solving complex problems that require a mix of technical knowledge, data analysis, and strategic thinking.",
+            "I do not see myself only as an infrastructure manager, data analyst, or product manager; I see myself as someone who builds effective bridges between technology, data, and business to create real value."
+          ]
+        }
+      ],
+      "heroSubtitles": [
+        "Technical Operations Manager — Infrastructure • Business Systems • Process Automation"
+      ],
+      "resumeDownloadLinks": {
+        "fa": "Download FA",
+        "en": "Download EN"
+      }
+    }
+  },
+  "profileImageCandidates": [
+    "assets/profile.jpg",
+    "assets/profile.jpeg",
+    "assets/profile.png",
+    "assets/profile.webp"
+  ],
+  "resumeDownloads": {
+    "fa": "resume/معین قزلباش.pdf",
+    "en": "resume/MOEIN GHEZELBASH.pdf"
+  }
+}
