@@ -352,3 +352,4 @@ html[dir="rtl"] .resume-section-title::after { background: linear-gradient(270de
   .resume-hero, .resume-job, .resume-card-grid, .resume-details-grid { grid-template-columns: 1fr; }
   .resume-period { position: static; text-align: start; }
 }
+.resume-mark img { width: 100%; height: 100%; object-fit: cover; }

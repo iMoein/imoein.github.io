@@ -51,25 +51,34 @@ const renderLocaleSwitcher = () => {
 const renderProfileImage = (data, content) => {
   const image = $("#profile-photo");
   const initials = $("#profile-initials");
+  const candidates = data.profileImageCandidates || [data.profileImage].filter(Boolean);
   initials.textContent = content.heroName
     .split(/\s+/)
     .slice(0, 2)
     .map((part) => part[0])
     .join("");
 
-  if (!data.profileImage) {
+  if (!candidates.length) {
     image.hidden = true;
     initials.hidden = false;
     return;
   }
 
-  image.src = data.profileImage;
+  let candidateIndex = 0;
+  const tryNextImage = () => {
+    if (candidateIndex >= candidates.length) {
+      image.hidden = true;
+      initials.hidden = false;
+      return;
+    }
+    image.src = candidates[candidateIndex];
+    candidateIndex += 1;
+  };
+
   image.hidden = false;
   initials.hidden = true;
-  image.onerror = () => {
-    image.hidden = true;
-    initials.hidden = false;
-  };
+  image.onerror = tryNextImage;
+  tryNextImage();
 };
 
 const renderSeo = (content) => {

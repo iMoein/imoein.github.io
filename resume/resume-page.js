@@ -17,22 +17,61 @@ const list = (items, className = '') => {
 
 const tags = (items) => list(items, 'tags');
 
+const resolveAsset = (path) => `../${path}`;
+
 const logoBox = (logo, company) => {
   const box = create('div', '', 'company-logo');
   const fallback = create('span', logo?.text || company.slice(0, 2));
-  if (logo?.src) {
+  const candidates = logo?.candidates?.length ? logo.candidates : [logo?.src].filter(Boolean);
+  if (candidates.length) {
     const img = document.createElement('img');
-    img.src = `../${logo.src}`;
     img.alt = `${company} logo`;
+    let candidateIndex = 0;
+    const tryNextLogo = () => {
+      if (candidateIndex >= candidates.length) {
+        img.remove();
+        if (!box.contains(fallback)) box.appendChild(fallback);
+        return;
+      }
+      img.src = resolveAsset(candidates[candidateIndex]);
+      candidateIndex += 1;
+    };
     img.onerror = () => {
-      img.remove();
-      box.appendChild(fallback);
+      tryNextLogo();
     };
     box.appendChild(img);
+    tryNextLogo();
   } else {
     box.appendChild(fallback);
   }
   return box;
+};
+
+const profileMark = (data, content) => {
+  const mark = create('div', '', 'resume-mark');
+  const fallback = create('span', content.profile.name.split(/\s+/).slice(0, 2).map((part) => part[0]).join(''));
+  const candidates = data.profileImageCandidates || [data.profileImage].filter(Boolean);
+  if (!candidates.length) {
+    mark.appendChild(fallback);
+    return mark;
+  }
+
+  const img = document.createElement('img');
+  img.alt = content.profile.name;
+  let candidateIndex = 0;
+  const tryNextProfile = () => {
+    if (candidateIndex >= candidates.length) {
+      img.remove();
+      if (!mark.contains(fallback)) mark.appendChild(fallback);
+      return;
+    }
+    img.src = resolveAsset(candidates[candidateIndex]);
+    candidateIndex += 1;
+  };
+  img.onerror = tryNextProfile;
+  mark.appendChild(img);
+  tryNextProfile();
+  return mark;
 };
 
 const section = (title, className = '') => {
@@ -42,7 +81,7 @@ const section = (title, className = '') => {
   return wrapper;
 };
 
-const renderHero = (content, contact) => {
+const renderHero = (data, content, contact) => {
   const phone = locale === 'fa' ? contact.phone.fa : contact.phone.international;
   const hero = create('header', '', 'resume-hero');
   const copy = create('div', '', 'resume-hero-copy');
@@ -57,9 +96,7 @@ const renderHero = (content, contact) => {
   contactBar.appendChild(linkedin);
   copy.appendChild(contactBar);
 
-  const mark = create('div', '', 'resume-mark');
-  mark.appendChild(create('span', content.profile.name.split(/\s+/).slice(0, 2).map((part) => part[0]).join('')));
-  hero.append(copy, mark);
+  hero.append(copy, profileMark(data, content));
   root.appendChild(hero);
 };
 
@@ -71,7 +108,7 @@ const render = (data) => {
   document.title = `${content.profile.name} | ${content.profile.title}`;
   document.querySelector('meta[name="description"]').setAttribute('content', content.seo.description);
 
-  renderHero(content, contact);
+  renderHero(data, content, contact);
 
   const summary = section(content.sections.summary, 'summary-section');
   const summaryCard = create('div', '', 'card resume-summary-card');
