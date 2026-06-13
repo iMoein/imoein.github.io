@@ -125,7 +125,11 @@
             "Implemented scalable infrastructure supporting large-scale B2B transactions.",
             "Improved reporting and analytics capabilities through BI platform integration.",
             "Enhanced database performance and system reliability."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/channelead.svg",
+            "text": "CL"
+          }
         },
         {
           "role": "Technical Operations & Infrastructure Consultant",
@@ -142,7 +146,11 @@
             "Automated software deployment and maintenance procedures for customer environments.",
             "Improved operational visibility through centralized monitoring and reporting.",
             "Supported infrastructure operations for enterprise-level hospitality clients."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/faraz-raya.svg",
+            "text": "FR"
+          }
         },
         {
           "role": "Business Development Manager",
@@ -158,7 +166,11 @@
             "Expanded supplier ecosystem through multiple successful integrations.",
             "Reduced booking conflicts through improved inventory aggregation processes.",
             "Established reporting frameworks for shareholders and executive stakeholders."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/channelead.svg",
+            "text": "CL"
+          }
         },
         {
           "role": "Product Manager",
@@ -174,7 +186,11 @@
             "Improved customer service operations through CRM optimization.",
             "Supported large-scale infrastructure and operational transition projects.",
             "Contributed to business intelligence and operational reporting initiatives."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/alibaba-travels.svg",
+            "text": "AT"
+          }
         },
         {
           "role": "Technology & Finance Consultant",
@@ -185,7 +201,11 @@
             "Supported financial system integrations and online payment process optimization.",
             "Provided technology recommendations for business process improvements."
           ],
-          "achievements": []
+          "achievements": [],
+          "logo": {
+            "src": "assets/logos/kavir-motor.svg",
+            "text": "KM"
+          }
         },
         {
           "role": "Project Manager",
@@ -199,7 +219,11 @@
           "achievements": [
             "Successfully delivered large-scale online broadcasting projects.",
             "Maintained service availability during peak traffic events."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/livefm.svg",
+            "text": "LF"
+          }
         }
       ],
       "technologies": [
@@ -341,7 +365,11 @@
             "ایجاد زیرساخت مقیاس‌پذیر برای سرویس‌های B2B.",
             "توسعه ابزارهای هوش تجاری برای تحلیل عملکرد کسب‌وکار.",
             "بهبود عملکرد سامانه‌ها و کاهش وابستگی به فرایندهای دستی."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/channelead.svg",
+            "text": "CL"
+          }
         },
         {
           "role": "مشاور زیرساخت و عملیات فناوری",
@@ -358,7 +386,11 @@
             "کاهش زمان استقرار و بروزرسانی سامانه‌های مشتریان.",
             "افزایش قابلیت اطمینان زیرساخت‌های عملیاتی.",
             "بهبود فرآیندهای نگهداری و پشتیبانی سرویس‌ها."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/faraz-raya.svg",
+            "text": "FR"
+          }
         },
         {
           "role": "مدیر توسعه کسب‌وکار",
@@ -375,7 +407,11 @@
             "توسعه شبکه تأمین‌کنندگان و شرکای تجاری.",
             "کاهش خطاهای رزرو از طریق بهبود مدل‌های تجمیع داده.",
             "ارتقای فرایندهای گزارش‌گیری و تصمیم‌سازی مدیریتی."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/channelead.svg",
+            "text": "CL"
+          }
         },
         {
           "role": "مدیر محصول",
@@ -392,7 +428,11 @@
             "بهبود عملکرد مرکز تماس و فرایندهای پشتیبانی مشتریان.",
             "اجرای موفق پروژه‌های توسعه زیرساخت و انتقال سرویس‌ها.",
             "توسعه ابزارهای تحلیلی برای تیم‌های عملیاتی."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/alibaba-travels.svg",
+            "text": "AT"
+          }
         },
         {
           "role": "مشاور فناوری و سیستم‌های مالی",
@@ -403,7 +443,11 @@
             "بهینه‌سازی فرایندهای مالی و پرداخت الکترونیک.",
             "ارائه راهکارهای فناوری برای بهبود عملکرد سازمانی."
           ],
-          "achievements": []
+          "achievements": [],
+          "logo": {
+            "src": "assets/logos/kavir-motor.svg",
+            "text": "KM"
+          }
         },
         {
           "role": "مدیر پروژه",
@@ -417,7 +461,11 @@
           "achievements": [
             "اجرای موفق سرویس‌های پخش زنده در مقیاس بالا.",
             "حفظ پایداری سرویس در رویدادهای پرترافیک."
-          ]
+          ],
+          "logo": {
+            "src": "assets/logos/livefm.svg",
+            "text": "LF"
+          }
         }
       ],
       "technologies": [
