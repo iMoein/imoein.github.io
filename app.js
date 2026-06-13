@@ -163,6 +163,44 @@ const renderResumeLinks = (content, resumeFiles) => {
   });
 };
 
+const companyInitials = (company) => company
+  .split(/\s+|&|-/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((part) => part[0])
+  .join("")
+  .toUpperCase();
+
+const renderCompanyLogo = (logo, company) => {
+  const box = document.createElement("span");
+  box.className = "brand-logo";
+  const fallback = document.createElement("span");
+  fallback.textContent = logo?.text || companyInitials(company);
+  const candidates = logo?.candidates?.length ? logo.candidates : [logo?.src].filter(Boolean);
+
+  if (!candidates.length) {
+    box.appendChild(fallback);
+    return box;
+  }
+
+  const image = document.createElement("img");
+  image.alt = `${company} logo`;
+  let candidateIndex = 0;
+  const tryNextLogo = () => {
+    if (candidateIndex >= candidates.length) {
+      image.remove();
+      if (!box.contains(fallback)) box.appendChild(fallback);
+      return;
+    }
+    image.src = candidates[candidateIndex];
+    candidateIndex += 1;
+  };
+  image.onerror = tryNextLogo;
+  box.appendChild(image);
+  tryNextLogo();
+  return box;
+};
+
 const renderCards = (selector, items, className = "card") => {
   const target = $(selector);
   clear(target);
@@ -191,10 +229,26 @@ const renderCards = (selector, items, className = "card") => {
   });
 };
 
-const renderExperienceSummary = (content) => {
+const renderExperienceSummary = (content, data) => {
   const target = $("#experience-summary");
   clear(target);
-  target.appendChild(createList(content.brands, "brand-list"));
+  const companies = new Map();
+  data.locales[state.locale].experience.forEach((job) => {
+    if (!companies.has(job.company)) {
+      companies.set(job.company, job.logo);
+    }
+  });
+
+  const brandList = document.createElement("div");
+  brandList.className = "brand-logo-list";
+  companies.forEach((logo, company) => {
+    const item = document.createElement("article");
+    item.className = "brand-logo-item";
+    item.append(renderCompanyLogo(logo, company), document.createTextNode(company));
+    brandList.appendChild(item);
+  });
+  target.appendChild(brandList);
+
   const roles = document.createElement("p");
   roles.textContent = content.roles;
   target.appendChild(roles);
@@ -228,7 +282,7 @@ const renderHome = () => {
   renderResumeLinks(content, data.resumeFiles);
   renderCards("#what-i-do", content.whatIDo, "card action-card");
   renderCards("#expertise", content.expertise, "card expertise-card");
-  renderExperienceSummary(content);
+  renderExperienceSummary(content, data);
   renderCards("#current-focus", content.current, "focus-pill");
   renderParagraphs("#philosophy", content.philosophy);
   $("#year").textContent = new Date().getFullYear();

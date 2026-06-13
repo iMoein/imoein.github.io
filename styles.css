@@ -355,3 +355,9 @@ html[dir="rtl"] .resume-section-title::after { background: linear-gradient(270de
 .resume-mark img { width: 100%; height: 100%; object-fit: cover; }
 .profile-frame img, .resume-mark img { display: block; border-radius: inherit; }
 .resume-mark { overflow: hidden; }
+
+.brand-logo-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-bottom: 18px; }
+.brand-logo-item { display: flex; align-items: center; gap: 10px; min-height: 58px; color: var(--brand); background: #fff; border: 1px solid var(--border); border-radius: 18px; padding: 10px 12px; font-weight: 800; }
+.brand-logo { flex: 0 0 38px; width: 38px; height: 38px; border-radius: 13px; display: grid; place-items: center; overflow: hidden; color: #fff; background: linear-gradient(145deg, var(--brand), var(--primary)); font-size: .78rem; font-weight: 900; border: 1px solid rgba(216,195,165,.75); }
+.brand-logo img { width: 100%; height: 100%; object-fit: contain; padding: 5px; background: #fff; }
+@media (max-width: 640px) { .brand-logo-list { grid-template-columns: 1fr; } }
