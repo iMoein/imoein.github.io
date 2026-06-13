@@ -370,3 +370,111 @@ html[dir="rtl"] .resume-section-title::after { background: linear-gradient(270de
 .download-bar .download-link:hover { color: #fff; background: var(--accent); border-color: var(--accent); }
 @media (max-width: 360px) { .download-bar { grid-template-columns: 1fr; } }
 .social-icon img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
+
+/* Mobile-first refinements for the homepage intro, hero, and resume actions */
+@media (max-width: 760px) {
+  .container { width: min(100% - 24px, 1080px); }
+  .hero { padding: 20px 0 18px; }
+  .home-hero .hero-card {
+    min-height: auto;
+    padding: 28px 22px;
+    border-radius: 28px;
+  }
+  .home-hero .hero-content {
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    text-align: center;
+    gap: 22px;
+  }
+  .home-hero h1 {
+    font-size: clamp(2.8rem, 14vw, 4.5rem);
+    line-height: 1.08;
+  }
+  .hero-subtitles {
+    justify-items: center;
+    max-width: 100%;
+    line-height: 1.7;
+  }
+  .profile-frame {
+    width: min(190px, 56vw);
+    border-radius: 26px;
+  }
+  .home-intro {
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+  }
+  .home-intro > div { min-width: 0; }
+  .sticky-card { position: static; }
+  .about-card { padding: 22px; }
+  .about-card p {
+    text-align: start;
+    font-size: 1rem;
+    line-height: 1.9;
+    word-spacing: normal;
+  }
+  .about-list { grid-template-columns: 1fr; }
+  .social-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+  .social-grid a {
+    min-height: 48px;
+    justify-content: space-between;
+  }
+  .download-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .download-bar .resume-link {
+    min-width: 0;
+    padding: 8px 7px;
+    font-size: .78rem;
+    line-height: 1.35;
+    white-space: nowrap;
+  }
+  .printable-resume { padding: 24px 0 44px; }
+  .resume-hero {
+    grid-template-columns: 1fr !important;
+    margin: 22px 0 28px;
+    padding: 26px 22px;
+    border-radius: 28px;
+  }
+  .resume-hero h1 {
+    font-size: clamp(2.6rem, 13vw, 4.2rem);
+    line-height: 1.05;
+  }
+  .resume-hero .lead {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+  .resume-contact { gap: 8px; }
+  .resume-contact span,
+  .resume-contact a {
+    padding: 7px 10px;
+    font-size: .9rem;
+  }
+  .resume-mark {
+    width: min(180px, 58vw);
+    border-radius: 24px;
+  }
+  .resume-summary-card p {
+    font-size: 1rem;
+    line-height: 1.85;
+  }
+}
+
+@media (max-width: 390px) {
+  .download-bar .resume-link {
+    padding-inline: 5px;
+    font-size: .72rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .download-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .download-bar .resume-link {
+    padding: 7px 4px;
+    font-size: .68rem;
+    white-space: nowrap;
+  }
+}
