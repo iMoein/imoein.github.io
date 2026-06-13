@@ -283,3 +283,19 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
   .section-title h2 { white-space: normal; }
   .hero-subtitles { font-size: .98rem; }
 }
+
+/* Locale-specific hero and denser status cards */
+.hero-subtitles { max-width: 760px; }
+.locale-fa .hero-subtitles { color: var(--complement); font-size: clamp(1.08rem, 2vw, 1.32rem); }
+.locale-en .hero-subtitles { color: rgba(255,255,255,.88); font-size: clamp(1rem, 1.8vw, 1.22rem); }
+.home-status { grid-template-columns: minmax(0, 1fr) minmax(320px, .72fr); align-items: start; }
+.home-status .card { min-height: 0; }
+#experience-summary { padding: 24px; background: linear-gradient(145deg, #fff, rgba(31,138,138,.07)); }
+#experience-summary .brand-list { margin-bottom: 16px; }
+#experience-summary p { margin: 0; }
+#current-focus { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding: 20px; }
+#current-focus .focus-pill { padding: 10px; font-size: .92rem; line-height: 1.35; border-radius: 14px; background: #fff; }
+@media (max-width: 800px) {
+  .home-status, #current-focus { grid-template-columns: 1fr; }
+}
+.locale-en .hero-subtitles span:last-child { color: rgba(255,255,255,.88); }
