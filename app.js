@@ -141,24 +141,38 @@ const renderAbout = (content) => {
 const renderSocialLinks = (links) => {
   const target = $("#social-links");
   clear(target);
-  links.forEach(({ label, url }) => {
+  links.filter((item) => item.enabled !== false).forEach(({ label, url, icon }) => {
     const link = document.createElement("a");
     link.href = url;
-    link.textContent = label;
     link.target = "_blank";
     link.rel = "noreferrer";
+    const mark = document.createElement("span");
+    mark.className = "social-icon";
+    mark.textContent = icon || label.slice(0, 2);
+    const text = document.createElement("span");
+    text.textContent = label;
+    link.append(mark, text);
     target.appendChild(link);
   });
 };
 
-const renderResumeLinks = (content, resumeFiles) => {
+const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
   const downloads = $("#downloads");
   clear(downloads);
   ["fa", "en"].forEach((locale) => {
     const link = document.createElement("a");
+    link.className = "resume-link view-link";
     link.href = resumeFiles[locale];
     link.textContent = content.resumeLinks[locale];
     link.target = "_blank";
+    downloads.appendChild(link);
+  });
+  ["fa", "en"].forEach((locale) => {
+    const link = document.createElement("a");
+    link.className = "resume-link download-link";
+    link.href = resumeDownloads[locale];
+    link.textContent = content.resumeDownloadLinks[locale];
+    link.download = "";
     downloads.appendChild(link);
   });
 };
@@ -279,7 +293,7 @@ const renderHome = () => {
 
   renderAbout(content);
   renderSocialLinks(data.socialLinks);
-  renderResumeLinks(content, data.resumeFiles);
+  renderResumeLinks(content, data.resumeFiles, data.resumeDownloads);
   renderCards("#what-i-do", content.whatIDo, "card action-card");
   renderCards("#expertise", content.expertise, "card expertise-card");
   renderExperienceSummary(content, data);

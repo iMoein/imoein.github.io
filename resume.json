@@ -808,39 +808,57 @@
   "socialLinks": [
     {
       "label": "LinkedIn",
-      "url": "https://www.linkedin.com/in/moeinghezelbash/"
+      "url": "https://www.linkedin.com/in/moeinghezelbash/",
+      "icon": "in",
+      "enabled": true
     },
     {
       "label": "GitHub",
-      "url": "https://github.com/imoein"
+      "url": "https://github.com/imoein",
+      "icon": "gh",
+      "enabled": true
     },
     {
       "label": "WhatsApp",
-      "url": "https://wa.me/989120137435"
+      "url": "https://wa.me/989120137435",
+      "icon": "wa",
+      "enabled": true
     },
     {
       "label": "X",
-      "url": "https://x.com/imoein"
+      "url": "https://x.com/imoein",
+      "icon": "𝕏",
+      "enabled": true
     },
     {
       "label": "Instagram",
-      "url": "https://www.instagram.com/imoein/"
+      "url": "https://www.instagram.com/imoein/",
+      "icon": "ig",
+      "enabled": true
     },
     {
       "label": "Telegram",
-      "url": "https://t.me/imoein"
+      "url": "https://t.me/imoein",
+      "icon": "tg",
+      "enabled": true
     },
     {
       "label": "TikTok",
-      "url": "https://www.tiktok.com/@imoein"
+      "url": "https://www.tiktok.com/@imoein",
+      "icon": "tt",
+      "enabled": true
     },
     {
       "label": "Threads",
-      "url": "https://www.threads.net/@imoein"
+      "url": "https://www.threads.net/@imoein",
+      "icon": "th",
+      "enabled": true
     },
     {
       "label": "Facebook",
-      "url": "https://www.facebook.com/imoein"
+      "url": "https://www.facebook.com/imoein",
+      "icon": "fb",
+      "enabled": true
     }
   ],
   "home": {
@@ -915,8 +933,8 @@
         "AI-driven Business Systems"
       ],
       "resumeLinks": {
-        "fa": "مشاهده رزومه فارسی",
-        "en": "View English Resume"
+        "fa": "مشاهده فارسی",
+        "en": "مشاهده انگلیسی"
       },
       "seo": {
         "description": "معین قزلباش متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل کسب‌وکار است."
@@ -980,7 +998,11 @@
       ],
       "heroSubtitles": [
         "مدیر عملیات فناوری — زیرساخت، سیستم‌های کسب‌وکار و اتوماسیون فرایندها"
-      ]
+      ],
+      "resumeDownloadLinks": {
+        "fa": "دانلود فارسی",
+        "en": "دانلود انگلیسی"
+      }
     },
     "en": {
       "dir": "ltr",
@@ -1053,8 +1075,8 @@
         "AI-driven Business Systems"
       ],
       "resumeLinks": {
-        "fa": "Persian Resume",
-        "en": "English Resume"
+        "fa": "View FA",
+        "en": "View EN"
       },
       "seo": {
         "description": "Moein Ghezelbash is an infrastructure, data, and technology specialist with 10+ years of experience designing scalable systems and digital products."
@@ -1118,7 +1140,11 @@
       ],
       "heroSubtitles": [
         "Technical Operations Manager — Infrastructure • Business Systems • Process Automation"
-      ]
+      ],
+      "resumeDownloadLinks": {
+        "fa": "Download FA",
+        "en": "Download EN"
+      }
     }
   },
   "profileImageCandidates": [
@@ -1126,5 +1152,9 @@
     "assets/profile.jpeg",
     "assets/profile.png",
     "assets/profile.webp"
-  ]
+  ],
+  "resumeDownloads": {
+    "fa": "resume/معین قزلباش.pdf",
+    "en": "resume/MOEIN GHEZELBASH.pdf"
+  }
 }
