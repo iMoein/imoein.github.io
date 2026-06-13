@@ -503,12 +503,10 @@
       "lang": "fa",
       "eyebrow": "سایت شخصی",
       "heroName": "معین قزلباش",
-      "heroTitle": "Infrastructure Architect • DevOps Leader • Data & Business Technology Strategist",
+      "heroTitle": "",
       "heroStatement": "",
       "intro": [
-        "من معین قزلباش هستم؛ متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل پیچیده کسب‌وکار با کمک فناوری.",
-        "مسیر حرفه‌ای من از صنعت رسانه و پخش زنده اینترنتی آغاز شد؛ جایی که با چالش‌های زیرساختی، مدیریت ترافیک بالا و ارائه سرویس‌های پایدار در مقیاس بزرگ آشنا شدم. همین تجربه باعث شد علاقه‌ام به معماری سیستم‌ها، شبکه، سرورها و عملکرد زیرساخت‌ها شکل بگیرد",
-        "در ادامه مسیر، وارد صنعت گردشگری و فناوری سفر شدم و فرصت همکاری با شرکت‌هایی را پیدا کردم که روزانه حجم بالایی از تراکنش‌ها، داده‌ها و تعاملات مشتریان را مدیریت می‌کردند. در این سال‌ها نقش‌های مختلفی از مدیر پروژه و مدیر محصول تا مدیر توسعه کسب‌وکار، مدیر داده و مدیر زیرساخت را تجربه کرده‌ام. این تنوع تجربه به من کمک کرده است تا فناوری را صرفاً از زاویه فنی نبینم، بلکه آن را به‌عنوان ابزاری برای رشد، سودآوری و توسعه کسب‌وکار در نظر بگیرم."
+        "من معین قزلباش هستم؛ متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل پیچیده کسب‌وکار با کمک فناوری."
       ],
       "sections": {
         "whatIDo": "چه کاری انجام می‌دهم؟",
@@ -517,7 +515,8 @@
         "philosophy": "فلسفه کاری من",
         "current": "در حال حاضر",
         "social": "شبکه‌های اجتماعی",
-        "resume": "رزومه آنلاین"
+        "resume": "رزومه آنلاین",
+        "about": "درباره من"
       },
       "whatIDo": [
         "زیرساخت‌های پایدار و مقیاس‌پذیر طراحی کنند.",
@@ -558,33 +557,90 @@
         "من اعتقاد دارم بهترین راهکارها زمانی شکل می‌گیرند که زیرساخت، داده و نیازهای کسب‌وکار در کنار یکدیگر دیده شوند. به همین دلیل همیشه تلاش کرده‌ام میان تیم‌های فنی، مدیریتی و تجاری پل ارتباطی ایجاد کنم و راهکارهایی ارائه دهم که هم از نظر فنی قابل اتکا باشند و هم از نظر اقتصادی ارزش‌آفرین."
       ],
       "current": [
-        "Cloud & Infrastructure Architecture",
-        "DevOps Leadership",
+        "Infrastructure Architecture",
+        "Platform Engineering",
+        "DevOps & Automation",
         "Data Engineering",
         "Business Intelligence",
-        "Travel Technology",
+        "Cloud Technologies",
         "Digital Transformation",
-        "Startup Advisory"
+        "Travel Technology",
+        "AI-driven Business Systems"
       ],
       "resumeLinks": {
         "fa": "مشاهده رزومه فارسی",
         "en": "View English Resume"
       },
       "seo": {
-        "description": "معین قزلباش معمار زیرساخت، رهبر DevOps و استراتژیست داده و فناوری کسب‌وکار با تجربه در گردشگری، BI، زیرساخت و تحول دیجیتال."
-      }
+        "description": "معین قزلباش متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل کسب‌وکار است."
+      },
+      "introTitle": "درباره من",
+      "aboutBlocks": [
+        {
+          "title": "درباره من",
+          "paragraphs": [
+            "من معین قزلباش هستم؛ متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل پیچیده کسب‌وکار با کمک فناوری.",
+            "مسیر حرفه‌ای من از صنعت رسانه و پخش زنده اینترنتی آغاز شد؛ جایی که با چالش‌های زیرساختی، مدیریت ترافیک بالا و ارائه سرویس‌های پایدار در مقیاس بزرگ آشنا شدم. همین تجربه باعث شد علاقه‌ام به معماری سیستم‌ها، شبکه، سرورها و عملکرد زیرساخت‌ها شکل بگیرد.",
+            "در ادامه مسیر، وارد صنعت گردشگری و فناوری سفر شدم و فرصت همکاری با شرکت‌هایی را پیدا کردم که روزانه حجم بالایی از تراکنش‌ها، داده‌ها و تعاملات مشتریان را مدیریت می‌کردند. در این سال‌ها نقش‌های مختلفی از مدیر پروژه و مدیر محصول تا مدیر توسعه کسب‌وکار، مدیر داده و مدیر زیرساخت را تجربه کرده‌ام. این تنوع تجربه به من کمک کرده است تا فناوری را صرفاً از زاویه فنی نبینم، بلکه آن را به‌عنوان ابزاری برای رشد، سودآوری و توسعه کسب‌وکار در نظر بگیرم."
+          ],
+          "items": [
+            "زیرساخت و معماری فناوری",
+            "داده و تحلیل کسب‌وکار",
+            "توسعه محصولات و مدل‌های درآمدی"
+          ]
+        },
+        {
+          "title": "تجربه‌ای فراتر از فناوری",
+          "paragraphs": [
+            "بخش مهمی از فعالیت حرفه‌ای من صرفاً به پیاده‌سازی زیرساخت یا توسعه نرم‌افزار محدود نبوده است.",
+            "در سال‌های گذشته در طراحی مدل‌های B2B صنعت گردشگری، مدیریت ارتباط با تأمین‌کنندگان، طراحی فرآیندهای عملیاتی، تحلیل داده‌های فروش، بودجه‌بندی، ارائه گزارش به سهامداران و همکاری مستقیم با مدیران ارشد و سرمایه‌گذاران نیز نقش داشته‌ام.",
+            "این تجربه باعث شده است هنگام طراحی یک راهکار فنی، تنها به عملکرد سیستم فکر نکنم؛ بلکه اثر آن بر درآمد، بهره‌وری، مقیاس‌پذیری و آینده کسب‌وکار را نیز در نظر بگیرم."
+          ]
+        },
+        {
+          "title": "نگاه من به فناوری",
+          "paragraphs": [
+            "من معتقدم فناوری زمانی ارزشمند است که بتواند مشکلات واقعی را حل کند.",
+            "راهکارهای فنی پیچیده اگر منجر به کاهش هزینه، افزایش بهره‌وری، بهبود تجربه مشتری یا ایجاد فرصت‌های جدید درآمدی نشوند، ارزش واقعی خود را از دست می‌دهند.",
+            "به همین دلیل در تمام پروژه‌هایی که روی آن‌ها کار کرده‌ام، تلاش کرده‌ام میان نیازهای کسب‌وکار و راهکارهای فنی تعادل برقرار کنم؛ از طراحی زیرساخت‌های سازمانی و پلتفرم‌های ابری گرفته تا توسعه سیستم‌های تحلیلی، اتوماسیون فرآیندها و ابزارهای تصمیم‌سازی مبتنی بر داده."
+          ]
+        },
+        {
+          "title": "آنچه امروز روی آن تمرکز دارم",
+          "paragraphs": [
+            "امروزه تمرکز حرفه‌ای من بر حوزه‌های زیر است:"
+          ],
+          "items": [
+            "Infrastructure Architecture",
+            "Platform Engineering",
+            "DevOps & Automation",
+            "Data Engineering",
+            "Business Intelligence",
+            "Cloud Technologies",
+            "Digital Transformation",
+            "Travel Technology",
+            "AI-driven Business Systems"
+          ]
+        },
+        {
+          "title": "فراتر از شغل",
+          "paragraphs": [
+            "من فردی هستم که به یادگیری مداوم اعتقاد دارد. بخش قابل توجهی از دانش فعلی‌ام حاصل تجربه عملی، ساختن، شکست خوردن و دوباره ساختن بوده است.",
+            "علاقه‌مند به فناوری، تحلیل داده، صنعت گردشگری، مدل‌های کسب‌وکار، استارتاپ‌ها و سیستم‌های مقیاس‌پذیر هستم. از حل مسائل پیچیده لذت می‌برم و معمولاً زمانی بیشترین انگیزه را دارم که با چالشی روبه‌رو شوم که نیازمند ترکیب دانش فنی، تحلیل داده و تفکر استراتژیک باشد.",
+            "امروز خودم را صرفاً یک مدیر زیرساخت، تحلیلگر داده یا مدیر محصول نمی‌دانم؛ بلکه فردی می‌دانم که تلاش می‌کند میان فناوری، داده و کسب‌وکار پلی مؤثر ایجاد کند و از این مسیر ارزش واقعی خلق کند."
+          ]
+        }
+      ]
     },
     "en": {
       "dir": "ltr",
       "lang": "en",
       "eyebrow": "Personal Website",
       "heroName": "Moein Ghezelbash",
-      "heroTitle": "Infrastructure Architect • DevOps Leader • Data & Business Technology Strategist",
+      "heroTitle": "",
       "heroStatement": "",
       "intro": [
-        "For more than 10 years, I have worked at the intersection of technology, data, and business.",
-        "My experience spans digital broadcasting platforms, travel products, enterprise infrastructure architecture, data analysis, and technology team leadership.",
-        "Today, I focus on scalable infrastructure, operational automation, data engineering, and technology solutions that support business growth."
+        "I am Moein Ghezelbash, an infrastructure, data, and technology specialist with more than a decade of experience designing scalable systems, developing digital products, and solving complex business problems with technology."
       ],
       "sections": {
         "whatIDo": "What I do",
@@ -593,7 +649,8 @@
         "philosophy": "Work Philosophy",
         "current": "Currently Interested In",
         "social": "Social Links",
-        "resume": "Online Resume"
+        "resume": "Online Resume",
+        "about": "About Me"
       },
       "whatIDo": [
         "Design stable and scalable infrastructure.",
@@ -634,21 +691,80 @@
         "I believe the best solutions are created when infrastructure, data, and business needs are considered together. I build bridges between technical, management, and commercial teams to deliver reliable and economically valuable solutions."
       ],
       "current": [
-        "Cloud & Infrastructure Architecture",
-        "DevOps Leadership",
+        "Infrastructure Architecture",
+        "Platform Engineering",
+        "DevOps & Automation",
         "Data Engineering",
         "Business Intelligence",
-        "Travel Technology",
+        "Cloud Technologies",
         "Digital Transformation",
-        "Startup Advisory"
+        "Travel Technology",
+        "AI-driven Business Systems"
       ],
       "resumeLinks": {
         "fa": "Persian Resume",
         "en": "English Resume"
       },
       "seo": {
-        "description": "Moein Ghezelbash is an Infrastructure Architect, DevOps Leader, and Data & Business Technology Strategist focused on scalable platforms, BI, travel technology, and digital transformation."
-      }
+        "description": "Moein Ghezelbash is an infrastructure, data, and technology specialist with 10+ years of experience designing scalable systems and digital products."
+      },
+      "introTitle": "About Me",
+      "aboutBlocks": [
+        {
+          "title": "About Me",
+          "paragraphs": [
+            "I am Moein Ghezelbash, an infrastructure, data, and technology specialist with more than a decade of experience designing scalable systems, developing digital products, and solving complex business problems with technology.",
+            "My professional path started in digital media and live streaming, where I learned to handle infrastructure challenges, high traffic, and reliable large-scale services. That experience shaped my interest in system architecture, networks, servers, and infrastructure performance.",
+            "Later, I moved into travel technology and worked with businesses that manage high volumes of transactions, data, and customer interactions. I have worked across project management, product management, business development, data, and infrastructure leadership, which helped me see technology as a tool for growth, profitability, and business development."
+          ],
+          "items": [
+            "Technology infrastructure and architecture",
+            "Data and business analysis",
+            "Product development and revenue models"
+          ]
+        },
+        {
+          "title": "Beyond Technology",
+          "paragraphs": [
+            "A significant part of my work has gone beyond infrastructure implementation or software delivery.",
+            "I have contributed to B2B travel models, supplier management, operating process design, sales data analysis, budgeting, shareholder reporting, and direct collaboration with executives and investors.",
+            "This experience helps me consider revenue, productivity, scalability, and the future of the business whenever I design a technical solution."
+          ]
+        },
+        {
+          "title": "How I Think About Technology",
+          "paragraphs": [
+            "I believe technology is valuable when it solves real problems.",
+            "Complex technical solutions lose their value if they do not reduce cost, improve productivity, improve customer experience, or create new revenue opportunities.",
+            "In every project, I try to balance business needs with technical solutions, from enterprise infrastructure and cloud platforms to analytics systems, process automation, and data-driven decision tools."
+          ]
+        },
+        {
+          "title": "What I Focus On Today",
+          "paragraphs": [
+            "Today my professional focus is on:"
+          ],
+          "items": [
+            "Infrastructure Architecture",
+            "Platform Engineering",
+            "DevOps & Automation",
+            "Data Engineering",
+            "Business Intelligence",
+            "Cloud Technologies",
+            "Digital Transformation",
+            "Travel Technology",
+            "AI-driven Business Systems"
+          ]
+        },
+        {
+          "title": "Beyond the Job",
+          "paragraphs": [
+            "I believe in continuous learning. Much of what I know today comes from hands-on experience, building, failing, and building again.",
+            "I am interested in technology, data analysis, travel, business models, startups, and scalable systems. I enjoy solving complex problems that require a mix of technical knowledge, data analysis, and strategic thinking.",
+            "I do not see myself only as an infrastructure manager, data analyst, or product manager; I see myself as someone who builds effective bridges between technology, data, and business to create real value."
+          ]
+        }
+      ]
     }
   }
 }

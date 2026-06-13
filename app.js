@@ -73,7 +73,7 @@ const renderProfileImage = (data, content) => {
 };
 
 const renderSeo = (content) => {
-  const title = `${content.heroName} | ${content.heroTitle}`;
+  const title = content.heroTitle ? `${content.heroName} | ${content.heroTitle}` : `${content.heroName} | ${content.sections.about}`;
   const description = content.seo.description;
   const url = `https://imoein.com/${state.locale === "en" ? "?lang=en" : ""}`;
 
@@ -95,6 +95,27 @@ const renderParagraphs = (selector, paragraphs) => {
     const p = document.createElement("p");
     p.textContent = text;
     target.appendChild(p);
+  });
+};
+
+const renderAbout = (content) => {
+  const target = $("#intro");
+  clear(target);
+  const blocks = content.aboutBlocks || [{ title: content.sections.about, paragraphs: content.intro }];
+  blocks.forEach((block, index) => {
+    if (block.title && index > 0) {
+      const heading = document.createElement("h3");
+      heading.textContent = block.title;
+      target.appendChild(heading);
+    }
+    block.paragraphs.forEach((text) => {
+      const p = document.createElement("p");
+      p.textContent = text;
+      target.appendChild(p);
+    });
+    if (block.items?.length) {
+      target.appendChild(createList(block.items, "about-list"));
+    }
   });
 };
 
@@ -164,8 +185,7 @@ const renderHome = () => {
 
   $("#eyebrow").textContent = content.eyebrow;
   $("#home-name").textContent = content.heroName;
-  $("#home-title").textContent = content.heroTitle;
-  $("#hero-statement").textContent = content.heroStatement;
+  $("#about-title").textContent = content.sections.about;
   $("#social-title").textContent = content.sections.social;
   $("#resume-title").textContent = content.sections.resume;
   $("#what-title").textContent = content.sections.whatIDo;
@@ -174,7 +194,7 @@ const renderHome = () => {
   $("#philosophy-title").textContent = content.sections.philosophy;
   $("#current-title").textContent = content.sections.current;
 
-  renderParagraphs("#intro", content.intro);
+  renderAbout(content);
   renderSocialLinks(data.socialLinks);
   renderResumeLinks(content, data.resumeFiles);
   renderCards("#what-i-do", content.whatIDo, "card action-card");
