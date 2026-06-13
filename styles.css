@@ -251,3 +251,35 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
   .about-list { grid-template-columns: 1fr; }
   .home-hero .hero-content { grid-template-columns: 1fr; }
 }
+
+.hero-subtitles { display: grid; gap: 8px; margin-top: 18px; color: rgba(255,255,255,.86); font-weight: 700; font-size: clamp(1rem, 1.8vw, 1.22rem); line-height: 1.65; }
+.hero-subtitles span:last-child { color: var(--complement); }
+.section-title { margin-top: 10px; }
+.section-title h2 { white-space: nowrap; }
+.action-grid { gap: 20px; }
+.action-card {
+  position: relative;
+  min-height: 128px;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
+  overflow: hidden;
+  border-inline-start: 0;
+  border-bottom: 4px solid var(--primary);
+  background: linear-gradient(145deg, #fff, rgba(216,195,165,.18));
+}
+.action-card::after { content: ""; position: absolute; inset-inline-end: -28px; bottom: -28px; width: 86px; height: 86px; border-radius: 50%; background: rgba(31,138,138,.09); }
+.action-card p { margin: 0; color: var(--brand); font-size: 1.02rem; line-height: 1.85; font-weight: 800; }
+.card-badge { color: var(--accent); font-size: .82rem; letter-spacing: .08em; font-weight: 900; }
+.expertise-card { min-height: 250px; display: flex; flex-direction: column; justify-content: flex-start; }
+.expertise-card h3 { color: var(--brand); font-size: 1.16rem; margin-bottom: 16px; }
+.expertise-card p { font-size: 1rem; line-height: 1.95; }
+#experience-summary p { line-height: 2; color: #31485d; }
+#current-focus { align-content: flex-start; }
+.focus-pill { text-align: center; }
+
+@media (max-width: 800px) {
+  .section-title h2 { white-space: normal; }
+  .hero-subtitles { font-size: .98rem; }
+}

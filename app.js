@@ -98,6 +98,16 @@ const renderParagraphs = (selector, paragraphs) => {
   });
 };
 
+const renderHeroSubtitles = (subtitles = []) => {
+  const target = $("#hero-subtitles");
+  clear(target);
+  subtitles.forEach((text) => {
+    const line = document.createElement("span");
+    line.textContent = text;
+    target.appendChild(line);
+  });
+};
+
 const renderAbout = (content) => {
   const target = $("#intro");
   clear(target);
@@ -147,11 +157,20 @@ const renderResumeLinks = (content, resumeFiles) => {
 const renderCards = (selector, items, className = "card") => {
   const target = $(selector);
   clear(target);
-  items.forEach((item) => {
+  items.forEach((item, index) => {
     const card = document.createElement("article");
     card.className = className;
     if (typeof item === "string") {
-      card.textContent = item;
+      if (className.includes("action-card")) {
+        const badge = document.createElement("span");
+        badge.className = "card-badge";
+        badge.textContent = String(index + 1).padStart(2, "0");
+        const text = document.createElement("p");
+        text.textContent = item;
+        card.append(badge, text);
+      } else {
+        card.textContent = item;
+      }
     } else {
       const title = document.createElement("h3");
       title.textContent = item.title;
@@ -185,6 +204,7 @@ const renderHome = () => {
 
   $("#eyebrow").textContent = content.eyebrow;
   $("#home-name").textContent = content.heroName;
+  renderHeroSubtitles(content.heroSubtitles);
   $("#about-title").textContent = content.sections.about;
   $("#social-title").textContent = content.sections.social;
   $("#resume-title").textContent = content.sections.resume;
