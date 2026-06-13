@@ -1,10 +1,121 @@
 <!doctype html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
-  <title>وب‌سایت من</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" id="meta-description" content="Moein Ghezelbash is a Technical Operations Manager in Tehran specializing in infrastructure, business systems, process automation, BI, and B2B platforms.">
+  <meta name="keywords" content="Moein Ghezelbash, Moein Ghezelbash resume, Technical Operations Manager, Infrastructure Manager, Process Automation, Business Systems, Apache Superset, Tehran">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" id="canonical-url" href="https://imoein.com/">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/?lang=en">
+  <link rel="alternate" hreflang="fa" href="https://imoein.com/?lang=fa">
+  <link rel="alternate" hreflang="x-default" href="https://imoein.com/">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" id="og-url" content="https://imoein.com/">
+  <meta property="og:title" id="og-title" content="Moein Ghezelbash | Technical Operations Manager">
+  <meta property="og:description" id="og-description" content="Technical Operations Manager specializing in infrastructure, business systems, process automation, BI, and B2B platforms.">
+  <meta property="og:site_name" content="Moein Ghezelbash Resume">
+  <meta property="og:locale" id="og-locale" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" id="twitter-title" content="Moein Ghezelbash | Technical Operations Manager">
+  <meta name="twitter:description" id="twitter-description" content="Technical Operations Manager specializing in infrastructure, business systems, process automation, BI, and B2B platforms.">
+  <title>Moein Ghezelbash | Technical Operations Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json" id="person-schema">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Moein Ghezelbash",
+      "alternateName": "معین قزلباش",
+      "jobTitle": "Technical Operations Manager",
+      "url": "https://imoein.com/",
+      "sameAs": ["https://www.linkedin.com/in/moeinghezelbash/"],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tehran",
+        "addressCountry": "IR"
+      },
+      "knowsAbout": [
+        "IT Infrastructure Management",
+        "Process Automation",
+        "Business Systems",
+        "Business Intelligence",
+        "Apache Superset",
+        "B2B Platform Operations"
+      ]
+    }
+  </script>
 </head>
 <body>
-  <h1>سلام، این سایت من روی GitHub Pages است</h1>
+  <header class="hero">
+    <div class="container hero-card">
+      <div class="top-actions">
+        <div class="eyebrow" id="eyebrow">Resume Portfolio</div>
+        <div class="locale-switcher" id="locale-switcher" aria-label="Language switcher"></div>
+      </div>
+      <div class="hero-content">
+        <div>
+          <h1 id="name">MOEIN GHEZELBASH</h1>
+          <h2><span id="role">Technical Operations Manager</span><small id="tagline">Infrastructure • Business Systems • Process Automation</small></h2>
+        </div>
+        <div class="profile-frame" aria-hidden="true">
+          <img id="profile-photo" alt="" hidden>
+          <span id="profile-initials">MG</span>
+        </div>
+      </div>
+      <p id="app-error" role="alert"></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="grid two-col" aria-label="Professional overview">
+      <div>
+        <div class="section-title"><h2 id="summary-title">Professional Summary</h2></div>
+        <div class="card summary" id="summary"></div>
+        <div class="card info-card">
+          <nav class="contact-bar" id="contact" aria-label="Contact information"></nav>
+          <div class="download-bar" id="downloads"></div>
+        </div>
+      </div>
+      <aside>
+        <div class="side-card card">
+          <h3 id="technologies-title">Selected Technologies</h3>
+          <div id="technologies"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="education-title">Education</h3>
+          <div id="education"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="certificates-title">Certificates</h3>
+          <div id="certificates"></div>
+        </div>
+        <div class="side-card card">
+          <h3 id="languages-title">Languages</h3>
+          <div id="languages"></div>
+        </div>
+      </aside>
+    </section>
+
+    <section aria-labelledby="competencies-title">
+      <div class="section-title"><h2 id="competencies-title">Core Competencies</h2></div>
+      <div class="grid cards" id="competencies"></div>
+    </section>
+
+    <section aria-labelledby="experience-title">
+      <div class="section-title"><h2 id="experience-title">Professional Experience</h2></div>
+      <div class="timeline" id="experience"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Moein Ghezelbash. <span id="footer-text">Built for GitHub Pages.</span></div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
