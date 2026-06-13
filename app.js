@@ -33,6 +33,20 @@ const createButton = (text, onClick, isActive = false) => {
 
 const getEmailAddress = (contact) => `${contact.email.user}@${contact.email.domainParts.join(".")}`;
 
+const setMetaContent = (selector, value) => {
+  const element = $(selector);
+  if (element) {
+    element.setAttribute("content", value);
+  }
+};
+
+const setLinkHref = (selector, value) => {
+  const element = $(selector);
+  if (element) {
+    element.setAttribute("href", value);
+  }
+};
+
 const renderLocaleSwitcher = () => {
   const switcher = $("#locale-switcher");
   clear(switcher);
@@ -120,6 +134,22 @@ const renderProfileImage = (data, content) => {
   };
 };
 
+const renderSeo = (content) => {
+  const title = `${content.profile.name} | ${content.profile.title}`;
+  const description = content.seo?.description || content.summary[0];
+  const url = `https://imoein.com/${state.locale === "fa" ? "?lang=fa" : ""}`;
+
+  document.title = title;
+  setMetaContent("#meta-description", description);
+  setMetaContent("#og-title", title);
+  setMetaContent("#og-description", description);
+  setMetaContent("#og-url", url);
+  setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_US");
+  setMetaContent("#twitter-title", title);
+  setMetaContent("#twitter-description", description);
+  setLinkHref("#canonical-url", url);
+};
+
 const renderSideSection = (selector, items, className = "clean") => {
   const target = $(selector);
   clear(target);
@@ -132,7 +162,7 @@ const renderResume = () => {
   document.documentElement.lang = content.lang;
   document.documentElement.dir = content.dir;
   document.body.className = `locale-${content.lang}`;
-  document.title = `${content.profile.name} | ${content.profile.title}`;
+  renderSeo(content);
 
   renderLocaleSwitcher();
   $("#eyebrow").textContent = content.eyebrow;
