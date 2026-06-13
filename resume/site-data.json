@@ -815,7 +815,7 @@
     },
     {
       "label": "GitHub",
-      "url": "https://github.com/imoein",
+      "url": "https://github.com/iMoein",
       "icon": "gh",
       "enabled": true,
       "iconSrc": "assets/social/github.png"
@@ -829,21 +829,21 @@
     },
     {
       "label": "X",
-      "url": "https://x.com/imoein",
+      "url": "https://x.com/moeinghezelbash",
       "icon": "𝕏",
       "enabled": true,
       "iconSrc": "assets/social/twitter.png"
     },
     {
       "label": "Instagram",
-      "url": "https://www.instagram.com/imoein/",
+      "url": "https://www.instagram.com/moeinghezelbash/",
       "icon": "ig",
       "enabled": true,
       "iconSrc": "assets/social/instagram.png"
     },
     {
       "label": "Telegram",
-      "url": "https://t.me/imoein",
+      "url": "https://t.me/iMoeinPV",
       "icon": "tg",
       "enabled": true,
       "iconSrc": "assets/social/telegram.png"
@@ -857,14 +857,14 @@
     },
     {
       "label": "Threads",
-      "url": "https://www.threads.net/@imoein",
+      "url": "https://www.threads.net/@moeinghezelbash",
       "icon": "th",
       "enabled": true,
       "iconSrc": "assets/social/threads.png"
     },
     {
       "label": "Facebook",
-      "url": "https://www.facebook.com/imoein",
+      "url": "https://www.facebook.com/Moeinghezelbash",
       "icon": "fb",
       "enabled": true,
       "iconSrc": "assets/social/facebook.png"
