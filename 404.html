@@ -32,8 +32,31 @@
     h1 { margin: 0 0 12px; }
     p { margin: 0 0 18px; line-height: 1.8; color: #5d6f7f; }
     a { color: #1F8A8A; font-weight: 700; }
+    .footer {
+      margin-top: 24px;
+      color: #5d6f7f;
+      font-size: 0.94rem;
+    }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .footer-nav a {
+      color: #102A43;
+      text-decoration: none;
+      border: 1px solid rgba(16, 42, 67, 0.1);
+      border-radius: 999px;
+      padding: 8px 13px;
+      background: rgba(255, 255, 255, 0.72);
+    }
   </style>
   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    });
     window.location.replace("/#about");
   </script>
 </head>
@@ -42,6 +65,14 @@
     <h1>در حال انتقال به صفحه معرفی</h1>
     <p>اگر به‌صورت خودکار منتقل نشدید، از لینک زیر وارد صفحه اصلی درباره من شوید.</p>
     <a href="/#about">رفتن به معرفی معین قزلباش</a>
+    <footer class="footer">
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="/">صفحه اصلی</a>
+        <a href="/resume/moein-ghezelbash-fa.html">رزومه فارسی</a>
+        <a href="/resume/moein-ghezelbash-en.html">رزومه انگلیسی</a>
+      </nav>
+      <div>© <span id="year"></span> Moein Ghezelbash.</div>
+    </footer>
   </main>
 </body>
 </html>

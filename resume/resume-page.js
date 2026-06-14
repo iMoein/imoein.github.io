@@ -81,6 +81,31 @@ const section = (title, className = '') => {
   return wrapper;
 };
 
+const resolveFooterHref = (href) => {
+  if (href === '/') return '../';
+  if (href.startsWith('/resume/')) return href.replace('/resume/', '');
+  return href;
+};
+
+const renderFooter = (data, content) => {
+  const nav = document.querySelector('#footer-nav');
+  const copy = document.querySelector('#footer-copy');
+  const links = data.footerNavigation?.[locale] || data.footerNavigation?.[data.defaultLocale] || [];
+
+  if (nav) {
+    nav.textContent = '';
+    links.forEach((item) => {
+      const link = create('a', item.label);
+      link.href = resolveFooterHref(item.href);
+      nav.appendChild(link);
+    });
+  }
+
+  if (copy) {
+    copy.textContent = `© ${new Date().getFullYear()} ${data.copyright || content.profile.name}.`;
+  }
+};
+
 const renderHero = (data, content, contact) => {
   const phone = locale === 'fa' ? contact.phone.fa : contact.phone.international;
   const hero = create('header', '', 'resume-hero');
@@ -158,6 +183,8 @@ const render = (data) => {
     detailsGrid.appendChild(card);
   });
   details.appendChild(detailsGrid);
+
+  renderFooter(data, content);
 };
 
 fetch(dataUrl)

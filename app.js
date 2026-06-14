@@ -81,9 +81,33 @@ const renderProfileImage = (data, content) => {
   tryNextImage();
 };
 
-const renderSeo = (content) => {
+const renderStructuredData = (content, data) => {
+  const schema = $("#person-schema");
+  if (!schema) return;
+
+  const sameAs = data.socialLinks
+    .filter((item) => item.enabled !== false)
+    .map((item) => item.url);
+  const knowsAbout = content.expertise
+    .flatMap((item) => (typeof item === "string" ? [item] : [item.title, item.body]))
+    .filter(Boolean);
+
+  schema.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: data.locales.en.profile.name,
+    alternateName: data.locales.fa.profile.name,
+    jobTitle: data.locales.en.profile.title,
+    url: "https://imoein.com/",
+    sameAs,
+    knowsAbout
+  });
+};
+
+const renderSeo = (content, data) => {
   const title = content.heroTitle ? `${content.heroName} | ${content.heroTitle}` : `${content.heroName} | ${content.sections.about}`;
   const description = content.seo.description;
+  const keywords = content.seo.keywords?.join(", ") || "";
   const url = `https://imoein.com/${state.locale === "en" ? "?lang=en" : ""}`;
 
   document.title = title;
@@ -94,7 +118,10 @@ const renderSeo = (content) => {
   setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_US");
   setMetaContent("#twitter-title", title);
   setMetaContent("#twitter-description", description);
+  setMetaContent("#meta-keywords", keywords);
+  setMetaContent("#meta-author", data.locales.en.profile.name);
   setLinkHref("#canonical-url", url);
+  renderStructuredData(content, data);
 };
 
 const renderParagraphs = (selector, paragraphs) => {
@@ -186,6 +213,26 @@ const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
     link.download = "";
     downloads.appendChild(link);
   });
+};
+
+const renderFooter = (data, content) => {
+  const nav = $("#footer-nav");
+  const copy = $("#footer-copy");
+  const links = data.footerNavigation?.[state.locale] || data.footerNavigation?.[data.defaultLocale] || [];
+
+  if (nav) {
+    clear(nav);
+    links.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.href;
+      link.textContent = item.label;
+      nav.appendChild(link);
+    });
+  }
+
+  if (copy) {
+    copy.textContent = `© ${new Date().getFullYear()} ${data.copyright || content.heroName}.`;
+  }
 };
 
 const companyInitials = (company) => company
@@ -286,7 +333,7 @@ const renderHome = () => {
   document.documentElement.dir = content.dir;
   document.body.className = `locale-${content.lang}`;
 
-  renderSeo(content);
+  renderSeo(content, data);
   renderLocaleSwitcher();
   renderProfileImage(data, content);
 
@@ -310,7 +357,7 @@ const renderHome = () => {
   renderExperienceSummary(content, data);
   renderCards("#current-focus", content.current, "focus-pill");
   renderParagraphs("#philosophy", content.philosophy);
-  $("#year").textContent = new Date().getFullYear();
+  renderFooter(data, content);
 };
 
 const setLocale = (locale) => {
