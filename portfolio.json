@@ -20,14 +20,21 @@
         "resumeEn": "رزومه انگلیسی"
       },
       "seo": {
-        "description": "نمونه‌کارها و پروژه‌های معین قزلباش در حوزه پلتفرم‌های B2B، BI، DevOps، اتوماسیون فرایند و زیرساخت.",
+        "description": "نمونه‌کارها، پروژه‌ها و مطالعات موردی معین قزلباش در زیرساخت، DevOps، BI، دیتاورهاوس، اتوماسیون فرایند، پلتفرم‌های B2B و فناوری سفر.",
         "keywords": [
-          "نمونه کار",
-          "پروژه",
+          "معین قزلباش",
+          "نمونه کار معین قزلباش",
+          "پروژه‌های معین قزلباش",
           "DevOps",
           "BI",
+          "هوش تجاری",
+          "دیتاورهاوس",
           "زیرساخت",
-          "معین قزلباش"
+          "اتوماسیون فرایند",
+          "فناوری سفر",
+          "B2B",
+          "Docker",
+          "CI/CD"
         ]
       },
       "projects": [
@@ -113,14 +120,20 @@
         "resumeEn": "English resume"
       },
       "seo": {
-        "description": "Projects and case studies by Moein Ghezelbash across B2B platforms, BI, DevOps, process automation, and infrastructure.",
+        "description": "Projects and case studies by Moein Ghezelbash across infrastructure, DevOps, BI, data warehouse, process automation, B2B platforms, and travel technology.",
         "keywords": [
-          "portfolio",
-          "projects",
-          "DevOps",
-          "BI",
-          "infrastructure",
-          "Moein Ghezelbash"
+          "Moein Ghezelbash",
+          "Moein Ghezelbash portfolio",
+          "Moein Ghezelbash projects",
+          "DevOps projects",
+          "BI portfolio",
+          "data warehouse",
+          "infrastructure projects",
+          "process automation",
+          "travel technology",
+          "B2B platform",
+          "Docker",
+          "CI/CD"
         ]
       },
       "projects": [
