@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" id="meta-description" content="معین قزلباش معمار زیرساخت، رهبر DevOps و استراتژیست داده و فناوری کسب‌وکار.">
-  <meta name="keywords" content="معین قزلباش, Moein Ghezelbash, Infrastructure Architect, DevOps Leader, Data Engineering, Business Intelligence, Travel Technology">
-  <meta name="author" content="Moein Ghezelbash">
+  <meta name="keywords" id="meta-keywords" content="">
+  <meta name="author" id="meta-author" content="">
   <meta name="robots" content="index, follow">
   <link rel="canonical" id="canonical-url" href="https://imoein.com/">
   <link rel="alternate" hreflang="fa" href="https://imoein.com/?lang=fa">
@@ -25,18 +25,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json" id="person-schema">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Moein Ghezelbash",
-      "alternateName": "معین قزلباش",
-      "jobTitle": "Infrastructure Architect, DevOps Leader, Data & Business Technology Strategist",
-      "url": "https://imoein.com/",
-      "sameAs": ["https://www.linkedin.com/in/moeinghezelbash/", "https://github.com/imoein"],
-      "knowsAbout": ["Infrastructure Architecture", "DevOps", "Data Engineering", "Business Intelligence", "Travel Technology", "Digital Transformation"]
-    }
-  </script>
+  <script type="application/ld+json" id="person-schema"></script>
 </head>
 <body>
   <header class="hero home-hero">
@@ -65,11 +54,15 @@
         <div class="section-title"><h2 id="about-title">معرفی من</h2></div>
         <div class="card summary about-card" id="intro"></div>
       </div>
-      <aside class="card info-card sticky-card">
-        <h3 id="social-title">شبکه‌های اجتماعی</h3>
-        <div class="social-grid" id="social-links"></div>
-        <h3 id="resume-title">رزومه آنلاین</h3>
-        <div class="download-bar" id="downloads"></div>
+      <aside class="sticky-card side-stack">
+        <div class="card info-card resume-online-card">
+          <h3 id="resume-title">رزومه آنلاین</h3>
+          <div class="download-bar" id="downloads"></div>
+        </div>
+        <div class="card info-card social-links-card">
+          <h3 id="social-title">شبکه‌های اجتماعی</h3>
+          <div class="social-grid" id="social-links"></div>
+        </div>
       </aside>
     </section>
 
@@ -101,7 +94,14 @@
   </main>
 
   <footer class="footer">
-    <div class="container">© <span id="year"></span> Moein Ghezelbash.</div>
+    <div class="container footer-inner">
+      <nav class="footer-nav" id="footer-nav" aria-label="Footer navigation">
+        <a href="/">صفحه اصلی</a>
+        <a href="/resume/moein-ghezelbash-fa.html">رزومه فارسی</a>
+        <a href="/resume/moein-ghezelbash-en.html">رزومه انگلیسی</a>
+      </nav>
+      <div class="footer-copy" id="footer-copy">© 2026 Moein Ghezelbash.</div>
+    </div>
   </footer>
 
   <script src="app.js"></script>
