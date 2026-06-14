@@ -9,6 +9,11 @@ const clear = (element) => {
   while (element.firstChild) element.removeChild(element.firstChild);
 };
 
+const setText = (selector, value) => {
+  const element = $(selector);
+  if (element) element.textContent = value;
+};
+
 const createList = (items, className = "clean") => {
   const ul = document.createElement("ul");
   ul.className = className;
@@ -81,9 +86,33 @@ const renderProfileImage = (data, content) => {
   tryNextImage();
 };
 
-const renderSeo = (content) => {
+const renderStructuredData = (content, data) => {
+  const schema = $("#person-schema");
+  if (!schema) return;
+
+  const sameAs = data.socialLinks
+    .filter((item) => item.enabled !== false)
+    .map((item) => item.url);
+  const knowsAbout = content.expertise
+    .flatMap((item) => (typeof item === "string" ? [item] : [item.title, item.body]))
+    .filter(Boolean);
+
+  schema.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: data.locales.en.profile.name,
+    alternateName: data.locales.fa.profile.name,
+    jobTitle: data.locales.en.profile.title,
+    url: "https://imoein.com/",
+    sameAs,
+    knowsAbout
+  });
+};
+
+const renderSeo = (content, data) => {
   const title = content.heroTitle ? `${content.heroName} | ${content.heroTitle}` : `${content.heroName} | ${content.sections.about}`;
   const description = content.seo.description;
+  const keywords = content.seo.keywords?.join(", ") || "";
   const url = `https://imoein.com/${state.locale === "en" ? "?lang=en" : ""}`;
 
   document.title = title;
@@ -94,7 +123,10 @@ const renderSeo = (content) => {
   setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_US");
   setMetaContent("#twitter-title", title);
   setMetaContent("#twitter-description", description);
+  setMetaContent("#meta-keywords", keywords);
+  setMetaContent("#meta-author", data.locales.en.profile.name);
   setLinkHref("#canonical-url", url);
+  renderStructuredData(content, data);
 };
 
 const renderParagraphs = (selector, paragraphs) => {
@@ -186,6 +218,26 @@ const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
     link.download = "";
     downloads.appendChild(link);
   });
+};
+
+const renderFooter = (data, content) => {
+  const nav = $("#footer-nav");
+  const copy = $("#footer-copy");
+  const links = data.footerNavigation?.[state.locale] || data.footerNavigation?.[data.defaultLocale] || [];
+
+  if (nav) {
+    clear(nav);
+    links.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.href;
+      link.textContent = item.label;
+      nav.appendChild(link);
+    });
+  }
+
+  if (copy) {
+    copy.textContent = `© ${new Date().getFullYear()} ${data.copyright || content.heroName}.`;
+  }
 };
 
 const companyInitials = (company) => company
@@ -286,21 +338,21 @@ const renderHome = () => {
   document.documentElement.dir = content.dir;
   document.body.className = `locale-${content.lang}`;
 
-  renderSeo(content);
+  renderSeo(content, data);
   renderLocaleSwitcher();
   renderProfileImage(data, content);
 
-  $("#eyebrow").textContent = content.eyebrow;
-  $("#home-name").textContent = content.heroName;
+  setText("#eyebrow", content.eyebrow);
+  setText("#home-name", content.heroName);
   renderHeroSubtitles(content.heroSubtitles);
-  $("#about-title").textContent = content.sections.about;
-  $("#social-title").textContent = content.sections.social;
-  $("#resume-title").textContent = content.sections.resume;
-  $("#what-title").textContent = content.sections.whatIDo;
-  $("#expertise-title").textContent = content.sections.expertise;
-  $("#experience-title").textContent = content.sections.experience;
-  $("#philosophy-title").textContent = content.sections.philosophy;
-  $("#current-title").textContent = content.sections.current;
+  setText("#about-title", content.sections.about);
+  setText("#social-title", content.sections.social);
+  setText("#resume-title", content.sections.resume);
+  setText("#what-title", content.sections.whatIDo);
+  setText("#expertise-title", content.sections.expertise);
+  setText("#experience-title", content.sections.experience);
+  setText("#philosophy-title", content.sections.philosophy);
+  setText("#current-title", content.sections.current);
 
   renderAbout(content);
   renderSocialLinks(data.socialLinks);
@@ -310,7 +362,7 @@ const renderHome = () => {
   renderExperienceSummary(content, data);
   renderCards("#current-focus", content.current, "focus-pill");
   renderParagraphs("#philosophy", content.philosophy);
-  $("#year").textContent = new Date().getFullYear();
+  renderFooter(data, content);
 };
 
 const setLocale = (locale) => {
@@ -330,5 +382,5 @@ fetch("resume/site-data.json")
     renderHome();
   })
   .catch((error) => {
-    $("#app-error").textContent = error.message;
+    setText("#app-error", error.message);
   });
