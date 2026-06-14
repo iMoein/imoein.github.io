@@ -970,7 +970,7 @@ body.locale-fa .resume-contact-panel small {
 
 @media (max-width: 760px) {
   .resume-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(116px, 34vw) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(98px, 28vw) !important;
     align-items: center;
     justify-items: stretch;
     gap: 14px;
@@ -995,13 +995,13 @@ body.locale-fa .resume-contact-panel small {
   }
 
   body.locale-fa .resume-hero h1 {
-    font-size: clamp(2.55rem, 11.4vw, 3.65rem);
+    font-size: clamp(2.15rem, 9.8vw, 3.1rem);
     line-height: 1.18;
   }
 
   body.locale-en .resume-hero h1 {
-    max-width: 8.7ch;
-    font-size: clamp(2.25rem, 10.8vw, 3.45rem);
+    max-width: 100%;
+    font-size: clamp(1.9rem, 8.8vw, 2.85rem);
     line-height: 1;
   }
 
@@ -1013,7 +1013,7 @@ body.locale-fa .resume-contact-panel small {
 
   .resume-mark {
     justify-self: end;
-    width: min(150px, 34vw);
+    width: min(126px, 28vw);
     margin-top: 0;
     border-radius: 24px;
   }
@@ -1048,20 +1048,20 @@ body.locale-fa .resume-contact-panel small {
 
 @media (max-width: 390px) {
   .resume-hero {
-    grid-template-columns: minmax(0, 1fr) minmax(104px, 32vw) !important;
+    grid-template-columns: minmax(0, 1fr) minmax(88px, 26vw) !important;
     padding-inline: 16px;
   }
 
   body.locale-fa .resume-hero h1 {
-    font-size: clamp(2.35rem, 10.8vw, 3.1rem);
+    font-size: clamp(2rem, 9.4vw, 2.75rem);
   }
 
   body.locale-en .resume-hero h1 {
-    font-size: clamp(2.05rem, 10vw, 2.85rem);
+    font-size: clamp(1.75rem, 8.4vw, 2.45rem);
   }
 
   .resume-mark {
-    width: min(132px, 32vw);
+    width: min(112px, 26vw);
     border-radius: 20px;
   }
 }
