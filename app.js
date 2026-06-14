@@ -9,6 +9,11 @@ const clear = (element) => {
   while (element.firstChild) element.removeChild(element.firstChild);
 };
 
+const setText = (selector, value) => {
+  const element = $(selector);
+  if (element) element.textContent = value;
+};
+
 const createList = (items, className = "clean") => {
   const ul = document.createElement("ul");
   ul.className = className;
@@ -337,17 +342,17 @@ const renderHome = () => {
   renderLocaleSwitcher();
   renderProfileImage(data, content);
 
-  $("#eyebrow").textContent = content.eyebrow;
-  $("#home-name").textContent = content.heroName;
+  setText("#eyebrow", content.eyebrow);
+  setText("#home-name", content.heroName);
   renderHeroSubtitles(content.heroSubtitles);
-  $("#about-title").textContent = content.sections.about;
-  $("#social-title").textContent = content.sections.social;
-  $("#resume-title").textContent = content.sections.resume;
-  $("#what-title").textContent = content.sections.whatIDo;
-  $("#expertise-title").textContent = content.sections.expertise;
-  $("#experience-title").textContent = content.sections.experience;
-  $("#philosophy-title").textContent = content.sections.philosophy;
-  $("#current-title").textContent = content.sections.current;
+  setText("#about-title", content.sections.about);
+  setText("#social-title", content.sections.social);
+  setText("#resume-title", content.sections.resume);
+  setText("#what-title", content.sections.whatIDo);
+  setText("#expertise-title", content.sections.expertise);
+  setText("#experience-title", content.sections.experience);
+  setText("#philosophy-title", content.sections.philosophy);
+  setText("#current-title", content.sections.current);
 
   renderAbout(content);
   renderSocialLinks(data.socialLinks);
@@ -377,5 +382,5 @@ fetch("resume/site-data.json")
     renderHome();
   })
   .catch((error) => {
-    $("#app-error").textContent = error.message;
+    setText("#app-error", error.message);
   });
