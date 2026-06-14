@@ -129,7 +129,7 @@ html[dir="rtl"] .section-title::after { background: linear-gradient(270deg, var(
 .summary { background: var(--surface-strong); }
 .summary p { margin: 0 0 13px; color: var(--muted); line-height: 1.8; font-size: 1rem; }
 .summary p:last-child { margin-bottom: 0; }
-.info-card { margin-top: 16px; padding: 18px; background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(216,195,165,0.28)); }
+.info-card { padding: 18px; background: linear-gradient(135deg, rgba(255,255,255,0.88), rgba(216,195,165,0.28)); }
 
 .contact-bar, .download-bar { display: flex; flex-wrap: wrap; gap: 10px; }
 .download-bar { margin-top: 12px; align-items: center; }
@@ -213,12 +213,14 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
 }
 
 .home-intro .info-card h3 { margin: 0 0 12px; color: var(--brand); }
+.side-stack { display: grid; gap: 16px; }
 .social-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 118px), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 126px), 1fr));
   gap: 10px;
   margin-bottom: 22px;
 }
+.social-links-card .social-grid { margin-bottom: 0; }
 .social-grid a, .focus-pill {
   display: block;
   text-decoration: none;
@@ -494,7 +496,7 @@ html[dir="rtl"] .resume-detail-card {
   gap: clamp(6px, 1.5vw, 9px);
   min-width: 0;
   overflow: hidden;
-  font-size: clamp(.82rem, 1.55vw, .95rem);
+  font-size: clamp(.72rem, 1.25vw, .84rem);
   line-height: 1.25;
 }
 .social-grid a span:last-child {
@@ -560,7 +562,7 @@ html[dir="rtl"] .resume-detail-card {
   .social-grid a {
     min-height: 48px;
     justify-content: space-between;
-    font-size: clamp(.86rem, 3.8vw, 1rem);
+    font-size: clamp(.76rem, 3.2vw, .9rem);
   }
   .download-bar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
