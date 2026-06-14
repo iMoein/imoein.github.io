@@ -909,7 +909,7 @@ html[dir="rtl"] .resume-detail-card {
 /* Minimal contact rail below resume hero */
 .resume-contact-panel {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1.55fr) minmax(0, .75fr);
   gap: 10px;
   margin: -12px 0 34px;
   padding: 10px;
