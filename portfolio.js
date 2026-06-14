@@ -73,7 +73,6 @@ const renderSchema = (content) => {
     mainEntity: content.projects.map((project) => ({
       "@type": "CreativeWork",
       name: project.title,
-      alternateName: project.subtitle,
       description: project.description
     }))
   });
@@ -103,15 +102,18 @@ const renderProjects = (content) => {
     const title = document.createElement("h3");
     title.textContent = project.title;
 
-    const subtitle = document.createElement("p");
-    subtitle.className = "portfolio-card-subtitle";
-    subtitle.textContent = project.subtitle;
-
     const description = document.createElement("p");
     description.className = "portfolio-card-description";
     description.textContent = project.description;
 
-    article.append(number, title, subtitle, description);
+    if (project.subtitle) {
+      const subtitle = document.createElement("p");
+      subtitle.className = "portfolio-card-subtitle";
+      subtitle.textContent = project.subtitle;
+      article.append(number, title, subtitle, description);
+    } else {
+      article.append(number, title, description);
+    }
     target.appendChild(article);
   });
 };
@@ -151,7 +153,11 @@ const renderPortfolio = () => {
   renderLocaleSwitcher();
   setText("#eyebrow", content.eyebrow);
   setText("#portfolio-title", content.title);
-  setText("#portfolio-subtitle", content.subtitle);
+  const subtitle = $("#portfolio-subtitle");
+  if (subtitle) {
+    subtitle.textContent = content.subtitle || "";
+    subtitle.hidden = !content.subtitle;
+  }
   setText("#projects-title", content.sections.projects);
   setText("#notice-title", content.sections.notice);
   renderIntro(content);

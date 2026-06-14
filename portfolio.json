@@ -6,7 +6,7 @@
       "dir": "rtl",
       "eyebrow": "نمونه‌کارها",
       "title": "نمونه‌کارها و پروژه‌ها",
-      "subtitle": "Projects & Case Studies",
+      "subtitle": "",
       "intro": [
         "بخش قابل توجهی از پروژه‌هایی که در آن‌ها نقش داشته‌ام، در محیط‌های سازمانی، تجاری و محرمانه انجام شده‌اند. به همین دلیل، امکان انتشار اسکرین‌شات، سورس‌کد، داشبوردهای داخلی، اطلاعات عملیاتی یا داده‌های واقعی آن‌ها وجود ندارد. با این حال، در این بخش تلاش کرده‌ام پروژه‌ها را بر اساس مسئله، نقش من، نوع راه‌حل، معماری کلی و اثر تجاری یا عملیاتی آن‌ها معرفی کنم."
       ],
@@ -33,62 +33,62 @@
       "projects": [
         {
           "title": "پلتفرم B2B رزرو هتل چنلید",
-          "subtitle": "Channelead B2B Hotel Booking Platform",
+          "subtitle": "",
           "description": "چنلید یک پلتفرم B2B رزرو هتل برای سازمان‌ها، آژانس‌ها و مشتریان شرکتی بود که از طریق پنل و API خدمات رزرو، مدیریت سفارش، اتصال به تأمین‌کنندگان، مدیریت ظرفیت، قیمت‌گذاری و عملیات فروش را ارائه می‌کرد. نقش من در این پروژه بیشتر در حوزه توسعه محصول، تحلیل فرآیندها، هماهنگی بین تیم‌های کسب‌وکار، عملیات، مالی و فنی، تعریف نیازمندی‌ها، بررسی جریان سفارش و کمک به بهبود گزارش‌ها و فرآیندهای عملیاتی بود."
         },
         {
           "title": "دیتاورهاوس و پلتفرم BI بسوی سامیار سفر",
-          "subtitle": "Besoye Samyar Safar Data Warehouse & BI Platform",
+          "subtitle": "",
           "description": "در این پروژه، هدف ایجاد یک لایه تحلیلی برای بررسی داده‌های فروش، سفارش‌ها، مشتریان، تأمین‌کنندگان، کنسلی‌ها، کمیسیون‌ها، رفتار کاربران، لاگ‌های جستجو و شاخص‌های عملیاتی بود. این پروژه به مدیران و تیم‌های عملیاتی کمک می‌کرد عملکرد روزانه، مشکلات داده‌ای، روند فروش و وضعیت سفارش‌ها را بهتر رصد کنند. نقش من شامل طراحی نیازمندی‌های گزارش‌گیری، تحلیل داده‌ها، ساخت کوئری‌های SQL، کار با Oracle APEX و تبدیل داده‌های خام به گزارش‌های قابل تصمیم‌گیری بود."
         },
         {
           "title": "سیستم CRM بلادرنگ برای دریافت و توزیع اطلاعات کاربران",
-          "subtitle": "Real-Time CRM Lead Notification System",
+          "subtitle": "",
           "description": "این پروژه با هدف اتصال وب‌سایت بسوی سامیار سفر به پنل CRM طراحی شد. پس از تکمیل اطلاعات توسط کاربر در وب‌سایت، داده‌ها به‌صورت بلادرنگ از طریق WebSocket وارد پنل CRM می‌شدند. سپس یک API Wrapper اطلاعات را پردازش و از طریق ایمیل، پیامک و Zulip برای مدیران و کاربران مرتبط ارسال می‌کرد تا تیم‌ها بتوانند بدون تأخیر به داده‌های جدید دسترسی داشته باشند. این پروژه ترکیبی از real-time communication، automation، CRM workflow و operational visibility بود."
         },
         {
           "title": "وب‌اپلیکیشن Time",
-          "subtitle": "Time Web App — time.imoein.com",
+          "subtitle": "",
           "description": "Time یک پروژه شخصی مبتنی بر React و Node.js است که با هدف نمایش زمان و ارائه یک تجربه ساده، سریع و مستقل طراحی شده است. این پروژه دارای فرانت‌اند و API جداگانه است و روی دامنه اختصاصی time.imoein.com در دسترس قرار گرفته. این پروژه برای نمایش توانایی من در ساخت، انتشار و نگهداری یک وب‌اپلیکیشن سبک و مستقل استفاده می‌شود."
         },
         {
           "title": "رجیستری خصوصی Docker و زیرساخت CI/CD",
-          "subtitle": "Private Docker Registry & CI/CD Infrastructure",
+          "subtitle": "",
           "description": "در این پروژه، هدف طراحی و آماده‌سازی یک جریان انتشار مبتنی بر Docker، رجیستری خصوصی Harbor و اتصال آن به فرآیندهای CI/CD بود. این کار شامل راه‌اندازی رجیستری خصوصی، طراحی استراتژی tagگذاری ایمیج‌ها، آماده‌سازی مسیر build و push ایمیج‌ها، و هماهنگی بین محیط‌های development و production بود. این پروژه بخشی از تجربه من در حوزه DevOps، containerization و زیرساخت انتشار نرم‌افزار است."
         },
         {
           "title": "مهاجرت GitLab CI/CD به Harbor Registry",
-          "subtitle": "GitLab CI/CD Migration to Harbor Registry",
+          "subtitle": "",
           "description": "در این پروژه، مسیر تحویل ایمیج‌های Docker از رجیستری داخلی GitLab به یک رجیستری خصوصی Harbor منتقل شد. این مهاجرت شامل بررسی pipeline موجود، تنظیم مراحل build، development و production، تغییر مقصد push ایمیج‌ها و آماده‌سازی ساختار انتشار پایدارتر برای محیط‌های مختلف بود."
         },
         {
           "title": "پلتفرم Dockerized ویرا‌لایف با Laravel و React",
-          "subtitle": "Viralife Dockerized Laravel/React Platform",
+          "subtitle": "",
           "description": "ویرا‌لایف یک پلتفرم مبتنی بر Laravel و React بود که با معماری Dockerized آماده‌سازی شد. در این پروژه، ساختار سرویس‌ها، اجرای PHP، تنظیم Nginx، استفاده از Redis برای کش، مدیریت پردازش‌ها با Supervisor و آماده‌سازی مسیر استقرار مبتنی بر CI/CD مورد توجه قرار گرفت. این پروژه نشان‌دهنده تجربه من در ترکیب توسعه محصول، معماری نرم‌افزار و زیرساخت اجرایی است."
         },
         {
           "title": "داشبوردهای عملیاتی با Oracle APEX",
-          "subtitle": "Oracle APEX Operational Dashboards",
+          "subtitle": "",
           "description": "در این پروژه، مجموعه‌ای از گزارش‌ها و داشبوردهای عملیاتی برای بررسی فروش، سفارش‌ها، کاربران، گروه‌های مشتری، تأمین‌کنندگان، کنسلی‌ها، کمیسیون‌ها، لاگ‌های جستجو و فعالیت کاربران طراحی و نگهداری شد. تمرکز اصلی روی تبدیل داده‌های عملیاتی به گزارش‌های قابل استفاده برای تصمیم‌گیری مدیریتی و پیگیری روزانه تیم‌ها بود. این پروژه ترکیبی از SQL، تحلیل داده، Oracle APEX و درک فرآیندهای کسب‌وکار بود."
         },
         {
           "title": "پروژه کسب‌وکاری گردش‌آنلاین",
-          "subtitle": "GardeshOnline Travel Platform / Business Project",
+          "subtitle": "",
           "description": "گردش‌آنلاین یک پروژه کسب‌وکاری در حوزه سفر بود که با هدف ارائه خدمات سفر تفریحی و سازمانی شکل گرفت. این پروژه شامل طراحی حضور دیجیتال، ارتباط با مشتریان، هماهنگی با تأمین‌کنندگان، فرآیندهای عملیاتی و توسعه ایده کسب‌وکار در صنعت گردشگری بود. نقش من در این پروژه به عنوان بنیان‌گذار، ترکیبی از توسعه کسب‌وکار، طراحی فرآیند، مدیریت ارتباطات و شناخت بازار سفر بود."
         },
         {
           "title": "آنلاین‌سازی فرآیندهای مالی و محصول در دلتابان / سه‌کلیک",
-          "subtitle": "Deltaban / 3click Product & Financial Process Automation",
+          "subtitle": "",
           "description": "در این پروژه، تمرکز بر بهبود و آنلاین‌سازی بخشی از فرآیندهای مالی و محصول در یک پلتفرم سفر بود. مواردی مانند وضعیت درگاه بانکی، فرآیند وصولی‌ها، هماهنگی بین محصول، مالی و عملیات، و برنامه‌ریزی برای ثبت و ردیابی بهتر داده‌های مالی در جریان کار قرار داشت. این پروژه نمونه‌ای از ترکیب مدیریت محصول، تحلیل فرآیند و تحول دیجیتال در عملیات مالی بود."
         },
         {
           "title": "مشاوره دیجیتال‌سازی فرآیندهای مالی در کویر موتور",
-          "subtitle": "Kavir Motor Financial Process Digitalization",
+          "subtitle": "",
           "description": "در این پروژه، نقش من ارائه مشاوره برای شناسایی گلوگاه‌های فرآیندهای مالی و پیشنهاد مسیرهایی برای آنلاین‌سازی و بهبود جریان‌های کاری بود. تمرکز اصلی روی کاهش فرآیندهای دستی، افزایش شفافیت، بهبود کنترل‌پذیری و نزدیک‌تر کردن عملیات مالی به ساختارهای دیجیتال بود."
         },
         {
           "title": "پلتفرم رادیو آنلاین و پخش زنده صوتی",
-          "subtitle": "LiveFM / Online Radio Platform",
+          "subtitle": "",
           "description": "LiveFM یک پروژه مرتبط با رسانه، پخش زنده صوتی و تجربه کاربری شنیداری بود. این پروژه حول ایده ارائه یک پلتفرم رادیو آنلاین شکل گرفت و شامل موضوعاتی مانند جریان پخش زنده، تجربه کاربر، مدیریت محتوا و الزامات عملیاتی رسانه دیجیتال بود. این تجربه برای من از نظر شناخت محصول‌های رسانه‌ای، live streaming و ترکیب محتوا با فناوری اهمیت داشت."
         }
       ],
@@ -99,7 +99,7 @@
       "dir": "ltr",
       "eyebrow": "Portfolio",
       "title": "Projects & Case Studies",
-      "subtitle": "نمونه‌کارها و پروژه‌ها",
+      "subtitle": "",
       "intro": [
         "A significant part of my work has been delivered within enterprise, commercial, and confidential environments. For this reason, screenshots, source code, internal dashboards, operational details, and real business data cannot be shared publicly. Instead, the following case studies focus on the business problem, my role, the solution approach, high-level architecture, and operational or business impact."
       ],
@@ -126,62 +126,62 @@
       "projects": [
         {
           "title": "Channelead B2B Hotel Booking Platform",
-          "subtitle": "پلتفرم B2B رزرو هتل چنلید",
+          "subtitle": "",
           "description": "Channelead was a B2B hotel booking platform designed for organizations, agencies, and corporate travel clients. The platform provided hotel booking services through both a web panel and API, including supplier connectivity, order management, capacity control, pricing, and sales operations. My role focused on product development support, process analysis, cross-functional coordination between business, operations, finance, and technical teams, requirement definition, order flow analysis, and operational reporting improvements."
         },
         {
           "title": "Besoye Samyar Safar Data Warehouse & BI Platform",
-          "subtitle": "دیتاورهاوس و پلتفرم BI بسوی سامیار سفر",
+          "subtitle": "",
           "description": "This project focused on building an analytical layer for sales, orders, customers, suppliers, cancellations, commissions, user behavior, search logs, and operational KPIs. The BI platform helped management and operational teams monitor daily performance, detect data issues, analyze sales trends, and track order status. My responsibilities included reporting requirement design, data analysis, SQL query development, Oracle APEX reporting, and transforming raw operational data into decision-ready insights."
         },
         {
           "title": "Real-Time CRM Lead Notification System",
-          "subtitle": "سیستم CRM بلادرنگ برای دریافت و توزیع اطلاعات کاربران",
+          "subtitle": "",
           "description": "This project connected the Besoye Samyar Safar website to a CRM panel. Once a user submitted their information on the website, the data was delivered to the CRM panel in real time through WebSocket. An API wrapper then processed and distributed the information through email, SMS, and Zulip notifications, allowing managers and system users to receive new data instantly. The project combined real-time communication, automation, CRM workflow, and operational visibility."
         },
         {
           "title": "Time Web App — time.imoein.com",
-          "subtitle": "وب‌اپلیکیشن Time",
+          "subtitle": "",
           "description": "Time is a personal React and Node.js web application built to provide a simple, fast, and independent time-focused experience. The project includes a separate frontend and API layer and is publicly available at time.imoein.com. It demonstrates my ability to build, deploy, and maintain a lightweight web application with a dedicated domain and public access."
         },
         {
           "title": "Private Docker Registry & CI/CD Infrastructure",
-          "subtitle": "رجیستری خصوصی Docker و زیرساخت CI/CD",
+          "subtitle": "",
           "description": "This project focused on designing and preparing a Docker-based delivery workflow using a private Harbor registry integrated with CI/CD processes. The work included private registry setup, Docker image tagging strategy, build and push workflow preparation, and alignment between development and production environments. It represents my experience in DevOps, containerization, and software delivery infrastructure."
         },
         {
           "title": "GitLab CI/CD Migration to Harbor Registry",
-          "subtitle": "مهاجرت GitLab CI/CD به Harbor Registry",
+          "subtitle": "",
           "description": "This project involved migrating Docker image delivery from GitLab’s internal registry to a private Harbor registry. The migration included reviewing the existing pipeline, adjusting build, development, and production stages, changing the image push destination, and preparing a more controlled release structure for different environments."
         },
         {
           "title": "Viralife Dockerized Laravel/React Platform",
-          "subtitle": "پلتفرم Dockerized ویرا‌لایف با Laravel و React",
+          "subtitle": "",
           "description": "Viralife was a Laravel and React-based platform prepared with a Dockerized architecture. The project involved service separation, PHP runtime setup, Nginx configuration, Redis caching considerations, Supervisor process management, and preparation for CI/CD-based deployment. It reflects my experience across product development, software architecture, and deployment infrastructure."
         },
         {
           "title": "Oracle APEX Operational Dashboards",
-          "subtitle": "داشبوردهای عملیاتی با Oracle APEX",
+          "subtitle": "",
           "description": "This project involved designing and maintaining operational dashboards and reports for sales, orders, users, customer groups, suppliers, cancellations, commissions, search logs, and user activity. The main focus was transforming operational data into usable reports for management decisions and daily team monitoring. The project combined SQL, data analysis, Oracle APEX, and business process understanding."
         },
         {
           "title": "GardeshOnline Travel Platform / Business Project",
-          "subtitle": "پروژه کسب‌وکاری گردش‌آنلاین",
+          "subtitle": "",
           "description": "GardeshOnline was a travel business initiative focused on leisure and corporate travel services. The project included digital presence planning, customer communication, supplier coordination, operational process design, and business development within the travel industry. As the founder, my role combined business development, process design, relationship management, and market understanding."
         },
         {
           "title": "Deltaban / 3click Product & Financial Process Automation",
-          "subtitle": "آنلاین‌سازی فرآیندهای مالی و محصول در دلتابان / سه‌کلیک",
+          "subtitle": "",
           "description": "This project focused on improving and digitizing parts of financial and product-related workflows within a travel platform. It involved areas such as payment gateway status tracking, receivables process improvement, coordination between product, finance, and operations teams, and planning for better financial data tracking. The project represents a combination of product management, process analysis, and digital transformation in financial operations."
         },
         {
           "title": "Kavir Motor Financial Process Digitalization",
-          "subtitle": "مشاوره دیجیتال‌سازی فرآیندهای مالی در کویر موتور",
+          "subtitle": "",
           "description": "In this project, my role was to provide consulting support for identifying financial process bottlenecks and proposing ways to digitize and improve workflows. The main focus was reducing manual processes, increasing transparency, improving controllability, and moving financial operations closer to digital workflows."
         },
         {
           "title": "LiveFM / Online Radio Platform",
-          "subtitle": "پلتفرم رادیو آنلاین و پخش زنده صوتی",
+          "subtitle": "",
           "description": "LiveFM was a media-related project focused on online radio, live audio streaming, and listening experience. The project was built around the idea of an online radio platform and involved areas such as live streaming workflow, user experience, content operations, and digital media requirements. This experience helped me better understand media products, live streaming, and the intersection of content and technology."
         }
       ],
