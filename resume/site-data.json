@@ -1183,5 +1183,36 @@
   "resumeDownloads": {
     "fa": "resume/معین قزلباش.pdf",
     "en": "resume/MOEIN GHEZELBASH.pdf"
-  }
+  },
+  "footerNavigation": {
+    "fa": [
+      {
+        "label": "صفحه اصلی",
+        "href": "/"
+      },
+      {
+        "label": "رزومه فارسی",
+        "href": "/resume/moein-ghezelbash-fa.html"
+      },
+      {
+        "label": "رزومه انگلیسی",
+        "href": "/resume/moein-ghezelbash-en.html"
+      }
+    ],
+    "en": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Persian Resume",
+        "href": "/resume/moein-ghezelbash-fa.html"
+      },
+      {
+        "label": "English Resume",
+        "href": "/resume/moein-ghezelbash-en.html"
+      }
+    ]
+  },
+  "copyright": "Moein Ghezelbash"
 }

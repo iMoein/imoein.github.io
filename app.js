@@ -215,6 +215,26 @@ const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
   });
 };
 
+const renderFooter = (data, content) => {
+  const nav = $("#footer-nav");
+  const copy = $("#footer-copy");
+  const links = data.footerNavigation?.[state.locale] || data.footerNavigation?.[data.defaultLocale] || [];
+
+  if (nav) {
+    clear(nav);
+    links.forEach((item) => {
+      const link = document.createElement("a");
+      link.href = item.href;
+      link.textContent = item.label;
+      nav.appendChild(link);
+    });
+  }
+
+  if (copy) {
+    copy.textContent = `© ${new Date().getFullYear()} ${data.copyright || content.heroName}.`;
+  }
+};
+
 const companyInitials = (company) => company
   .split(/\s+|&|-/)
   .filter(Boolean)
@@ -337,7 +357,7 @@ const renderHome = () => {
   renderExperienceSummary(content, data);
   renderCards("#current-focus", content.current, "focus-pill");
   renderParagraphs("#philosophy", content.philosophy);
-  $("#year").textContent = new Date().getFullYear();
+  renderFooter(data, content);
 };
 
 const setLocale = (locale) => {
