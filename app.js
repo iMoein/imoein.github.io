@@ -199,6 +199,17 @@ const renderSocialLinks = (links) => {
   });
 };
 
+const renderProjectCard = (content) => {
+  const projectCard = content.projectCard;
+  setText("#projects-card-title", content.sections.projects);
+  setText("#projects-card-description", projectCard?.description || "");
+  const link = $("#projects-card-link");
+  if (link && projectCard) {
+    link.href = projectCard.href;
+    link.textContent = projectCard.linkLabel;
+  }
+};
+
 const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
   const downloads = $("#downloads");
   clear(downloads);
@@ -348,6 +359,7 @@ const renderHome = () => {
   setText("#about-title", content.sections.about);
   setText("#social-title", content.sections.social);
   setText("#resume-title", content.sections.resume);
+  setText("#projects-card-title", content.sections.projects);
   setText("#what-title", content.sections.whatIDo);
   setText("#expertise-title", content.sections.expertise);
   setText("#experience-title", content.sections.experience);
@@ -357,6 +369,7 @@ const renderHome = () => {
   renderAbout(content);
   renderSocialLinks(data.socialLinks);
   renderResumeLinks(content, data.resumeFiles, data.resumeDownloads);
+  renderProjectCard(content);
   renderCards("#what-i-do", content.whatIDo, "card action-card");
   renderCards("#expertise", content.expertise, "card expertise-card");
   renderExperienceSummary(content, data);

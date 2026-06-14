@@ -739,3 +739,33 @@ html[dir="rtl"] .resume-detail-card {
 @media (max-width: 800px) {
   .portfolio-grid { grid-template-columns: 1fr; }
 }
+
+.projects-card {
+  display: grid;
+  gap: 12px;
+}
+
+.projects-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.8;
+  font-weight: 600;
+}
+
+.projects-card-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  background: var(--brand);
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(16, 42, 67, 0.14);
+}
+
+.projects-card-link:hover {
+  background: var(--primary);
+}
