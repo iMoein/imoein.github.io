@@ -905,3 +905,163 @@ html[dir="rtl"] .resume-detail-card {
     font-size: clamp(3rem, 14vw, 3.8rem);
   }
 }
+
+/* Minimal contact rail below resume hero */
+.resume-contact-panel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: -12px 0 34px;
+  padding: 10px;
+  border: 1px solid rgba(16,42,67,.08);
+  border-radius: 24px;
+  background: rgba(255,255,255,.54);
+  box-shadow: 0 18px 48px rgba(16,42,67,.08);
+  backdrop-filter: blur(18px);
+}
+
+.resume-contact-panel span,
+.resume-contact-panel a {
+  min-width: 0;
+  display: grid;
+  gap: 3px;
+  padding: 12px 14px;
+  color: var(--brand);
+  text-decoration: none;
+  border-radius: 18px;
+  background: rgba(255,255,255,.72);
+  border: 1px solid rgba(16,42,67,.06);
+}
+
+.resume-contact-panel small {
+  color: var(--muted);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+body.locale-fa .resume-contact-panel small {
+  letter-spacing: 0;
+}
+
+.resume-contact-panel strong {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--brand);
+  font-size: .92rem;
+  font-weight: 800;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.resume-contact-panel a:hover {
+  border-color: rgba(31,138,138,.32);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .resume-contact-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .resume-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(116px, 34vw) !important;
+    align-items: center;
+    justify-items: stretch;
+    gap: 14px;
+    min-height: 0;
+    padding: 28px 18px;
+    text-align: start;
+  }
+
+  .resume-hero-copy {
+    justify-items: start;
+    align-content: center;
+  }
+
+  .resume-eyebrow {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .resume-hero h1 {
+    max-width: 8.5ch;
+    margin-inline: 0;
+  }
+
+  body.locale-fa .resume-hero h1 {
+    font-size: clamp(2.55rem, 11.4vw, 3.65rem);
+    line-height: 1.18;
+  }
+
+  body.locale-en .resume-hero h1 {
+    max-width: 8.7ch;
+    font-size: clamp(2.25rem, 10.8vw, 3.45rem);
+    line-height: 1;
+  }
+
+  .resume-hero .lead {
+    max-width: 100%;
+    margin-inline: 0;
+    font-size: clamp(.82rem, 3.2vw, 1rem);
+  }
+
+  .resume-mark {
+    justify-self: end;
+    width: min(150px, 34vw);
+    margin-top: 0;
+    border-radius: 24px;
+  }
+
+  body.locale-fa .resume-mark {
+    justify-self: start;
+  }
+
+  .resume-contact-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin: -10px 0 26px;
+    padding: 8px;
+    border-radius: 22px;
+  }
+
+  .resume-contact-panel span,
+  .resume-contact-panel a {
+    padding: 10px 11px;
+    border-radius: 16px;
+  }
+
+  .resume-contact-panel span:nth-child(3),
+  .resume-contact-panel a:nth-child(4) {
+    grid-column: 1 / -1;
+  }
+
+  .resume-contact-panel strong {
+    font-size: .84rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .resume-hero {
+    grid-template-columns: minmax(0, 1fr) minmax(104px, 32vw) !important;
+    padding-inline: 16px;
+  }
+
+  body.locale-fa .resume-hero h1 {
+    font-size: clamp(2.35rem, 10.8vw, 3.1rem);
+  }
+
+  body.locale-en .resume-hero h1 {
+    font-size: clamp(2.05rem, 10vw, 2.85rem);
+  }
+
+  .resume-mark {
+    width: min(132px, 32vw);
+    border-radius: 20px;
+  }
+}
