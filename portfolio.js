@@ -67,13 +67,24 @@ const renderSchema = (content) => {
   schema.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
+    "@id": `https://imoein.com/portfolio.html${state.locale === "en" ? "?lang=en" : ""}#portfolio`,
     name: content.title,
     description: content.seo.description,
     url: `https://imoein.com/portfolio.html${state.locale === "en" ? "?lang=en" : ""}`,
+    inLanguage: content.lang,
+    author: {
+      "@type": "Person",
+      "@id": "https://imoein.com/#person",
+      name: "Moein Ghezelbash",
+      alternateName: "معین قزلباش"
+    },
+    about: content.seo.keywords,
     mainEntity: content.projects.map((project) => ({
       "@type": "CreativeWork",
       name: project.title,
-      description: project.description
+      description: project.description,
+      creator: { "@id": "https://imoein.com/#person" },
+      keywords: content.seo.keywords.join(", ")
     }))
   });
 };

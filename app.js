@@ -100,12 +100,28 @@ const renderStructuredData = (content, data) => {
   schema.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": "https://imoein.com/#person",
     name: data.locales.en.profile.name,
-    alternateName: data.locales.fa.profile.name,
-    jobTitle: data.locales.en.profile.title,
+    alternateName: [
+      data.locales.fa.profile.name,
+      "معین قزلباش",
+      "Moein Ghezelbash"
+    ],
+    jobTitle: [data.locales.en.profile.title, data.locales.fa.profile.title].filter(Boolean),
+    description: content.seo.description,
     url: "https://imoein.com/",
+    image: "https://imoein.com/assets/profile.jpg",
+    email: data.contact?.email?.display,
+    telephone: data.contact?.phone?.international,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: data.locales.en.profile.location,
+      addressCountry: "IR"
+    },
     sameAs,
-    knowsAbout
+    knowsAbout,
+    alumniOf: data.locales.en.education?.map((item) => item.school || item.title).filter(Boolean),
+    worksFor: content.brands?.map((name) => ({ "@type": "Organization", name }))
   });
 };
 
