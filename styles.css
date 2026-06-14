@@ -655,3 +655,87 @@ html[dir="rtl"] .resume-detail-card {
   padding: 0;
   object-fit: contain;
 }
+
+.portfolio-hero-content {
+  position: relative;
+  z-index: 1;
+  margin-top: 28px;
+  max-width: 920px;
+}
+
+.portfolio-intro {
+  max-width: 900px;
+  margin-top: 22px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: clamp(1rem, 1.7vw, 1.16rem);
+  line-height: 1.9;
+}
+
+.portfolio-intro p { margin: 0; }
+
+.portfolio-page { padding-bottom: 18px; }
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.portfolio-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(249,246,240,0.78));
+}
+
+.portfolio-card::after {
+  content: "";
+  position: absolute;
+  inset-inline-end: -46px;
+  top: -46px;
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  background: radial-gradient(circle, rgba(31, 138, 138, 0.18), transparent 68%);
+}
+
+.portfolio-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  color: #fff;
+  background: var(--brand);
+  font-weight: 900;
+}
+
+.portfolio-card h3 {
+  margin: 0 0 8px;
+  color: var(--brand);
+  font-size: clamp(1.12rem, 2vw, 1.42rem);
+  line-height: 1.45;
+}
+
+.portfolio-card-subtitle {
+  margin: 0 0 16px;
+  color: var(--primary);
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.portfolio-card-description {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.confidentiality-card {
+  border-inline-start: 5px solid var(--accent);
+}
+
+@media (max-width: 800px) {
+  .portfolio-grid { grid-template-columns: 1fr; }
+}
