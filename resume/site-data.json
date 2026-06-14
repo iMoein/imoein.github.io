@@ -889,7 +889,8 @@
         "current": "تمرکز فعلی من ",
         "social": "شبکه‌های اجتماعی",
         "resume": "رزومه آنلاین",
-        "about": "درباره من"
+        "about": "درباره من",
+        "projects": "نمونه‌کارها و پروژه‌ها"
       },
       "whatIDo": [
         "زیرساخت‌های پایدار و مقیاس‌پذیر طراحی می‌کنم.",
@@ -1020,6 +1021,11 @@
       "resumeDownloadLinks": {
         "fa": "دانلود فارسی",
         "en": "دانلود انگلیسی"
+      },
+      "projectCard": {
+        "description": "مطالعات موردی و پروژه‌هایی که در حوزه محصول، داده، زیرساخت، DevOps و اتوماسیون فرآیند انجام داده‌ام.",
+        "linkLabel": "مشاهده پروژه‌ها",
+        "href": "/portfolio.html?lang=fa"
       }
     },
     "en": {
@@ -1040,7 +1046,8 @@
         "current": "Currently Interested In",
         "social": "Social Links",
         "resume": "Online Resume",
-        "about": "About Me"
+        "about": "About Me",
+        "projects": "Projects & Case Studies"
       },
       "whatIDo": [
         "Design stable and scalable infrastructure.",
@@ -1171,6 +1178,11 @@
       "resumeDownloadLinks": {
         "fa": "Download FA",
         "en": "Download EN"
+      },
+      "projectCard": {
+        "description": "Case studies and projects across product, data, infrastructure, DevOps, and process automation.",
+        "linkLabel": "View projects",
+        "href": "/portfolio.html?lang=en"
       }
     }
   },
@@ -1191,6 +1203,10 @@
         "href": "/"
       },
       {
+        "label": "پروژه‌ها",
+        "href": "/portfolio.html?lang=fa"
+      },
+      {
         "label": "رزومه فارسی",
         "href": "/resume/moein-ghezelbash-fa.html"
       },
@@ -1203,6 +1219,10 @@
       {
         "label": "Home",
         "href": "/"
+      },
+      {
+        "label": "Projects",
+        "href": "/portfolio.html?lang=en"
       },
       {
         "label": "Persian Resume",
