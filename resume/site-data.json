@@ -1191,6 +1191,10 @@
         "href": "/"
       },
       {
+        "label": "پروژه‌ها",
+        "href": "/portfolio.html?lang=fa"
+      },
+      {
         "label": "رزومه فارسی",
         "href": "/resume/moein-ghezelbash-fa.html"
       },
@@ -1203,6 +1207,10 @@
       {
         "label": "Home",
         "href": "/"
+      },
+      {
+        "label": "Projects",
+        "href": "/portfolio.html?lang=en"
       },
       {
         "label": "Persian Resume",
