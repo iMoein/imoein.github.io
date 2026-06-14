@@ -176,8 +176,6 @@ const renderSocialLinks = (links) => {
   links.filter((item) => item.enabled !== false).forEach(({ label, url, icon, iconSrc }) => {
     const link = document.createElement("a");
     link.href = url;
-    link.target = "_blank";
-    link.rel = "noreferrer";
     const mark = document.createElement("span");
     mark.className = "social-icon";
     if (iconSrc) {
@@ -218,7 +216,6 @@ const renderResumeLinks = (content, resumeFiles, resumeDownloads) => {
     link.className = "resume-link view-link";
     link.href = resumeFiles[locale];
     link.textContent = content.resumeLinks[locale];
-    link.target = "_blank";
     downloads.appendChild(link);
   });
   ["fa", "en"].forEach((locale) => {

@@ -106,23 +106,41 @@ const renderFooter = (data, content) => {
   }
 };
 
-const renderHero = (data, content, contact) => {
-  const phone = locale === 'fa' ? contact.phone.fa : contact.phone.international;
+const contactLabels = {
+  en: { panel: 'Contact details', location: 'Location', phone: 'Phone', email: 'Email', linkedin: 'Profile' },
+  fa: { panel: 'اطلاعات تماس', location: 'موقعیت', phone: 'تلفن', email: 'ایمیل', linkedin: 'لینکدین' }
+};
+
+const contactItem = (label, value, href = '') => {
+  const item = href ? create('a', '') : create('span', '');
+  if (href) item.href = href;
+  item.append(create('small', label), create('strong', value));
+  return item;
+};
+
+const renderHero = (data, content) => {
   const hero = create('header', '', 'resume-hero');
   const copy = create('div', '', 'resume-hero-copy');
   copy.append(create('span', content.eyebrow, 'resume-eyebrow'));
   copy.append(create('h1', content.profile.name));
   copy.append(create('p', `${content.profile.title} — ${content.profile.tagline}`, 'lead'));
 
-  const contactBar = create('div', '', 'contact resume-contact');
-  [content.profile.location, phone, contact.email.display].forEach((item) => contactBar.appendChild(create('span', item)));
-  const linkedin = create('a', contact.linkedin.label);
-  linkedin.href = contact.linkedin.url;
-  contactBar.appendChild(linkedin);
-  copy.appendChild(contactBar);
-
   hero.append(copy, profileMark(data, content));
   root.appendChild(hero);
+};
+
+const renderContactPanel = (content, contact) => {
+  const labels = contactLabels[locale] || contactLabels.en;
+  const phone = locale === 'fa' ? contact.phone.fa : contact.phone.international;
+  const panel = create('section', '', 'resume-contact-panel');
+  panel.setAttribute('aria-label', labels.panel);
+  panel.append(
+    contactItem(labels.location, content.profile.location),
+    contactItem(labels.phone, phone),
+    contactItem(labels.email, contact.email.display),
+    contactItem(labels.linkedin, contact.linkedin.label, contact.linkedin.url)
+  );
+  root.appendChild(panel);
 };
 
 const render = (data) => {
@@ -133,7 +151,8 @@ const render = (data) => {
   document.title = `${content.profile.name} | ${content.profile.title}`;
   document.querySelector('meta[name="description"]').setAttribute('content', content.seo.description);
 
-  renderHero(data, content, contact);
+  renderHero(data, content);
+  renderContactPanel(content, contact);
 
   const summary = section(content.sections.summary, 'summary-section');
   const summaryCard = create('div', '', 'card resume-summary-card');
