@@ -496,7 +496,7 @@ html[dir="rtl"] .resume-detail-card {
   gap: clamp(6px, 1.5vw, 9px);
   min-width: 0;
   overflow: hidden;
-  font-size: clamp(.72rem, 1.25vw, .84rem);
+  font-size: clamp(.72rem, 1.25vw, .65rem);
   line-height: 1.25;
 }
 .social-grid a span:last-child {
