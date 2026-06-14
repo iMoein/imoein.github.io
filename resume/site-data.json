@@ -946,7 +946,16 @@
         "en": "مشاهده انگلیسی"
       },
       "seo": {
-        "description": "معین قزلباش متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل کسب‌وکار است."
+        "description": "معین قزلباش متخصص زیرساخت، داده و فناوری با بیش از یک دهه تجربه در طراحی سیستم‌های مقیاس‌پذیر، توسعه محصولات دیجیتال و حل مسائل کسب‌وکار است.",
+        "keywords": [
+          "معین قزلباش",
+          "Moein Ghezelbash",
+          "معمار زیرساخت",
+          "رهبر DevOps",
+          "مهندسی داده",
+          "هوش تجاری",
+          "فناوری سفر"
+        ]
       },
       "introTitle": "معرفی من",
       "aboutBlocks": [
@@ -1088,7 +1097,16 @@
         "en": "View EN"
       },
       "seo": {
-        "description": "Moein Ghezelbash is an infrastructure, data, and technology specialist with 10+ years of experience designing scalable systems and digital products."
+        "description": "Moein Ghezelbash is an infrastructure, data, and technology specialist with 10+ years of experience designing scalable systems and digital products.",
+        "keywords": [
+          "Moein Ghezelbash",
+          "Infrastructure Architect",
+          "DevOps Leader",
+          "Data Engineering",
+          "Business Intelligence",
+          "Travel Technology",
+          "Digital Transformation"
+        ]
       },
       "introTitle": "About Me",
       "aboutBlocks": [
@@ -1165,5 +1183,36 @@
   "resumeDownloads": {
     "fa": "resume/معین قزلباش.pdf",
     "en": "resume/MOEIN GHEZELBASH.pdf"
-  }
+  },
+  "footerNavigation": {
+    "fa": [
+      {
+        "label": "صفحه اصلی",
+        "href": "/"
+      },
+      {
+        "label": "رزومه فارسی",
+        "href": "/resume/moein-ghezelbash-fa.html"
+      },
+      {
+        "label": "رزومه انگلیسی",
+        "href": "/resume/moein-ghezelbash-en.html"
+      }
+    ],
+    "en": [
+      {
+        "label": "Home",
+        "href": "/"
+      },
+      {
+        "label": "Persian Resume",
+        "href": "/resume/moein-ghezelbash-fa.html"
+      },
+      {
+        "label": "English Resume",
+        "href": "/resume/moein-ghezelbash-en.html"
+      }
+    ]
+  },
+  "copyright": "Moein Ghezelbash"
 }
