@@ -41,17 +41,17 @@
       "projects": [
         {
           "title": "A-Forwarder",
-          "subtitle": "مدیر محصول فنی | iMoein.com | مرداد ۱۴۰۵ تا اکنون",
+          "subtitle": "",
           "description": "A-Forwarder یک محصول موبایلی چندپلتفرمی برای انتقال پیام‌ها و رویدادهای تماس از گوشی Android دارای سیم‌کارت به iPhone است. محصول از چهار اپ مستقل تشکیل شده است: دو اپ برای Android در حوزه SMS و Phone و دو اپ برای iPhone در همین دو حوزه؛ هر بخش مستقل از دیگری کار می‌کند. نقش من شامل تعریف مسئله و محدوده محصول، طراحی جریان‌های اصلی، تدوین نقشه راه Android و iOS، بررسی محدودیت‌های هر پلتفرم، مدیریت نیازمندی‌های چندسیم‌کارته، وضعیت اتصال و آفلاین، نوتیفیکیشن‌ها و هدایت توسعه مرحله‌ای محصول بوده است. در این پروژه از هوش مصنوعی مولد و AI Coding Agents برای تحقیق فنی، تدوین نیازمندی، نمونه‌سازی، بازبینی پیاده‌سازی، تست و خطایابی استفاده شده است."
         },
         {
           "title": "Farvah Cafe",
-          "subtitle": "مدیر محصول | خرداد ۱۴۰۵ تا اکنون",
+          "subtitle": "",
           "description": "Farvah Cafe یک پلتفرم یکپارچه برای مدیریت کافه و ارتباط با مشتری است که از یک MVP شروع شد و در چند فاز به سمت یک محصول تجاری چندماژوله توسعه پیدا کرد. محصول شامل POS، مدیریت سفارش، منو و محصول، پروفایل مشتری، باشگاه مشتریان و پاداش، CRM، فرایندهای حسابداری، مدیریت نقش‌ها و عملیات چندشعبه‌ای است. نقش من شامل تعریف نیازمندی‌ها، طراحی نقشه راه، اولویت‌بندی قابلیت‌ها، طراحی گردش‌کار برای مدیر، مدیر شعبه، صندوق‌دار، باریستا و مشتری و هماهنگی تصمیمات محصول با معماری فنی و تجربه کاربری بوده است. محصول در پایان فاز ۷ قرار دارد و فاز ۸ با تمرکز بر قابلیت‌های فرانچایز و توسعه ساختار چندشعبه‌ای تعریف شده است."
         },
         {
           "title": "TIME",
-          "subtitle": "مدیر محصول | iMoein.com | ۲۰ اردیبهشت ۱۴۰۵ تا پایان خرداد ۱۴۰۵",
+          "subtitle": "",
           "description": "TIME یک محصول وب عمومی برای نمایش و مقایسه ساعت، تاریخ و منطقه زمانی شهرهای مختلف است که از مرحله ایده تا انتشار عمومی توسعه داده شد. قابلیت‌های اصلی آن شامل ساعت زنده، جست‌وجوی شهر و منطقه زمانی، ذخیره شهرهای منتخب، نمایش تاریخ شمسی و میلادی، شماره هفته و رابط واکنش‌گرا برای موبایل و دسکتاپ است. محصول با داده‌های قابل تنظیم، بخش مدیریت سبک و فرایند انتشار و بروزرسانی از طریق GitHub Pages طراحی شد و روی time.imoein.com در دسترس قرار گرفت. این پروژه به‌عنوان یک محصول کامل و قابل استفاده عمومی توسعه داده شد، نه صرفاً یک نمونه اولیه."
         },
         {
@@ -152,17 +152,17 @@
       "projects": [
         {
           "title": "A-Forwarder",
-          "subtitle": "Technical Product Manager | iMoein.com | August 2026 – Present",
+          "subtitle": "",
           "description": "A-Forwarder is a cross-platform mobile product for transferring SMS and call activity from an Android phone with SIM connectivity to an iPhone. The product consists of four independent apps: two Android apps for SMS and Phone and two iPhone apps for the same areas, with each part operating independently. My role covers problem definition, product scope, key user flows, separate Android and iOS roadmaps, platform constraints, multi-SIM behavior, connectivity and offline states, notifications, and phased product delivery. Generative AI and AI coding agents are used throughout technical research, requirements, prototyping, implementation review, testing, and debugging."
         },
         {
           "title": "Farvah Cafe",
-          "subtitle": "Product Manager | June 2026 – Present",
+          "subtitle": "",
           "description": "Farvah Cafe is an integrated café management and customer engagement platform that started as an MVP and evolved through multiple phases toward a commercial multi-module product. It covers POS, order management, menu and product management, customer profiles, loyalty and rewards, CRM, accounting workflows, role-based access, and multi-branch operations. My role includes requirements definition, roadmap design, feature prioritization, workflow design for managers, branch managers, cashiers, baristas, and customers, and keeping product decisions aligned with technical architecture and user experience. The product is at the end of Phase 7, with Phase 8 focused on franchise capabilities and further multi-branch expansion."
         },
         {
           "title": "TIME",
-          "subtitle": "Product Manager | iMoein.com | May 10, 2026 – June 2026",
+          "subtitle": "",
           "description": "TIME is a public web product for viewing and comparing local time, dates, and time zones across cities, developed from initial concept through public release. Core features include live clocks, city and time-zone search, saved cities, Persian and Gregorian calendar dates, ISO week information, and a responsive interface for desktop and mobile. The product was designed with configurable data, a lightweight administration flow, and a deployment and update process through GitHub Pages, and was released publicly at time.imoein.com. It was built as a complete usable product rather than a prototype."
         },
         {
