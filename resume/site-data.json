@@ -124,14 +124,48 @@
       ],
       "experience": [
         {
-          "role": "Founder & Product Manager",
-          "company": "Farvah Cafe",
-          "period": "2026 – Present",
+          "role": "Technical Product Manager",
+          "company": "A-Forwarder",
+          "period": "August 2026 – Present",
           "description": [
-            "Founded and led Farvah Cafe as an integrated café management and customer engagement platform, growing the product from an MVP into a multi-module commercial platform.",
+            "Defined and led development of a cross-platform product for transferring SMS and call activity from an Android device with SIM connectivity to an iPhone.",
+            "Built the product as four independent apps: two Android apps for SMS and Phone, and two iPhone apps for SMS and Phone. Each part works independently.",
+            "Defined product flows for SMS synchronization and sending, call-event forwarding, multi-SIM handling, device connectivity, offline states, gateway status, background behavior, and cross-device notifications.",
+            "Created separate Android and iOS roadmaps, moving from technical feasibility and MVP validation toward a more complete product while accounting for the different limitations of each platform.",
+            "Used generative AI and AI coding agents for technical research, product specification, prototyping, implementation review, testing, debugging, and release planning."
+          ],
+          "achievements": [
+            "Turned a real connectivity limitation into a modular four-app product.",
+            "Separated SMS and Phone so each app can be developed, tested, and released independently.",
+            "Defined a consistent cross-platform experience for connectivity, messages, calls, multi-SIM behavior, offline states, and system status.",
+            "Balanced product experience with Android and iOS platform constraints through phased technical and product decisions."
+          ],
+          "logo": {
+            "src": "assets/logo/a-forwarder.svg",
+            "text": "AF",
+            "candidates": [
+              "assets/logo/a-forwarder.svg",
+              "assets/logo/a-forwarder.png",
+              "assets/logo/a-forwarder.jpg",
+              "assets/logo/a-forwarder.jpeg",
+              "assets/logo/a-forwarder.webp",
+              "assets/logo/aforwarder.svg",
+              "assets/logo/aforwarder.png",
+              "assets/logo/aforwarder.jpg",
+              "assets/logo/aforwarder.jpeg",
+              "assets/logo/aforwarder.webp"
+            ]
+          }
+        },
+        {
+          "role": "Product Manager",
+          "company": "Farvah Cafe",
+          "period": "May 2026 – Present",
+          "description": [
+            "Leading Farvah Cafe as an integrated café management and customer engagement product, growing it from an MVP into a multi-module commercial platform.",
             "Defined and executed a phased product roadmap covering POS, order management, menu and product management, customer profiles, loyalty and rewards, CRM, accounting workflows, role-based administration, and multi-branch operations.",
             "Defined workflows and requirements for administrators, branch managers, cashiers, baristas, and customers based on real operational use cases.",
-            "Led the product through the end of Phase 7, with Phase 8 focused on franchise capabilities, multi-branch scalability, and the structure required for broader commercial expansion.",
+            "Led the product through the end of Phase 7; Phase 8 is focused on franchise capabilities, multi-branch scalability, and the structure needed for broader commercial expansion.",
             "Used generative AI and AI coding agents across research, requirements, prototyping, implementation review, testing, debugging, and documentation.",
             "Kept product decisions aligned with technical architecture, user experience, and operational needs as the platform moved from MVP toward commercial readiness."
           ],
@@ -159,36 +193,29 @@
           }
         },
         {
-          "role": "Product Builder & Technical Product Manager",
-          "company": "A-Forwarder",
-          "period": "2026 – Present",
+          "role": "Product Manager",
+          "company": "TIME",
+          "period": "May 2026 – June 2026",
           "description": [
-            "Defined and led development of a cross-platform communication product designed to relay SMS and call activity from an Android device with SIM connectivity to an iPhone using the Android device as the communication gateway.",
-            "Structured the product as four independent applications: SMS Gateway for Android, Phone Gateway for Android, SMS Companion for iPhone, and Phone Companion for iPhone. SMS and Phone products operate independently on both platforms.",
-            "Defined product flows for SMS synchronization and sending, call-event forwarding, multi-SIM handling, device connectivity, offline states, gateway status, background behavior, and cross-device notifications.",
-            "Created separate Android and iOS roadmaps, moving from technical feasibility and MVP validation toward a more complete product while accounting for the different limitations of each platform.",
-            "Used generative AI and AI coding agents for technical research, product specification, prototyping, implementation review, testing, debugging, and release planning."
+            "Led the development of TIME.imoein.com as a standalone web product for viewing and comparing local time, dates, and time zones across cities.",
+            "Defined the product experience around live clocks, city and time-zone search, saved city selections, Persian and Gregorian calendars, ISO week information, and responsive use across desktop and mobile.",
+            "Designed the product for public use with configurable data, a lightweight administration flow, and a deployment model that allowed updates to be released through GitHub Pages.",
+            "Managed the product from initial concept and scope definition through implementation, testing, refinement, and public release."
           ],
           "achievements": [
-            "Turned a real connectivity limitation into a modular four-app product architecture.",
-            "Separated SMS and Phone into independent products, allowing each application to be developed, tested, and released without direct dependency on the other.",
-            "Defined a consistent cross-platform model for connectivity, message and call flows, multi-SIM behavior, offline resilience, and user-visible system status.",
-            "Balanced product experience with Android and iOS platform constraints through phased technical and product decisions."
+            "Took a focused product from concept to public release within a short development cycle.",
+            "Built a complete standalone web product rather than a prototype, with user-facing functionality, configuration, administration, and a production deployment flow.",
+            "Created a reusable product foundation that could be expanded with additional calendar, location, and time-related services."
           ],
           "logo": {
-            "src": "assets/logo/a-forwarder.svg",
-            "text": "AF",
+            "src": "assets/logo/time.svg",
+            "text": "TM",
             "candidates": [
-              "assets/logo/a-forwarder.svg",
-              "assets/logo/a-forwarder.png",
-              "assets/logo/a-forwarder.jpg",
-              "assets/logo/a-forwarder.jpeg",
-              "assets/logo/a-forwarder.webp",
-              "assets/logo/aforwarder.svg",
-              "assets/logo/aforwarder.png",
-              "assets/logo/aforwarder.jpg",
-              "assets/logo/aforwarder.jpeg",
-              "assets/logo/aforwarder.webp"
+              "assets/logo/time.svg",
+              "assets/logo/time.png",
+              "assets/logo/time.jpg",
+              "assets/logo/time.jpeg",
+              "assets/logo/time.webp"
             ]
           }
         },
@@ -479,8 +506,7 @@
         "CMS"
       ],
       "education": [
-        "Associate Degree in Software Engineering (Islamic Azad University)",
-        "Professional Diploma in Reservation & Customer Service (IranAir Training Center)"
+        "Software Engineering — Islamic Azad University"
       ],
       "certificates": [
         "Docker Fundamentals",
@@ -598,21 +624,55 @@
       ],
       "experience": [
         {
-          "role": "بنیان‌گذار و مدیر محصول",
-          "company": "Farvah Cafe",
-          "period": "۱۴۰۵ تا اکنون",
+          "role": "مدیر محصول فنی",
+          "company": "A-Forwarder",
+          "period": "مرداد ۱۴۰۵ تا اکنون",
           "description": [
-            "بنیان‌گذاری و هدایت Farvah Cafe به‌عنوان یک پلتفرم یکپارچه برای مدیریت کافه و ارتباط با مشتری، از مرحله MVP تا توسعه یک محصول تجاری چندماژوله.",
+            "تعریف و هدایت توسعه یک محصول چندپلتفرمی برای انتقال پیام‌ها و رویدادهای تماس از گوشی Android دارای سیم‌کارت به iPhone.",
+            "توسعه محصول در قالب چهار اپ مستقل: دو اپ Android برای SMS و Phone و دو اپ iPhone برای SMS و Phone؛ هر بخش مستقل از دیگری کار می‌کند.",
+            "تعریف جریان‌های اصلی محصول شامل همگام‌سازی و ارسال SMS، انتقال رویدادهای تماس، مدیریت چند سیم‌کارت، اتصال دستگاه‌ها، حالت آفلاین، وضعیت Gateway، رفتار پس‌زمینه و نوتیفیکیشن‌های بین دستگاهی.",
+            "تدوین نقشه راه مستقل برای Android و iOS از مرحله بررسی امکان‌پذیری و MVP تا توسعه محصول کامل‌تر، با درنظر گرفتن محدودیت‌های متفاوت هر پلتفرم.",
+            "استفاده از هوش مصنوعی مولد و AI Coding Agents در تحقیق فنی، تدوین مشخصات محصول، نمونه‌سازی، بازبینی پیاده‌سازی، تست، خطایابی و برنامه‌ریزی انتشار."
+          ],
+          "achievements": [
+            "تبدیل یک محدودیت واقعی ارتباطی به یک محصول ماژولار چهاراپی.",
+            "تفکیک SMS و Phone و فراهم‌کردن امکان توسعه، تست و انتشار مستقل هر اپ.",
+            "تعریف یک تجربه منسجم میان Android و iPhone برای اتصال، پیام، تماس، چند سیم‌کارت، حالت آفلاین و وضعیت سیستم.",
+            "ایجاد تعادل میان تجربه محصول و محدودیت‌های Android و iOS با تصمیم‌گیری مرحله‌ای در حوزه محصول و فناوری."
+          ],
+          "logo": {
+            "src": "assets/logo/a-forwarder.svg",
+            "text": "AF",
+            "candidates": [
+              "assets/logo/a-forwarder.svg",
+              "assets/logo/a-forwarder.png",
+              "assets/logo/a-forwarder.jpg",
+              "assets/logo/a-forwarder.jpeg",
+              "assets/logo/a-forwarder.webp",
+              "assets/logo/aforwarder.svg",
+              "assets/logo/aforwarder.png",
+              "assets/logo/aforwarder.jpg",
+              "assets/logo/aforwarder.jpeg",
+              "assets/logo/aforwarder.webp"
+            ]
+          }
+        },
+        {
+          "role": "مدیر محصول",
+          "company": "Farvah Cafe",
+          "period": "خرداد ۱۴۰۵ تا اکنون",
+          "description": [
+            "هدایت Farvah Cafe به‌عنوان یک محصول یکپارچه برای مدیریت کافه و ارتباط با مشتری، از مرحله MVP تا توسعه یک پلتفرم تجاری چندماژوله.",
             "طراحی و اجرای نقشه راه محصول در چند فاز، با توسعه تدریجی قابلیت‌هایی مانند POS، مدیریت سفارش، منو و محصول، پروفایل مشتری، باشگاه مشتریان و پاداش، CRM، فرایندهای حسابداری، مدیریت نقش‌ها و عملیات چندشعبه‌ای.",
-            "تعریف گردش‌کارها و نیازمندی‌های مربوط به مدیر، مدیر شعبه، صندوق‌دار، باریستا و مشتری بر اساس فرایندهای واقعی عملیاتی.",
-            "هدایت محصول تا پایان فاز ۷؛ فاز ۸ با تمرکز بر قابلیت‌های Franchise، توسعه ساختار چندشعبه‌ای و آماده‌سازی محصول برای مقیاس‌پذیری تجاری تعریف شده است.",
+            "تعریف گردش‌کارها و نیازمندی‌های مدیر، مدیر شعبه، صندوق‌دار، باریستا و مشتری بر اساس فرایندهای واقعی عملیاتی.",
+            "هدایت محصول تا پایان فاز ۷؛ فاز ۸ با تمرکز بر قابلیت‌های فرانچایز، توسعه ساختار چندشعبه‌ای و آماده‌سازی محصول برای مقیاس‌پذیری تجاری تعریف شده است.",
             "استفاده از هوش مصنوعی مولد و AI Coding Agents در تحقیق، تدوین نیازمندی‌ها، نمونه‌سازی، بازبینی پیاده‌سازی، تست، رفع خطا و مستندسازی.",
             "هماهنگ نگه داشتن تصمیمات محصول با معماری فنی، تجربه کاربری و نیازهای عملیاتی در مسیر رشد محصول از MVP تا نسخه تجاری."
           ],
           "achievements": [
             "تبدیل یک ایده اولیه به محصولی فازبندی‌شده با مسیر مشخص از MVP تا آمادگی تجاری.",
             "یکپارچه‌سازی فرایندهای فروش، عملیات روزانه، ارتباط با مشتری، وفاداری، CRM و امور پشتیبان در یک پلتفرم واحد.",
-            "طراحی محصول از ابتدا با نگاه به عملیات چندشعبه‌ای، مدیریت متمرکز و توسعه آینده در مدل Franchise.",
+            "طراحی محصول از ابتدا با نگاه به عملیات چندشعبه‌ای، مدیریت متمرکز و توسعه آینده در مدل فرانچایز.",
             "استفاده از فرایندهای AI-Augmented برای سریع‌تر و منظم‌تر شدن تحقیق، تدوین نیازمندی، نمونه‌سازی و تکرار محصول."
           ],
           "logo": {
@@ -633,36 +693,29 @@
           }
         },
         {
-          "role": "سازنده محصول و مدیر محصول فنی",
-          "company": "A-Forwarder",
-          "period": "۱۴۰۵ تا اکنون",
+          "role": "مدیر محصول",
+          "company": "TIME",
+          "period": "۲۰ اردیبهشت ۱۴۰۵ تا پایان خرداد ۱۴۰۵",
           "description": [
-            "تعریف و هدایت توسعه یک محصول ارتباطی چندپلتفرمی برای انتقال پیام‌ها و رویدادهای تماس از یک دستگاه Android دارای سیم‌کارت به iPhone، با استفاده از Android به‌عنوان Gateway ارتباطی.",
-            "طراحی محصول به‌صورت چهار اپلیکیشن مستقل: SMS Gateway برای Android، Phone Gateway برای Android، SMS Companion برای iPhone و Phone Companion برای iPhone. بخش SMS و Phone در هر دو پلتفرم مستقل از یکدیگر کار می‌کنند.",
-            "تعریف جریان‌های اصلی محصول شامل همگام‌سازی و ارسال SMS، انتقال رویدادهای تماس، مدیریت چند سیم‌کارت، اتصال دستگاه‌ها، حالت آفلاین، وضعیت Gateway، رفتار پس‌زمینه و نوتیفیکیشن‌های بین دستگاهی.",
-            "تدوین نقشه راه مستقل برای Android و iOS از مرحله بررسی امکان‌پذیری و MVP تا توسعه محصول کامل‌تر، با درنظر گرفتن محدودیت‌های متفاوت هر پلتفرم.",
-            "استفاده از هوش مصنوعی مولد و AI Coding Agents در تحقیق فنی، تدوین مشخصات محصول، نمونه‌سازی، بازبینی پیاده‌سازی، تست، خطایابی و برنامه‌ریزی انتشار."
+            "هدایت توسعه TIME.imoein.com به‌عنوان یک محصول وب مستقل برای نمایش و مقایسه ساعت، تاریخ و منطقه زمانی شهرهای مختلف.",
+            "تعریف تجربه محصول شامل ساعت زنده، جست‌وجوی شهر و منطقه زمانی، ذخیره شهرهای منتخب، تقویم شمسی و میلادی، شماره هفته و رابط واکنش‌گرا برای موبایل و دسکتاپ.",
+            "طراحی محصول برای استفاده عمومی با داده‌های قابل تنظیم، بخش مدیریت سبک و روشی برای انتشار و بروزرسانی مستمر از طریق GitHub Pages.",
+            "مدیریت مسیر محصول از ایده و تعیین محدوده اولیه تا پیاده‌سازی، تست، اصلاح و انتشار عمومی."
           ],
           "achievements": [
-            "تبدیل یک محدودیت واقعی ارتباطی به معماری ماژولار چهاراپی.",
-            "تفکیک SMS و Phone به محصولات مستقل و فراهم‌کردن امکان توسعه، تست و انتشار جداگانه برای هر اپلیکیشن.",
-            "تعریف یک مدل منسجم چندپلتفرمی برای اتصال، جریان پیام و تماس، رفتار چندسیم‌کارته، حالت آفلاین و نمایش وضعیت سیستم به کاربر.",
-            "ایجاد تعادل میان تجربه محصول و محدودیت‌های Android و iOS با تصمیم‌گیری مرحله‌ای در حوزه محصول و فناوری."
+            "تبدیل ایده به یک محصول کامل و قابل استفاده عمومی در یک بازه توسعه کوتاه.",
+            "توسعه یک محصول وب مستقل با قابلیت‌های کاربری، مدیریت داده و فرایند انتشار واقعی؛ فراتر از یک نمونه اولیه.",
+            "ایجاد پایه‌ای قابل توسعه برای اضافه شدن خدمات بیشتر در حوزه زمان، تقویم و اطلاعات مکانی."
           ],
           "logo": {
-            "src": "assets/logo/a-forwarder.svg",
-            "text": "AF",
+            "src": "assets/logo/time.svg",
+            "text": "TM",
             "candidates": [
-              "assets/logo/a-forwarder.svg",
-              "assets/logo/a-forwarder.png",
-              "assets/logo/a-forwarder.jpg",
-              "assets/logo/a-forwarder.jpeg",
-              "assets/logo/a-forwarder.webp",
-              "assets/logo/aforwarder.svg",
-              "assets/logo/aforwarder.png",
-              "assets/logo/aforwarder.jpg",
-              "assets/logo/aforwarder.jpeg",
-              "assets/logo/aforwarder.webp"
+              "assets/logo/time.svg",
+              "assets/logo/time.png",
+              "assets/logo/time.jpg",
+              "assets/logo/time.jpeg",
+              "assets/logo/time.webp"
             ]
           }
         },
@@ -953,8 +1006,7 @@
         "CMS"
       ],
       "education": [
-        "کاردانی مهندسی نرم‌افزار — دانشگاه آزاد اسلامی",
-        "دیپلم تخصصی رزرو و خدمات مشتریان — مرکز آموزش ایران‌ایر"
+        "مهندسی نرم‌افزار — دانشگاه آزاد اسلامی"
       ],
       "certificates": [
         "Docker Fundamentals",
@@ -1201,7 +1253,7 @@
         "en": "دانلود انگلیسی"
       },
       "projectCard": {
-        "description": "مطالعات موردی شامل Farvah Cafe و A-Forwarder با تمرکز بر استراتژی محصول، توسعه مرحله‌ای، سیستم‌های B2B، فرایندهای AI-Augmented و طراحی محصول چندپلتفرمی.",
+        "description": "مطالعات موردی محصول شامل A-Forwarder، Farvah Cafe و TIME؛ از ارتباط موبایلی چندپلتفرمی و مدیریت کافه تا یک محصول وب منتشرشده برای استفاده عمومی.",
         "linkLabel": "مشاهده پروژه‌ها",
         "href": "/portfolio.html?lang=fa"
       }
@@ -1368,7 +1420,7 @@
         "en": "Download EN"
       },
       "projectCard": {
-        "description": "Case studies including Farvah Cafe and A-Forwarder, covering product strategy, phased product development, B2B systems, AI-augmented workflows, and cross-platform product design.",
+        "description": "Product case studies including A-Forwarder, Farvah Cafe, and TIME — covering cross-platform mobile communication, café operations, and a publicly released web product.",
         "linkLabel": "View projects",
         "href": "/portfolio.html?lang=en"
       }
@@ -1430,5 +1482,17 @@
       }
     ]
   },
-  "copyright": "Moein Ghezelbash"
+  "copyright": "Moein Ghezelbash",
+  "projectLinks": {
+    "time": {
+      "site": "https://time.imoein.com",
+      "github": "https://github.com/iMoein/time"
+    },
+    "farvahCafe": {
+      "github": "https://github.com/iMoein/smart-coffee"
+    },
+    "aForwarder": {
+      "github": "https://github.com/iMoein/a-forwarder"
+    }
+  }
 }
