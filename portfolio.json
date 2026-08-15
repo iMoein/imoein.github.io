@@ -8,7 +8,7 @@
       "title": "نمونه‌کارها و پروژه‌ها",
       "subtitle": "",
       "intro": [
-        "بخش قابل توجهی از پروژه‌هایی که در آن‌ها نقش داشته‌ام، در محیط‌های سازمانی، تجاری و محرمانه انجام شده‌اند. به همین دلیل، امکان انتشار اسکرین‌شات، سورس‌کد، داشبوردهای داخلی، اطلاعات عملیاتی یا داده‌های واقعی آن‌ها وجود ندارد. با این حال، در این بخش تلاش کرده‌ام پروژه‌ها را بر اساس مسئله، نقش من، نوع راه‌حل، معماری کلی و اثر تجاری یا عملیاتی آن‌ها معرفی کنم."
+        "در این بخش مجموعه‌ای از محصولات، پروژه‌ها و مطالعات موردی را معرفی کرده‌ام؛ از محصولات مستقلی که از ایده تا انتشار توسعه داده شده‌اند تا پروژه‌های سازمانی در حوزه محصول، داده، زیرساخت و اتوماسیون. در پروژه‌های محرمانه، توضیحات فقط بر مسئله، نقش من، نوع راه‌حل و اثر عملیاتی یا تجاری تمرکز دارند."
       ],
       "sections": {
         "projects": "پروژه‌ها و مطالعات موردی",
@@ -20,24 +20,40 @@
         "resumeEn": "رزومه انگلیسی"
       },
       "seo": {
-        "description": "نمونه‌کارها، پروژه‌ها و مطالعات موردی معین قزلباش در زیرساخت، DevOps، BI، دیتاورهاوس، اتوماسیون فرایند، پلتفرم‌های B2B و فناوری سفر.",
+        "description": "نمونه‌کارها و مطالعات موردی معین قزلباش در مدیریت محصول، محصولات موبایلی و وب، پلتفرم‌های B2B، هوش مصنوعی در توسعه محصول، BI، اتوماسیون و فناوری سفر.",
         "keywords": [
           "معین قزلباش",
           "نمونه کار معین قزلباش",
-          "پروژه‌های معین قزلباش",
-          "DevOps",
-          "BI",
-          "هوش تجاری",
-          "دیتاورهاوس",
-          "زیرساخت",
-          "اتوماسیون فرایند",
-          "فناوری سفر",
+          "مدیر محصول",
+          "مدیر محصول فنی",
+          "A-Forwarder",
+          "Farvah Cafe",
+          "TIME",
+          "محصول موبایل",
+          "محصول وب",
           "B2B",
-          "Docker",
-          "CI/CD"
+          "AI-Augmented Product Development",
+          "هوش تجاری",
+          "اتوماسیون فرایند",
+          "فناوری سفر"
         ]
       },
       "projects": [
+        {
+          "title": "A-Forwarder",
+          "subtitle": "مدیر محصول فنی | iMoein.com | مرداد ۱۴۰۵ تا اکنون",
+          "description": "A-Forwarder یک محصول موبایلی چندپلتفرمی برای انتقال پیام‌ها و رویدادهای تماس از گوشی Android دارای سیم‌کارت به iPhone است. محصول از چهار اپ مستقل تشکیل شده است: دو اپ برای Android در حوزه SMS و Phone و دو اپ برای iPhone در همین دو حوزه؛ هر بخش مستقل از دیگری کار می‌کند. نقش من شامل تعریف مسئله و محدوده محصول، طراحی جریان‌های اصلی، تدوین نقشه راه Android و iOS، بررسی محدودیت‌های هر پلتفرم، مدیریت نیازمندی‌های چندسیم‌کارته، وضعیت اتصال و آفلاین، نوتیفیکیشن‌ها و هدایت توسعه مرحله‌ای محصول بوده است. در این پروژه از هوش مصنوعی مولد و AI Coding Agents برای تحقیق فنی، تدوین نیازمندی، نمونه‌سازی، بازبینی پیاده‌سازی، تست و خطایابی استفاده شده است."
+        },
+        {
+          "title": "Farvah Cafe",
+          "subtitle": "مدیر محصول | خرداد ۱۴۰۵ تا اکنون",
+          "description": "Farvah Cafe یک پلتفرم یکپارچه برای مدیریت کافه و ارتباط با مشتری است که از یک MVP شروع شد و در چند فاز به سمت یک محصول تجاری چندماژوله توسعه پیدا کرد. محصول شامل POS، مدیریت سفارش، منو و محصول، پروفایل مشتری، باشگاه مشتریان و پاداش، CRM، فرایندهای حسابداری، مدیریت نقش‌ها و عملیات چندشعبه‌ای است. نقش من شامل تعریف نیازمندی‌ها، طراحی نقشه راه، اولویت‌بندی قابلیت‌ها، طراحی گردش‌کار برای مدیر، مدیر شعبه، صندوق‌دار، باریستا و مشتری و هماهنگی تصمیمات محصول با معماری فنی و تجربه کاربری بوده است. محصول در پایان فاز ۷ قرار دارد و فاز ۸ با تمرکز بر قابلیت‌های فرانچایز و توسعه ساختار چندشعبه‌ای تعریف شده است."
+        },
+        {
+          "title": "TIME",
+          "subtitle": "مدیر محصول | iMoein.com | ۲۰ اردیبهشت ۱۴۰۵ تا پایان خرداد ۱۴۰۵",
+          "description": "TIME یک محصول وب عمومی برای نمایش و مقایسه ساعت، تاریخ و منطقه زمانی شهرهای مختلف است که از مرحله ایده تا انتشار عمومی توسعه داده شد. قابلیت‌های اصلی آن شامل ساعت زنده، جست‌وجوی شهر و منطقه زمانی، ذخیره شهرهای منتخب، نمایش تاریخ شمسی و میلادی، شماره هفته و رابط واکنش‌گرا برای موبایل و دسکتاپ است. محصول با داده‌های قابل تنظیم، بخش مدیریت سبک و فرایند انتشار و بروزرسانی از طریق GitHub Pages طراحی شد و روی time.imoein.com در دسترس قرار گرفت. این پروژه به‌عنوان یک محصول کامل و قابل استفاده عمومی توسعه داده شد، نه صرفاً یک نمونه اولیه."
+        },
         {
           "title": "پلتفرم B2B رزرو هتل چنلید",
           "subtitle": "",
@@ -52,11 +68,6 @@
           "title": "سیستم CRM بلادرنگ برای دریافت و توزیع اطلاعات کاربران",
           "subtitle": "",
           "description": "این پروژه با هدف اتصال وب‌سایت بسوی سامیار سفر به پنل CRM طراحی شد. پس از تکمیل اطلاعات توسط کاربر در وب‌سایت، داده‌ها به‌صورت بلادرنگ از طریق WebSocket وارد پنل CRM می‌شدند. سپس یک API Wrapper اطلاعات را پردازش و از طریق ایمیل، پیامک و Zulip برای مدیران و کاربران مرتبط ارسال می‌کرد تا تیم‌ها بتوانند بدون تأخیر به داده‌های جدید دسترسی داشته باشند. این پروژه ترکیبی از real-time communication، automation، CRM workflow و operational visibility بود."
-        },
-        {
-          "title": "وب‌اپلیکیشن Time",
-          "subtitle": "",
-          "description": "Time یک پروژه شخصی مبتنی بر React و Node.js است که با هدف نمایش زمان و ارائه یک تجربه ساده، سریع و مستقل طراحی شده است. این پروژه دارای فرانت‌اند و API جداگانه است و روی دامنه اختصاصی time.imoein.com در دسترس قرار گرفته. این پروژه برای نمایش توانایی من در ساخت، انتشار و نگهداری یک وب‌اپلیکیشن سبک و مستقل استفاده می‌شود."
         },
         {
           "title": "رجیستری خصوصی Docker و زیرساخت CI/CD",
@@ -108,7 +119,7 @@
       "title": "Projects & Case Studies",
       "subtitle": "",
       "intro": [
-        "A significant part of my work has been delivered within enterprise, commercial, and confidential environments. For this reason, screenshots, source code, internal dashboards, operational details, and real business data cannot be shared publicly. Instead, the following case studies focus on the business problem, my role, the solution approach, high-level architecture, and operational or business impact."
+        "This portfolio includes products, projects, and case studies ranging from independent products taken from idea to release to enterprise work across product, data, infrastructure, and automation. For confidential projects, the descriptions focus only on the problem, my role, the solution approach, and the operational or business impact."
       ],
       "sections": {
         "projects": "Selected projects",
@@ -120,23 +131,40 @@
         "resumeEn": "English resume"
       },
       "seo": {
-        "description": "Projects and case studies by Moein Ghezelbash across infrastructure, DevOps, BI, data warehouse, process automation, B2B platforms, and travel technology.",
+        "description": "Product portfolio and case studies by Moein Ghezelbash across product management, mobile and web products, B2B platforms, AI-augmented product development, BI, automation, and travel technology.",
         "keywords": [
           "Moein Ghezelbash",
           "Moein Ghezelbash portfolio",
-          "Moein Ghezelbash projects",
-          "DevOps projects",
-          "BI portfolio",
-          "data warehouse",
-          "infrastructure projects",
-          "process automation",
-          "travel technology",
-          "B2B platform",
-          "Docker",
-          "CI/CD"
+          "Product Manager",
+          "Technical Product Manager",
+          "A-Forwarder",
+          "Farvah Cafe",
+          "TIME",
+          "Mobile Product",
+          "Web Product",
+          "B2B Product",
+          "AI-Augmented Product Development",
+          "Business Intelligence",
+          "Process Automation",
+          "Travel Technology"
         ]
       },
       "projects": [
+        {
+          "title": "A-Forwarder",
+          "subtitle": "Technical Product Manager | iMoein.com | August 2026 – Present",
+          "description": "A-Forwarder is a cross-platform mobile product for transferring SMS and call activity from an Android phone with SIM connectivity to an iPhone. The product consists of four independent apps: two Android apps for SMS and Phone and two iPhone apps for the same areas, with each part operating independently. My role covers problem definition, product scope, key user flows, separate Android and iOS roadmaps, platform constraints, multi-SIM behavior, connectivity and offline states, notifications, and phased product delivery. Generative AI and AI coding agents are used throughout technical research, requirements, prototyping, implementation review, testing, and debugging."
+        },
+        {
+          "title": "Farvah Cafe",
+          "subtitle": "Product Manager | June 2026 – Present",
+          "description": "Farvah Cafe is an integrated café management and customer engagement platform that started as an MVP and evolved through multiple phases toward a commercial multi-module product. It covers POS, order management, menu and product management, customer profiles, loyalty and rewards, CRM, accounting workflows, role-based access, and multi-branch operations. My role includes requirements definition, roadmap design, feature prioritization, workflow design for managers, branch managers, cashiers, baristas, and customers, and keeping product decisions aligned with technical architecture and user experience. The product is at the end of Phase 7, with Phase 8 focused on franchise capabilities and further multi-branch expansion."
+        },
+        {
+          "title": "TIME",
+          "subtitle": "Product Manager | iMoein.com | May 10, 2026 – June 2026",
+          "description": "TIME is a public web product for viewing and comparing local time, dates, and time zones across cities, developed from initial concept through public release. Core features include live clocks, city and time-zone search, saved cities, Persian and Gregorian calendar dates, ISO week information, and a responsive interface for desktop and mobile. The product was designed with configurable data, a lightweight administration flow, and a deployment and update process through GitHub Pages, and was released publicly at time.imoein.com. It was built as a complete usable product rather than a prototype."
+        },
         {
           "title": "Channelead B2B Hotel Booking Platform",
           "subtitle": "",
@@ -151,11 +179,6 @@
           "title": "Real-Time CRM Lead Notification System",
           "subtitle": "",
           "description": "This project connected the Besoye Samyar Safar website to a CRM panel. Once a user submitted their information on the website, the data was delivered to the CRM panel in real time through WebSocket. An API wrapper then processed and distributed the information through email, SMS, and Zulip notifications, allowing managers and system users to receive new data instantly. The project combined real-time communication, automation, CRM workflow, and operational visibility."
-        },
-        {
-          "title": "Time Web App — time.imoein.com",
-          "subtitle": "",
-          "description": "Time is a personal React and Node.js web application built to provide a simple, fast, and independent time-focused experience. The project includes a separate frontend and API layer and is publicly available at time.imoein.com. It demonstrates my ability to build, deploy, and maintain a lightweight web application with a dedicated domain and public access."
         },
         {
           "title": "Private Docker Registry & CI/CD Infrastructure",
