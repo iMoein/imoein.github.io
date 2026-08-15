@@ -124,8 +124,8 @@
       ],
       "experience": [
         {
-          "role": "Technical Product Manager",
-          "company": "A-Forwarder",
+          "role": "Technical Product Manager — A-Forwarder",
+          "company": "iMoein.com",
           "period": "August 2026 – Present",
           "description": [
             "Defined and led development of a cross-platform product for transferring SMS and call activity from an Android device with SIM connectivity to an iPhone.",
@@ -141,21 +141,17 @@
             "Balanced product experience with Android and iOS platform constraints through phased technical and product decisions."
           ],
           "logo": {
-            "src": "assets/logo/a-forwarder.svg",
-            "text": "AF",
+            "src": "assets/logo/imoein.svg",
+            "text": "iM",
             "candidates": [
-              "assets/logo/a-forwarder.svg",
-              "assets/logo/a-forwarder.png",
-              "assets/logo/a-forwarder.jpg",
-              "assets/logo/a-forwarder.jpeg",
-              "assets/logo/a-forwarder.webp",
-              "assets/logo/aforwarder.svg",
-              "assets/logo/aforwarder.png",
-              "assets/logo/aforwarder.jpg",
-              "assets/logo/aforwarder.jpeg",
-              "assets/logo/aforwarder.webp"
+              "assets/logo/imoein.svg",
+              "assets/logo/imoein.png",
+              "assets/logo/imoein.jpg",
+              "assets/logo/imoein.jpeg",
+              "assets/logo/imoein.webp"
             ]
-          }
+          },
+          "product": "A-Forwarder"
         },
         {
           "role": "Product Manager",
@@ -193,8 +189,8 @@
           }
         },
         {
-          "role": "Product Manager",
-          "company": "TIME",
+          "role": "Product Manager — TIME",
+          "company": "iMoein.com",
           "period": "May 2026 – June 2026",
           "description": [
             "Led the development of TIME.imoein.com as a standalone web product for viewing and comparing local time, dates, and time zones across cities.",
@@ -208,16 +204,17 @@
             "Created a reusable product foundation that could be expanded with additional calendar, location, and time-related services."
           ],
           "logo": {
-            "src": "assets/logo/time.svg",
-            "text": "TM",
+            "src": "assets/logo/imoein.svg",
+            "text": "iM",
             "candidates": [
-              "assets/logo/time.svg",
-              "assets/logo/time.png",
-              "assets/logo/time.jpg",
-              "assets/logo/time.jpeg",
-              "assets/logo/time.webp"
+              "assets/logo/imoein.svg",
+              "assets/logo/imoein.png",
+              "assets/logo/imoein.jpg",
+              "assets/logo/imoein.jpeg",
+              "assets/logo/imoein.webp"
             ]
-          }
+          },
+          "product": "TIME"
         },
         {
           "role": "Director of Infrastructure & Technology Operations",
@@ -624,8 +621,8 @@
       ],
       "experience": [
         {
-          "role": "مدیر محصول فنی",
-          "company": "A-Forwarder",
+          "role": "مدیر محصول فنی — A-Forwarder",
+          "company": "iMoein.com",
           "period": "مرداد ۱۴۰۵ تا اکنون",
           "description": [
             "تعریف و هدایت توسعه یک محصول چندپلتفرمی برای انتقال پیام‌ها و رویدادهای تماس از گوشی Android دارای سیم‌کارت به iPhone.",
@@ -641,21 +638,17 @@
             "ایجاد تعادل میان تجربه محصول و محدودیت‌های Android و iOS با تصمیم‌گیری مرحله‌ای در حوزه محصول و فناوری."
           ],
           "logo": {
-            "src": "assets/logo/a-forwarder.svg",
-            "text": "AF",
+            "src": "assets/logo/imoein.svg",
+            "text": "iM",
             "candidates": [
-              "assets/logo/a-forwarder.svg",
-              "assets/logo/a-forwarder.png",
-              "assets/logo/a-forwarder.jpg",
-              "assets/logo/a-forwarder.jpeg",
-              "assets/logo/a-forwarder.webp",
-              "assets/logo/aforwarder.svg",
-              "assets/logo/aforwarder.png",
-              "assets/logo/aforwarder.jpg",
-              "assets/logo/aforwarder.jpeg",
-              "assets/logo/aforwarder.webp"
+              "assets/logo/imoein.svg",
+              "assets/logo/imoein.png",
+              "assets/logo/imoein.jpg",
+              "assets/logo/imoein.jpeg",
+              "assets/logo/imoein.webp"
             ]
-          }
+          },
+          "product": "A-Forwarder"
         },
         {
           "role": "مدیر محصول",
@@ -693,8 +686,8 @@
           }
         },
         {
-          "role": "مدیر محصول",
-          "company": "TIME",
+          "role": "مدیر محصول — TIME",
+          "company": "iMoein.com",
           "period": "۲۰ اردیبهشت ۱۴۰۵ تا پایان خرداد ۱۴۰۵",
           "description": [
             "هدایت توسعه TIME.imoein.com به‌عنوان یک محصول وب مستقل برای نمایش و مقایسه ساعت، تاریخ و منطقه زمانی شهرهای مختلف.",
@@ -708,16 +701,17 @@
             "ایجاد پایه‌ای قابل توسعه برای اضافه شدن خدمات بیشتر در حوزه زمان، تقویم و اطلاعات مکانی."
           ],
           "logo": {
-            "src": "assets/logo/time.svg",
-            "text": "TM",
+            "src": "assets/logo/imoein.svg",
+            "text": "iM",
             "candidates": [
-              "assets/logo/time.svg",
-              "assets/logo/time.png",
-              "assets/logo/time.jpg",
-              "assets/logo/time.jpeg",
-              "assets/logo/time.webp"
+              "assets/logo/imoein.svg",
+              "assets/logo/imoein.png",
+              "assets/logo/imoein.jpg",
+              "assets/logo/imoein.jpeg",
+              "assets/logo/imoein.webp"
             ]
-          }
+          },
+          "product": "TIME"
         },
         {
           "role": "مدیر عملیات فناوری و زیرساخت",
