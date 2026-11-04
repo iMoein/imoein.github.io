@@ -342,11 +342,15 @@ const renderExperienceSummary = (content, data) => {
   }
   clear(target);
   const companies = new Map();
-  data.locales[state.locale].experience.forEach((job) => {
-    if (!companies.has(job.company)) {
+  const resume = data.locales[state.locale];
+  // Overview only; detailed categories remain separate in the resume.
+  [...resume.experience, ...resume.consulting, ...resume.additionalExperience].forEach((job) => {
+    if (job.logo?.src && !companies.has(job.company)) {
       companies.set(job.company, job.logo);
     }
   });
+  companies.set("iMoein", { src: "assets/logo/imoein.webp" });
+  companies.set("Farvah Cafe", { src: "assets/logo/farvah.webp" });
 
   const brandList = document.createElement("div");
   brandList.className = "brand-logo-list";
@@ -394,13 +398,8 @@ const renderHome = () => {
   renderCards("#what-i-do", content.whatIDo, "card action-card");
   renderCards("#expertise", content.expertise, "card expertise-card");
   renderExperienceSummary(content, data);
-  const focus = $("#current-focus");
-  if (focus.dataset.prerendered === "true") {
-    // HTML already contains the exact first-paint content; avoid replacing it.
-    delete focus.dataset.prerendered;
-  } else {
-    renderCards("#current-focus", content.current, "focus-pill");
-  }
+  // Both focus languages are present in HTML, so switching locale requires no re-render.
+  // This prevents the first-paint jump and keeps the bilingual focus tiles in sync.
   renderParagraphs("#philosophy", content.philosophy);
   renderFooter(data, content);
 };

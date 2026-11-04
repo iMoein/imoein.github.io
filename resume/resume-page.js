@@ -189,6 +189,111 @@ const render = (data) => {
   });
   experience.appendChild(timeline);
 
+  // A career break is context, not a professional employer.
+  if (content.careerBreak) experience.appendChild(create('p', content.careerBreak, 'resume-career-note'));
+
+  // Product ownership groups: the iMoein collection and standalone Farvah Cafe.
+  if (content.independentProjects?.length) {
+    const wrapper = section(content.sections.independentProjects, 'independent-projects-section');
+    const grid = create('div', '', 'resume-independent-grid');
+    const imoein = content.independentProjects.filter((p) => !/farvah/i.test(p.title));
+    const farvah = content.independentProjects.filter((p) => /farvah/i.test(p.title));
+
+    const productGroup = (name, logo, subtitle, products) => {
+      const card = create('article', '', 'card resume-product-group');
+      const head = create('div', '', 'resume-product-head');
+      const image = create('img');
+      image.src = resolveAsset(logo);
+      image.alt = '';
+      image.width = 48;
+      image.height = 48;
+      image.decoding = 'async';
+      const meta = create('div');
+      meta.append(create('h3', name), create('small', subtitle));
+      head.append(image, meta);
+      card.appendChild(head);
+      const entries = create('ul', '', 'resume-product-list');
+      products.forEach((project) => {
+        const item = create('li');
+        if (project.url && /^https:\/\//.test(project.url)) {
+          const link = create('a', project.title);
+          link.href = project.url;
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          item.appendChild(link);
+        } else {
+          item.appendChild(create('strong', project.title));
+        }
+        item.appendChild(create('span', project.description));
+        entries.appendChild(item);
+      });
+      card.appendChild(entries);
+      return card;
+    };
+    grid.appendChild(productGroup(
+      'iMoein', 'assets/logo/imoein.webp',
+      locale === 'fa' ? 'مجموعه محصولات مستقل' : 'Independent software products', imoein
+    ));
+    if (farvah.length) grid.appendChild(productGroup(
+      'Farvah Cafe', 'assets/logo/farvah.webp',
+      locale === 'fa' ? 'پلتفرم مستقل مدیریت کافه' : 'Standalone cafe platform', farvah
+    ));
+    wrapper.appendChild(grid);
+  }
+
+  // Consulting is a concise list with existing organization icons.
+  if (content.consulting?.length) {
+    const wrapper = section(content.sections.consulting, 'consulting-section');
+    const grid = create('div', '', 'resume-consulting-list');
+    content.consulting.forEach((item) => {
+      const card = create('article', '', 'card resume-consulting-row');
+      const logo = item.logo?.src;
+      if (logo) {
+        const image = create('img', '', 'resume-consulting-logo');
+        image.src = resolveAsset(logo);
+        image.alt = '';
+        image.width = 48;
+        image.height = 48;
+        image.decoding = 'async';
+        card.appendChild(image);
+      }
+      const info = create('div', '', 'resume-consulting-info');
+      const role = create('div', '', 'resume-consulting-role');
+      role.append(create('strong', item.company), create('span', item.role));
+      info.append(role, create('p', item.description?.[0] || ''));
+      card.append(info, create('small', item.period));
+      grid.appendChild(card);
+    });
+    wrapper.appendChild(grid);
+  }
+
+  // Additional career activities stay separate from employer history and consulting.
+  if (content.additionalExperience?.length) {
+    const wrapper = section(content.sections.additionalExperience, 'additional-experience-section');
+    const grid = create('div', '', 'resume-other-grid');
+    content.additionalExperience.forEach((item) => {
+      const card = create('article', '', 'card resume-other-card');
+      const header = create('div', '', 'resume-other-header');
+      if (item.logo?.src) {
+        const logo = create('img', '', 'resume-other-logo');
+        logo.src = resolveAsset(item.logo.src);
+        logo.alt = `${item.company} logo`;
+        logo.width = 48;
+        logo.height = 48;
+        logo.decoding = 'async';
+        header.appendChild(logo);
+      }
+      const heading = create('div', '', 'resume-other-heading');
+      heading.append(create('strong', item.company), create('h3', item.role));
+      header.appendChild(heading);
+      header.appendChild(create('small', item.period, 'resume-other-period'));
+      card.appendChild(header);
+      if (item.description?.length) card.appendChild(list(item.description));
+      grid.appendChild(card);
+    });
+    wrapper.appendChild(grid);
+  }
+
   const details = section('', 'resume-details');
   const detailsGrid = create('div', '', 'resume-details-grid');
   [

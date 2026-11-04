@@ -35,356 +35,277 @@
       },
       "profile": {
         "name": "Moein Ghezelbash",
-        "title": "Senior Technical Product Manager",
-        "tagline": "B2B Platforms • AI-Augmented Product Development • Product & Technology Strategy",
+        "title": "Technical Product Manager",
+        "tagline": "B2B Platforms • Product & Technology Strategy • AI-Augmented Delivery",
         "location": "Tehran, Iran"
       },
       "sections": {
         "summary": "Professional Summary",
-        "competencies": "Core Competencies",
+        "competencies": "Core Skills",
         "experience": "Professional Experience",
-        "technologies": "Selected Technologies",
+        "technologies": "Technology & Delivery Tools",
         "education": "Education",
-        "certificates": "Certificates",
+        "certificates": "Training & Professional Development",
         "languages": "Languages",
-        "achievements": "Key Achievements"
+        "achievements": "Key Achievements",
+        "independentProjects": "Selected Independent Projects",
+        "consulting": "Consulting Experience",
+        "additionalExperience": "Additional Experience"
       },
       "summary": [
-        "Senior Technical Product Manager with 10+ years of experience across product management, B2B platforms, business systems, travel technology, data, and technical operations.",
-        "Experienced in turning customer, business, and operational problems into clear product requirements, practical roadmaps, scalable workflows, integrations, and digital products. A technical background makes it possible to work closely with engineering teams while keeping product value, user experience, and business outcomes in focus.",
-        "Currently building independent software products and using generative AI and AI coding agents across research, requirements, prototyping, implementation review, testing, debugging, and documentation."
+        "Technical Product Manager with 10+ years across B2B platforms, travel technology and 0-to-1 products. Led Gardesh in digital media and FARVAH in cafe operations, from MVP and roadmapping to feature delivery. At Samyar Safar, drove travel-service bundling, operational resilience and data-driven reporting, reducing report preparation from sometimes two working days to one hour or less."
       ],
       "competencies": [
         {
-          "group": "Product Leadership",
+          "group": "Product Management",
           "items": [
-            "Product Strategy",
-            "Product Discovery",
-            "Roadmapping & Prioritization",
-            "Requirements Definition",
-            "MVP & Iterative Delivery",
-            "Cross-Functional Product Delivery"
+            "Product Strategy & Discovery",
+            "Roadmapping",
+            "Backlog Prioritization",
+            "MVP",
+            "Requirements & Acceptance Criteria",
+            "User Journeys",
+            "KPI & Product Analytics",
+            "Go-to-Market",
+            "Stakeholder Management"
           ]
         },
         {
-          "group": "B2B & Platform Products",
+          "group": "Business & Data",
           "items": [
-            "B2B Platforms",
-            "API & Partner Integrations",
-            "Pricing & Inventory Workflows",
-            "Business Systems",
-            "CRM & Customer Operations",
-            "Travel Technology"
+            "B2B/B2B2C",
+            "CRM",
+            "Cross-Selling",
+            "SQL",
+            "ETL/DWH",
+            "Apache Superset",
+            "Budgeting",
+            "Business Continuity"
           ]
         },
         {
-          "group": "AI-Augmented Product Development",
+          "group": "Technology & Delivery",
           "items": [
-            "Generative AI Workflows",
-            "AI Coding Agents",
-            "AI-Assisted Product Discovery",
-            "AI-Assisted Prototyping",
-            "Prompt Engineering",
-            "Agentic Development Workflows"
-          ]
-        },
-        {
-          "group": "Product Analytics & Data",
-          "items": [
-            "Product & Business Analytics",
-            "Business Intelligence",
-            "ETL & Data Aggregation",
-            "Dashboarding",
-            "Data-Driven Decision Making",
-            "MySQL / MariaDB / PostgreSQL"
-          ]
-        },
-        {
-          "group": "Technical & Delivery Fluency",
-          "items": [
-            "REST APIs",
-            "System Architecture",
-            "Linux & Cloud Infrastructure",
-            "Docker",
-            "CI/CD",
-            "Technical Trade-off Analysis"
-          ]
-        },
-        {
-          "group": "Leadership & Business",
-          "items": [
-            "Stakeholder Management",
-            "Business Development",
-            "Budget Planning",
-            "Vendor & Supplier Management",
-            "Cross-Functional Leadership",
-            "Executive Reporting"
+            "API Integration",
+            "System Design",
+            "HLS/CMAF",
+            "Live Streaming",
+            "RBAC",
+            "Functional Testing",
+            "Jira/Planka",
+            "GitHub Issues/PRs",
+            "GitLab CI/CD",
+            "AI Coding Agents"
           ]
         }
       ],
       "experience": [
         {
-          "role": "Technical Product Manager — A-Forwarder",
-          "company": "iMoein.com",
-          "period": "August 2026 – Present",
+          "role": "Founder & Product Lead",
+          "company": "Gardesh",
+          "period": "Aug 2026–Present",
           "description": [
-            "Defined and led development of a cross-platform product for transferring SMS and call activity from an Android device with SIM connectivity to an iPhone.",
-            "Built the product as four independent apps: two Android apps for SMS and Phone, and two iPhone apps for SMS and Phone. Each part works independently.",
-            "Defined product flows for SMS synchronization and sending, call-event forwarding, multi-SIM handling, device connectivity, offline states, gateway status, background behavior, and cross-device notifications.",
-            "Created separate Android and iOS roadmaps, moving from technical feasibility and MVP validation toward a more complete product while accounting for the different limitations of each platform.",
-            "Used generative AI and AI coding agents for technical research, product specification, prototyping, implementation review, testing, debugging, and release planning."
+            "Repositioned Gardesh from group watching to a multimedia platform; prioritized its MVP and phased roadmap by user needs, value, cost and risk.",
+            "Led self-service episode creation and publishing for creators; access control and reuse of the Media Library and audio pipeline eliminated platform-admin dependency and duplicate uploads.",
+            "Enabled hosted, YouTube and Aparat video sources with manual selection and automatic playback-error failover; region-aware source selection remains on the roadmap.",
+            "Unified live-stream lifecycle and access controls; set reconnection and synchronization acceptance criteria and included Safari/iOS in QA, with 81 Native Live automated tests passing.",
+            "Defined a 13-issue Creator-First publisher roadmap prioritizing first publication and resuming drafts; redesign remains in development and review."
           ],
-          "achievements": [
-            "Turned a real connectivity limitation into a modular four-app product.",
-            "Separated SMS and Phone so each app can be developed, tested, and released independently.",
-            "Defined a consistent cross-platform experience for connectivity, messages, calls, multi-SIM behavior, offline states, and system status.",
-            "Balanced product experience with Android and iOS platform constraints through phased technical and product decisions."
-          ],
+          "achievements": [],
           "logo": {
-            "src": "assets/logo/imoein.webp",
-            "text": "iM",
+            "src": "assets/logo/gardesh.webp",
+            "text": "G",
             "candidates": [
-              "assets/logo/imoein.webp"
-            ]
-          },
-          "product": "A-Forwarder"
-        },
-        {
-          "role": "Product Manager",
-          "company": "Farvah Cafe",
-          "period": "May 2026 – Present",
-          "description": [
-            "Leading Farvah Cafe as an integrated café management and customer engagement product, growing it from an MVP into a multi-module commercial platform.",
-            "Defined and executed a phased product roadmap covering POS, order management, menu and product management, customer profiles, loyalty and rewards, CRM, accounting workflows, role-based administration, and multi-branch operations.",
-            "Defined workflows and requirements for administrators, branch managers, cashiers, baristas, and customers based on real operational use cases.",
-            "Led the product through the end of Phase 7; Phase 8 is focused on franchise capabilities, multi-branch scalability, and the structure needed for broader commercial expansion.",
-            "Used generative AI and AI coding agents across research, requirements, prototyping, implementation review, testing, debugging, and documentation.",
-            "Kept product decisions aligned with technical architecture, user experience, and operational needs as the platform moved from MVP toward commercial readiness."
-          ],
-          "achievements": [
-            "Turned an initial concept into a phased product with a clear path from MVP to commercial readiness.",
-            "Brought sales, daily operations, customer engagement, loyalty, CRM, and back-office workflows into one platform.",
-            "Designed the product from the beginning for multi-branch operations, centralized management, and future franchise support.",
-            "Used AI-augmented workflows to make product research, specification, prototyping, and iteration faster and more structured."
-          ],
-          "logo": {
-            "src": "assets/logo/farvah.webp",
-            "text": "FC",
-            "candidates": [
-              "assets/logo/farvah.webp"
+              "assets/logo/gardesh.webp",
+              "assets/logo/gardesh.jpeg"
             ]
           }
         },
         {
-          "role": "Product Manager — TIME",
-          "company": "iMoein.com",
-          "period": "May 2026 – June 2026",
+          "role": "Business Development & Technical Operations Manager",
+          "company": "Samyar Safar",
+          "period": "Dec 2020–May 2026",
           "description": [
-            "Led the development of TIME.imoein.com as a standalone web product for viewing and comparing local time, dates, and time zones across cities.",
-            "Defined the product experience around live clocks, city and time-zone search, saved city selections, Persian and Gregorian calendars, ISO week information, and responsive use across desktop and mobile.",
-            "Designed the product for public use with configurable data, a lightweight administration flow, and a deployment model that allowed updates to be released through GitHub Pages.",
-            "Managed the product from initial concept and scope definition through implementation, testing, refinement, and public release."
+            "Led requirements and rollout for a B2B2C bundle covering flights, hotels, transfers and airport services, enabling multi-service booking and cross-selling.",
+            "Prioritized critical product dependencies during internet disruptions and introduced internal alternatives for communication, alerts, build workflows and certificate management.",
+            "Coordinated product requirements across engineering, sales and operations and managed online and offline advertising publisher relationships.",
+            "Co-led five years of budgeting, combining financial and operational reporting for performance and variance reviews.",
+            "Redesigned sales reporting with integrated data pipelines and management dashboards, reducing preparation from sometimes two working days to one hour or less."
           ],
-          "achievements": [
-            "Took a focused product from concept to public release within a short development cycle.",
-            "Built a complete standalone web product rather than a prototype, with user-facing functionality, configuration, administration, and a production deployment flow.",
-            "Created a reusable product foundation that could be expanded with additional calendar, location, and time-related services."
-          ],
-          "logo": {
-            "src": "assets/logo/imoein.webp",
-            "text": "iM",
-            "candidates": [
-              "assets/logo/imoein.webp"
-            ]
-          },
-          "product": "TIME"
-        },
-        {
-          "role": "Director of Infrastructure & Technology Operations",
-          "company": "Besouye Samyar Safar",
-          "period": "April 2024 – May 2026",
-          "description": [
-            "Partnered with engineering and business teams to support the evolution, reliability, and scalability of high-volume B2B travel products.",
-            "Translated operational and commercial needs into platform, data, reporting, automation, and reliability initiatives.",
-            "Supported development and launch of new digital products and services by coordinating technical requirements and operational readiness.",
-            "Built analytics and business intelligence capabilities that improved visibility into operational and commercial performance.",
-            "Introduced automation and platform improvements that reduced manual workload and improved service reliability."
-          ],
-          "achievements": [
-            "Improved the scalability and operational readiness of business-critical B2B platforms.",
-            "Expanded decision-support capabilities through BI and structured reporting.",
-            "Reduced operational dependency on manual processes through automation."
-          ],
+          "achievements": [],
           "logo": {
             "src": "assets/logo/samyarsafar.webp",
-            "text": "CL",
             "candidates": [
               "assets/logo/samyarsafar.webp"
             ]
           }
         },
         {
-          "role": "Technical Operations & Infrastructure Consultant",
-          "company": "Tahlilgaran Fanavaran Faraz Raya",
-          "period": "April 2024 – October 2025",
+          "role": "Product Manager",
+          "company": "Alibaba Travels (Iran)",
+          "period": "Apr 2016–Oct 2018",
           "description": [
-            "Advised on technical platform design and operational readiness for hospitality and enterprise software environments.",
-            "Worked with development teams to improve deployment, release, monitoring, and support workflows.",
-            "Translated customer and operational requirements into infrastructure, automation, and service-delivery improvements.",
-            "Supported executive stakeholders with technical assessments, risk visibility, and delivery reporting."
+            "Led ParsLogic CRM rollout and enhancements based on frontline customer-support experience and structured case workflows.",
+            "Translated contact-center queue, call-routing and agent-performance needs into CRM requirements and operational reporting.",
+            "Led a reconciliation tool that turned transaction matching from a process sometimes taking a week into a trackable one-day SLA.",
+            "Worked with the BI group to translate finance and operations data needs into management dashboards and reporting improvements.",
+            "Coordinated contact-center relocation, office rollouts and redundant-site initiatives to minimize disruption to customer services."
           ],
-          "achievements": [
-            "Improved software deployment and maintenance workflows across customer environments.",
-            "Increased operational visibility through monitoring and structured reporting.",
-            "Supported reliable delivery of business-critical hospitality software."
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/alibaba.webp",
+            "candidates": [
+              "assets/logo/alibaba.webp"
+            ]
+          }
+        }
+      ],
+      "technologies": [
+        "API Integration",
+        "System Design",
+        "HLS/CMAF",
+        "Live Streaming",
+        "RBAC",
+        "Functional Testing",
+        "Jira",
+        "Planka",
+        "GitHub Issues & PRs",
+        "GitLab CI/CD",
+        "AI Coding Agents",
+        "SQL",
+        "ETL/DWH",
+        "Apache Superset"
+      ],
+      "education": [
+        "Software Engineering — Islamic Azad University"
+      ],
+      "certificates": [
+        "AI Foundation — OpenAI Academy",
+        "ITIL — Sematec",
+        "SAFe/Scrum — Sematec"
+      ],
+      "languages": [
+        "Persian (Native)",
+        "English (technical reading; developing spoken proficiency)"
+      ],
+      "footer": "Built for GitHub Pages.",
+      "seo": {
+        "description": "Moein Ghezelbash is a Senior Technical Product Manager with 10+ years of experience in B2B platforms, travel technology, AI-augmented product development, product analytics, business systems, and technical operations."
+      },
+      "careerBreak": "Career Break | Nov 2018–Jun 2020: Self-directed learning and helping organize WordPress Iran meetups.",
+      "independentProjects": [
+        {
+          "title": "TIME",
+          "period": "May–Jun 2026",
+          "description": "World-clock web app with saved cities and Persian/Gregorian calendars.",
+          "url": "https://time.imoein.com/"
+        },
+        {
+          "title": "FARVAH / Smart Coffee",
+          "period": "Jun 2026",
+          "description": "Farvah Cafe is an integrated cafe operations and customer-engagement platform, developed from an MVP into a multi-module commercial product. Its core areas include POS and order management, menus, CRM and loyalty, back-office workflows, and multi-branch operations. My role has focused on product roadmapping, feature prioritisation, and aligning operational needs with UX and technical delivery, with franchise capabilities on the future roadmap.",
+          "url": "https://farvahcafe.com/"
+        },
+        {
+          "title": "Device Sync",
+          "period": "Aug 2026",
+          "description": "Local-network synchronization of SMS and call events between Android and iOS.",
+          "url": ""
+        },
+        {
+          "title": "AI Detector",
+          "period": "Oct 2026",
+          "description": "Browser-based EXIF/C2PA inspection and image metadata removal.",
+          "url": "https://ai-detector.imoein.com/"
+        },
+        {
+          "title": "QR Code Studio",
+          "period": "Oct 2026",
+          "description": "QR design in 11 languages with SVG/PNG export.",
+          "url": "https://qrcode.imoein.com/"
+        }
+      ],
+      "consulting": [
+        {
+          "role": "Technology Operations Consultant",
+          "company": "Faraz Raya",
+          "period": "2024–2026",
+          "description": [
+            "Technology operations and delivery-readiness advisory."
           ],
+          "achievements": [],
           "logo": {
             "src": "assets/logo/farazraya.webp",
-            "text": "FR",
             "candidates": [
               "assets/logo/farazraya.webp"
             ]
           }
         },
         {
-          "role": "Business Development Manager — B2B Product & Platform Growth",
-          "company": "Besouye Samyar Safar",
-          "period": "December 2020 – March 2024",
-          "description": [
-            "Led product and business development for a B2B hotel booking platform, connecting supplier capabilities, partner APIs, inventory, pricing, and operational workflows.",
-            "Translated partner, customer, and commercial requirements into platform improvements and integration priorities.",
-            "Managed supplier and API partnerships while coordinating delivery across business and technical teams.",
-            "Designed data-driven pricing, inventory, and aggregation approaches to improve booking quality and commercial performance.",
-            "Owned budgeting, executive reporting, and stakeholder communication for business growth initiatives."
-          ],
-          "achievements": [
-            "Expanded the supplier and API partner ecosystem through successful integrations.",
-            "Reduced booking conflicts through improved inventory aggregation and process design.",
-            "Built management reporting frameworks supporting commercial and executive decision-making."
-          ],
-          "logo": {
-            "src": "assets/logo/samyarsafar.webp",
-            "text": "CL",
-            "candidates": [
-              "assets/logo/samyarsafar.webp"
-            ]
-          }
-        },
-        {
-          "role": "Product Manager",
-          "company": "Alibaba Travels Co.",
-          "period": "April 2016 – October 2018",
-          "description": [
-            "Managed financial and operational digital products supporting online travel services, payments, CRM, and customer operations.",
-            "Led CRM implementation and optimization, translating service and operational needs into system workflows and process improvements.",
-            "Worked cross-functionally with engineering, operations, customer support, and infrastructure teams to improve product reliability and service delivery.",
-            "Contributed to business intelligence initiatives and management dashboards for operational decision-making.",
-            "Managed technology programs spanning payment systems, customer operations, business continuity, and office/call-center expansion."
-          ],
-          "achievements": [
-            "Improved customer-service workflows and operational efficiency through CRM optimization.",
-            "Supported reliable payment and operational systems for a high-volume online travel business.",
-            "Expanded management visibility through BI and operational reporting initiatives."
-          ],
-          "logo": {
-            "src": "assets/logo/alibaba.webp",
-            "text": "AT",
-            "candidates": [
-              "assets/logo/alibaba.webp"
-            ]
-          }
-        },
-        {
           "role": "Technology Consultant",
-          "company": "3Click.com",
-          "period": "July 2020 - November 2020",
+          "company": "3Click",
+          "period": "2020",
           "description": [
-            "Reviewed digital travel platform workflows, infrastructure, security, and payment operations from a product and technology perspective.",
-            "Identified reliability and process improvements across customer-facing and operational systems.",
-            "Provided recommendations connecting business requirements with practical technology improvements."
+            "Technology and operational workflow consulting."
           ],
           "achievements": [],
           "logo": {
             "src": "assets/logo/3click.webp",
-            "text": "3C",
             "candidates": [
               "assets/logo/3click.webp"
             ]
           }
         },
         {
-          "role": "Finance Systems Consultant",
+          "role": "Financial Systems Consultant",
           "company": "Kavir Motor",
-          "period": "July 2020 - October 2020",
+          "period": "2020",
           "description": [
-            "Supported finance-system and payment integration initiatives from a product, operations, and technology perspective.",
-            "Mapped finance-related workflows and identified opportunities for process and system improvement.",
-            "Provided recommendations to improve the reliability and usability of financial operations."
+            "Advised on digital financial systems and workflows."
           ],
           "achievements": [],
           "logo": {
             "src": "assets/logo/kavirmotor.webp",
-            "text": "KM",
             "candidates": [
               "assets/logo/kavirmotor.webp"
             ]
           }
-        },
+        }
+      ],
+      "additionalExperience": [
         {
-          "role": "Project Manager — Digital Broadcasting Platform",
-          "company": "LiveFM Broadcasting",
-          "period": "Jun 2012 – March 2016",
+          "role": "Project Manager",
+          "company": "LiveFM Internet Radio",
+          "period": "2012–2016",
           "description": [
-            "Led development and operation of a cloud-based live audio and digital broadcasting platform.",
-            "Coordinated product, technical, and operational requirements for high-traffic live streaming events.",
-            "Managed delivery across technical and operational teams while balancing reliability, scale, and event deadlines."
+            "Developed online radio stations and internet live streaming."
           ],
-          "achievements": [
-            "Delivered large-scale online broadcasting projects for peak-traffic events.",
-            "Maintained service continuity during high-demand live operations."
-          ],
+          "achievements": [],
           "logo": {
             "src": "assets/logo/livefm.webp",
-            "text": "LF",
             "candidates": [
               "assets/logo/livefm.webp"
             ]
           }
+        },
+        {
+          "role": "Persian Translation Contributor",
+          "company": "WordPress",
+          "period": "2013–Present",
+          "description": [
+            "Contributed Persian translations to the WordPress project."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/wordpress.webp",
+            "text": "W",
+            "candidates": [
+              "assets/logo/wordpress.webp",
+              "assets/logo/wordpress.jpeg"
+            ]
+          }
         }
-      ],
-      "technologies": [
-        "Product Discovery",
-        "Product Strategy",
-        "Roadmapping",
-        "Requirements Management",
-        "MVP & Iterative Delivery",
-        "Product Analytics",
-        "Business Intelligence",
-        "Generative AI",
-        "AI Coding Agents",
-        "Prompt Engineering",
-        "API & Partner Integrations",
-        "CRM",
-        "Business Systems",
-        "B2B Platforms",
-        "Travel Technology",
-        "Git / GitHub / GitLab"
-      ],
-      "education": [
-        "Software Engineering — Islamic Azad University"
-      ],
-      "certificates": [
-        "ITIL — IT service management principles focused on service quality, operational processes, change management, and continuous improvement.",
-        "SAFe Scrum — Agile and Scrum practices for product delivery in scaled organizations, with emphasis on iterative development, prioritization, cross-functional collaboration, and coordinated delivery."
-      ],
-      "languages": [
-        "Persian (Native)",
-        "English (Professional Working Proficiency)"
-      ],
-      "footer": "Built for GitHub Pages.",
-      "seo": {
-        "description": "Moein Ghezelbash is a Senior Technical Product Manager with 10+ years of experience in B2B platforms, travel technology, AI-augmented product development, product analytics, business systems, and technical operations."
-      }
+      ]
     },
     "fa": {
       "dir": "rtl",
@@ -398,278 +319,222 @@
       },
       "profile": {
         "name": "معین قزلباش",
-        "title": "مدیر ارشد محصول فنی",
-        "tagline": "پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی و راهبرد محصول و فناوری",
+        "title": "مدیر محصول فنی",
+        "tagline": "پلتفرم‌های B2B • مدیریت محصول و فناوری • توسعه مبتنی بر هوش مصنوعی",
         "location": "تهران"
       },
       "sections": {
         "summary": "درباره من",
-        "competencies": "شایستگی‌های کلیدی",
+        "competencies": "مهارت‌های کلیدی",
         "experience": "سوابق حرفه‌ای",
-        "technologies": "فناوری‌ها و ابزارها",
+        "technologies": "فناوری و ابزارهای تحویل",
         "education": "تحصیلات",
-        "certificates": "گواهینامه‌ها",
+        "certificates": "دوره‌ها و آموزش‌های تخصصی",
         "languages": "زبان‌ها",
-        "achievements": "دستاوردها"
+        "achievements": "دستاوردها",
+        "independentProjects": "پروژه‌های مستقل",
+        "consulting": "سوابق مشاوره",
+        "additionalExperience": "سایر فعالیت‌های حرفه‌ای"
       },
       "summary": [
-        "مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در مدیریت محصول، پلتفرم‌های B2B، سیستم‌های کسب‌وکار، فناوری سفر، داده و عملیات فنی.",
-        "تجربه در تبدیل مسائل مشتری، کسب‌وکار و عملیات به نیازمندی‌های روشن محصول، نقشه راه عملی، گردش‌کارهای مقیاس‌پذیر، یکپارچه‌سازی‌ها و محصولات دیجیتال. سابقه فنی این امکان را فراهم کرده که همکاری نزدیکی با تیم‌های مهندسی شکل بگیرد، بدون اینکه تمرکز از ارزش محصول، تجربه کاربر و نتیجه کسب‌وکار برداشته شود.",
-        "در حال حاضر تمرکز بر توسعه محصولات نرم‌افزاری مستقل و استفاده از هوش مصنوعی مولد و AI Coding Agents در تحقیق، تدوین نیازمندی، نمونه‌سازی، بازبینی پیاده‌سازی، تست، خطایابی و مستندسازی است."
+        "مدیر محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و ساخت محصول از صفر؛ راهبری گردش در رسانه دیجیتال و فروه در مدیریت هوشمند کافه، از تعریف MVP و نقشه راه تا تحویل قابلیت‌ها. در سامیار سفر نیز توسعه باندل خدمات، تاب‌آوری عملیات و گزارش‌گیری مبتنی بر داده را پیش بردم و زمان تهیه گزارش را از گاهی دو روز کاری به حداکثر یک ساعت رساندم."
       ],
       "competencies": [
         {
-          "group": "رهبری و مدیریت محصول",
+          "group": "مدیریت محصول",
           "items": [
-            "استراتژی محصول",
-            "کشف محصول",
-            "نقشه راه و اولویت‌بندی",
-            "تعریف نیازمندی‌ها",
-            "طراحی MVP و توسعه تکرارشونده",
-            "هدایت تحویل میان‌وظیفه‌ای محصول"
+            "Product Strategy & Discovery",
+            "Roadmapping",
+            "Backlog Prioritization",
+            "MVP",
+            "Requirements & Acceptance Criteria",
+            "User Journeys",
+            "KPI & Product Analytics",
+            "Go-to-Market",
+            "Stakeholder Management"
           ]
         },
         {
-          "group": "محصولات B2B و پلتفرمی",
+          "group": "کسب‌وکار و داده",
           "items": [
-            "پلتفرم‌های B2B",
-            "یکپارچه‌سازی API و شرکای تجاری",
-            "فرایندهای قیمت‌گذاری و موجودی",
-            "سیستم‌های کسب‌وکار",
-            "CRM و عملیات مشتری",
-            "فناوری سفر"
+            "B2B/B2B2C",
+            "CRM",
+            "Cross-Selling",
+            "SQL",
+            "ETL/DWH",
+            "Apache Superset",
+            "Budgeting",
+            "Business Continuity"
           ]
         },
         {
-          "group": "توسعه محصول با کمک هوش مصنوعی",
+          "group": "فناوری و تحویل",
           "items": [
-            "Generative AI Workflows",
-            "AI Coding Agents",
-            "AI-Assisted Product Discovery",
-            "AI-Assisted Prototyping",
-            "Prompt Engineering",
-            "Agentic Development Workflows"
-          ]
-        },
-        {
-          "group": "تحلیل محصول و داده",
-          "items": [
-            "تحلیل محصول و کسب‌وکار",
-            "هوش تجاری",
-            "ETL و تجمیع داده",
-            "داشبوردهای مدیریتی",
-            "تصمیم‌گیری داده‌محور",
-            "MySQL / MariaDB / PostgreSQL"
-          ]
-        },
-        {
-          "group": "دانش فنی و تحویل",
-          "items": [
-            "REST API",
-            "معماری سیستم",
-            "Linux و زیرساخت ابری",
-            "Docker",
-            "CI/CD",
-            "تحلیل Trade-offهای فنی"
-          ]
-        },
-        {
-          "group": "رهبری و کسب‌وکار",
-          "items": [
-            "مدیریت ذی‌نفعان",
-            "توسعه کسب‌وکار",
-            "بودجه‌بندی",
-            "مدیریت تأمین‌کنندگان و شرکا",
-            "رهبری تیم‌های میان‌وظیفه‌ای",
-            "گزارش‌دهی مدیریتی"
+            "API Integration",
+            "System Design",
+            "HLS/CMAF",
+            "Live Streaming",
+            "RBAC",
+            "Functional Testing",
+            "Jira/Planka",
+            "GitHub Issues/PRs",
+            "GitLab CI/CD",
+            "AI Coding Agents"
           ]
         }
       ],
       "experience": [
         {
-          "role": "مدیر محصول فنی — A-Forwarder",
-          "company": "iMoein.com",
-          "period": "مرداد ۱۴۰۵ تا اکنون",
+          "role": "بنیان‌گذار و راهبر محصول",
+          "company": "گردش (Gardesh)",
+          "period": "مرداد ۱۴۰۵ تاکنون",
           "description": [
-            "تعریف و هدایت توسعه یک محصول چندپلتفرمی برای انتقال پیام‌ها و رویدادهای تماس از گوشی Android دارای سیم‌کارت به iPhone.",
-            "توسعه محصول در قالب چهار اپ مستقل: دو اپ Android برای SMS و Phone و دو اپ iPhone برای SMS و Phone؛ هر بخش مستقل از دیگری کار می‌کند.",
-            "تعریف جریان‌های اصلی محصول شامل همگام‌سازی و ارسال SMS، انتقال رویدادهای تماس، مدیریت چند سیم‌کارت، اتصال دستگاه‌ها، حالت آفلاین، وضعیت Gateway، رفتار پس‌زمینه و نوتیفیکیشن‌های بین دستگاهی.",
-            "تدوین نقشه راه مستقل برای Android و iOS از مرحله بررسی امکان‌پذیری و MVP تا توسعه محصول کامل‌تر، با درنظر گرفتن محدودیت‌های متفاوت هر پلتفرم.",
-            "استفاده از هوش مصنوعی مولد و AI Coding Agents در تحقیق فنی، تدوین مشخصات محصول، نمونه‌سازی، بازبینی پیاده‌سازی، تست، خطایابی و برنامه‌ریزی انتشار."
+            "بازتعریف گردش از تماشای گروهی به پلتفرم رسانه‌ای چندرسانه‌ای؛ اولویت‌بندی MVP و نقشه راه مرحله‌ای بر اساس نیاز کاربر، ارزش، هزینه و ریسک.",
+            "هدایت مسیر مستقل ساخت و انتشار اپیزود برای ناشران با کنترل دسترسی و استفاده مجدد از کتابخانه رسانه و پردازش صوت؛ حذف وابستگی به مدیر پلتفرم و آپلود تکراری.",
+            "ارائه منابع ویدئویی میزبانی داخلی، YouTube و Aparat با انتخاب دستی و جایگزینی خودکار هنگام خطای پخش؛ انتخاب جغرافیامحور منبع در نقشه راه آینده.",
+            "یکپارچه‌سازی چرخه عمر پخش زنده و کنترل دسترسی و تعریف معیارهای پذیرش برای بازیابی اتصال و همگام‌سازی؛ ورود مسائل Safari/iOS به QA و موفقیت ۸۱ تست خودکار Native Live.",
+            "تدوین نقشه راه ۱۳ مسئله‌ای Creator-First با اولویت انتشار اولین محتوا و ادامه پیش‌نویس؛ بازطراحی در مرحله توسعه و بازبینی است."
           ],
-          "achievements": [
-            "تبدیل یک محدودیت واقعی ارتباطی به یک محصول ماژولار چهاراپی.",
-            "تفکیک SMS و Phone و فراهم‌کردن امکان توسعه، تست و انتشار مستقل هر اپ.",
-            "تعریف یک تجربه منسجم میان Android و iPhone برای اتصال، پیام، تماس، چند سیم‌کارت، حالت آفلاین و وضعیت سیستم.",
-            "ایجاد تعادل میان تجربه محصول و محدودیت‌های Android و iOS با تصمیم‌گیری مرحله‌ای در حوزه محصول و فناوری."
-          ],
+          "achievements": [],
           "logo": {
-            "src": "assets/logo/imoein.webp",
-            "text": "iM",
+            "src": "assets/logo/gardesh.webp",
+            "text": "G",
             "candidates": [
-              "assets/logo/imoein.webp"
-            ]
-          },
-          "product": "A-Forwarder"
-        },
-        {
-          "role": "مدیر محصول",
-          "company": "Farvah Cafe",
-          "period": "خرداد ۱۴۰۵ تا اکنون",
-          "description": [
-            "هدایت Farvah Cafe به‌عنوان یک محصول یکپارچه برای مدیریت کافه و ارتباط با مشتری، از مرحله MVP تا توسعه یک پلتفرم تجاری چندماژوله.",
-            "طراحی و اجرای نقشه راه محصول در چند فاز، با توسعه تدریجی قابلیت‌هایی مانند POS، مدیریت سفارش، منو و محصول، پروفایل مشتری، باشگاه مشتریان و پاداش، CRM، فرایندهای حسابداری، مدیریت نقش‌ها و عملیات چندشعبه‌ای.",
-            "تعریف گردش‌کارها و نیازمندی‌های مدیر، مدیر شعبه، صندوق‌دار، باریستا و مشتری بر اساس فرایندهای واقعی عملیاتی.",
-            "هدایت محصول تا پایان فاز ۷؛ فاز ۸ با تمرکز بر قابلیت‌های فرانچایز، توسعه ساختار چندشعبه‌ای و آماده‌سازی محصول برای مقیاس‌پذیری تجاری تعریف شده است.",
-            "استفاده از هوش مصنوعی مولد و AI Coding Agents در تحقیق، تدوین نیازمندی‌ها، نمونه‌سازی، بازبینی پیاده‌سازی، تست، رفع خطا و مستندسازی.",
-            "هماهنگ نگه داشتن تصمیمات محصول با معماری فنی، تجربه کاربری و نیازهای عملیاتی در مسیر رشد محصول از MVP تا نسخه تجاری."
-          ],
-          "achievements": [
-            "تبدیل یک ایده اولیه به محصولی فازبندی‌شده با مسیر مشخص از MVP تا آمادگی تجاری.",
-            "یکپارچه‌سازی فرایندهای فروش، عملیات روزانه، ارتباط با مشتری، وفاداری، CRM و امور پشتیبان در یک پلتفرم واحد.",
-            "طراحی محصول از ابتدا با نگاه به عملیات چندشعبه‌ای، مدیریت متمرکز و توسعه آینده در مدل فرانچایز.",
-            "استفاده از فرایندهای AI-Augmented برای سریع‌تر و منظم‌تر شدن تحقیق، تدوین نیازمندی، نمونه‌سازی و تکرار محصول."
-          ],
-          "logo": {
-            "src": "assets/logo/farvah.webp",
-            "text": "FC",
-            "candidates": [
-              "assets/logo/farvah.webp"
+              "assets/logo/gardesh.webp",
+              "assets/logo/gardesh.jpeg"
             ]
           }
         },
         {
-          "role": "مدیر محصول — TIME",
-          "company": "iMoein.com",
-          "period": "۲۰ اردیبهشت ۱۴۰۵ تا پایان خرداد ۱۴۰۵",
-          "description": [
-            "هدایت توسعه TIME.imoein.com به‌عنوان یک محصول وب مستقل برای نمایش و مقایسه ساعت، تاریخ و منطقه زمانی شهرهای مختلف.",
-            "تعریف تجربه محصول شامل ساعت زنده، جست‌وجوی شهر و منطقه زمانی، ذخیره شهرهای منتخب، تقویم شمسی و میلادی، شماره هفته و رابط واکنش‌گرا برای موبایل و دسکتاپ.",
-            "طراحی محصول برای استفاده عمومی با داده‌های قابل تنظیم، بخش مدیریت سبک و روشی برای انتشار و بروزرسانی مستمر از طریق GitHub Pages.",
-            "مدیریت مسیر محصول از ایده و تعیین محدوده اولیه تا پیاده‌سازی، تست، اصلاح و انتشار عمومی."
-          ],
-          "achievements": [
-            "تبدیل ایده به یک محصول کامل و قابل استفاده عمومی در یک بازه توسعه کوتاه.",
-            "توسعه یک محصول وب مستقل با قابلیت‌های کاربری، مدیریت داده و فرایند انتشار واقعی؛ فراتر از یک نمونه اولیه.",
-            "ایجاد پایه‌ای قابل توسعه برای اضافه شدن خدمات بیشتر در حوزه زمان، تقویم و اطلاعات مکانی."
-          ],
-          "logo": {
-            "src": "assets/logo/imoein.webp",
-            "text": "iM",
-            "candidates": [
-              "assets/logo/imoein.webp"
-            ]
-          },
-          "product": "TIME"
-        },
-        {
-          "role": "مدیر عملیات فناوری و زیرساخت",
+          "role": "مدیر توسعه کسب‌وکار و عملیات فنی",
           "company": "بسوی سامیار سفر",
-          "period": "فروردین ۱۴۰۳ تا اردیبهشت ۱۴۰۵",
+          "period": "آذر ۱۳۹۹ تا اردیبهشت ۱۴۰۵",
           "description": [
-            "همکاری با تیم‌های فنی و کسب‌وکار برای توسعه، مقیاس‌پذیری و پایداری محصولات B2B گردشگری.",
-            "تبدیل نیازهای عملیاتی و تجاری به ابتکارهای پلتفرمی، داده‌ای، گزارش‌گیری، اتوماسیون و پایداری سرویس.",
-            "پشتیبانی از توسعه و عرضه محصولات و سرویس‌های جدید از طریق هماهنگی نیازمندی‌های فنی و آمادگی عملیاتی.",
-            "توسعه قابلیت‌های تحلیل و هوش تجاری برای افزایش شفافیت عملکرد عملیاتی و تجاری.",
-            "اجرای بهبودهای پلتفرمی و اتوماسیون برای کاهش فعالیت‌های دستی و افزایش قابلیت اطمینان سرویس."
+            "هدایت نیازمندی‌ها و عرضه باندل B2B2C پرواز، هتل، ترانسفر و خدمات فرودگاهی برای خرید چند خدمت و فروش مکمل در یک سفر خرید.",
+            "شناسایی وابستگی‌های حیاتی ارتباطات، هشدارها، ساخت و مدیریت گواهی‌ها هنگام اختلال اینترنت و استفاده از جایگزین‌های داخلی برای تداوم عملیات.",
+            "هماهنگی نیازمندی‌های محصول میان مهندسی، فروش و عملیات و مدیریت همکاری با ناشران تبلیغاتی آنلاین و آفلاین.",
+            "مشارکت محوری در پنج سال بودجه‌بندی و تلفیق داده‌های مالی و عملیاتی برای پایش عملکرد و انحراف بودجه.",
+            "بازطراحی گزارش‌های فروش با خطوط یکپارچه داده و داشبوردهای مدیریتی؛ کاهش زمان آماده‌سازی از گاهی دو روز کاری به حداکثر یک ساعت."
           ],
-          "achievements": [
-            "افزایش مقیاس‌پذیری و آمادگی عملیاتی پلتفرم‌های B2B حیاتی کسب‌وکار.",
-            "توسعه ابزارهای تصمیم‌سازی مدیریتی از طریق BI و گزارش‌گیری ساختاریافته.",
-            "کاهش وابستگی عملیات به فرایندهای دستی با استفاده از اتوماسیون."
-          ],
+          "achievements": [],
           "logo": {
             "src": "assets/logo/samyarsafar.webp",
-            "text": "CL",
             "candidates": [
               "assets/logo/samyarsafar.webp"
             ]
           }
         },
         {
-          "role": "مشاور زیرساخت و عملیات فناوری",
-          "company": "تحلیلگران فناوران فراز رایا",
-          "period": "فروردین ۱۴۰۳ تا آبان ۱۴۰۴",
+          "role": "مدیر محصول",
+          "company": "سفرهای علی‌بابا",
+          "period": "فروردین ۱۳۹۵ تا مهر ۱۳۹۷",
           "description": [
-            "مشاوره در طراحی پلتفرم فنی و آمادگی عملیاتی برای محیط‌های نرم‌افزاری هتلداری و سازمانی.",
-            "همکاری با تیم‌های توسعه برای بهبود فرایندهای استقرار، انتشار، مانیتورینگ و پشتیبانی.",
-            "تبدیل نیازهای مشتری و عملیات به بهبودهای زیرساختی، اتوماسیون و ارائه سرویس.",
-            "ارائه ارزیابی‌های فنی، دید ریسک و گزارش‌های تحویل به مدیران ارشد و ذی‌نفعان."
+            "هدایت نیازمندی‌ها و استقرار و بهبود CRM پارس‌لاجیک با تکیه بر تجربه پشتیبانی مشتریان.",
+            "تبدیل مسائل صف تماس، مسیریابی تماس و عملکرد کارشناسان به نیازمندی‌ها و گزارش‌های عملیاتی.",
+            "هدایت ساخت ابزار مغایرت‌گیری تراکنش و تبدیل فرایندی گاه یک‌هفته‌ای به SLA قابل پیگیری یک‌روزه.",
+            "همکاری با تیم هوش تجاری برای تبدیل نیازهای مالی و عملیاتی به گزارش‌های مدیریتی و بهبود وابستگی به پردازش‌های شبانه.",
+            "هماهنگی با تیم‌های فنی و عملیات برای جابه‌جایی مرکز تماس، دفاتر جدید و سایت‌های پشتیبان با حداقل اختلال در خدمات."
           ],
-          "achievements": [
-            "بهبود فرایندهای استقرار و نگهداری نرم‌افزار در محیط مشتریان.",
-            "افزایش شفافیت عملیاتی از طریق مانیتورینگ و گزارش‌گیری ساختاریافته.",
-            "پشتیبانی از ارائه پایدار نرم‌افزارهای حیاتی هتلداری."
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/alibaba.webp",
+            "candidates": [
+              "assets/logo/alibaba.webp"
+            ]
+          }
+        }
+      ],
+      "technologies": [
+        "API Integration",
+        "System Design",
+        "HLS/CMAF",
+        "Live Streaming",
+        "RBAC",
+        "Functional Testing",
+        "Jira",
+        "Planka",
+        "GitHub Issues & PRs",
+        "GitLab CI/CD",
+        "AI Coding Agents",
+        "SQL",
+        "ETL/DWH",
+        "Apache Superset"
+      ],
+      "education": [
+        "مهندسی نرم‌افزار — دانشگاه آزاد اسلامی"
+      ],
+      "certificates": [
+        "AI Foundation — آکادمی OpenAI",
+        "ITIL — مجتمع فنی سماتک",
+        "SAFe/Scrum — مجتمع فنی سماتک"
+      ],
+      "languages": [
+        "فارسی (زبان مادری)",
+        "انگلیسی (خوب)"
+      ],
+      "footer": "ساخته‌شده برای GitHub Pages.",
+      "seo": {
+        "description": "معین قزلباش مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر، توسعه محصول با کمک هوش مصنوعی، تحلیل محصول، سیستم‌های کسب‌وکار و عملیات فنی است."
+      },
+      "careerBreak": "وقفه شغلی | آبان ۱۳۹۷ تا خرداد ۱۳۹۹: یادگیری خودآموز و کمک به برگزاری میتاپ‌های وردپرس ایران.",
+      "independentProjects": [
+        {
+          "title": "TIME",
+          "period": "اردیبهشت تا خرداد ۱۴۰۵",
+          "description": "وب‌اپ ساعت جهانی با شهرهای ذخیره‌شده و تقویم شمسی/میلادی.",
+          "url": "https://time.imoein.com/"
+        },
+        {
+          "title": "FARVAH / Smart Coffee",
+          "period": "خرداد ۱۴۰۵",
+          "description": "Farvah Cafe یک پلتفرم یکپارچه برای مدیریت کافه و ارتباط با مشتری است که از MVP به یک محصول تجاری چندماژوله توسعه یافته است. امکانات اصلی آن فروش و سفارش‌گیری (POS)، مدیریت منو، CRM و باشگاه مشتریان، فرایندهای پشتیبان و مدیریت چندشعبه‌ای را در بر می‌گیرد. نقش من هدایت نقشه راه، اولویت‌بندی قابلیت‌ها و هماهنگی نیازهای عملیاتی با تجربه کاربری و توسعه فنی بوده است؛ توسعه ساختار فرانچایز نیز در نقشه راه آینده قرار دارد.",
+          "url": "https://farvahcafe.com/"
+        },
+        {
+          "title": "Device Sync",
+          "period": "مرداد ۱۴۰۵",
+          "description": "همگام‌سازی رویدادهای پیامک و تماس میان Android و iOS در شبکه محلی.",
+          "url": ""
+        },
+        {
+          "title": "AI Detector",
+          "period": "مهر ۱۴۰۵",
+          "description": "بررسی EXIF/C2PA و پاک‌سازی متادیتای تصویر در مرورگر.",
+          "url": "https://ai-detector.imoein.com/"
+        },
+        {
+          "title": "QR Code Studio",
+          "period": "مهر ۱۴۰۵",
+          "description": "طراحی کد QR در ۱۱ زبان با خروجی SVG و PNG.",
+          "url": "https://qrcode.imoein.com/"
+        }
+      ],
+      "consulting": [
+        {
+          "role": "مشاور عملیات فناوری",
+          "company": "فراز رایا",
+          "period": "۱۴۰۳ تا ۱۴۰۴",
+          "description": [
+            "مشاوره عملیات فناوری و بهبود آمادگی اجرایی سامانه‌ها."
           ],
+          "achievements": [],
           "logo": {
             "src": "assets/logo/farazraya.webp",
-            "text": "FR",
             "candidates": [
               "assets/logo/farazraya.webp"
             ]
           }
         },
         {
-          "role": "مدیر توسعه کسب‌وکار — توسعه محصول و پلتفرم B2B",
-          "company": "بسوی سامیار سفر",
-          "period": "آذر ۱۳۹۹ تا اسفند ۱۴۰۲",
-          "description": [
-            "راهبری توسعه محصول و کسب‌وکار پلتفرم رزرو هتل B2B با اتصال قابلیت‌های تأمین‌کنندگان، API شرکا، موجودی، قیمت‌گذاری و فرایندهای عملیاتی.",
-            "تبدیل نیازهای شرکای تجاری، مشتریان و کسب‌وکار به بهبودهای محصول و اولویت‌های یکپارچه‌سازی.",
-            "مدیریت تأمین‌کنندگان و شرکای API و هماهنگی تحویل میان تیم‌های تجاری و فنی.",
-            "طراحی رویکردهای داده‌محور برای قیمت‌گذاری، مدیریت موجودی و تجمیع داده با هدف بهبود کیفیت رزرو و عملکرد تجاری.",
-            "مسئولیت بودجه‌بندی، گزارش‌دهی مدیریتی و ارتباط با ذی‌نفعان در ابتکارهای رشد کسب‌وکار."
-          ],
-          "achievements": [
-            "توسعه شبکه تأمین‌کنندگان و شرکای API از طریق یکپارچه‌سازی‌های موفق.",
-            "کاهش تعارض‌های رزرو با بهبود فرایند و مدل تجمیع موجودی.",
-            "ایجاد چارچوب‌های گزارش‌گیری برای تصمیم‌گیری تجاری و مدیریتی."
-          ],
-          "logo": {
-            "src": "assets/logo/samyarsafar.webp",
-            "text": "CL",
-            "candidates": [
-              "assets/logo/samyarsafar.webp"
-            ]
-          }
-        },
-        {
-          "role": "مدیر محصول",
-          "company": "سفرهای علی بابا",
-          "period": "فروردین ۱۳۹۵ تا مهر ۱۳۹۷",
-          "description": [
-            "مدیریت محصولات و پروژه‌های دیجیتال مالی و عملیاتی در کسب‌وکار آنلاین گردشگری، شامل پرداخت، CRM و عملیات مشتری.",
-            "راهبری استقرار و بهینه‌سازی CRM و تبدیل نیازهای خدمات و عملیات به گردش‌کارها و بهبودهای سیستمی.",
-            "همکاری میان‌وظیفه‌ای با تیم‌های فنی، عملیات، پشتیبانی مشتری و زیرساخت برای بهبود پایداری محصول و کیفیت ارائه سرویس.",
-            "مشارکت در ابتکارهای هوش تجاری و توسعه داشبوردهای مدیریتی برای تصمیم‌گیری عملیاتی.",
-            "مدیریت برنامه‌های فناوری در حوزه سیستم‌های پرداخت، عملیات مشتری، تداوم کسب‌وکار و توسعه مرکز تماس و دفاتر."
-          ],
-          "achievements": [
-            "بهبود گردش‌کارهای خدمات مشتری و بهره‌وری عملیاتی از طریق بهینه‌سازی CRM.",
-            "پشتیبانی از پایداری سیستم‌های پرداخت و عملیات در یک کسب‌وکار پرتراکنش گردشگری.",
-            "افزایش شفافیت مدیریتی از طریق BI و گزارش‌گیری عملیاتی."
-          ],
-          "logo": {
-            "src": "assets/logo/alibaba.webp",
-            "text": "AT",
-            "candidates": [
-              "assets/logo/alibaba.webp"
-            ]
-          }
-        },
-        {
           "role": "مشاور فناوری",
-          "company": "سه کلیک",
-          "period": "مهر ۱۳۹۹ تا آذر ۱۳۹۹",
+          "company": "سه‌کلیک",
+          "period": "۱۳۹۹",
           "description": [
-            "بررسی جریان‌های محصول دیجیتال گردشگری، زیرساخت، امنیت و پرداخت از منظر محصول و فناوری.",
-            "شناسایی فرصت‌های بهبود در پایداری و فرایندهای سیستم‌های مشتری‌محور و عملیاتی.",
-            "ارائه پیشنهادهایی که نیازهای کسب‌وکار را به بهبودهای عملی فناوری متصل می‌کرد."
+            "ارائه مشاوره فناوری و فرایندهای عملیاتی."
           ],
           "achievements": [],
           "logo": {
             "src": "assets/logo/3click.webp",
-            "text": "3C",
             "candidates": [
               "assets/logo/3click.webp"
             ]
@@ -678,76 +543,53 @@
         {
           "role": "مشاور سیستم‌های مالی",
           "company": "کویر موتور",
-          "period": "تیر ۱۳۹۹ تا مهر ۱۳۹۹",
+          "period": "۱۳۹۹",
           "description": [
-            "همکاری در پروژه‌های سیستم‌های مالی و یکپارچه‌سازی پرداخت از منظر محصول، عملیات و فناوری.",
-            "مدلسازی گردش‌کارهای مالی و شناسایی فرصت‌های بهبود فرایند و سیستم.",
-            "ارائه پیشنهاد برای بهبود قابلیت اطمینان و کاربری عملیات مالی."
+            "مشاوره برای دیجیتال‌سازی فرایندهای مالی."
           ],
           "achievements": [],
           "logo": {
             "src": "assets/logo/kavirmotor.webp",
-            "text": "KM",
             "candidates": [
               "assets/logo/kavirmotor.webp"
             ]
           }
-        },
+        }
+      ],
+      "additionalExperience": [
         {
-          "role": "مدیر پروژه — پلتفرم پخش دیجیتال",
-          "company": "لایو اف ام",
-          "period": "خرداد ۱۳۹۱ تا اسفند ۱۳۹۴",
+          "role": "مدیر پروژه",
+          "company": "رادیو اینترنتی لایو اف ام",
+          "period": "۱۳۹۱ تا ۱۳۹۴",
           "description": [
-            "راهبری توسعه و عملیات یک پلتفرم ابری پخش زنده صوتی و رسانه دیجیتال.",
-            "هماهنگی نیازمندی‌های محصول، فناوری و عملیات برای رویدادهای پخش زنده پرترافیک.",
-            "مدیریت تحویل میان تیم‌های فنی و عملیاتی با تمرکز بر پایداری، مقیاس و زمان‌بندی رویداد."
+            "توسعه ایستگاه‌های رادیویی آنلاین و پخش زنده اینترنتی."
           ],
-          "achievements": [
-            "تحویل پروژه‌های پخش آنلاین در مقیاس بالا برای رویدادهای پرترافیک.",
-            "حفظ تداوم سرویس در دوره‌های اوج مصرف."
-          ],
+          "achievements": [],
           "logo": {
             "src": "assets/logo/livefm.webp",
-            "text": "LF",
             "candidates": [
               "assets/logo/livefm.webp"
             ]
           }
+        },
+        {
+          "role": "مشارکت‌کننده ترجمه فارسی",
+          "company": "جامعه جهانی وردپرس",
+          "period": "۱۳۹۲ تاکنون",
+          "description": [
+            "مشارکت در ترجمه فارسی محصولات وردپرس."
+          ],
+          "achievements": [],
+          "logo": {
+            "src": "assets/logo/wordpress.webp",
+            "text": "W",
+            "candidates": [
+              "assets/logo/wordpress.webp",
+              "assets/logo/wordpress.jpeg"
+            ]
+          }
         }
-      ],
-      "technologies": [
-        "Product Discovery",
-        "Product Strategy",
-        "Roadmapping",
-        "Requirements Management",
-        "MVP & Iterative Delivery",
-        "Product Analytics",
-        "Business Intelligence",
-        "Generative AI",
-        "AI Coding Agents",
-        "Prompt Engineering",
-        "API & Partner Integrations",
-        "CRM",
-        "Business Systems",
-        "B2B Platforms",
-        "Travel Technology",
-        "Git / GitHub / GitLab"
-      ],
-      "education": [
-        "مهندسی نرم‌افزار — دانشگاه آزاد اسلامی"
-      ],
-      "certificates": [
-        "ITIL — آشنایی با اصول مدیریت خدمات فناوری اطلاعات با تمرکز بر کیفیت ارائه خدمات، مدیریت تغییر، بهبود فرایندهای عملیاتی و بهبود مستمر.",
-        "SAFe Scrum — آشنایی با روش‌های Agile و Scrum در سازمان‌های مقیاس‌پذیر، با تمرکز بر توسعه تکرارشونده، اولویت‌بندی، همکاری میان‌وظیفه‌ای و هماهنگی تحویل محصول بین تیم‌ها."
-      ],
-      "languages": [
-        "فارسی (زبان مادری)",
-        "انگلیسی (سطح حرفه‌ای)"
-      ],
-      "footer": "ساخته‌شده برای GitHub Pages.",
-      "seo": {
-        "description": "معین قزلباش مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر، توسعه محصول با کمک هوش مصنوعی، تحلیل محصول، سیستم‌های کسب‌وکار و عملیات فنی است."
-      }
+      ]
     }
   },
   "profileImage": "assets/profile.jpg",
@@ -825,7 +667,7 @@
       "heroTitle": "",
       "heroStatement": "",
       "intro": [
-        "من معین قزلباش هستم؛ مدیر ارشد محصول فنی با بیش از یک دهه تجربه در محصول، پلتفرم‌های B2B، سیستم‌های کسب‌وکار، فناوری سفر، داده و عملیات فنی."
+        "مدیر محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و محصولات مستقل."
       ],
       "sections": {
         "whatIDo": "چه کاری انجام می‌دهم؟",
@@ -865,28 +707,32 @@
         }
       ],
       "brands": [
+        "گردش (Gardesh)",
         "بسوی سامیار سفر",
-        "سفرهای علی بابا",
-        "تحلیلگران فناوران فراز رایا",
-        "سه کلیک",
-        "کویر موتور",
-        "LiveFM Broadcasting"
+        "سفرهای علی‌بابا"
       ],
-      "roles": "در این مسیر در نقش‌های مدیر محصول، مدیر توسعه کسب‌وکار، مدیر عملیات فناوری، مشاور و مدیر پروژه فعالیت کرده‌ام و دیدگاهی شکل داده‌ام که نیاز مشتری، ارزش کسب‌وکار و فناوری را به یکدیگر متصل می‌کند.",
+      "roles": "مروری بر همکاری‌های حرفه‌ای، فعالیت‌های مستقل و مشارکت‌های تخصصی؛ جزئیات هر بخش در رزومه آنلاین قرار دارد.",
       "philosophy": [
         "فناوری زمانی ارزشمند است که بتواند یک مسئله واقعی را حل کند.",
         "من اعتقاد دارم بهترین راهکارها زمانی شکل می‌گیرند که زیرساخت، داده و نیازهای کسب‌وکار در کنار یکدیگر دیده شوند. به همین دلیل همیشه تلاش کرده‌ام میان تیم‌های فنی، مدیریتی و تجاری پل ارتباطی ایجاد کنم و راهکارهایی ارائه دهم که هم از نظر فنی قابل اتکا باشند و هم از نظر اقتصادی ارزش‌آفرین."
       ],
       "current": [
-        "Technical Product Management",
-        "B2B & Platform Products",
-        "AI-Augmented Product Development",
-        "Generative AI Workflows",
-        "Product Discovery & Strategy",
-        "Product Analytics",
-        "Travel Technology",
-        "Business Systems",
-        "Digital Transformation"
+        "راهبرد و کشف محصول",
+        "نقشه راه و اولویت‌بندی",
+        "ساخت MVP و محصول از صفر",
+        "پلتفرم‌های B2B و B2B2C",
+        "یکپارچه‌سازی API و شرکا",
+        "تحلیل محصول و شاخص‌های KPI",
+        "هوش تجاری و جریان داده",
+        "CRM و تجربه مشتری",
+        "فناوری سفر و رزرو آنلاین",
+        "پلتفرم‌های رسانه و پخش زنده",
+        "مدیریت محصول با کمک AI",
+        "AI Coding Agents",
+        "گردش‌کارهای چندنقشی و RBAC",
+        "اتوماسیون و تداوم عملیات",
+        "توسعه محصول چندشعبه‌ای",
+        "تحویل میان‌تیمی و آزمون محصول"
       ],
       "resumeLinks": {
         "fa": "مشاهده فارسی",
@@ -919,7 +765,7 @@
         {
           "title": "معرفی من",
           "paragraphs": [
-            "من معین قزلباش هستم؛ مدیر ارشد محصول فنی و سازنده محصول با بیش از یک دهه تجربه در مدیریت محصول، پلتفرم‌های B2B، سیستم‌های کسب‌وکار، فناوری سفر، داده و عملیات فنی.",
+            "من معین قزلباش هستم؛ مدیر محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و ساخت محصولات مستقل.",
             "مسیر حرفه‌ای من از رسانه دیجیتال و پخش زنده آغاز شد و در ادامه به گردشگری آنلاین، مدیریت محصول، توسعه کسب‌وکار، داده و مدیریت زیرساخت رسید. این تنوع تجربه به من دیدی عملی نسبت به اثر نیاز مشتری، محدودیت‌های کسب‌وکار، عملیات، داده و تصمیمات مهندسی بر محصول داده است.",
             "امروز تمرکز من بر ساخت و بهبود محصولات دیجیتالی است که مسائل واقعی عملیاتی و تجاری را حل می‌کنند؛ به‌ویژه محصولاتی که نیازمند همکاری نزدیک میان محصول، مهندسی، داده و عملیات هستند."
           ],
@@ -972,7 +818,7 @@
         }
       ],
       "heroSubtitles": [
-        "مدیر ارشد محصول فنی — پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی و راهبرد محصول و فناوری"
+        "مدیر محصول فنی — پلتفرم‌های B2B • مدیریت محصول و فناوری • توسعه مبتنی بر هوش مصنوعی"
       ],
       "resumeDownloadLinks": {
         "fa": "دانلود فارسی",
@@ -992,7 +838,7 @@
       "heroTitle": "",
       "heroStatement": "",
       "intro": [
-        "I am Moein Ghezelbash, a Senior Technical Product Manager with more than a decade of experience across product, B2B platforms, business systems, travel technology, data, and technical operations."
+        "Technical Product Manager with 10+ years across B2B platforms, travel technology and independent products."
       ],
       "sections": {
         "whatIDo": "What I Do",
@@ -1032,28 +878,32 @@
         }
       ],
       "brands": [
-        "‌‌Besouye Samyar Safar",
-        "Alibaba Travels",
-        "Faraz Raya",
-        "3Click.com",
-        "KAVIR Motor",
-        "LiveFM Broadcasting"
+        "Gardesh",
+        "Samyar Safar",
+        "Alibaba Travels (Iran)"
       ],
-      "roles": "Across this path, I have worked as a product manager, business development manager, technical operations leader, consultant, and project manager — building a perspective that connects customer needs, business value, and technology.",
+      "roles": "An overview of professional roles, independent product work and contributions. Explore the online resume for details.",
       "philosophy": [
         "Technology is valuable when it solves a real problem.",
         "I believe the best solutions are created when infrastructure, data, and business needs are considered together. I build bridges between technical, management, and commercial teams to deliver reliable and economically valuable solutions."
       ],
       "current": [
-        "Technical Product Management",
-        "B2B & Platform Products",
-        "AI-Augmented Product Development",
-        "Generative AI Workflows",
-        "Product Discovery & Strategy",
-        "Product Analytics",
+        "Product Strategy & Discovery",
+        "Roadmaps & Prioritisation",
+        "0-to-1 Products & MVPs",
+        "B2B & B2B2C Platforms",
+        "API & Partner Integrations",
+        "Product Analytics & KPIs",
+        "Business Intelligence & Data",
+        "CRM & Customer Journeys",
         "Travel Technology",
-        "Business Systems",
-        "Digital Transformation"
+        "Media Platforms & Live Streaming",
+        "AI-Augmented Product Delivery",
+        "AI Coding Agents",
+        "Multi-Role Workflows & RBAC",
+        "Automation & Resilience",
+        "Multi-Branch Product Systems",
+        "Cross-Functional Delivery & QA"
       ],
       "resumeLinks": {
         "fa": "View FA",
@@ -1086,7 +936,7 @@
         {
           "title": "About Me",
           "paragraphs": [
-            "I am Moein Ghezelbash, a Senior Technical Product Manager and product builder with more than a decade of experience across product management, B2B platforms, business systems, travel technology, data, and technical operations.",
+            "I am Moein Ghezelbash, a Technical Product Manager with 10+ years across B2B platforms, travel technology and 0-to-1 products.",
             "My career has moved through digital media, online travel, product management, business development, data, and infrastructure leadership. That range has given me a practical understanding of how customer needs, business constraints, operations, data, and engineering decisions shape a product.",
             "Today I focus on building and improving digital products that solve operational and business problems, especially products that require close collaboration between product, engineering, data, and operations."
           ],
@@ -1139,7 +989,7 @@
         }
       ],
       "heroSubtitles": [
-        "Senior Technical Product Manager — B2B Platforms • AI-Augmented Product Development • Product & Technology Strategy"
+        "Technical Product Manager — B2B Platforms • Product & Technology Strategy • AI-Augmented Delivery"
       ],
       "resumeDownloadLinks": {
         "fa": "Download FA",
