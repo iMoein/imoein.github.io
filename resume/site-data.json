@@ -1067,8 +1067,6 @@
     "farvahCafe": {
       "github": "https://github.com/iMoein/smart-coffee"
     },
-    "aForwarder": {
-      "github": "https://github.com/iMoein/a-forwarder"
-    }
+    "deviceSync": {}
   }
 }
