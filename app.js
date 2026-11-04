@@ -420,7 +420,9 @@ fetch("resume/site-data.json")
     state.data = data;
     if (!data.home[state.locale]) state.locale = "fa";
     renderHome();
+    window.siteReady?.();
   })
   .catch((error) => {
     setText("#app-error", error.message);
+    window.siteReady?.();
   });

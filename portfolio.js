@@ -192,7 +192,9 @@ fetch("portfolio.json")
     state.data = data;
     if (!data.locales[state.locale]) state.locale = data.defaultLocale || "fa";
     renderPortfolio();
+    window.siteReady?.();
   })
   .catch((error) => {
     setText("#app-error", error.message);
+    window.siteReady?.();
   });

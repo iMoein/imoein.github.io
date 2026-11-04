@@ -211,7 +211,11 @@ fetch(dataUrl)
     if (!response.ok) throw new Error('Resume data could not be loaded.');
     return response.json();
   })
-  .then(render)
+  .then((data) => {
+    render(data);
+    window.siteReady?.();
+  })
   .catch((error) => {
     root.textContent = error.message;
+    window.siteReady?.();
   });
