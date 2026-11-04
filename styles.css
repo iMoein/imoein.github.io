@@ -1065,3 +1065,28 @@ body.locale-fa .resume-contact-panel small {
     border-radius: 20px;
   }
 }
+
+
+/* Show prerendered experience immediately in the selected language. */
+.experience-locale { display: none; }
+html[lang="fa"] .experience-locale[data-locale="fa"],
+html[lang="en"] .experience-locale[data-locale="en"] { display: block; }
+
+
+/* Public, directly accessible projects – static HTML to avoid loading flashes. */
+.public-projects-section { scroll-margin-top: 24px; margin-bottom: 46px; }
+.public-projects-intro { margin: -4px 0 20px; color: var(--muted); line-height: 1.8; }
+.public-projects-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.public-project-card { display: flex; align-items: flex-start; min-width: 0; gap: 13px; padding: 20px; border-radius: 22px; border: 1px solid var(--border); background: #fff; color: var(--text); text-decoration: none; box-shadow: 0 10px 28px rgba(16,42,67,.055); transition: border-color .18s, box-shadow .18s, transform .18s; }
+.public-project-card:hover, .public-project-card:focus-visible { border-color: var(--primary); box-shadow: 0 16px 36px rgba(16,42,67,.12); transform: translateY(-2px); }
+.public-project-mark { width: 44px; height: 44px; flex: 0 0 44px; display: grid; place-items: center; border-radius: 14px; background: rgba(31,138,138,.09); color: var(--primary); font: 800 1.2rem Inter, sans-serif; }
+.public-project-content { min-width: 0; display: flex; flex: 1; flex-direction: column; align-items: flex-start; gap: 7px; }
+.public-project-name { font-weight: 800; line-height: 1.4; }
+.public-project-description { color: var(--muted); font-size: .89rem; line-height: 1.65; }
+.public-project-url { direction: ltr; unicode-bidi: isolate; text-align: start; color: var(--primary); font: 500 .78rem Inter, sans-serif; overflow-wrap: anywhere; }
+.public-project-arrow { flex: 0 0 auto; color: var(--primary); font-size: 1.15rem; }
+.public-projects-fa, .public-projects-en { display: none; }
+html[lang="fa"] .public-projects-fa, html[lang="en"] .public-projects-en { display: inline; }
+@media (max-width: 960px) { .public-projects-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .public-projects-grid { grid-template-columns: 1fr; } .public-project-card { padding: 16px; } }
+@media (prefers-reduced-motion: reduce) { .public-project-card { transition: none; } }

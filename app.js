@@ -286,6 +286,9 @@ const renderCompanyLogo = (logo, company) => {
 
   const image = document.createElement("img");
   image.alt = `${company} logo`;
+  image.width = 38;
+  image.height = 38;
+  image.decoding = "async";
   let candidateIndex = 0;
   const tryNextLogo = () => {
     if (candidateIndex >= candidates.length) {
@@ -332,6 +335,11 @@ const renderCards = (selector, items, className = "card") => {
 
 const renderExperienceSummary = (content, data) => {
   const target = $("#experience-summary");
+  // Keep the bilingual HTML snapshot visible on initial load, without waiting for JSON.
+  if (target.dataset.prerendered === "true") {
+    delete target.dataset.prerendered;
+    return;
+  }
   clear(target);
   const companies = new Map();
   data.locales[state.locale].experience.forEach((job) => {
@@ -386,7 +394,13 @@ const renderHome = () => {
   renderCards("#what-i-do", content.whatIDo, "card action-card");
   renderCards("#expertise", content.expertise, "card expertise-card");
   renderExperienceSummary(content, data);
-  renderCards("#current-focus", content.current, "focus-pill");
+  const focus = $("#current-focus");
+  if (focus.dataset.prerendered === "true") {
+    // HTML already contains the exact first-paint content; avoid replacing it.
+    delete focus.dataset.prerendered;
+  } else {
+    renderCards("#current-focus", content.current, "focus-pill");
+  }
   renderParagraphs("#philosophy", content.philosophy);
   renderFooter(data, content);
 };

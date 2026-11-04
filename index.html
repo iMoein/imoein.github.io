@@ -27,6 +27,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const requested = new URLSearchParams(location.search).get("lang");
+      let saved = null;
+      try { saved = localStorage.getItem("site-locale"); } catch (_) {}
+      const locale = ["fa", "en"].includes(requested) ? requested : (saved === "en" ? "en" : "fa");
+      document.documentElement.lang = locale;
+      document.documentElement.dir = locale === "fa" ? "rtl" : "ltr";
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json" id="person-schema"></script>
 </head>
@@ -87,11 +97,48 @@
     <section class="grid two-col home-status" aria-labelledby="experience-title">
       <div>
         <div class="section-title"><h2 id="experience-title">تجربه حرفه‌ای</h2></div>
-        <div class="card" id="experience-summary"></div>
+        <div class="card" id="experience-summary" data-prerendered="true">
+        <div class="experience-locale" data-locale="fa">
+          <div class="brand-logo-list">
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/imoein.webp" alt="iMoein.com logo" width="38" height="38" decoding="async"></span>iMoein.com</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farvah.webp" alt="Farvah Cafe logo" width="38" height="38" decoding="async"></span>Farvah Cafe</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/samyarsafar.webp" alt="بسوی سامیار سفر logo" width="38" height="38" decoding="async"></span>بسوی سامیار سفر</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farazraya.webp" alt="تحلیلگران فناوران فراز رایا logo" width="38" height="38" decoding="async"></span>تحلیلگران فناوران فراز رایا</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/alibaba.webp" alt="سفرهای علی بابا logo" width="38" height="38" decoding="async"></span>سفرهای علی بابا</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/3click.webp" alt="سه کلیک logo" width="38" height="38" decoding="async"></span>سه کلیک</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/kavirmotor.webp" alt="کویر موتور logo" width="38" height="38" decoding="async"></span>کویر موتور</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/livefm.webp" alt="لایو اف ام logo" width="38" height="38" decoding="async"></span>لایو اف ام</article>
+          </div>
+          <p>در این مسیر در نقش‌های مدیر محصول، مدیر توسعه کسب‌وکار، مدیر عملیات فناوری، مشاور و مدیر پروژه فعالیت کرده‌ام و دیدگاهی شکل داده‌ام که نیاز مشتری، ارزش کسب‌وکار و فناوری را به یکدیگر متصل می‌کند.</p>
+        </div>
+        <div class="experience-locale" data-locale="en">
+          <div class="brand-logo-list">
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/imoein.webp" alt="iMoein.com logo" width="38" height="38" decoding="async"></span>iMoein.com</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farvah.webp" alt="Farvah Cafe logo" width="38" height="38" decoding="async"></span>Farvah Cafe</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/samyarsafar.webp" alt="Besouye Samyar Safar logo" width="38" height="38" decoding="async"></span>Besouye Samyar Safar</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farazraya.webp" alt="Tahlilgaran Fanavaran Faraz Raya logo" width="38" height="38" decoding="async"></span>Tahlilgaran Fanavaran Faraz Raya</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/alibaba.webp" alt="Alibaba Travels Co. logo" width="38" height="38" decoding="async"></span>Alibaba Travels Co.</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/3click.webp" alt="3Click.com logo" width="38" height="38" decoding="async"></span>3Click.com</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/kavirmotor.webp" alt="Kavir Motor logo" width="38" height="38" decoding="async"></span>Kavir Motor</article>
+            <article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/livefm.webp" alt="LiveFM Broadcasting logo" width="38" height="38" decoding="async"></span>LiveFM Broadcasting</article>
+          </div>
+          <p>Across this path, I have worked as a product manager, business development manager, technical operations leader, consultant, and project manager — building a perspective that connects customer needs, business value, and technology.</p>
+        </div>
+      </div>
       </div>
       <div>
         <div class="section-title"><h2 id="current-title">در حال حاضر</h2></div>
-        <div class="card" id="current-focus"></div>
+        <div class="card" id="current-focus" data-prerendered="true">
+          <article class="focus-pill">Technical Product Management</article>
+          <article class="focus-pill">B2B &amp; Platform Products</article>
+          <article class="focus-pill">AI-Augmented Product Development</article>
+          <article class="focus-pill">Generative AI Workflows</article>
+          <article class="focus-pill">Product Discovery &amp; Strategy</article>
+          <article class="focus-pill">Product Analytics</article>
+          <article class="focus-pill">Travel Technology</article>
+          <article class="focus-pill">Business Systems</article>
+          <article class="focus-pill">Digital Transformation</article>
+        </div>
       </div>
     </section>
 

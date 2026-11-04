@@ -26,6 +26,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    (() => {
+      const requested = new URLSearchParams(location.search).get("lang");
+      let saved = null;
+      try { saved = localStorage.getItem("site-locale"); } catch (_) {}
+      const locale = ["fa", "en"].includes(requested) ? requested : (saved === "en" ? "en" : "fa");
+      document.documentElement.lang = locale;
+      document.documentElement.dir = locale === "en" ? "ltr" : "rtl";
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json" id="portfolio-schema"></script>
 </head>
@@ -46,6 +56,73 @@
   </header>
 
   <main class="container portfolio-page">
+    <!-- Add new public products here: copy an article and update its title, descriptions and URL. -->
+    <section class="public-projects-section" id="live-projects" aria-labelledby="live-projects-title">
+      <div class="section-title"><h2 id="live-projects-title"><span class="public-projects-fa">پروژه‌های آنلاین</span><span class="public-projects-en">Live Projects</span></h2></div>
+      <p class="public-projects-intro"><span class="public-projects-fa">محصولات و پروژه‌هایی که می‌توانید مستقیماً از آن‌ها بازدید کنید.</span><span class="public-projects-en">Products and projects you can explore online.</span></p>
+      <div class="public-projects-grid">
+        <a class="public-project-card" href="https://time.imoein.com/" target="_blank" rel="noopener noreferrer" aria-label="باز کردن TIME">
+          <span class="public-project-mark" aria-hidden="true">T</span>
+          <span class="public-project-content">
+            <strong class="public-project-name">TIME</strong>
+            <span class="public-project-description public-projects-fa">ساعت جهانی و مناطق زمانی</span>
+            <span class="public-project-description public-projects-en">World clocks &amp; time zones</span>
+            <span class="public-project-url" dir="ltr">time.imoein.com</span>
+          </span>
+          <span class="public-project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="public-project-card" href="https://ai-detector.imoein.com/" target="_blank" rel="noopener noreferrer" aria-label="باز کردن AI Detector">
+          <span class="public-project-mark" aria-hidden="true">A</span>
+          <span class="public-project-content">
+            <strong class="public-project-name">AI Detector</strong>
+            <span class="public-project-description public-projects-fa">تشخیص ردپای هوش مصنوعی در تصاویر</span>
+            <span class="public-project-description public-projects-en">AI-generated image detection</span>
+            <span class="public-project-url" dir="ltr">ai-detector.imoein.com</span>
+          </span>
+          <span class="public-project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="public-project-card" href="https://qrcode.imoein.com/" target="_blank" rel="noopener noreferrer" aria-label="باز کردن QR Code">
+          <span class="public-project-mark" aria-hidden="true">Q</span>
+          <span class="public-project-content">
+            <strong class="public-project-name">QR Code</strong>
+            <span class="public-project-description public-projects-fa">ساخت کد QR</span>
+            <span class="public-project-description public-projects-en">QR code generator</span>
+            <span class="public-project-url" dir="ltr">qrcode.imoein.com</span>
+          </span>
+          <span class="public-project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="public-project-card" href="https://farvahcafe.com/" target="_blank" rel="noopener noreferrer" aria-label="باز کردن Farvah Cafe">
+          <span class="public-project-mark" aria-hidden="true">F</span>
+          <span class="public-project-content">
+            <strong class="public-project-name">Farvah Cafe</strong>
+            <span class="public-project-description public-projects-fa">راهکار مدیریت کافه</span>
+            <span class="public-project-description public-projects-en">Cafe management platform</span>
+            <span class="public-project-url" dir="ltr">farvahcafe.com</span>
+          </span>
+          <span class="public-project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="public-project-card" href="https://gardeshonline.com/" target="_blank" rel="noopener noreferrer" aria-label="باز کردن GardeshOnline">
+          <span class="public-project-mark" aria-hidden="true">G</span>
+          <span class="public-project-content">
+            <strong class="public-project-name">GardeshOnline</strong>
+            <span class="public-project-description public-projects-fa">خدمات و فناوری سفر</span>
+            <span class="public-project-description public-projects-en">Travel services &amp; technology</span>
+            <span class="public-project-url" dir="ltr">gardeshonline.com</span>
+          </span>
+          <span class="public-project-arrow" aria-hidden="true">↗</span>
+        </a>
+        <a class="public-project-card" href="https://imoein.com/nevis-sanj/" target="_blank" rel="noopener noreferrer" aria-label="باز کردن نویس‌سنج | NevisSanj">
+          <span class="public-project-mark" aria-hidden="true">ن</span>
+          <span class="public-project-content">
+            <strong class="public-project-name">نویس‌سنج | NevisSanj</strong>
+            <span class="public-project-description public-projects-fa">تشخیص و تحلیل متن تولیدشده با هوش مصنوعی</span>
+            <span class="public-project-description public-projects-en">AI-generated text analysis</span>
+            <span class="public-project-url" dir="ltr">imoein.com</span>
+          </span>
+          <span class="public-project-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
     <section aria-labelledby="projects-title">
       <div class="section-title"><h2 id="projects-title">پروژه‌ها و مطالعات موردی</h2></div>
       <div class="portfolio-grid" id="portfolio-projects"></div>
