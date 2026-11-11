@@ -35,7 +35,8 @@
           "AI-Augmented Product Development",
           "هوش تجاری",
           "اتوماسیون فرایند",
-          "فناوری سفر"
+          "فناوری سفر",
+          "پلتفرم چندرسانه‌ای"
         ]
       },
       "projects": [
@@ -90,9 +91,9 @@
           "description": "در این پروژه، مجموعه‌ای از گزارش‌ها و داشبوردهای عملیاتی برای بررسی فروش، سفارش‌ها، کاربران، گروه‌های مشتری، تأمین‌کنندگان، کنسلی‌ها، کمیسیون‌ها، لاگ‌های جستجو و فعالیت کاربران طراحی و نگهداری شد. تمرکز اصلی روی تبدیل داده‌های عملیاتی به گزارش‌های قابل استفاده برای تصمیم‌گیری مدیریتی و پیگیری روزانه تیم‌ها بود. این پروژه ترکیبی از SQL، تحلیل داده، Oracle APEX و درک فرآیندهای کسب‌وکار بود."
         },
         {
-          "title": "پروژه کسب‌وکاری گردش‌آنلاین",
+          "title": "گردش | پلتفرم چندرسانه‌ای",
           "subtitle": "",
-          "description": "گردش‌آنلاین یک پروژه کسب‌وکاری در حوزه سفر بود که با هدف ارائه خدمات سفر تفریحی و سازمانی شکل گرفت. این پروژه شامل طراحی حضور دیجیتال، ارتباط با مشتریان، هماهنگی با تأمین‌کنندگان، فرآیندهای عملیاتی و توسعه ایده کسب‌وکار در صنعت گردشگری بود. نقش من در این پروژه به عنوان بنیان‌گذار، ترکیبی از توسعه کسب‌وکار، طراحی فرآیند، مدیریت ارتباطات و شناخت بازار سفر بود."
+          "description": "گردش در حال توسعه به‌عنوان یک پلتفرم چندرسانه‌ای برای انتشار، مدیریت و تماشای محتوای صوتی و تصویری است. مسیر محصول شامل پادکست و اپیزودها، ویدئو، رویدادهای زنده و فضای کاری مستقل برای ناشران و تولیدکنندگان محتواست. نقش من بر راهبری محصول، تعیین نقشه راه، طراحی تجربه انتشار و مدیریت رسانه و هماهنگی نیازمندی‌های پخش و دسترسی با توسعه فنی متمرکز است. قابلیت‌ها به‌صورت مرحله‌ای در حال پیاده‌سازی و ارزیابی‌اند."
         },
         {
           "title": "آنلاین‌سازی فرآیندهای مالی و محصول در دلتابان / سه‌کلیک",
@@ -146,7 +147,8 @@
           "AI-Augmented Product Development",
           "Business Intelligence",
           "Process Automation",
-          "Travel Technology"
+          "Travel Technology",
+          "Multimedia Platform"
         ]
       },
       "projects": [
@@ -201,9 +203,9 @@
           "description": "This project involved designing and maintaining operational dashboards and reports for sales, orders, users, customer groups, suppliers, cancellations, commissions, search logs, and user activity. The main focus was transforming operational data into usable reports for management decisions and daily team monitoring. The project combined SQL, data analysis, Oracle APEX, and business process understanding."
         },
         {
-          "title": "GardeshOnline Travel Platform / Business Project",
+          "title": "Gardesh | Multimedia Platform",
           "subtitle": "",
-          "description": "GardeshOnline was a travel business initiative focused on leisure and corporate travel services. The project included digital presence planning, customer communication, supplier coordination, operational process design, and business development within the travel industry. As the founder, my role combined business development, process design, relationship management, and market understanding."
+          "description": "Gardesh is being developed as a multimedia platform for publishing, managing and enjoying audio and video content. Its product direction covers podcasts and episodes, video, live events, and an independent workspace for publishers and creators. My role focuses on product leadership, roadmap priorities, publishing and media-management workflows, and aligning playback and access requirements with technical delivery. Capabilities are being developed and evaluated in phases."
         },
         {
           "title": "Deltaban / 3click Product & Financial Process Automation",
