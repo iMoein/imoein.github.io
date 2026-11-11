@@ -190,7 +190,19 @@
       ],
       "footer": "Built for GitHub Pages.",
       "seo": {
-        "description": "Moein Ghezelbash is a Senior Technical Product Manager with 10+ years of experience in B2B platforms, travel technology, AI-augmented product development, product analytics, business systems, and technical operations."
+        "description": "Moein Ghezelbash is a Senior Technical Product Manager with 10+ years of experience in B2B platforms, travel technology, AI-augmented product development, product analytics, business systems, and technical operations.",
+        "keywords": [
+          "Moein Ghezelbash",
+          "Senior Technical Product Manager",
+          "Technical Product Manager",
+          "B2B Platforms",
+          "Product Strategy",
+          "MVP",
+          "Travel Technology",
+          "AI-Augmented Product Development",
+          "AI Coding Agents",
+          "Product Analytics"
+        ]
       },
       "careerBreak": "Career Break | Nov 2018–Jun 2020: Self-directed learning and helping organize WordPress Iran meetups.",
       "independentProjects": [
@@ -474,7 +486,20 @@
       ],
       "footer": "ساخته‌شده برای GitHub Pages.",
       "seo": {
-        "description": "معین قزلباش مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر، توسعه محصول با کمک هوش مصنوعی، تحلیل محصول، سیستم‌های کسب‌وکار و عملیات فنی است."
+        "description": "معین قزلباش مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر، توسعه محصول با کمک هوش مصنوعی، تحلیل محصول، سیستم‌های کسب‌وکار و عملیات فنی است.",
+        "keywords": [
+          "معین قزلباش",
+          "مدیر ارشد محصول فنی",
+          "مدیر محصول فنی",
+          "مدیریت محصول",
+          "پلتفرم‌های B2B",
+          "استراتژی محصول",
+          "MVP",
+          "فناوری سفر",
+          "توسعه محصول با هوش مصنوعی",
+          "AI Coding Agents",
+          "تحلیل محصول"
+        ]
       },
       "careerBreak": "وقفه شغلی | آبان ۱۳۹۷ تا خرداد ۱۳۹۹: یادگیری خودآموز و کمک به برگزاری میتاپ‌های وردپرس ایران.",
       "independentProjects": [
@@ -592,7 +617,7 @@
       ]
     }
   },
-  "profileImage": "assets/profile.jpg",
+  "profileImage": "assets/profile-photo.webp",
   "socialLinks": [
     {
       "label": "LinkedIn",
@@ -1003,6 +1028,7 @@
     }
   },
   "profileImageCandidates": [
+    "assets/profile-photo.webp",
     "assets/profile.jpg",
     "assets/profile.jpeg",
     "assets/profile.png",
@@ -1068,5 +1094,35 @@
       "github": "https://github.com/iMoein/smart-coffee"
     },
     "deviceSync": {}
+  },
+  "siteNavigation": {
+    "fa": {
+      "home": "صفحه اصلی",
+      "projects": "پروژه‌ها",
+      "resume": "رزومه",
+      "blog": "بلاگ"
+    },
+    "en": {
+      "home": "Home",
+      "projects": "Projects",
+      "resume": "Resume",
+      "blog": "Blog"
+    }
+  },
+  "resumeContactLabels": {
+    "fa": {
+      "panel": "اطلاعات تماس",
+      "location": "موقعیت",
+      "phone": "تلفن",
+      "email": "ایمیل",
+      "linkedin": "لینکدین"
+    },
+    "en": {
+      "panel": "Contact details",
+      "location": "Location",
+      "phone": "Phone",
+      "email": "Email",
+      "linkedin": "Profile"
+    }
   }
 }

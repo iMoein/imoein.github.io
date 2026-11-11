@@ -4,3 +4,4 @@ Disallow: /work
 Disallow: /resume/*.pdf$
 
 Sitemap: https://imoein.com/sitemap.xml
+Sitemap: https://imoein.com/blog/sitemap.xml

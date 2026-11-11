@@ -146,3 +146,9 @@ assets/.DS_Store
 assets/.DS_Store
 .DS_Store
 assets/.DS_Store
+
+# Local-only studio is stored in the private imoein-blog-studio repository
+/scripts/
+/Blog Studio.command
+# Private-preview output must never be part of a public commit
+/assets/blog/media/

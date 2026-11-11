@@ -46,11 +46,19 @@ const setLinkHref = (selector, value) => {
 
 const renderLocaleSwitcher = () => {
   const switcher = $("#locale-switcher");
-  clear(switcher);
-  switcher.append(
-    createButton("فا", () => setLocale("fa"), state.locale === "fa"),
-    createButton("EN", () => setLocale("en"), state.locale === "en")
-  );
+  switcher.dataset.locale = state.locale;
+  // Keep the animated thumb alive so its transform can transition.
+  switcher.querySelectorAll("button").forEach((button) => button.remove());
+  const english = createButton("EN", () => setLocale("en"), state.locale === "en");
+  const persian = createButton("فا", () => setLocale("fa"), state.locale === "fa");
+  [english, persian].forEach((button, index) => {
+    const lang = index === 0 ? "en" : "fa";
+    button.dataset.lang = lang;
+    button.lang = lang;
+    button.setAttribute("aria-pressed", String(state.locale === lang));
+    button.setAttribute("aria-label", lang === "fa" ? "نمایش فارسی" : "Show English");
+  });
+  switcher.append(english, persian);
 };
 
 const renderProfileImage = (data, content) => {
@@ -405,8 +413,15 @@ const renderHome = () => {
 };
 
 const setLocale = (locale) => {
+  if (locale === state.locale) return;
   state.locale = locale;
   localStorage.setItem("site-locale", locale);
+  // Keep the selected language shareable and persistent after reload.
+  // No full navigation: the pill and content can animate in place.
+  const address = new URL(window.location.href);
+  if (locale === "en") address.searchParams.set("lang", "en");
+  else address.searchParams.delete("lang");
+  window.history.replaceState(window.history.state, "", address.pathname + address.search + address.hash);
   renderHome();
 };
 

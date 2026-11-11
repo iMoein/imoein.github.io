@@ -129,8 +129,8 @@ const renderHero = (data, content) => {
   root.appendChild(hero);
 };
 
-const renderContactPanel = (content, contact) => {
-  const labels = contactLabels[locale] || contactLabels.en;
+const renderContactPanel = (content, contact, data) => {
+  const labels = data.resumeContactLabels?.[locale] || contactLabels[locale] || contactLabels.en;
   const phone = locale === 'fa' ? contact.phone.fa : contact.phone.international;
   const panel = create('section', '', 'resume-contact-panel');
   panel.setAttribute('aria-label', labels.panel);
@@ -152,7 +152,7 @@ const render = (data) => {
   document.querySelector('meta[name="description"]').setAttribute('content', content.seo.description);
 
   renderHero(data, content);
-  renderContactPanel(content, contact);
+  renderContactPanel(content, contact, data);
 
   const summary = section(content.sections.summary, 'summary-section');
   const summaryCard = create('div', '', 'card resume-summary-card');
