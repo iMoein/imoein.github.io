@@ -1440,8 +1440,17 @@ html[data-color-scheme="dark"] .blog-article-grid > .blog-list-card.is-featured 
 }
 .blog-page .blog-content-section .blog-search-wrap:focus-within {
   border-color:#3e9c9e;
-  outline:0;
+  outline:none;
   box-shadow:0 0 0 3px rgba(31,138,138,.10);
+}
+/* The global .blog-page :focus-visible rule must not paint a square outline
+   around the inner search input. Keep the accessible focus ring on its
+   rounded parent instead, including when reached via the keyboard. */
+.blog-page .blog-content-section .blog-search-wrap input,
+.blog-page .blog-content-section .blog-search-wrap input:focus,
+.blog-page .blog-content-section .blog-search-wrap input:focus-visible {
+  outline:none;
+  box-shadow:none;
 }
 .blog-page .blog-content-section .blog-search-wrap input {height:44px;font-size:.87rem;}
 .blog-page .blog-content-section .blog-category-dropdown-trigger {
@@ -1866,6 +1875,10 @@ html[data-color-scheme="dark"] .blog-page .blog-content-section .blog-search-wra
   background:rgba(23,48,65,.83);
   border-color:rgba(146,195,204,.25);
   color:#c2dbe1;
+}
+html[data-color-scheme="dark"] .blog-page .blog-content-section .blog-search-wrap:focus-within {
+  border-color:rgba(108,219,211,.74);
+  box-shadow:0 0 0 3px rgba(108,219,211,.13);
 }
 html[data-color-scheme="dark"] .blog-page .blog-content-section .blog-category-dropdown-trigger,
 html[data-color-scheme="dark"] .blog-page .blog-content-section .blog-category-select-wrap {
