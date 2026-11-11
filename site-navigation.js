@@ -25,7 +25,81 @@
   logo.height = 60;
   logo.alt = 'iMoein';
   brand.appendChild(logo);
-  mount.append(brand, links, switcher);
+  // Direct light/dark switch, plus a separate one-tap return to system Auto.
+  const themePicker = document.createElement('div');
+  themePicker.className = 'theme-picker';
+  themePicker.setAttribute('role', 'group');
+
+  const themeAuto = document.createElement('button');
+  themeAuto.type = 'button';
+  themeAuto.className = 'theme-auto-button';
+  const monitor = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  monitor.setAttribute('viewBox', '0 0 24 24');
+  monitor.setAttribute('aria-hidden', 'true');
+  monitor.setAttribute('fill', 'none');
+  monitor.setAttribute('stroke', 'currentColor');
+  monitor.setAttribute('stroke-width', '1.8');
+  monitor.setAttribute('stroke-linecap', 'round');
+  monitor.setAttribute('stroke-linejoin', 'round');
+  const screen = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+  screen.setAttribute('x', '3');
+  screen.setAttribute('y', '4');
+  screen.setAttribute('width', '18');
+  screen.setAttribute('height', '14');
+  screen.setAttribute('rx', '2');
+  const stand = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  stand.setAttribute('d', 'M8 22h8M12 18v4');
+  monitor.append(screen, stand);
+  themeAuto.appendChild(monitor);
+
+  const themeSwitch = document.createElement('button');
+  themeSwitch.type = 'button';
+  themeSwitch.className = 'theme-mode-switch';
+  themeSwitch.setAttribute('role', 'switch');
+  const sun = document.createElement('span');
+  sun.className = 'theme-symbol theme-sun';
+  sun.setAttribute('aria-hidden', 'true');
+  sun.textContent = '☀';
+  const moon = document.createElement('span');
+  moon.className = 'theme-symbol theme-moon';
+  moon.setAttribute('aria-hidden', 'true');
+  moon.textContent = '☾';
+  const thumb = document.createElement('span');
+  thumb.className = 'theme-switch-thumb';
+  thumb.setAttribute('aria-hidden', 'true');
+  themeSwitch.append(sun, moon, thumb);
+
+  const themeLabels = {
+    fa: { group: 'حالت نمایش', auto: 'خودکار؛ مطابق تنظیمات سیستم',
+      toLight: 'تغییر به حالت روشن', toDark: 'تغییر به حالت تاریک' },
+    en: { group: 'Appearance', auto: 'Auto; follow system appearance',
+      toLight: 'Switch to light mode', toDark: 'Switch to dark mode' }
+  };
+  const updateThemeControl = () => {
+    const words = themeLabels[locale()];
+    const mode = window.siteTheme?.get() || 'auto';
+    const dark = (window.siteTheme?.effective() || 'light') === 'dark';
+    themePicker.setAttribute('aria-label', words.group);
+    themeAuto.setAttribute('aria-label', words.auto);
+    themeAuto.title = words.auto;
+    themeAuto.setAttribute('aria-pressed', String(mode === 'auto'));
+    themeAuto.classList.toggle('is-active', mode === 'auto');
+    themeSwitch.setAttribute('aria-checked', String(dark));
+    themeSwitch.setAttribute('aria-label', dark ? words.toLight : words.toDark);
+    themeSwitch.title = dark ? words.toLight : words.toDark;
+  };
+  themeSwitch.addEventListener('click', () => {
+    const dark = (window.siteTheme?.effective() || 'light') === 'dark';
+    window.siteTheme?.set(dark ? 'light' : 'dark');
+    updateThemeControl();
+  });
+  themeAuto.addEventListener('click', () => {
+    window.siteTheme?.set('auto');
+    updateThemeControl();
+  });
+  themePicker.append(themeAuto, themeSwitch);
+  document.addEventListener('site-theme-change', updateThemeControl);
+  mount.append(brand, links, themePicker, switcher);
   function draw() {
     const lang = locale();
     links.replaceChildren();
@@ -40,6 +114,7 @@
       if (active) link.setAttribute('aria-current', 'page');
       links.appendChild(link);
     });
+    updateThemeControl();
     if (isResume) {
       switcher.replaceChildren();
       ['fa', 'en'].forEach((lng) => {

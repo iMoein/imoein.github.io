@@ -267,7 +267,7 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
 .about-card { padding: clamp(24px, 3vw, 34px); }
 .about-card h3 { margin: 28px 0 12px; color: var(--primary); font-size: 1.25rem; }
 .about-card h3:first-child { margin-top: 0; }
-.about-card p { color: #31485d; font-size: 1.04rem; line-height: 2.05; text-align: justify; }
+.about-card p { color: var(--muted); font-size: 1.04rem; line-height: 2.05; text-align: justify; }
 .about-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; padding: 0; margin: 14px 0 4px; list-style: none; }
 .about-list li { background: #F9F6F0; border: 1px solid rgba(31,138,138,.18); border-inline-start: 4px solid var(--primary); border-radius: 16px; padding: 10px 12px; font-weight: 800;font-size:small; color: var(--brand); }
 .sticky-card { position: sticky; top: 24px; }
@@ -305,7 +305,7 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
 .expertise-card { min-height: 250px; display: flex; flex-direction: column; justify-content: flex-start; }
 .expertise-card h3 { color: var(--brand); font-size: 1.16rem; margin-bottom: 16px; }
 .expertise-card p { font-size: 1rem; line-height: 1.95; }
-#experience-summary p { line-height: 2; color: #31485d; }
+#experience-summary p { line-height: 2; color: var(--muted); }
 #current-focus { align-content: flex-start; }
 .focus-pill { text-align: center; }
 
@@ -355,7 +355,7 @@ ul.clean { margin: 0; padding-inline-start: 20px; color: var(--muted); line-heig
 .resume-section-title::after { content: ""; height: 2px; flex: 1; background: linear-gradient(90deg, var(--primary), transparent); }
 html[dir="rtl"] .resume-section-title::after { background: linear-gradient(270deg, var(--primary), transparent); }
 .resume-summary-card { padding: clamp(22px, 3vw, 34px); }
-.resume-summary-card p { color: #31485d; line-height: 1.95; font-size: 1.02rem; }
+.resume-summary-card p { color: var(--muted); line-height: 1.95; font-size: 1.02rem; }
 .resume-card-grid { display: grid; grid-template-columns: 1fr; gap: 20px; align-items: start; }
 .resume-competency-card { min-height: 0; }
 .resume-competency-card h3, .resume-detail-card h2 { margin-top: 0; color: var(--primary); }
@@ -1691,4 +1691,401 @@ html[lang="en"] .focus-locale[data-locale="en"] {
   .site-navigation .locale-switcher button,
   .site-navigation .locale-switcher a { min-width: 32px; padding: 4px 7px; }
   .site-navigation .primary-nav-links a { font-size: .77rem; }
+}
+
+
+/* Compact theme switch: immediate light/dark toggle, optional system Auto. */
+.site-navigation .theme-picker {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 5px;
+  min-height: 40px;
+  padding: 2px 5px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-strong);
+  transition: background-color .28s ease, border-color .28s ease;
+}
+.site-navigation .theme-picker button {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  font-family: inherit;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.site-navigation .theme-picker button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+.theme-auto-button {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 50%;
+  color: var(--muted);
+  background: transparent;
+  transition: background-color .28s ease, color .28s ease, transform .26s ease;
+}
+.theme-auto-button:hover { transform: scale(1.06); }
+.theme-auto-button:active { transform: scale(.95); }
+.theme-auto-button svg { display: block; width: 18px; height: 18px; }
+.theme-auto-button.is-active {
+  color: var(--brand);
+  background: rgba(31,138,138,.14);
+}
+.theme-auto-button.is-active::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #1F8A8A;
+}
+.theme-mode-switch {
+  display: flex;
+  direction: ltr; /* Sun stays on the left, moon on the right in both languages. */
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 72px;
+  width: 72px;
+  height: 32px;
+  padding: 0 9px;
+  border-radius: 999px;
+  --thumb-travel: 40px;
+  background: #DDE9E7;
+  color: #536E79;
+  transition: background-color .38s cubic-bezier(.2,.7,.3,1), color .3s ease;
+  touch-action: manipulation;
+}
+.theme-mode-switch[aria-checked="true"] {
+  background: #315265;
+  color: #D6E5E9;
+}
+.theme-symbol {
+  position: relative;
+  z-index: 2;
+  font-size: 15px;
+  line-height: 1;
+  pointer-events: none;
+  opacity: .65;
+  transition: color .32s ease, opacity .32s ease, transform .42s cubic-bezier(.2,1.1,.35,1);
+}
+.theme-mode-switch[aria-checked="false"] .theme-sun {
+  color: #98632F;
+  opacity: 1;
+  transform: scale(1.08);
+}
+.theme-mode-switch[aria-checked="true"] .theme-moon {
+  color: #FBF5E9;
+  opacity: 1;
+  transform: scale(1.08);
+}
+.theme-switch-thumb {
+  position: absolute;
+  z-index: 1;
+  top: 3px;
+  left: 3px;
+  width: 26px;
+  height: 26px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(12,35,52,.2);
+  transform: translate3d(0, 0, 0);
+  transition:
+    transform .46s cubic-bezier(.22,1.26,.34,1),
+    background-color .34s ease,
+    box-shadow .34s ease;
+  will-change: transform;
+}
+.theme-mode-switch[aria-checked="true"] .theme-switch-thumb {
+  transform: translate3d(var(--thumb-travel), 0, 0);
+  background: #173245;
+  box-shadow: 0 2px 10px rgba(5,22,34,.4);
+}
+.theme-mode-switch:hover .theme-switch-thumb {
+  box-shadow: 0 2px 11px rgba(12,35,52,.3);
+}
+.theme-mode-switch:active .theme-switch-thumb {
+  scale: 1.07 .94;
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-picker, .theme-auto-button, .theme-mode-switch,
+  .theme-switch-thumb, .theme-symbol { transition: none !important; }
+}
+@media (max-width: 760px) {
+  .site-navigation {
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    grid-template-areas: "brand theme language" "links links links";
+    column-gap: 7px;
+  }
+  .site-navigation .theme-picker {
+    grid-area: theme;
+    justify-self: end;
+    gap: 2px;
+    padding: 2px 3px;
+  }
+  .theme-auto-button { width: 28px; height: 30px; }
+  .theme-mode-switch { --thumb-travel: 32px; width: 64px; flex-basis: 64px; padding-inline: 8px; }
+}
+@media (max-width: 360px) {
+  .site-navigation { column-gap: 4px; }
+  .site-navigation .site-nav-brand img { max-width: 106px; }
+  .site-navigation .theme-picker { padding-inline: 2px; }
+  .theme-mode-switch { --thumb-travel: 28px; width: 60px; flex-basis: 60px; }
+}
+
+/* Dark palette: brand-led navy backgrounds, teal accents, readable content surfaces. */
+html[data-color-scheme="dark"] {
+  --primary: #60D1CE;
+  --brand: #E8F4FA;
+  --complement: #E0C9AC;
+  --bg: #0C1926;
+  --accent: #EAB47E;
+  --surface: rgba(22, 40, 54, .93);
+  --surface-strong: #1B3041;
+  --border: rgba(173, 215, 225, .18);
+  --text: #EAF4F9;
+  --muted: #B4C8D3;
+  --shadow: 0 18px 46px rgba(0, 0, 0, .30);
+  background: #122433;
+}
+html[data-color-scheme="dark"] body {
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(24, 124, 134, .20), transparent 32rem),
+    radial-gradient(circle at 90% 9%, rgba(164, 116, 71, .12), transparent 30rem),
+    linear-gradient(180deg, #0E1E2C 0%, #101A27 100%);
+}
+html[data-color-scheme="dark"] body::before {
+  background-image:
+    linear-gradient(rgba(175,220,229,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(175,220,229,.045) 1px, transparent 1px);
+}
+html[data-color-scheme="dark"] .hero-card,
+html[data-color-scheme="dark"] .resume-hero,
+html[data-color-scheme="dark"] .resume-page .resume-hero {
+  background:
+    radial-gradient(circle at 88% 6%, rgba(59,160,161,.16), transparent 19rem),
+    linear-gradient(135deg, #132D42 0%, #0D2537 62%, #17636F 140%);
+  border-color: rgba(189,226,229,.17);
+  color: #F5FAFC;
+}
+html[data-color-scheme="dark"] .hero-card h1,
+html[data-color-scheme="dark"] .resume-hero h1 { color: #fff; }
+html[data-color-scheme="dark"] .hero-card h2,
+html[data-color-scheme="dark"] .resume-hero .lead { color: #F2F8FC; }
+
+html[data-color-scheme="dark"] .card,
+html[data-color-scheme="dark"] .summary,
+html[data-color-scheme="dark"] .info-card,
+html[data-color-scheme="dark"] .job,
+html[data-color-scheme="dark"] .resume-job-card,
+html[data-color-scheme="dark"] .resume-career-note,
+html[data-color-scheme="dark"] .home-intro .info-card,
+html[data-color-scheme="dark"] .home-resume-card,
+html[data-color-scheme="dark"] .resume-other-card,
+html[data-color-scheme="dark"] .consulting-row,
+html[data-color-scheme="dark"] .resume-consulting-row,
+html[data-color-scheme="dark"] .public-project-card,
+html[data-color-scheme="dark"] .resume-contact-panel {
+  background: var(--surface);
+  border-color: var(--border);
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+html[data-color-scheme="dark"] .action-card {
+  background: linear-gradient(145deg, #233849, #23343F);
+}
+html[data-color-scheme="dark"] #experience-summary {
+  background: linear-gradient(145deg, #1B3142, #152F3B);
+}
+html[data-color-scheme="dark"] #current-focus {
+  background: linear-gradient(145deg, #1C3242, #18303D);
+}
+html[data-color-scheme="dark"] .brand-logo-item,
+html[data-color-scheme="dark"] #current-focus .focus-pill,
+html[data-color-scheme="dark"] .social-grid a,
+html[data-color-scheme="dark"] .about-list li,
+html[data-color-scheme="dark"] .tag-list li,
+html[data-color-scheme="dark"] .resume-period,
+html[data-color-scheme="dark"] .resume-contact-panel span,
+html[data-color-scheme="dark"] .resume-contact-panel a,
+html[data-color-scheme="dark"] .resume-contact span,
+html[data-color-scheme="dark"] .resume-contact a,
+html[data-color-scheme="dark"] .resume-contact-panel a,
+html[data-color-scheme="dark"] .contact-bar a,
+html[data-color-scheme="dark"] .contact-bar span,
+html[data-color-scheme="dark"] .contact-button,
+html[data-color-scheme="dark"] .download-bar span,
+html[data-color-scheme="dark"] .footer-nav a {
+  background: #253D4C;
+  color: var(--text);
+  border-color: var(--border);
+}
+html[data-color-scheme="dark"] .resume-contact-panel { background: #152A3B; }
+html[data-color-scheme="dark"] .resume-contact-panel strong,
+html[data-color-scheme="dark"] .brand-logo-item,
+html[data-color-scheme="dark"] .public-project-card .public-project-name {
+  color: var(--text);
+}
+html[data-color-scheme="dark"] .download-bar a,
+html[data-color-scheme="dark"] .projects-card-link,
+html[data-color-scheme="dark"] .brand-list li {
+  background: #247682;
+  color: #fff;
+  border-color: #3D9DA7;
+}
+html[data-color-scheme="dark"] .download-bar a:hover,
+html[data-color-scheme="dark"] .projects-card-link:hover,
+html[data-color-scheme="dark"] .social-grid a:hover {
+  background: #246B78;
+  color: #fff;
+}
+html[data-color-scheme="dark"] .home-resume-card a,
+html[data-color-scheme="dark"] .public-project-url,
+html[data-color-scheme="dark"] .public-project-arrow,
+html[data-color-scheme="dark"] .projects-card a:not(.projects-card-link) {
+  color: var(--primary);
+}
+html[data-color-scheme="dark"] .site-navigation .locale-switcher,
+html[data-color-scheme="dark"] .site-navigation .theme-picker {
+  background: #1E3444;
+  border-color: var(--border);
+  color: var(--text);
+  box-shadow: none;
+}
+html[data-color-scheme="dark"] .site-navigation .primary-nav-links a {
+  color: var(--text);
+}
+html[data-color-scheme="dark"] .site-navigation .primary-nav-links a:hover,
+html[data-color-scheme="dark"] .site-navigation .primary-nav-links a[aria-current="page"] {
+  background: #2C5159;
+  color: #DAFFFF;
+}
+html[data-color-scheme="dark"] .site-navigation .locale-switcher button,
+html[data-color-scheme="dark"] .site-navigation .locale-switcher a {
+  color: var(--muted);
+}
+html[data-color-scheme="dark"] .site-navigation .locale-switcher .active {
+  background: #35616A;
+  color: #fff;
+}
+html[data-color-scheme="dark"] .site-navigation .primary-nav-links {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+html[data-color-scheme="dark"] .site-nav-brand {
+  position: relative;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+}
+html[data-color-scheme="dark"] .site-nav-brand img { opacity: 0; }
+html[data-color-scheme="dark"] .site-nav-brand::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, #2C83FF 0%, #70C2FF 34%, #F3F8FC 41%, #F3F8FC 100%);
+  -webkit-mask: url("assets/logo/imoein.com.webp") center / contain no-repeat;
+  mask: url("assets/logo/imoein.com.webp") center / contain no-repeat;
+}
+html[data-color-scheme="dark"] .theme-auto-button { color: var(--muted); }
+html[data-color-scheme="dark"] .theme-auto-button.is-active {
+  background: rgba(96,209,206,.18);
+  color: var(--primary);
+}
+html[data-color-scheme="dark"] .theme-auto-button.is-active::after { background: var(--primary); }
+html[data-color-scheme="dark"] .resume-contact-panel strong { color: var(--text); }
+html[data-color-scheme="dark"] .resume-other-period,
+html[data-color-scheme="dark"] .consulting-row > small,
+html[data-color-scheme="dark"] .resume-consulting-row > small {
+  background: #284451;
+  color: var(--text);
+}
+html[data-color-scheme="dark"] .portfolio-intro,
+html[data-color-scheme="dark"] .portfolio-hero .portfolio-intro {
+  color: var(--muted);
+}
+html[data-color-scheme="dark"] .public-project-mark,
+html[data-color-scheme="dark"] .social-icon {
+  background: #244B58;
+  color: var(--primary);
+}
+html[data-color-scheme="dark"] .site-loader {
+  background: #101F2D;
+  color: var(--text);
+}
+html[data-color-scheme="dark"] .site-loader-caption { color: var(--muted); }
+html[data-color-scheme="dark"] .site-loader-progress {
+  background: rgba(204,234,240,.17);
+}
+html[data-color-scheme="dark"] .site-loader-progress span { background: var(--primary); }
+html[data-color-scheme="dark"] .site-loader-name { color: var(--text); }
+
+/* Contrast corrections for small labels and ordered project markers. */
+html[data-color-scheme="dark"] .resume-competency-card .tags li,
+html[data-color-scheme="dark"] .resume-detail-card .tags li {
+  background: #294756;
+  color: #F1F8FC;
+  border-color: rgba(112, 204, 204, .32);
+  box-shadow: none;
+}
+html[data-color-scheme="dark"] .resume-detail-card > ul:not(.tags) li {
+  background: #223C4A;
+  color: var(--text);
+  border-color: var(--border);
+}
+html[data-color-scheme="dark"] .portfolio-card .portfolio-number {
+  background: #2A6575;
+  color: #FFFFFF;
+  border: 1px solid rgba(146, 225, 225, .40);
+  box-shadow: 0 3px 12px rgba(3, 20, 29, .15);
+}
+/* Do not publish dark backgrounds in printed resumes. */
+@media print {
+  html[data-color-scheme="dark"] {
+    --primary: #1F8A8A;
+    --brand: #102A43;
+    --complement: #D8C3A5;
+    --accent: #B87333;
+    --surface: #fff;
+    --surface-strong: #fff;
+    --border: rgba(16,42,67,.12);
+    --text: #102A43;
+    --muted: #5d6f7f;
+    color-scheme: light !important;
+  }
+  html[data-color-scheme="dark"] body { background: #fff !important; color: #102A43 !important; }
+  html[data-color-scheme="dark"] .card,
+  html[data-color-scheme="dark"] .resume-job-card,
+  html[data-color-scheme="dark"] .resume-period,
+  html[data-color-scheme="dark"] .resume-contact-panel,
+  html[data-color-scheme="dark"] .resume-contact-panel > * {
+    background: #fff !important;
+    color: #102A43 !important;
+    box-shadow: none !important;
+  }
+  html[data-color-scheme="dark"] .resume-contact-panel strong { color: #102A43 !important; }
+  html[data-color-scheme="dark"] .resume-competency-card .tags li,
+  html[data-color-scheme="dark"] .resume-detail-card .tags li,
+  html[data-color-scheme="dark"] .resume-detail-card > ul:not(.tags) li {
+    background: #f4f6f6 !important;
+    color: #102A43 !important;
+    border-color: rgba(16, 42, 67, .16) !important;
+    box-shadow: none !important;
+  }
+  html[data-color-scheme="dark"] .portfolio-card .portfolio-number {
+    background: #102A43 !important;
+    color: #fff !important;
+    border-color: #102A43 !important;
+  }
 }
