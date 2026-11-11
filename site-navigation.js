@@ -9,8 +9,8 @@
   // hardcoded fallback for network failures and offline preview.
   let studioNavigation = null;
   const fallbackNavigation = {
-    fa: {home:'صفحه اصلی',projects:'پروژه‌ها',resume:'رزومه',blog:'بلاگ'},
-    en: {home:'Home',projects:'Projects',resume:'Resume',blog:'Blog'}
+    fa: {home:'درباره من',projects:'پروژه‌ها',resume:'رزومه',blog:'بلاگ'},
+    en: {home:'About Me',projects:'Projects',resume:'Resume',blog:'Blog'}
   };
   const items = (lang) => {
     const words = studioNavigation?.[lang] || fallbackNavigation[lang];
