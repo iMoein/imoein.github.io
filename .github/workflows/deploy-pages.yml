@@ -1,0 +1,78 @@
+name: Deploy static site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Publish website
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Prepare public-only static files
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+
+          # The studio and private Markdown are deliberately not part of this deployment.
+          # Only website entry files and known static directories can enter _site.
+          for name in index.html portfolio.html 404.html CNAME favicon.ico site.webmanifest robots.txt sitemap.xml portfolio.json styles.css app.js portfolio.js site-navigation.js site-theme.js site-loader.js; do
+            test -f "$name" || { echo "::error::Missing required site file $name"; exit 1; }
+            cp "$name" "_site/$name"
+          done
+
+          # Search engine verification files are static public website files.
+          for name in google*.html; do
+            if test -f "$name"; then cp "$name" "_site/$name"; fi
+          done
+
+          for directory in assets resume blog; do
+            test -d "$directory" || { echo "::error::Missing website directory $directory"; exit 1; }
+            mkdir -p "_site/$directory"
+            rsync -a --exclude='.DS_Store' --exclude='.*' \
+              --exclude='*.py' --exclude='*.md' \
+              "$directory/" "_site/$directory/"
+          done
+
+          # Defense in depth: publishing must never ship editor code or local previews.
+          if find _site -type f \( -name '*.md' -o -name '*.py' -o -name '.DS_Store' \) | grep -q .; then
+            echo "::error::Private/source files found in the site artifact."
+            exit 1
+          fi
+          test ! -e _site/scripts
+          test ! -e _site/Blog\ Studio.command
+          test -f _site/blog/fa/index.html
+          test -f _site/blog/en/index.html
+          echo "Public files prepared:"
+          find _site -type f | wc -l
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload public site artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
