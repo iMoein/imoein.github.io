@@ -210,13 +210,27 @@
           "title": "TIME",
           "period": "May–Jun 2026",
           "description": "World-clock web app with saved cities and Persian/Gregorian calendars.",
-          "url": "https://time.imoein.com/"
+          "url": "https://time.imoein.com/",
+          "homeSummary": "TIME brings live clocks for Tehran and cities around the world into one responsive dashboard, with searchable and saved cities, time-zone comparisons, and Persian and Gregorian dates.",
+          "homeHighlights": [
+            "Live world clocks",
+            "Persian & Gregorian dates",
+            "Saved cities & time zones"
+          ],
+          "previewImage": "assets/time-preview.webp"
         },
         {
           "title": "FARVAH / Smart Coffee",
           "period": "Jun 2026",
           "description": "Farvah Cafe is an integrated cafe operations and customer-engagement platform, developed from an MVP into a multi-module commercial product. Its core areas include POS and order management, menus, CRM and loyalty, back-office workflows, and multi-branch operations. My role has focused on product roadmapping, feature prioritisation, and aligning operational needs with UX and technical delivery, with franchise capabilities on the future roadmap.",
-          "url": "https://farvahcafe.com/"
+          "url": "https://farvahcafe.com/",
+          "logo": {
+            "src": "assets/logo/farvah.webp",
+            "candidates": [
+              "assets/logo/farvah.webp",
+              "assets/logo/farvah.jpeg"
+            ]
+          }
         },
         {
           "title": "Device Sync",
@@ -331,7 +345,7 @@
       },
       "profile": {
         "name": "معین قزلباش",
-        "title": "مدیر محصول فنی",
+        "title": "مدیر ارشد محصول فنی",
         "tagline": "پلتفرم‌های B2B • مدیریت محصول و فناوری • توسعه مبتنی بر هوش مصنوعی",
         "location": "تهران"
       },
@@ -349,7 +363,7 @@
         "additionalExperience": "سایر فعالیت‌های حرفه‌ای"
       },
       "summary": [
-        "مدیر محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و ساخت محصول از صفر؛ راهبری گردش در رسانه دیجیتال و فروه در مدیریت هوشمند کافه، از تعریف MVP و نقشه راه تا تحویل قابلیت‌ها. در سامیار سفر نیز توسعه باندل خدمات، تاب‌آوری عملیات و گزارش‌گیری مبتنی بر داده را پیش بردم و زمان تهیه گزارش را از گاهی دو روز کاری به حداکثر یک ساعت رساندم."
+        "مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و ساخت محصول از صفر؛ راهبری گردش در رسانه دیجیتال و فروه در مدیریت هوشمند کافه، از تعریف MVP و نقشه راه تا تحویل قابلیت‌ها. در سامیار سفر نیز توسعه باندل خدمات، تاب‌آوری عملیات و گزارش‌گیری مبتنی بر داده را پیش بردم و زمان تهیه گزارش را از گاهی دو روز کاری به حداکثر یک ساعت رساندم."
       ],
       "competencies": [
         {
@@ -490,7 +504,7 @@
         "keywords": [
           "معین قزلباش",
           "مدیر ارشد محصول فنی",
-          "مدیر محصول فنی",
+          "مدیر ارشد محصول فنی",
           "مدیریت محصول",
           "پلتفرم‌های B2B",
           "استراتژی محصول",
@@ -507,13 +521,27 @@
           "title": "TIME",
           "period": "اردیبهشت تا خرداد ۱۴۰۵",
           "description": "وب‌اپ ساعت جهانی با شهرهای ذخیره‌شده و تقویم شمسی/میلادی.",
-          "url": "https://time.imoein.com/"
+          "url": "https://time.imoein.com/",
+          "homeSummary": "TIME یک داشبورد سبک برای دیدن ساعت زنده تهران و شهرهای جهان است؛ با جست‌وجو و ذخیره شهرهای دلخواه، مقایسه مناطق زمانی و نمایش تاریخ شمسی و میلادی.",
+          "homeHighlights": [
+            "ساعت زنده شهرها",
+            "تقویم شمسی و میلادی",
+            "ذخیره شهرهای دلخواه"
+          ],
+          "previewImage": "assets/time-preview.webp"
         },
         {
           "title": "FARVAH / Smart Coffee",
           "period": "خرداد ۱۴۰۵",
           "description": "Farvah Cafe یک پلتفرم یکپارچه برای مدیریت کافه و ارتباط با مشتری است که از MVP به یک محصول تجاری چندماژوله توسعه یافته است. امکانات اصلی آن فروش و سفارش‌گیری (POS)، مدیریت منو، CRM و باشگاه مشتریان، فرایندهای پشتیبان و مدیریت چندشعبه‌ای را در بر می‌گیرد. نقش من هدایت نقشه راه، اولویت‌بندی قابلیت‌ها و هماهنگی نیازهای عملیاتی با تجربه کاربری و توسعه فنی بوده است؛ توسعه ساختار فرانچایز نیز در نقشه راه آینده قرار دارد.",
-          "url": "https://farvahcafe.com/"
+          "url": "https://farvahcafe.com/",
+          "logo": {
+            "src": "assets/logo/farvah.webp",
+            "candidates": [
+              "assets/logo/farvah.webp",
+              "assets/logo/farvah.jpeg"
+            ]
+          }
         },
         {
           "title": "Device Sync",
@@ -617,7 +645,7 @@
       ]
     }
   },
-  "profileImage": "assets/profile-photo.webp",
+  "profileImage": "assets/profile-photo.webp?v=3567fit",
   "socialLinks": [
     {
       "label": "LinkedIn",
@@ -692,7 +720,7 @@
       "heroTitle": "",
       "heroStatement": "",
       "intro": [
-        "مدیر محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و محصولات مستقل."
+        "مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و محصولات مستقل."
       ],
       "sections": {
         "whatIDo": "چه کاری انجام می‌دهم؟",
@@ -769,7 +797,7 @@
           "معین قزلباش",
           "Moein Ghezelbash",
           "مدیر ارشد محصول فنی",
-          "مدیر محصول فنی",
+          "مدیر ارشد محصول فنی",
           "مدیر محصول",
           "مدیر محصول B2B",
           "مدیر محصول پلتفرم",
@@ -790,7 +818,7 @@
         {
           "title": "معرفی من",
           "paragraphs": [
-            "من معین قزلباش هستم؛ مدیر محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و ساخت محصولات مستقل.",
+            "من معین قزلباش هستم؛ مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر و ساخت محصولات مستقل.",
             "مسیر حرفه‌ای من از رسانه دیجیتال و پخش زنده آغاز شد و در ادامه به گردشگری آنلاین، مدیریت محصول، توسعه کسب‌وکار، داده و مدیریت زیرساخت رسید. این تنوع تجربه به من دیدی عملی نسبت به اثر نیاز مشتری، محدودیت‌های کسب‌وکار، عملیات، داده و تصمیمات مهندسی بر محصول داده است.",
             "امروز تمرکز من بر ساخت و بهبود محصولات دیجیتالی است که مسائل واقعی عملیاتی و تجاری را حل می‌کنند؛ به‌ویژه محصولاتی که نیازمند همکاری نزدیک میان محصول، مهندسی، داده و عملیات هستند."
           ],
@@ -843,7 +871,7 @@
         }
       ],
       "heroSubtitles": [
-        "مدیر محصول فنی — پلتفرم‌های B2B • مدیریت محصول و فناوری • توسعه مبتنی بر هوش مصنوعی"
+        "مدیر ارشد محصول فنی — پلتفرم‌های B2B • مدیریت محصول و فناوری • توسعه مبتنی بر هوش مصنوعی"
       ],
       "resumeDownloadLinks": {
         "fa": "دانلود فارسی",
@@ -1028,11 +1056,8 @@
     }
   },
   "profileImageCandidates": [
-    "assets/profile-photo.webp",
-    "assets/profile.jpg",
-    "assets/profile.jpeg",
-    "assets/profile.png",
-    "assets/profile.webp"
+    "assets/profile-photo.webp?v=3567fit",
+    "assets/profile.jpg?v=3567fit"
   ],
   "resumeDownloads": {
     "fa": "resume/معین قزلباش.pdf",
@@ -1097,16 +1122,18 @@
   },
   "siteNavigation": {
     "fa": {
-      "home": "درباره من",
+      "home": "خانه",
       "projects": "پروژه‌ها",
       "resume": "رزومه",
-      "blog": "بلاگ"
+      "blog": "بلاگ",
+      "about": "درباره من"
     },
     "en": {
-      "home": "About Me",
+      "home": "Home",
       "projects": "Projects",
       "resume": "Resume",
-      "blog": "Blog"
+      "blog": "Blog",
+      "about": "About Me"
     }
   },
   "resumeContactLabels": {

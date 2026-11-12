@@ -37,8 +37,26 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/blog/blog.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Tag: Product Discovery", "url": "https://imoein.com/blog/en/tag/product-discovery/", "inLanguage": "en", "mainEntity": [{"@type": "BlogPosting", "url": "https://imoein.com/blog/en/designing-products-for-users-with-limited-access/", "name": "How Would You Design a Product for Users With Limited Access?"}]}</script>
+  <link rel="stylesheet" href="/site-footer.css">
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
 </head>
 <body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
   <div class="container site-navigation" id="site-navigation" role="navigation"></div>
 <main class="container blog-shell" id="main-content">
   <section class="blog-hero" aria-labelledby="blog-title">
@@ -83,7 +101,7 @@
     <p class="blog-screenreader-status" id="blog-result-count" role="status" aria-live="polite">1 articles</p>
     <div class="blog-article-grid" id="blog-articles" data-items-per-page="10" data-current-page="1" data-total-posts="1" data-index-url="/blog/en/tag/product-discovery/index.json" data-base-url="/blog/en/tag/product-discovery/" data-archive="true">
       <article class="blog-list-card" data-category="Product Management" data-search="how would you design a product for users with limited access? day 1 of 1,000 product manager interview questions 1000-product-management-interview-questions product discovery" data-post-url="/blog/en/designing-products-for-users-with-limited-access/">
-<a class="blog-cover" href="/blog/en/designing-products-for-users-with-limited-access/" aria-label="How Would You Design a Product for Users With Limited Access?"><img src="/assets/blog/media/covers/designing-products-for-users-with-limited-access-ac7e58191b00.png" loading="lazy" decoding="async" alt="PM_Day_0001_Website_1200x630.png"></a>        <div class="blog-list-card-top">
+<a class="blog-cover" href="/blog/en/designing-products-for-users-with-limited-access/" aria-label="How Would You Design a Product for Users With Limited Access?"><img src="/assets/blog/media/covers/designing-products-for-users-with-limited-access-ac7e58191b00.webp" loading="lazy" decoding="async" alt="PM_Day_0001_Website_1200x630.png"></a>        <div class="blog-list-card-top">
           <div class="blog-card-labels">
             <a class="blog-category-tag" href="/blog/en/category/product-management/">Product Management</a>
           </div>
@@ -103,12 +121,22 @@
     </nav>
   </section>
 </main>
-  <footer class="footer blog-footer">
-    <div class="container footer-inner">
-      <div class="footer-copy">© 2026 Moein Ghezelbash</div>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">Home</a>
+        <a data-site-footer-link="about" href="/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">Projects</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
     </div>
   </footer>
   <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
   <script src="/assets/blog/blog.js"></script>
+  <script src="/site-footer.js"></script>
 </body>
 </html>

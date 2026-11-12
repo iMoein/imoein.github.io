@@ -9,13 +9,14 @@
   // hardcoded fallback for network failures and offline preview.
   let studioNavigation = null;
   const fallbackNavigation = {
-    fa: {home:'درباره من',projects:'پروژه‌ها',resume:'رزومه',blog:'بلاگ'},
-    en: {home:'About Me',projects:'Projects',resume:'Resume',blog:'Blog'}
+    fa: {home:'خانه',about:'درباره من',projects:'پروژه‌ها',resume:'رزومه',blog:'بلاگ'},
+    en: {home:'Home',about:'About Me',projects:'Projects',resume:'Resume',blog:'Blog'}
   };
   const items = (lang) => {
     const words = studioNavigation?.[lang] || fallbackNavigation[lang];
     return [
       {label:words.home,href:'/' + (lang === 'en' ? '?lang=en' : '')},
+      {label:words.about || fallbackNavigation[lang].about,href:'/about.html' + (lang === 'en' ? '?lang=en' : '')},
       {label:words.projects,href:'/portfolio.html?lang=' + lang},
       {label:words.resume,href:'/resume/moein-ghezelbash-' + lang + '.html'},
       {label:words.blog,href:'/blog/' + lang + '/'}
@@ -185,6 +186,7 @@
       const active = item.href.startsWith('/blog/') ? page.startsWith('/blog/') :
         item.href.startsWith('/resume/') ? page.includes('/resume/') :
         item.href.startsWith('/portfolio') ? page.includes('portfolio.html') :
+        item.href.startsWith('/about.html') ? page.endsWith('/about.html') :
         page === '/' || page.endsWith('/index.html');
       if (active) link.setAttribute('aria-current', 'page');
       links.appendChild(link);
@@ -269,17 +271,21 @@
     }
   });
 
-  // Resolve the configured labels before the first paint of navigation.
-  // Drawing once prevents a flash of the fallback label followed by the
-  // Site Studio label (e.g. «صفحه اصلی» changing to «درباره من»).
-  let navigationReady = false;
+  // Fill the header synchronously so a slow data request cannot create
+  // a visible layout shift. Site Studio labels still override fallback labels
+  // if they differ, without a redundant DOM replacement on ordinary loads.
+  let navigationReady = true;
+  draw();
   fetch('/resume/site-data.json')
     .then(response => response.ok ? response.json() : null)
     .then(data => {
-      if (data?.siteNavigation) studioNavigation = data.siteNavigation;
+      if (!data?.siteNavigation) return;
+      const before = items(locale()).map(item => item.label).join('\u0000');
+      studioNavigation = data.siteNavigation;
+      const after = items(locale()).map(item => item.label).join('\u0000');
+      if (before !== after) draw();
     })
-    .catch(() => {})
-    .finally(() => { navigationReady = true; draw(); });
+    .catch(() => {});
   new MutationObserver(() => {
     // During the initial request there is no nav yet; the eventual draw uses
     // the latest document language, so no temporary language is displayed.

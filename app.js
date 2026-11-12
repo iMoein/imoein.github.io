@@ -118,7 +118,7 @@ const renderStructuredData = (content, data) => {
     jobTitle: [data.locales.en.profile.title, data.locales.fa.profile.title].filter(Boolean),
     description: content.seo.description,
     url: "https://imoein.com/",
-    image: "https://imoein.com/assets/profile.jpg",
+    image: "https://imoein.com/assets/profile.jpg?v=3567fit",
     email: data.contact?.email?.display,
     telephone: data.contact?.phone?.international,
     address: {
@@ -137,7 +137,7 @@ const renderSeo = (content, data) => {
   const title = content.heroTitle ? `${content.heroName} | ${content.heroTitle}` : `${content.heroName} | ${content.sections.about}`;
   const description = content.seo.description;
   const keywords = content.seo.keywords?.join(", ") || "";
-  const url = `https://imoein.com/${state.locale === "en" ? "?lang=en" : ""}`;
+  const url = `https://imoein.com/about.html${state.locale === "en" ? "?lang=en" : ""}`;
 
   document.title = title;
   setMetaContent("#meta-description", description);

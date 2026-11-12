@@ -37,8 +37,26 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/blog/blog.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "آرشیو برچسب‌ها", "url": "https://imoein.com/blog/fa/tags/", "inLanguage": "fa"}</script>
+  <link rel="stylesheet" href="/site-footer.css">
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
 </head>
 <body class="locale-fa blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="در حال بارگذاری صفحه">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
   <div class="container site-navigation" id="site-navigation" role="navigation"></div>
 <main class="container blog-shell" id="main-content">
   <nav class="blog-breadcrumbs" aria-label="Breadcrumb"><a href="/blog/fa/">یادداشت‌ها و تجربه‌ها</a><span aria-hidden="true">/</span><span aria-current="page">آرشیو برچسب‌ها</span></nav>
@@ -68,12 +86,22 @@
     </a>
   </section>
 </main>
-  <footer class="footer blog-footer">
-    <div class="container footer-inner">
-      <div class="footer-copy">© 2026 Moein Ghezelbash</div>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">خانه</a>
+        <a data-site-footer-link="about" href="/about.html">درباره من</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">پروژه‌ها</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">رزومه</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">بلاگ</a>
+      </nav>
+      <small class="site-footer-copy">© ۲۰۲۶ معین قزلباش</small>
     </div>
   </footer>
   <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
   <script src="/assets/blog/blog.js"></script>
+  <script src="/site-footer.js"></script>
 </body>
 </html>

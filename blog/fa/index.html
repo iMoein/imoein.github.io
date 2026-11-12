@@ -40,8 +40,26 @@
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/assets/blog/blog.css">
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "یادداشت‌ها | iMoein", "url": "https://imoein.com/blog/fa/", "inLanguage": "fa", "mainEntity": [{"@type": "BlogPosting", "url": "https://imoein.com/blog/fa/designing-products-for-users-with-limited-access/", "name": "چطور محصولی طراحی کنیم که با دسترسی محدود هم واقعا کاربردی باشد؟"}]}</script>
+  <link rel="stylesheet" href="/site-footer.css">
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
 </head>
 <body class="locale-fa blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="در حال بارگذاری صفحه">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
   <div class="container site-navigation" id="site-navigation" role="navigation"></div>
 <main class="container blog-shell" id="main-content">
   <section class="blog-hero" aria-labelledby="blog-title">
@@ -85,7 +103,7 @@
     <p class="blog-screenreader-status" id="blog-result-count" role="status" aria-live="polite">1 مقاله</p>
     <div class="blog-article-grid" id="blog-articles" data-items-per-page="10" data-current-page="1" data-total-posts="1" data-index-url="/blog/fa/index.json" data-base-url="/blog/fa/" data-archive="false">
       <article class="blog-list-card is-featured" data-category="مدیریت محصول" data-search="چطور محصولی طراحی کنیم که با دسترسی محدود هم واقعا کاربردی باشد؟ روز اول از هزار سوال مصاحبه مدیر محصول 1000-product-management-interview-questions product discovery" data-post-url="/blog/fa/designing-products-for-users-with-limited-access/">
-<a class="blog-cover" href="/blog/fa/designing-products-for-users-with-limited-access/" aria-label="چطور محصولی طراحی کنیم که با دسترسی محدود هم واقعا کاربردی باشد؟"><img src="/assets/blog/media/covers/designing-products-for-users-with-limited-access-2bd3ce08d94f.png" loading="lazy" decoding="async" alt="PM_Day_0001_Website_1200x630.png"></a>        <div class="blog-list-card-top">
+<a class="blog-cover" href="/blog/fa/designing-products-for-users-with-limited-access/" aria-label="چطور محصولی طراحی کنیم که با دسترسی محدود هم واقعا کاربردی باشد؟"><img src="/assets/blog/media/covers/designing-products-for-users-with-limited-access-2bd3ce08d94f.webp" loading="lazy" decoding="async" alt="PM_Day_0001_Website_1200x630.png"></a>        <div class="blog-list-card-top">
           <div class="blog-card-labels">
             <a class="blog-category-tag" href="/blog/fa/category/%D9%85%D8%AF%DB%8C%D8%B1%DB%8C%D8%AA-%D9%85%D8%AD%D8%B5%D9%88%D9%84/">مدیریت محصول</a>
 <span class="blog-featured-mark"><span aria-hidden="true">✦</span> منتخب</span>          </div>
@@ -105,12 +123,22 @@
     </nav>
   </section>
 </main>
-  <footer class="footer blog-footer">
-    <div class="container footer-inner">
-      <div class="footer-copy">© 2026 Moein Ghezelbash</div>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">خانه</a>
+        <a data-site-footer-link="about" href="/about.html">درباره من</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">پروژه‌ها</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">رزومه</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">بلاگ</a>
+      </nav>
+      <small class="site-footer-copy">© ۲۰۲۶ معین قزلباش</small>
     </div>
   </footer>
   <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
   <script src="/assets/blog/blog.js"></script>
+  <script src="/site-footer.js"></script>
 </body>
 </html>

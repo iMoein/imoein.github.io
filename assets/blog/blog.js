@@ -596,4 +596,7 @@
     });
     sync();
   }
+  // The initial static article/listing DOM is now enhanced. The shared loader
+  // waits for the asynchronous navigation, font layout and visible images.
+  window.siteReady?.();
 })();

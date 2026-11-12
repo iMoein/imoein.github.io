@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -7,160 +7,160 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="description" id="meta-description" content="معین قزلباش مدیر ارشد محصول فنی و سازنده محصول با تمرکز بر پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی، فناوری سفر، تحلیل محصول و سیستم‌های کسب‌وکار است.">
-  <meta name="keywords" id="meta-keywords" content="معین قزلباش, Moein Ghezelbash, مدیر ارشد محصول فنی, مدیر محصول فنی, مدیر محصول, مدیر محصول B2B, مدیر محصول پلتفرم, سازنده محصول, توسعه محصول با هوش مصنوعی, Generative AI, AI Coding Agents, Prompt Engineering, کشف محصول, استراتژی محصول, تحلیل محصول, فناوری سفر, سیستم‌های کسب‌وکار">
-  <meta name="author" id="meta-author" content="">
-  <meta name="robots" content="index, follow">
   <link rel="canonical" id="canonical-url" href="https://imoein.com/">
   <link rel="alternate" hreflang="fa" href="https://imoein.com/?lang=fa">
   <link rel="alternate" hreflang="en" href="https://imoein.com/?lang=en">
   <link rel="alternate" hreflang="x-default" href="https://imoein.com/">
+  <meta name="robots" content="index,follow">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="description" id="meta-description" content="معین قزلباش | مدیر ارشد محصول فنی، سازنده محصولات مستقل و علاقه‌مند به راهبرد محصول، داده و توسعه با هوش مصنوعی.">
   <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
   <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
-  <meta property="og:type" content="profile">
+  <meta property="og:type" content="website">
   <meta property="og:url" id="og-url" content="https://imoein.com/">
-  <meta property="og:title" id="og-title" content="معین قزلباش | درباره من">
-  <meta property="og:description" id="og-description" content="معین قزلباش مدیر ارشد محصول فنی و سازنده محصول با تمرکز بر پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی، فناوری سفر، تحلیل محصول و سیستم‌های کسب‌وکار است.">
-  <meta property="og:site_name" content="Moein Ghezelbash">
+  <meta property="og:title" id="og-title" content="معین قزلباش | از مسئله تا محصول">
+  <meta property="og:description" id="og-description" content="محصولات مستقل، یادداشت‌های مدیریت محصول و مسیرهای همکاری با معین قزلباش.">
+  <meta property="og:site_name" content="iMoein">
   <meta property="og:locale" id="og-locale" content="fa_IR">
-  <meta name="twitter:card" content="summary_large_image">
   <meta property="og:image" content="https://imoein.com/assets/og-site.jpg">
-  <meta property="og:image:secure_url" content="https://imoein.com/assets/og-site.jpg">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="پرتره معین قزلباش کنار عنوان مدیر ارشد محصول فنی و برند iMoein">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://imoein.com/assets/og-site.jpg">
-  <meta name="twitter:image:alt" content="پرتره معین قزلباش کنار عنوان مدیر ارشد محصول فنی و برند iMoein">
-  <meta name="twitter:title" id="twitter-title" content="معین قزلباش | درباره من">
-  <meta name="twitter:description" id="twitter-description" content="معین قزلباش مدیر ارشد محصول فنی و سازنده محصول با تمرکز بر پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی، فناوری سفر، تحلیل محصول و سیستم‌های کسب‌وکار است.">
-  <title>معین قزلباش | درباره من</title>
+  <title>معین قزلباش | از مسئله تا محصول</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
     (() => {
-      const requested = new URLSearchParams(location.search).get("lang");
+      const requested = new URLSearchParams(location.search).get('lang');
       let saved = null;
-      try { saved = localStorage.getItem("site-locale"); } catch (_) {}
-      const locale = ["fa", "en"].includes(requested) ? requested : (saved === "en" ? "en" : "fa");
-      document.documentElement.lang = locale;
-      document.documentElement.dir = locale === "fa" ? "rtl" : "ltr";
+      try { saved = localStorage.getItem('site-locale'); } catch (_) {}
+      const lang = ['fa','en'].includes(requested) ? requested : saved === 'en' ? 'en' : 'fa';
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
+      document.documentElement.classList.add('landing-initializing');
     })();
   </script>
-  <script src="site-theme.js"></script>
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json" id="person-schema"></script>
-  <script>
-    document.documentElement.classList.add("site-loading");
-    // Fail open if the controller or data request never completes.
-    window.setTimeout(() => {
-      document.documentElement.classList.remove("site-loading");
-      document.documentElement.classList.add("site-ready");
-      const overlay = document.getElementById("site-loader");
-      if (overlay) overlay.hidden = true;
-    }, 6500);
-  </script>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/home.css">
+  <script type="application/ld+json" id="homepage-schema"></script>
+  <link rel="stylesheet" href="/site-footer.css">
 </head>
-<body>
-  <div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
-    <div class="site-loader-inner">
-      <span class="site-loader-symbol" aria-hidden="true"><img src="assets/logo/imoein.webp" alt="" width="64" height="64" decoding="sync"></span>
-      <span class="site-loader-name">iMoein</span>
-      <span class="site-loader-progress" aria-hidden="true"><span></span></span>
-      <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
-    </div>
-  </div>
-
+<body class="landing-page">
+  <a class="landing-skip" href="#main-content" data-i18n="skip">رفتن به محتوا</a>
   <div class="container site-navigation" id="site-navigation" role="navigation"></div>
-  <header class="hero home-hero">
-    <div class="container hero-card">
-      <div class="top-actions">
-        <div class="eyebrow" id="eyebrow">سایت شخصی</div>
-      </div>
-      <div class="hero-content">
-        <div>
-          <h1 id="home-name">معین قزلباش</h1>
-          <div class="hero-subtitles" id="hero-subtitles"></div>
-        </div>
-        <div class="profile-frame" aria-hidden="true">
-          <img id="profile-photo" alt="" hidden>
-          <span id="profile-initials">مق</span>
-        </div>
-      </div>
-      <p id="app-error" role="alert"></p>
-    </div>
-  </header>
 
-  <main class="container">
-    <section class="grid two-col home-intro" id="about" aria-label="Professional introduction">
-      <div>
-        <div class="section-title"><h2 id="about-title">درباره من</h2></div>
-        <div class="card summary about-card" id="intro"></div>
+  <main id="main-content" class="container landing-main">
+    <section class="landing-hero" aria-labelledby="landing-title">
+      <div class="landing-hero-copy">
+        <span class="landing-eyebrow" data-i18n="eyebrow">از مسئله تا محصول</span>
+        <h1 id="landing-title" data-i18n="heroName">معین قزلباش</h1>
+        <p class="landing-role" data-i18n="heroRole">مدیر ارشد محصول فنی · سازنده محصول</p>
+        <p class="landing-lead" data-i18n="heroLead">ایده‌ها را به محصولات کاربردی تبدیل می‌کنم؛ با ترکیب تجربه مدیریت محصول، نگاه فنی، داده و ابزارهای هوش مصنوعی.</p>
+        <nav class="landing-hero-social" aria-label="Professional profiles">
+          <a id="hero-linkedin" href="https://www.linkedin.com/in/moeinghezelbash/" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/social/linkedin.png" width="23" height="23" alt="" loading="eager">
+            <span>LinkedIn</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+          <a id="hero-github" href="https://github.com/iMoein" target="_blank" rel="noopener noreferrer">
+            <img src="/assets/social/github.png" width="23" height="23" alt="" loading="eager">
+            <span>GitHub</span>
+            <span aria-hidden="true">↗</span>
+          </a>
+        </nav>
       </div>
-      <aside class="sticky-card side-stack">
-        <div class="card info-card resume-online-card">
-          <h3 id="resume-title">رزومه آنلاین</h3>
-          <div class="download-bar" id="downloads"></div>
-        </div>
-        <div class="card info-card projects-card">
-          <h3 id="projects-card-title">نمونه‌کارها و پروژه‌ها</h3>
-          <p id="projects-card-description">منتخبی از محصولات و پروژه‌هایی که از ایده تا توسعه و اجرا روی آن‌ها کار کرده‌ام.</p>
-          <a class="projects-card-link" id="projects-card-link" href="/portfolio.html?lang=fa#live-projects">مشاهده پروژه‌ها</a>
-        </div>
-        <div class="card info-card social-links-card">
-          <h3 id="social-title">شبکه‌های اجتماعی</h3>
-          <div class="social-grid" id="social-links"></div>
-        </div>
-      </aside>
-    </section>
-
-    <section aria-labelledby="what-title">
-      <div class="section-title"><h2 id="what-title">چه کاری انجام می‌دهم؟</h2></div>
-      <div class="grid action-grid" id="what-i-do"></div>
-    </section>
-
-    <section aria-labelledby="expertise-title">
-      <div class="section-title"><h2 id="expertise-title">حوزه‌های تخصصی</h2></div>
-      <div class="grid expertise-grid" id="expertise"></div>
-    </section>
-
-    <section class="grid two-col home-status" aria-labelledby="experience-title">
-      <div>
-        <div class="section-title"><h2 id="experience-title">تجربه حرفه‌ای</h2></div>
-        <div class="card" id="experience-summary" data-prerendered="true">
-          <div class="experience-locale" data-locale="fa"><div class="brand-logo-list"><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/gardesh.webp" alt="" width="38" height="38" decoding="async"></span><span>گردش (Gardesh)</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/samyarsafar.webp" alt="" width="38" height="38" decoding="async"></span><span>بسوی سامیار سفر</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/alibaba.webp" alt="" width="38" height="38" decoding="async"></span><span>سفرهای علی‌بابا</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farazraya.webp" alt="" width="38" height="38" decoding="async"></span><span>فراز رایا</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/3click.webp" alt="" width="38" height="38" decoding="async"></span><span>سه‌کلیک</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/kavirmotor.webp" alt="" width="38" height="38" decoding="async"></span><span>کویر موتور</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/livefm.webp" alt="" width="38" height="38" decoding="async"></span><span>رادیو اینترنتی لایو اف ام</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/wordpress.webp" alt="" width="38" height="38" decoding="async"></span><span>جامعه جهانی وردپرس</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/imoein.webp" alt="" width="38" height="38" decoding="async"></span><span>iMoein</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farvah.webp" alt="" width="38" height="38" decoding="async"></span><span>Farvah Cafe</span></article></div><p>مروری بر همکاری‌های حرفه‌ای، فعالیت‌های مستقل و مشارکت‌های تخصصی؛ جزئیات هر بخش در رزومه آنلاین قرار دارد.</p></div>
-          <div class="experience-locale" data-locale="en"><div class="brand-logo-list"><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/gardesh.webp" alt="" width="38" height="38" decoding="async"></span><span>Gardesh</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/samyarsafar.webp" alt="" width="38" height="38" decoding="async"></span><span>Samyar Safar</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/alibaba.webp" alt="" width="38" height="38" decoding="async"></span><span>Alibaba Travels (Iran)</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farazraya.webp" alt="" width="38" height="38" decoding="async"></span><span>Faraz Raya</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/3click.webp" alt="" width="38" height="38" decoding="async"></span><span>3Click</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/kavirmotor.webp" alt="" width="38" height="38" decoding="async"></span><span>Kavir Motor</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/livefm.webp" alt="" width="38" height="38" decoding="async"></span><span>LiveFM Internet Radio</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/wordpress.webp" alt="" width="38" height="38" decoding="async"></span><span>WordPress</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/imoein.webp" alt="" width="38" height="38" decoding="async"></span><span>iMoein</span></article><article class="brand-logo-item"><span class="brand-logo"><img src="assets/logo/farvah.webp" alt="" width="38" height="38" decoding="async"></span><span>Farvah Cafe</span></article></div><p>An overview of professional roles, independent product work and contributions. Explore the online resume for details.</p></div>
-        </div>
-      </div>
-      <div>
-        <div class="section-title"><h2 id="current-title">تمرکز فعلی من </h2></div>
-        <div class="card" id="current-focus" data-prerendered="true">
-          <div class="focus-locale" data-locale="fa"><article class="focus-pill">راهبرد و کشف محصول</article><article class="focus-pill">نقشه راه و اولویت‌بندی</article><article class="focus-pill">ساخت MVP و محصول از صفر</article><article class="focus-pill">پلتفرم‌های B2B و B2B2C</article><article class="focus-pill">یکپارچه‌سازی API و شرکا</article><article class="focus-pill">تحلیل محصول و شاخص‌های KPI</article><article class="focus-pill">هوش تجاری و جریان داده</article><article class="focus-pill">CRM و تجربه مشتری</article><article class="focus-pill">فناوری سفر و رزرو آنلاین</article><article class="focus-pill">پلتفرم‌های رسانه و پخش زنده</article><article class="focus-pill">مدیریت محصول با کمک AI</article><article class="focus-pill">AI Coding Agents</article><article class="focus-pill">گردش‌کارهای چندنقشی و RBAC</article><article class="focus-pill">اتوماسیون و تداوم عملیات</article><article class="focus-pill">توسعه محصول چندشعبه‌ای</article><article class="focus-pill">تحویل میان‌تیمی و آزمون محصول</article></div>
-          <div class="focus-locale" data-locale="en"><article class="focus-pill">Product Strategy &amp; Discovery</article><article class="focus-pill">Roadmaps &amp; Prioritisation</article><article class="focus-pill">0-to-1 Products &amp; MVPs</article><article class="focus-pill">B2B &amp; B2B2C Platforms</article><article class="focus-pill">API &amp; Partner Integrations</article><article class="focus-pill">Product Analytics &amp; KPIs</article><article class="focus-pill">Business Intelligence &amp; Data</article><article class="focus-pill">CRM &amp; Customer Journeys</article><article class="focus-pill">Travel Technology</article><article class="focus-pill">Media Platforms &amp; Live Streaming</article><article class="focus-pill">AI-Augmented Product Delivery</article><article class="focus-pill">AI Coding Agents</article><article class="focus-pill">Multi-Role Workflows &amp; RBAC</article><article class="focus-pill">Automation &amp; Resilience</article><article class="focus-pill">Multi-Branch Product Systems</article><article class="focus-pill">Cross-Functional Delivery &amp; QA</article></div>
-        </div>
+      <div class="landing-hero-portrait" aria-hidden="true">
+        <div class="landing-portrait-halo"></div>
+        <img src="/assets/profile-portrait-transparent.webp?v=3567" srcset="/assets/profile-portrait-480.webp 480w, /assets/profile-portrait-840.webp 840w, /assets/profile-portrait-transparent.webp?v=3567 1312w" sizes="(max-width: 580px) 204px, (max-width: 760px) 170px, (max-width: 950px) 290px, 375px" width="1312" height="1199" alt="" fetchpriority="high" decoding="async">
       </div>
     </section>
 
-    <section aria-labelledby="philosophy-title">
-      <div class="section-title"><h2 id="philosophy-title">فلسفه کاری من</h2></div>
-      <div class="card summary" id="philosophy"></div>
+    <section class="landing-shortcuts" aria-label="Quick access">
+      <a class="landing-shortcut landing-about" data-local-link="about" href="/about.html">
+        <span class="landing-shortcut-symbol" aria-hidden="true"><img src="/assets/icons/home-about.webp" alt="" width="112" height="112" decoding="async"></span>
+        <span class="landing-shortcut-copy"><strong data-i18n="about">درباره من</strong><small data-i18n="aboutDetail">آشنایی با مسیر و تجربه حرفه‌ای</small></span>
+        <span class="landing-shortcut-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="landing-shortcut landing-projects" data-local-link="projects" href="/portfolio.html?lang=fa">
+        <span class="landing-shortcut-symbol" aria-hidden="true"><img src="/assets/icons/home-projects.webp" alt="" width="112" height="112" decoding="async"></span>
+        <span class="landing-shortcut-copy"><strong data-i18n="projects">پروژه‌ها</strong><small data-i18n="projectsDetail">محصولات و تجربه‌های اجرایی</small></span>
+        <span class="landing-shortcut-arrow" aria-hidden="true">↗</span>
+      </a>
+      <a class="landing-shortcut landing-resume" data-local-link="resume" href="/resume/moein-ghezelbash-fa.html">
+        <span class="landing-shortcut-symbol" aria-hidden="true"><img src="/assets/icons/home-resume.webp" alt="" width="112" height="112" decoding="async"></span>
+        <span class="landing-shortcut-copy"><strong data-i18n="resume">رزومه</strong><small data-i18n="resumeDetail">سوابق، مهارت‌ها و دستاوردها</small></span>
+        <span class="landing-shortcut-arrow" aria-hidden="true">↗</span>
+      </a>
+    </section>
+
+    <section class="landing-section landing-journal" id="landing-journal" aria-labelledby="landing-journal-title">
+      <div class="landing-section-heading">
+        <h2 id="landing-journal-title" data-i18n="latest">تازه‌ترین یادداشت‌ها</h2>
+        <a class="landing-section-link" data-local-link="blog" href="/blog/fa/"><span data-i18n="allPosts">مشاهده همه یادداشت‌ها</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <div id="landing-featured" class="landing-featured" aria-live="polite">
+        <div class="landing-featured-loading" data-i18n="loadingPosts">در حال بارگذاری یادداشت‌ها…</div>
+      </div>
+      <div id="landing-posts" class="landing-posts" aria-live="polite"></div>
+      <p id="landing-journal-note" class="landing-journal-note" hidden></p>
+    </section>
+
+    <section class="landing-section landing-independent" aria-labelledby="landing-independent-title">
+      <div class="landing-section-heading">
+        <h2 id="landing-independent-title" data-i18n="independent">پروژه‌های مستقل</h2>
+        <a class="landing-section-link" data-local-link="projects" href="/portfolio.html?lang=fa#live-projects"><span data-i18n="allProjects">مشاهده همه پروژه‌ها</span><span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="landing-section-intro" data-i18n="independentIntro">محصولاتی که مستقل یا در کنار تیم‌های کوچک، از ایده تا ساخت و توسعه‌شان پیش رفته‌ام؛ برای هرکدام به‌مرور یک صفحه اختصاصی خواهیم داشت.</p>
+      <div id="landing-independent-grid" class="landing-independent-grid">
+        <p data-i18n="loadingProjects">در حال بارگذاری پروژه‌ها…</p>
+      </div>
+    </section>
+
+<section class="landing-section landing-collaborations" id="landing-collaborations" aria-labelledby="landing-collaborations-title">
+  <div class="landing-section-heading">
+    <h2 id="landing-collaborations-title" data-i18n="collaborationsTitle">همکاری‌ها و تجربه‌های حرفه‌ای</h2>
+  </div>
+  <p class="landing-section-intro" data-i18n="collaborationsIntro">از نقش‌های تمام‌وقت و مشاوره تا پروژه‌ها و مشارکت‌های مستقل.</p>
+  <div class="landing-marquee-shell" role="region" aria-label="لوگوهای همکاری‌های حرفه‌ای">
+    <div class="landing-marquee-track" id="landing-marquee-track"></div>
+  </div>
+</section>
+
+    <section class="landing-contact" aria-labelledby="landing-contact-title">
+      <div class="landing-contact-art" aria-hidden="true">
+        <span class="landing-contact-orbit orbit-one"></span><span class="landing-contact-orbit orbit-two"></span>
+        <img src="/assets/social/telegram.png" width="86" height="86" alt="">
+        <img src="/assets/social/whatsapp.png" width="86" height="86" alt="">
+      </div>
+      <div class="landing-contact-body">
+        <span class="landing-contact-kicker" data-i18n="contactKicker">بیایید گفتگو کنیم</span>
+        <h2 id="landing-contact-title" data-i18n="contactTitle">گفتگو، مشاوره یا شروع همکاری</h2>
+        <p data-i18n="contactLead">برای بررسی یک ایده، حل چالش محصول یا همکاری در ساخت و توسعه، خوشحال می‌شوم گفتگو کنیم.</p>
+        <div class="landing-contact-actions">
+          <a id="contact-telegram" class="landing-contact-button" href="https://t.me/moeinghezelbash" target="_blank" rel="noopener noreferrer"><img src="/assets/social/telegram.png" width="23" height="23" alt=""><span data-i18n="telegram">گفتگو در تلگرام</span><span aria-hidden="true">↗</span></a>
+          <a id="contact-whatsapp" class="landing-contact-button" href="https://wa.me/989120137435" target="_blank" rel="noopener noreferrer"><img src="/assets/social/whatsapp.png" width="23" height="23" alt=""><span data-i18n="whatsapp">گفتگو در واتساپ</span><span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container footer-inner">
-      <nav class="footer-nav" id="footer-nav" aria-label="Footer navigation">
-        <a href="/">صفحه اصلی</a>
-        <a href="/resume/moein-ghezelbash-fa.html">رزومه فارسی</a>
-        <a href="/resume/moein-ghezelbash-en.html">رزومه انگلیسی</a>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">خانه</a>
+        <a data-site-footer-link="about" href="/about.html">درباره من</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">پروژه‌ها</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">رزومه</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">بلاگ</a>
       </nav>
-      <div class="footer-copy" id="footer-copy">© 2026 Moein Ghezelbash.</div>
+      <small class="site-footer-copy">© ۲۰۲۶ معین قزلباش</small>
     </div>
   </footer>
-
-  <script src="site-navigation.js"></script>
-  <script src="site-loader.js"></script>
-  <script src="app.js"></script>
+  <script src="/site-navigation.js"></script>
+  <script src="/home-collaborations.js"></script>
+  <script src="/home.js"></script>
+  <script src="/site-footer.js"></script>
 </body>
 </html>

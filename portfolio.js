@@ -147,6 +147,7 @@ const renderNotice = (content) => {
 
 const renderFooter = (content) => {
   const nav = $("#footer-nav");
+  if (!nav) return; // Common footer owns the links on all pages.
   clear(nav);
   [
     { label: content.nav.home, href: `/${state.locale === "en" ? "?lang=en" : ""}` },

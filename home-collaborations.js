@@ -1,0 +1,83 @@
+/* Continuous, accessible brand timeline derived from the public bilingual CV. */
+(() => {
+  let observer;
+  const logoPath = value =>
+    typeof value === 'string' && /^assets\/logo\/[\w.-]+\.(webp|png|jpeg|jpg)$/.test(value)
+      ? '/' + value : null;
+  const createGroup = (records, hidden) => {
+    const list = document.createElement('ul');
+    list.className = 'landing-marquee-group';
+    if (hidden) list.setAttribute('aria-hidden', 'true');
+    records.forEach(record => {
+      const card = document.createElement('li');
+      card.className = 'landing-marquee-item';
+      const image = document.createElement('img');
+      image.src = record.src;
+      image.alt = '';
+      image.width = 64;
+      image.height = 44;
+      // The scrolling track can start off-screen; eager images prevent blank logos.
+      image.loading = 'eager';
+      image.fetchPriority = 'low';
+      image.decoding = 'async';
+      const text = document.createElement('span');
+      text.className = 'landing-marquee-item-info';
+      const name = document.createElement('strong');
+      name.textContent = record.name;
+      text.append(name);
+      if (record.role) {
+        const role = document.createElement('small');
+        role.textContent = record.role;
+        text.append(role);
+      }
+      card.append(image, text);
+      list.appendChild(card);
+    });
+    return list;
+  };
+  window.renderHomeCollaborations = (data, lang) => {
+    const section = document.getElementById('landing-collaborations');
+    const track = document.getElementById('landing-marquee-track');
+    const localeData = data?.locales?.[lang];
+    if (!section || !track || !localeData) return;
+    const records = [];
+    const seen = new Set();
+    // One source of truth: every collaboration comes from site-data.json.
+    // A new company or independent project with a logo appears on next page load.
+    // Different entries may legitimately share a logo, so dedupe by name + logo.
+    const add = item => {
+      const name = (item.company || item.title || item.name || '').trim();
+      const rawLogo = typeof item.logo === 'string' ? item.logo : item.logo?.src;
+      const src = logoPath(rawLogo);
+      if (!src || !name) return;
+      const key = name.toLocaleLowerCase() + '|' + src;
+      if (seen.has(key)) return;
+      seen.add(key);
+      // Only job titles explicitly recorded in the bilingual resume may appear.
+      // Independent projects without a role show the project name only.
+      const role = typeof item.role === 'string' ? item.role.trim() : '';
+      records.push({name, src, role});
+    };
+    const sections = ['experience', 'consulting', 'additionalExperience', 'independentProjects'];
+    sections.forEach(sectionName => {
+      const entries = localeData[sectionName];
+      if (Array.isArray(entries)) entries.forEach(add);
+    });
+    if (!records.length) {
+      section.hidden = true;
+      return;
+    }
+    section.hidden = false;
+    track.replaceChildren(createGroup(records, false), createGroup(records, true));
+    track.style.setProperty('--marquee-duration', Math.max(30, records.length * 4.6) + 's');
+    if (observer) observer.disconnect();
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(entries => {
+        section.classList.toggle('is-in-view', entries.some(entry => entry.isIntersecting));
+      }, {rootMargin:'80px'});
+      observer.observe(section);
+    } else {
+      section.classList.add('is-in-view');
+    }
+  };
+})();

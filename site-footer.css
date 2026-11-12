@@ -1,0 +1,98 @@
+/* Consistent site footer on Home, About, Projects, Resume and Journal. */
+.site-unified-footer.footer {
+  margin-block-start:16px;
+  padding:0 0 30px;
+  color:var(--muted);
+  text-align:initial;
+}
+.site-unified-footer .site-footer-inner {
+  /* Match the central 1180px site container, not the viewport width. */
+  width:min(1180px,calc(100% - 36px));
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);
+  align-items:center;
+  column-gap:24px;
+  row-gap:14px;
+  padding-block-start:19px;
+  border-top:1px solid rgba(31,138,138,.18);
+}
+.site-unified-footer .site-footer-brand {display:inline-flex;align-items:center;justify-self:start;min-width:0;}
+.site-unified-footer .site-footer-brand img {display:block;width:116px;height:auto;max-height:50px;object-fit:contain;}
+.site-unified-footer .site-footer-nav {
+  display:flex!important;
+  align-items:center;
+  flex-wrap:wrap;
+  justify-content:center;
+  justify-self:center;
+  gap:12px;
+}
+.site-unified-footer .site-footer-nav a {
+  display:inline-flex;
+  align-items:center;
+  padding:4px 1px;
+  border:0;
+  border-radius:0;
+  background:none;
+  font-size:.79rem;
+  line-height:1.6;
+  font-weight:750;
+  color:#284b60;
+  text-decoration:none;
+}
+.site-unified-footer .site-footer-nav a:hover {background:none;color:#16838b;text-decoration:underline;}
+.site-unified-footer .site-footer-nav a:focus-visible {
+  outline:2px solid #168b91;
+  outline-offset:4px;
+  border-radius:2px;
+}
+.site-unified-footer .site-footer-copy {
+  justify-self:end;
+  font-size:.77rem;
+  line-height:1.65;
+  color:#677d8b;
+  white-space:nowrap;
+  opacity:1;
+}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-inner {border-color:rgba(139,196,205,.22);}
+/* Mirror the header wordmark: retain the original image in light mode,
+   and reveal the same blue-to-white masked logo on dark backgrounds. */
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-brand {
+  position:relative;
+  background:transparent;
+  padding:0;
+  border-radius:0;
+}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-brand img {
+  opacity:0;
+}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-brand::after {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(90deg,#2C83FF 0%,#70C2FF 34%,#F3F8FC 41%,#F3F8FC 100%);
+  -webkit-mask:url("/assets/logo/imoein.com.webp") center / contain no-repeat;
+  mask:url("/assets/logo/imoein.com.webp") center / contain no-repeat;
+}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-nav a {color:#c4dfe5;}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-nav a:hover {color:#9eeadf;}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-copy {color:#a5bec8;}
+@media(max-width:760px) {
+  .site-unified-footer .site-footer-inner {width:min(1080px,calc(100% - 24px));}
+}
+@media(max-width:650px) {
+  .site-unified-footer.footer {margin-block-start:14px;padding-block-end:25px;}
+  .site-unified-footer .site-footer-inner {
+    grid-template-columns:minmax(0,1fr);
+    justify-items:center;
+    text-align:center;
+    row-gap:11px;
+  }
+  .site-unified-footer .site-footer-brand {order:1;justify-self:center;}
+  .site-unified-footer .site-footer-nav {order:2;justify-self:center;width:100%;gap:8px 13px;}
+  .site-unified-footer .site-footer-copy {order:3;justify-self:center;width:100%;text-align:center;}
+}
+@media print {
+  .site-unified-footer .site-footer-nav {display:none!important;}
+}
