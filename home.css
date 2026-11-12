@@ -85,8 +85,10 @@ html[dir="rtl"] .landing-section-heading:after {background:linear-gradient(270de
   border-radius:24px;background:linear-gradient(145deg,#fff,rgba(31,138,138,.07));
   box-shadow:0 17px 34px rgba(15,51,64,.08);
 }
-.landing-story-media {display:block;overflow:hidden;min-height:260px;aspect-ratio:16/10;border-radius:16px;border:1px solid rgba(31,138,138,.17);background:#d6e7e8;}
-.landing-story-media img {width:100%;height:100%;object-fit:cover;transition:transform .35s;}
+/* Keep the cover inside its grid track even when a long title makes the row tall.
+   Aspect-ratio + min-height must never impose an intrinsic minimum width. */
+.landing-story-media {position:relative;display:block;overflow:hidden;min-width:0;width:100%;min-height:260px;aspect-ratio:16/10;border-radius:16px;border:1px solid rgba(31,138,138,.17);background:#d6e7e8;}
+.landing-story-media img {position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s;}
 .landing-story-media.is-contained img {object-fit:contain;}
 .landing-story-media:hover img {transform:scale(1.035);}
 .landing-story-body {direction:rtl;display:flex;flex-direction:column;justify-content:center;min-width:0;padding:8px 5px 6px 0;}
@@ -95,7 +97,7 @@ html[lang="en"] .landing-story-body {direction:ltr;}
 .landing-featured-pill {background:linear-gradient(130deg,#1b7680,#218b90);color:#fff;border-radius:999px;padding:5px 11px;font-size:.76rem;font-weight:800;}
 .landing-category {border-radius:999px;padding:5px 11px;background:rgba(31,138,138,.10);color:#1b737d;font-size:.77rem;font-weight:800;}
 .landing-read-time {margin-inline-start:auto;font-size:.75rem;color:#526d7c;white-space:nowrap;}
-.landing-story h3 {font-size:clamp(1.4rem,2.5vw,2.2rem);font-weight:900;line-height:1.65;letter-spacing:-.02em;margin:0 0 8px;}
+.landing-story h3 {font-size:clamp(1.4rem,2.5vw,2.2rem);font-weight:900;line-height:1.65;letter-spacing:-.02em;margin:0 0 8px;overflow-wrap:anywhere;}
 .landing-story h3 a {text-decoration:none;color:#102a43;}
 .landing-story h3 a:hover {color:#0c7e89;}
 .landing-story-excerpt {font-size:.94rem;color:#597281;line-height:1.9;margin:0 0 13px;}
