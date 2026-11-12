@@ -243,13 +243,6 @@
     };
     const articleCard = (post, showFeatured = false) => {
       const article = text('article', 'blog-list-card' + (showFeatured ? ' is-featured' : ''));
-      if (showFeatured) {
-        const mark = text('span', 'blog-featured-mark');
-        const star = text('span', '', '✦');
-        star.setAttribute('aria-hidden', 'true');
-        mark.append(star, document.createTextNode(' ' + (lang === 'fa' ? 'یادداشت منتخب' : 'Featured story')));
-        article.append(mark);
-      }
       if (post.cover) {
         const cover = text('a', 'blog-cover' + (post.coverFit === 'contain' ? ' is-contained' : ''));
         cover.href = post.url;
@@ -266,9 +259,18 @@
         article.append(cover);
       }
       const top = text('div', 'blog-list-card-top');
+      const labels = text('div', 'blog-card-labels');
       const categoryLink = text('a', 'blog-category-tag', post.category);
       categoryLink.href = post.categoryUrl || baseUrl;
-      top.append(categoryLink);
+      labels.append(categoryLink);
+      if (showFeatured) {
+        const mark = text('span', 'blog-featured-mark');
+        const star = text('span', '', '✦');
+        star.setAttribute('aria-hidden', 'true');
+        mark.append(star, document.createTextNode(' ' + (lang === 'fa' ? 'منتخب' : 'Featured')));
+        labels.append(mark);
+      }
+      top.append(labels);
       top.append(text('span', 'blog-readtime', numbers.format(post.minutes) + ' ' + (lang === 'fa' ? 'دقیقه مطالعه' : 'min read')));
       article.append(top);
       const heading = text('h3');
@@ -477,6 +479,56 @@
     syncSidebar();
   }
 
+  // Use the platform's own share sheet (iOS, Android and supporting desktop
+  // browsers). If no native share target is available, offer a copyable URL.
+  const shareNative = document.getElementById('blog-share-native');
+  const shareCopy = document.getElementById('blog-share-copy-link');
+  const shareStatus = document.getElementById('blog-share-status');
+  const shareUrlInput = document.getElementById('blog-share-url');
+  if (shareNative && shareCopy && shareStatus && shareUrlInput) {
+    const articleUrl = shareUrlInput.value || document.querySelector('link[rel="canonical"]')?.href || location.href.split(/[?#]/)[0];
+    const articleTitle = document.querySelector('.blog-post-header h1')?.textContent.trim() || document.title;
+    const shareData = { title: articleTitle, url: articleUrl };
+    const nativeSupported = typeof navigator.share === 'function'
+      && (typeof navigator.canShare !== 'function' || navigator.canShare(shareData));
+    shareNative.hidden = !nativeSupported;
+    shareNative.addEventListener('click', async () => {
+      if (!nativeSupported) return;
+      shareStatus.textContent = '';
+      try {
+        // Must be invoked directly from the user's gesture, before any await.
+        await navigator.share(shareData);
+      } catch (error) {
+        // Closing the native sheet is a normal cancel, not a failed publish.
+        if (error?.name !== 'AbortError') {
+          shareStatus.textContent = lang === 'fa'
+            ? 'پنجره اشتراک‌گذاری باز نشد. می‌توانید لینک را کپی کنید.'
+            : 'Sharing is unavailable. You can copy the link instead.';
+        }
+      }
+    });
+    shareCopy.addEventListener('click', async () => {
+      shareStatus.textContent = '';
+      let copied = false;
+      if (navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(articleUrl);
+          copied = true;
+        } catch (_) { /* Fall through to the legacy or manual copy. */ }
+      }
+      if (!copied) {
+        shareUrlInput.hidden = false;
+        shareUrlInput.focus({ preventScroll: true });
+        shareUrlInput.select();
+        try { copied = typeof document.execCommand === 'function' && document.execCommand('copy'); }
+        catch (_) { /* Keep the selectable URL visible for manual copying. */ }
+        if (copied) shareUrlInput.hidden = true;
+      }
+      shareStatus.textContent = copied
+        ? (lang === 'fa' ? 'لینک مقاله کپی شد.' : 'Article link copied.')
+        : (lang === 'fa' ? 'لینک را از کادر زیر انتخاب و کپی کنید.' : 'Select and copy the link below.');
+    });
+  }
   // Fenced code is an accessible, real HTML code block even without JS.
   // JS adds only localized labels and copying via a direct user gesture.
   const codeControls = document.querySelectorAll('.blog-code-view .blog-code-copy');

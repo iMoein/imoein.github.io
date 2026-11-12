@@ -152,3 +152,6 @@ assets/.DS_Store
 /Blog Studio.command
 # Private-preview output must never be part of a public commit
 /assets/blog/media/
+.DS_Store
+.DS_Store
+assets/.DS_Store
