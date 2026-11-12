@@ -349,6 +349,10 @@ html[lang="fa"][data-color-scheme="dark"] .landing-page .landing-project-link:ho
 .landing-marquee-shell::after {right:0;background:linear-gradient(to left,rgba(239,249,246,.98),transparent);}
 .landing-marquee-track {
   --marquee-duration:40s;
+  /* Width/offset are derived from the actual card geometry in JS, rather
+     than 50% of a max-content track (not reliable in iOS WebKit flexbox). */
+  --marquee-cycle-width:2025px;
+  --marquee-offset:-2025px;
   display:flex;width:max-content;direction:ltr;align-items:stretch;
   animation:landing-marquee-left var(--marquee-duration) linear infinite;
   animation-play-state:paused;will-change:transform;
@@ -358,12 +362,21 @@ html[lang="fa"] .landing-marquee-track {animation-name:landing-marquee-right;}
 .landing-marquee-shell:hover .landing-marquee-track,
 .landing-marquee-shell:focus-within .landing-marquee-track {animation-play-state:paused;}
 .landing-marquee-group {
-  list-style:none;display:flex;flex:0 0 auto;align-items:stretch;
-  gap:12px;margin:0;padding:0 12px 0 0;direction:ltr;
+  list-style:none;display:flex;align-items:stretch;
+  /* Each copy occupies precisely one cycle; prevent WebKit flex shrink
+     and accidental overlap between the original and repeated groups. */
+  box-sizing:border-box;
+  flex:0 0 var(--marquee-cycle-width);
+  width:var(--marquee-cycle-width);
+  min-width:var(--marquee-cycle-width);
+  max-width:var(--marquee-cycle-width);
+  gap:12px;margin:0;padding:0;direction:ltr;
 }
 .landing-marquee-item {
-  flex:0 0 213px;display:flex;align-items:center;gap:11px;
-  min-height:78px;max-width:213px;padding:11px 13px;
+  box-sizing:border-box;
+  flex:0 0 213px;width:213px;min-width:213px;max-width:213px;
+  display:flex;align-items:center;gap:11px;overflow:hidden;
+  min-height:78px;padding:11px 13px;
   border:1px solid rgba(34,105,124,.12);border-radius:16px;
   background:rgba(255,255,255,.85);color:#143850;
   box-shadow:0 4px 10px rgba(19,55,73,.045);
@@ -379,8 +392,8 @@ html[lang="en"] .landing-marquee-item-info {direction:ltr;}
   white-space:normal;overflow-wrap:anywhere;
 }
 .landing-marquee-item-info small {font-size:.68rem;line-height:1.4;color:#5c7886;}
-@keyframes landing-marquee-left {from{transform:translate3d(0,0,0);}to{transform:translate3d(-50%,0,0);}}
-@keyframes landing-marquee-right {from{transform:translate3d(-50%,0,0);}to{transform:translate3d(0,0,0);}}
+@keyframes landing-marquee-left {from{transform:translate3d(0,0,0);}to{transform:translate3d(var(--marquee-offset),0,0);}}
+@keyframes landing-marquee-right {from{transform:translate3d(var(--marquee-offset),0,0);}to{transform:translate3d(0,0,0);}}
 html[data-color-scheme="dark"] .landing-marquee-shell {
   background:linear-gradient(120deg,#203e50,#193747);border-color:rgba(138,203,209,.2);
 }
@@ -403,7 +416,7 @@ html[data-color-scheme="dark"] .landing-marquee-shell::after {background:linear-
 @media(max-width:580px) {
  .landing-collaborations {margin-top:29px;}
  .landing-marquee-shell {padding:11px 0;border-radius:17px;}
- .landing-marquee-item {flex-basis:190px;max-width:190px;min-height:69px;padding:9px 11px;}
+ .landing-marquee-item {flex-basis:190px;width:190px;min-width:190px;max-width:190px;min-height:69px;padding:9px 11px;}
  .landing-marquee-item img {width:49px;height:43px;flex-basis:49px;}
  .landing-marquee-item-info strong {font-size:.73rem;}
  .landing-marquee-item-info small {font-size:.65rem;}

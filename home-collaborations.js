@@ -1,6 +1,8 @@
 /* Continuous, accessible brand timeline derived from the public bilingual CV. */
 (() => {
   let observer;
+  let layoutObserver;
+  let resizeListener;
   const logoPath = value =>
     typeof value === 'string' && /^assets\/logo\/[\w.-]+\.(webp|png|jpeg|jpg)$/.test(value)
       ? '/' + value : null;
@@ -68,8 +70,34 @@
       return;
     }
     section.hidden = false;
+    if (layoutObserver) layoutObserver.disconnect();
+    if (resizeListener) window.removeEventListener('resize', resizeListener);
     track.replaceChildren(createGroup(records, false), createGroup(records, true));
     track.style.setProperty('--marquee-duration', Math.max(30, records.length * 4.6) + 's');
+
+    // Safari may size a max-content flex track differently from Chrome.
+    // Set the complete cycle width explicitly, including the seam gap.
+    // It recalculates automatically if a company is added or the viewport resizes.
+    const syncCycleWidth = () => {
+      const group = track.firstElementChild;
+      const card = group?.firstElementChild;
+      if (!card) return;
+      const cardWidth = card.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(group).columnGap) || 0;
+      const distance = records.length * (cardWidth + gap);
+      if (!Number.isFinite(distance) || distance <= 0) return;
+      const width = distance + 'px';
+      if (track.style.getPropertyValue('--marquee-cycle-width') === width) return;
+      track.style.setProperty('--marquee-cycle-width', width);
+      track.style.setProperty('--marquee-offset', -distance + 'px');
+    };
+    syncCycleWidth();
+    resizeListener = syncCycleWidth;
+    window.addEventListener('resize', resizeListener, {passive:true});
+    if ('ResizeObserver' in window) {
+      layoutObserver = new ResizeObserver(syncCycleWidth);
+      layoutObserver.observe(section);
+    }
     if (observer) observer.disconnect();
     if ('IntersectionObserver' in window) {
       observer = new IntersectionObserver(entries => {
