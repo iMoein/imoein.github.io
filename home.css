@@ -85,13 +85,15 @@ html[dir="rtl"] .landing-section-heading:after {background:linear-gradient(270de
   border-radius:24px;background:linear-gradient(145deg,#fff,rgba(31,138,138,.07));
   box-shadow:0 17px 34px rgba(15,51,64,.08);
 }
+/* Persian keeps its image on the left; English mirrors the columns. */
+html[lang="en"] .landing-story {direction:rtl;}
 /* Keep the cover inside its grid track even when a long title makes the row tall.
    Aspect-ratio + min-height must never impose an intrinsic minimum width. */
 .landing-story-media {position:relative;display:block;overflow:hidden;min-width:0;width:100%;min-height:260px;aspect-ratio:16/10;border-radius:16px;border:1px solid rgba(31,138,138,.17);background:#d6e7e8;}
 .landing-story-media img {position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s;}
 .landing-story-media.is-contained img {object-fit:contain;}
 .landing-story-media:hover img {transform:scale(1.035);}
-.landing-story-body {direction:rtl;display:flex;flex-direction:column;justify-content:center;min-width:0;padding:8px 5px 6px 0;}
+.landing-story-body {direction:rtl;display:flex;flex-direction:column;justify-content:center;min-width:0;padding:8px 0 6px;padding-inline-start:5px;}
 html[lang="en"] .landing-story-body {direction:ltr;}
 .landing-story-meta {display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:15px;}
 .landing-featured-pill {background:linear-gradient(130deg,#1b7680,#218b90);color:#fff;border-radius:999px;padding:5px 11px;font-size:.76rem;font-weight:800;}
