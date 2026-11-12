@@ -349,11 +349,24 @@ html[lang="fa"][data-color-scheme="dark"] .landing-page .landing-project-link:ho
 .landing-marquee-shell::after {right:0;background:linear-gradient(to left,rgba(239,249,246,.98),transparent);}
 .landing-marquee-track {
   --marquee-duration:40s;
-  /* Width/offset are derived from the actual card geometry in JS, rather
-     than 50% of a max-content track (not reliable in iOS WebKit flexbox). */
+  --marquee-item-width:213px;
+  --marquee-gap:12px;
   --marquee-cycle-width:2025px;
+  --marquee-total-width:4038px;
   --marquee-offset:-2025px;
-  display:flex;width:max-content;direction:ltr;align-items:stretch;
+  /* A SINGLE flat grid eliminates the overlapping boundary between two
+     independent flex groups seen in iOS Safari/Chrome RTL layouts. */
+  display:grid;
+  grid-template-rows:minmax(0,1fr);
+  grid-auto-flow:column;
+  grid-auto-columns:var(--marquee-item-width);
+  gap:var(--marquee-gap);
+  box-sizing:border-box;
+  width:var(--marquee-total-width);
+  min-width:var(--marquee-total-width);
+  max-width:var(--marquee-total-width);
+  margin:0;padding:0;list-style:none;
+  direction:ltr;align-items:stretch;
   animation:landing-marquee-left var(--marquee-duration) linear infinite;
   animation-play-state:paused;will-change:transform;
 }
@@ -361,20 +374,10 @@ html[lang="fa"] .landing-marquee-track {animation-name:landing-marquee-right;}
 .landing-collaborations.is-in-view .landing-marquee-track {animation-play-state:running;}
 .landing-marquee-shell:hover .landing-marquee-track,
 .landing-marquee-shell:focus-within .landing-marquee-track {animation-play-state:paused;}
-.landing-marquee-group {
-  list-style:none;display:flex;align-items:stretch;
-  /* Each copy occupies precisely one cycle; prevent WebKit flex shrink
-     and accidental overlap between the original and repeated groups. */
-  box-sizing:border-box;
-  flex:0 0 var(--marquee-cycle-width);
-  width:var(--marquee-cycle-width);
-  min-width:var(--marquee-cycle-width);
-  max-width:var(--marquee-cycle-width);
-  gap:12px;margin:0;padding:0;direction:ltr;
-}
 .landing-marquee-item {
   box-sizing:border-box;
-  flex:0 0 213px;width:213px;min-width:213px;max-width:213px;
+  /* Grid gives each card its own fixed column. No flex-basis/shrink. */
+  width:100%;min-width:0;max-width:100%;margin:0;
   display:flex;align-items:center;gap:11px;overflow:hidden;
   min-height:78px;padding:11px 13px;
   border:1px solid rgba(34,105,124,.12);border-radius:16px;
@@ -416,7 +419,8 @@ html[data-color-scheme="dark"] .landing-marquee-shell::after {background:linear-
 @media(max-width:580px) {
  .landing-collaborations {margin-top:29px;}
  .landing-marquee-shell {padding:11px 0;border-radius:17px;}
- .landing-marquee-item {flex-basis:190px;width:190px;min-width:190px;max-width:190px;min-height:69px;padding:9px 11px;}
+ .landing-marquee-track {--marquee-item-width:190px;}
+ .landing-marquee-item {min-height:69px;padding:9px 11px;}
  .landing-marquee-item img {width:49px;height:43px;flex-basis:49px;}
  .landing-marquee-item-info strong {font-size:.73rem;}
  .landing-marquee-item-info small {font-size:.65rem;}
@@ -424,15 +428,15 @@ html[data-color-scheme="dark"] .landing-marquee-shell::after {background:linear-
 @media(prefers-reduced-motion:reduce) {
  .landing-marquee-shell {overflow-x:auto;scrollbar-width:thin;}
  .landing-marquee-shell::before,.landing-marquee-shell::after {display:none;}
- .landing-marquee-track {animation:none!important;transform:none!important;will-change:auto;}
- .landing-marquee-group[aria-hidden="true"] {display:none;}
+ .landing-marquee-track {animation:none!important;transform:none!important;will-change:auto;width:max-content;min-width:0;max-width:none;}
+ .landing-marquee-item[aria-hidden="true"] {display:none;}
 }
 @media print {
  .landing-marquee-track {animation:none;transform:none;}
- .landing-marquee-group[aria-hidden="true"] {display:none;}
+ .landing-marquee-item[aria-hidden="true"] {display:none;}
 }
 
-/* Prevent the marquee's very wide flex track from influencing its grid column. */
+/* Prevent the marquee's wide animated grid from influencing its parent grid column. */
 .landing-main {grid-template-columns:minmax(0,1fr);min-width:0;}
 .landing-collaborations {min-width:0;max-width:100%;}
 .landing-marquee-shell {min-width:0;max-width:100%;width:100%;}

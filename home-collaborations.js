@@ -6,13 +6,12 @@
   const logoPath = value =>
     typeof value === 'string' && /^assets\/logo\/[\w.-]+\.(webp|png|jpeg|jpg)$/.test(value)
       ? '/' + value : null;
-  const createGroup = (records, hidden) => {
-    const list = document.createElement('ul');
-    list.className = 'landing-marquee-group';
-    if (hidden) list.setAttribute('aria-hidden', 'true');
+  const createCards = (records, hidden) => {
+    const fragment = document.createDocumentFragment();
     records.forEach(record => {
       const card = document.createElement('li');
       card.className = 'landing-marquee-item';
+      if (hidden) card.setAttribute('aria-hidden', 'true');
       const image = document.createElement('img');
       image.src = record.src;
       image.alt = '';
@@ -33,9 +32,9 @@
         text.append(role);
       }
       card.append(image, text);
-      list.appendChild(card);
+      fragment.appendChild(card);
     });
-    return list;
+    return fragment;
   };
   window.renderHomeCollaborations = (data, lang) => {
     const section = document.getElementById('landing-collaborations');
@@ -72,23 +71,28 @@
     section.hidden = false;
     if (layoutObserver) layoutObserver.disconnect();
     if (resizeListener) window.removeEventListener('resize', resizeListener);
-    track.replaceChildren(createGroup(records, false), createGroup(records, true));
+    // One flat grid: the repeat starts exactly one card-gap after the last
+    // original. This removes the separate UL/Flex boundary that overlapped
+    // on iOS in Persian. The duplicate is hidden from assistive technology.
+    track.replaceChildren(createCards(records, false), createCards(records, true));
     track.style.setProperty('--marquee-duration', Math.max(30, records.length * 4.6) + 's');
 
-    // Safari may size a max-content flex track differently from Chrome.
-    // Set the complete cycle width explicitly, including the seam gap.
-    // It recalculates automatically if a company is added or the viewport resizes.
+    // Explicit track width and grid column widths avoid WebKit max-content,
+    // RTL flex measurement and fractional seam inconsistencies.
+    // Any added resume/company record automatically expands both dimensions.
     const syncCycleWidth = () => {
-      const group = track.firstElementChild;
-      const card = group?.firstElementChild;
+      const card = track.firstElementChild;
       if (!card) return;
-      const cardWidth = card.getBoundingClientRect().width;
-      const gap = parseFloat(getComputedStyle(group).columnGap) || 0;
+      const style = getComputedStyle(track);
+      const cardWidth = parseFloat(style.gridAutoColumns) || card.getBoundingClientRect().width;
+      const gap = parseFloat(style.columnGap) || 0;
       const distance = records.length * (cardWidth + gap);
+      const totalWidth = 2 * records.length * cardWidth + (2 * records.length - 1) * gap;
       if (!Number.isFinite(distance) || distance <= 0) return;
       const width = distance + 'px';
       if (track.style.getPropertyValue('--marquee-cycle-width') === width) return;
       track.style.setProperty('--marquee-cycle-width', width);
+      track.style.setProperty('--marquee-total-width', totalWidth + 'px');
       track.style.setProperty('--marquee-offset', -distance + 'px');
     };
     syncCycleWidth();
