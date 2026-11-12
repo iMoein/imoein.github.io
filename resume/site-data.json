@@ -683,10 +683,17 @@
       "iconSrc": "assets/social/instagram.png"
     },
     {
-      "label": "Telegram",
-      "url": "https://t.me/moeinghezelbash",
+      "label": "Telegram Chat",
+      "url": "https://t.me/iMoeinPV",
       "icon": "tg",
       "enabled": true,
+      "iconSrc": "assets/social/telegram.png"
+    },
+    {
+      "label": "Telegram Channel",
+      "url": "https://t.me/moeinghezelbash",
+      "icon": "tg",
+      "enabled": false,
       "iconSrc": "assets/social/telegram.png"
     },
     {
@@ -1150,6 +1157,172 @@
       "phone": "Phone",
       "email": "Email",
       "linkedin": "Profile"
+    }
+  },
+  "landing": {
+    "fa": {
+      "hero": {
+        "eyebrow": "از مسئله تا محصول",
+        "heroName": "معین قزلباش",
+        "heroRole": "مدیر ارشد محصول فنی · سازنده محصول",
+        "heroLead": "با ترکیب نگاه کسب‌وکار، فناوری و داده، مسائل واقعی را به محصولاتی قابل‌استفاده تبدیل می‌کنم؛ از کشف مسئله و MVP تا توسعه و تحویل.",
+        "linkedinText": "LinkedIn",
+        "githubText": "GitHub",
+        "skip": "رفتن به محتوا"
+      },
+      "shortcuts": {
+        "about": "درباره من",
+        "aboutDetail": "مسیر و تجربه حرفه‌ای",
+        "projects": "پروژه‌ها",
+        "projectsDetail": "محصولات و تجربه‌های اجرایی",
+        "resume": "رزومه",
+        "resumeDetail": "سوابق، مهارت‌ها و دستاوردها"
+      },
+      "journal": {
+        "latest": "تازه‌ترین یادداشت‌ها",
+        "allPosts": "همه یادداشت‌ها",
+        "loadingPosts": "در حال بارگذاری یادداشت‌ها…",
+        "blogError": "فهرست یادداشت‌ها در دسترس نیست. از صفحه بلاگ دیدن کنید.",
+        "noPosts": "هنوز یادداشتی منتشر نشده است.",
+        "moreSoon": "سه جایگاه دیگر با انتشار یادداشت‌های تازه تکمیل می‌شوند.",
+        "featured": "منتخب",
+        "minRead": "دقیقه مطالعه",
+        "read": "مطالعه مقاله"
+      },
+      "independent": {
+        "independent": "پروژه‌های مستقل",
+        "allProjects": "همه پروژه‌ها",
+        "independentIntro": "محصولاتی که مستقل یا در همکاری‌های کوچک، از ایده تا ساخت و توسعه‌شان پیش رفته‌ام. صفحه اختصاصی هر محصول به‌مرور اضافه می‌شود.",
+        "loadingProjects": "در حال بارگذاری پروژه‌ها…",
+        "projectError": "جزئیات پروژه‌ها در دسترس نیست.",
+        "projectTag": "محصول مستقل",
+        "projectVisit": "مشاهده محصول",
+        "comingSoon": "صفحه اختصاصی به‌زودی",
+        "timeVisit": "ورود به وب‌اپ TIME",
+        "timeOverview": "معرفی پروژه",
+        "timePreviewAlt": "پیش‌نمایش داشبورد TIME؛ ساعت تهران، تقویم و اطلاعات روشنایی روز"
+      },
+      "collaborations": {
+        "collaborationsTitle": "همکاری‌ها و تجربه‌های حرفه‌ای",
+        "collaborationsIntro": "از همکاری تمام‌وقت و مشاوره تا پروژه‌ها و مشارکت‌های مستقل."
+      },
+      "contact": {
+        "contactKicker": "ارتباط مستقیم",
+        "contactTitle": "گفتگو، مشاوره یا شروع همکاری",
+        "contactLead": "اگر ایده‌ای داری، با چالش محصول روبه‌رو شده‌ای یا می‌خواهی درباره یک همکاری صحبت کنیم، خوشحال می‌شوم گفتگو کنیم.",
+        "telegram": "گفتگو در تلگرام",
+        "whatsapp": "گفتگو در واتساپ",
+        "telegramChannel": "عضویت در کانال تلگرام"
+      },
+      "seo": {
+        "title": "معین قزلباش | از مسئله تا محصول",
+        "description": "معین قزلباش، مدیر ارشد محصول فنی و سازنده محصولات مستقل؛ یادداشت‌های مدیریت محصول، پروژه‌ها و راه‌های شروع همکاری.",
+        "ogImage": "https://imoein.com/assets/og-site.jpg"
+      },
+      "links": {
+        "about": "/about.html",
+        "projects": "/portfolio.html?lang=fa#live-projects",
+        "resume": "/resume/moein-ghezelbash-fa.html",
+        "allPosts": "/blog/fa/",
+        "allProjects": "/portfolio.html?lang=fa#live-projects",
+        "timeOverview": "/portfolio.html?lang=fa#live-projects"
+      },
+      "projectSelection": {
+        "featuredTitle": "TIME",
+        "cardTitles": [
+          "FARVAH / Smart Coffee",
+          "Device Sync",
+          "AI Detector"
+        ]
+      },
+      "media": {
+        "heroPortrait": "/assets/profile-portrait-transparent.webp?v=3567",
+        "aboutIcon": "/assets/icons/home-about.webp",
+        "projectsIcon": "/assets/icons/home-projects.webp",
+        "resumeIcon": "/assets/icons/home-resume.webp"
+      }
+    },
+    "en": {
+      "hero": {
+        "eyebrow": "FROM PROBLEM TO PRODUCT",
+        "heroName": "Moein Ghezelbash",
+        "heroRole": "Senior Technical Product Manager · Product Builder",
+        "heroLead": "I turn real business and user problems into usable digital products, combining product thinking, technical depth and data — from discovery and MVP to delivery.",
+        "linkedinText": "LinkedIn",
+        "githubText": "GitHub",
+        "skip": "Skip to content"
+      },
+      "shortcuts": {
+        "about": "About Me",
+        "aboutDetail": "My experience and professional journey",
+        "projects": "Projects",
+        "projectsDetail": "Products and hands-on work",
+        "resume": "Resume",
+        "resumeDetail": "Experience, skills and achievements"
+      },
+      "journal": {
+        "latest": "Latest writing",
+        "allPosts": "Explore all articles",
+        "loadingPosts": "Loading articles…",
+        "blogError": "Articles are temporarily unavailable. Visit the journal instead.",
+        "noPosts": "No published articles yet.",
+        "moreSoon": "Three more articles will appear here as new writing is published.",
+        "featured": "Featured",
+        "minRead": "min read",
+        "read": "Read article"
+      },
+      "independent": {
+        "independent": "Independent projects",
+        "allProjects": "Explore all projects",
+        "independentIntro": "Products I have taken from idea to delivery, independently or with small teams. Each will have its own dedicated page over time.",
+        "loadingProjects": "Loading projects…",
+        "projectError": "Project details are temporarily unavailable.",
+        "projectTag": "Independent product",
+        "projectVisit": "Visit product",
+        "comingSoon": "Dedicated page coming soon",
+        "timeVisit": "Open TIME web app",
+        "timeOverview": "Project overview",
+        "timePreviewAlt": "Preview of the TIME dashboard with Tehran clock, calendar and daylight information"
+      },
+      "collaborations": {
+        "collaborationsTitle": "Companies & collaborations",
+        "collaborationsIntro": "From full-time roles and consulting engagements to independent ventures and professional contributions."
+      },
+      "contact": {
+        "contactKicker": "GET IN TOUCH",
+        "contactTitle": "Let’s talk, consult or collaborate",
+        "contactLead": "Have an idea, a product challenge, or a project worth building? I would love to explore it with you.",
+        "telegram": "Message on Telegram",
+        "whatsapp": "Chat on WhatsApp",
+        "telegramChannel": "Follow Telegram Channel"
+      },
+      "seo": {
+        "title": "Moein Ghezelbash | From problem to product",
+        "description": "Moein Ghezelbash, Senior Technical Product Manager and independent product builder. Explore projects, product writing and ways to collaborate.",
+        "ogImage": "https://imoein.com/assets/og-site.jpg"
+      },
+      "links": {
+        "about": "/about.html?lang=en",
+        "projects": "/portfolio.html?lang=en#live-projects",
+        "resume": "/resume/moein-ghezelbash-en.html",
+        "allPosts": "/blog/en/",
+        "allProjects": "/portfolio.html?lang=en#live-projects",
+        "timeOverview": "/portfolio.html?lang=en#live-projects"
+      },
+      "projectSelection": {
+        "featuredTitle": "TIME",
+        "cardTitles": [
+          "FARVAH / Smart Coffee",
+          "Device Sync",
+          "AI Detector"
+        ]
+      },
+      "media": {
+        "heroPortrait": "/assets/profile-portrait-transparent.webp?v=3567",
+        "aboutIcon": "/assets/icons/home-about.webp",
+        "projectsIcon": "/assets/icons/home-projects.webp",
+        "resumeIcon": "/assets/icons/home-resume.webp"
+      }
     }
   }
 }

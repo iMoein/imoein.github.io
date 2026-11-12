@@ -745,3 +745,9 @@ html[data-color-scheme="dark"] .landing-time-primary:hover {background:#167481;}
   .landing-time-button {transition:none;}
   .landing-time-button:hover {transform:none;}
 }
+
+
+/* Respect Studio-managed enabled/disabled social channels even when the
+   button's explicit display style would override the UA [hidden] rule. */
+.landing-hero-social a[hidden],
+.landing-contact-actions a[hidden] {display:none!important;}
