@@ -4,6 +4,7 @@
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   const translations = {
     fa: {
+      linkedinText:'LinkedIn', githubText:'GitHub',
       skip: 'رفتن به محتوا', home: 'خانه', about: 'درباره من', projects: 'پروژه‌ها', resume: 'رزومه', blog: 'بلاگ',
       eyebrow: 'از مسئله تا محصول', heroName: 'معین قزلباش',
       heroRole: 'مدیر ارشد محصول فنی · سازنده محصول',
@@ -22,12 +23,13 @@
       timePreviewAlt: 'پیش‌نمایش داشبورد TIME؛ ساعت تهران، تقویم و اطلاعات روشنایی روز',
       contactKicker: 'ارتباط مستقیم', contactTitle: 'گفتگو، مشاوره یا شروع همکاری',
       contactLead: 'اگر ایده‌ای داری، با چالش محصول روبه‌رو شده‌ای یا می‌خواهی درباره یک همکاری صحبت کنیم، خوشحال می‌شوم گفتگو کنیم.',
-      telegram: 'گفتگو در تلگرام', whatsapp: 'گفتگو در واتساپ',
+      telegram: 'گفتگو در تلگرام', telegramChannel:'عضویت در کانال تلگرام', whatsapp: 'گفتگو در واتساپ',
       title: 'معین قزلباش | از مسئله تا محصول',
       description: 'معین قزلباش، مدیر ارشد محصول فنی و سازنده محصولات مستقل؛ یادداشت‌های مدیریت محصول، پروژه‌ها و راه‌های شروع همکاری.',
       copyright: 'معین قزلباش'
     },
     en: {
+      linkedinText:'LinkedIn', githubText:'GitHub',
       skip: 'Skip to content', home: 'Home', about: 'About Me', projects: 'Projects', resume: 'Resume', blog: 'Blog',
       eyebrow: 'FROM PROBLEM TO PRODUCT', heroName: 'Moein Ghezelbash',
       heroRole: 'Senior Technical Product Manager · Product Builder',
@@ -46,7 +48,7 @@
       timePreviewAlt: 'Preview of the TIME dashboard with Tehran clock, calendar and daylight information',
       contactKicker: 'GET IN TOUCH', contactTitle: 'Let’s talk, consult or collaborate',
       contactLead: 'Have an idea, a product challenge, or a project worth building? I would love to explore it with you.',
-      telegram: 'Message on Telegram', whatsapp: 'Chat on WhatsApp',
+      telegram: 'Message on Telegram', telegramChannel:'Follow Telegram Channel', whatsapp: 'Chat on WhatsApp',
       title: 'Moein Ghezelbash | From problem to product',
       description: 'Moein Ghezelbash, Senior Technical Product Manager and independent product builder. Explore projects, product writing and ways to collaborate.',
       copyright: 'Moein Ghezelbash'
@@ -61,17 +63,42 @@
     if (text !== undefined) el.textContent = String(text);
     return el;
   };
+  const homeContent = () => siteData?.landing?.[lang] || null;
+  const currentCopy = () => {
+    const source=homeContent();
+    if (!source) return translations[lang];
+    return Object.assign({}, translations[lang],
+      ...['hero','shortcuts','journal','independent','collaborations','contact','seo']
+        .map(section => source[section] && typeof source[section]==='object' ? source[section] : {}));
+  };
+  const validHref = value => {
+    if (typeof value!=='string' || !value || value!==value.trim() || /[\\\x00-\x1F]/.test(value)) return false;
+    if (value.startsWith('/') && !value.startsWith('//'))
+      return !value.split(/[?#]/)[0].split('/').includes('..');
+    if (!value.startsWith('https://')) return false;
+    try {
+      const url=new URL(value);
+      return url.protocol==='https:' && !url.username && !url.password && !!url.hostname;
+    } catch (_) { return false; }
+  };
   const safeBlogUrl = (value) => typeof value === 'string' && value.startsWith('/blog/' + lang + '/') && !value.includes('//')
     ? value : '/blog/' + lang + '/';
   const safeCoverUrl = (value) => typeof value === 'string' && value.startsWith('/assets/blog/media/')
     ? value : '/assets/logo/imoein-symbol.webp';
-  const localHref = (name) => ({
-    home: '/' + (lang === 'en' ? '?lang=en' : ''),
-    about: '/about.html' + (lang === 'en' ? '?lang=en' : ''),
-    projects: '/portfolio.html?lang=' + lang + '#live-projects',
-    resume: '/resume/moein-ghezelbash-' + lang + '.html',
-    blog: '/blog/' + lang + '/'
-  })[name];
+  const localHref = (name) => {
+    const defaults={
+      home:'/' + (lang==='en'?'?lang=en':''),
+      about:'/about.html' + (lang==='en'?'?lang=en':''),
+      projects:'/portfolio.html?lang=' + lang + '#live-projects',
+      resume:'/resume/moein-ghezelbash-' + lang + '.html',
+      blog:'/blog/' + lang + '/',
+      allPosts:'/blog/' + lang + '/',
+      allProjects:'/portfolio.html?lang=' + lang + '#live-projects',
+      timeOverview:'/portfolio.html?lang=' + lang + '#live-projects'
+    };
+    const configured=homeContent()?.links?.[name];
+    return validHref(configured) ? configured : defaults[name];
+  };
   const displayDate = (iso) => {
     const value = new Date((iso || '') + 'T12:00:00Z');
     if (Number.isNaN(value.getTime())) return iso || '';
@@ -94,9 +121,9 @@
     media.append(img);
     const content = node('div', 'landing-story-body');
     const meta = node('div', 'landing-story-meta');
-    if (post.featured) meta.append(node('span','landing-featured-pill','✦ ' + translations[lang].featured));
+    if (post.featured) meta.append(node('span','landing-featured-pill','✦ ' + currentCopy().featured));
     meta.append(node('span','landing-category',post.category || 'Product'));
-    meta.append(node('span','landing-read-time',(post.minutes || 1) + ' ' + translations[lang].minRead));
+    meta.append(node('span','landing-read-time',(post.minutes || 1) + ' ' + currentCopy().minRead));
     const title = node('h3');
     title.append(makeLink(safeBlogUrl(post.url),post.title || ''));
     const summary = node('p','landing-story-excerpt',post.summary || '');
@@ -105,7 +132,7 @@
     const footer = node('div','landing-story-footer');
     const date = node('time','landing-date',displayDate(post.date));
     if (post.date) date.dateTime = post.date;
-    const action = makeLink(safeBlogUrl(post.url),translations[lang].read + ' ↗','landing-read-link');
+    const action = makeLink(safeBlogUrl(post.url),currentCopy().read + ' ↗','landing-read-link');
     footer.append(date,action);
     content.append(meta,title,summary,tags,footer);
     article.append(media,content);
@@ -134,7 +161,7 @@
     meta.append(node('span', 'landing-mini-category', post.category || (lang === 'fa' ? 'یادداشت' : 'Article')));
     if (Number.isFinite(Number(post.minutes)) && Number(post.minutes) > 0) {
       meta.append(node('span', 'landing-mini-read-time',
-        new Intl.NumberFormat(lang === 'fa' ? 'fa-IR' : 'en-GB').format(post.minutes) + ' ' + translations[lang].minRead));
+        new Intl.NumberFormat(lang === 'fa' ? 'fa-IR' : 'en-GB').format(post.minutes) + ' ' + currentCopy().minRead));
     }
     const title = node('h3', '', titleText);
     content.append(meta, title);
@@ -146,7 +173,7 @@
     const date = node('time', '', displayDate(post.date));
     if (post.date) date.dateTime = post.date;
     const action = node('span', 'landing-mini-action');
-    action.append(node('span', '', translations[lang].read), node('span', 'landing-mini-arrow', '↗'));
+    action.append(node('span', '', currentCopy().read), node('span', 'landing-mini-arrow', '↗'));
     bottom.append(date, action);
     link.append(visual, content, bottom);
     card.append(link);
@@ -157,7 +184,7 @@
     const featured = $('#landing-featured');
     const more = $('#landing-posts');
     const note = $('#landing-journal-note');
-    featured.replaceChildren(node('p','landing-featured-loading',translations[lang].loadingPosts));
+    featured.replaceChildren(node('p','landing-featured-loading',currentCopy().loadingPosts));
     more.replaceChildren();
     note.hidden = true;
     try {
@@ -170,7 +197,7 @@
       published.sort((a,b) => (b.date || '').localeCompare(a.date || ''));
       const four = published.slice(0,4);
       if (!four.length) {
-        featured.replaceChildren(node('p','landing-featured-loading',translations[lang].noPosts));
+        featured.replaceChildren(node('p','landing-featured-loading',currentCopy().noPosts));
         return;
       }
       const lead = four.find(p=>p.featured) || four[0];
@@ -178,12 +205,12 @@
       const ordinary = four.filter(p=>p!==lead);
       more.replaceChildren(...ordinary.map(createSmallPost));
       if (ordinary.length < 3) {
-        note.textContent = translations[lang].moreSoon;
+        note.textContent = currentCopy().moreSoon;
         note.hidden = false;
       }
     } catch (_) {
       if (request === latestRequest) {
-        featured.replaceChildren(node('p','landing-featured-loading',translations[lang].blogError));
+        featured.replaceChildren(node('p','landing-featured-loading',currentCopy().blogError));
         more.replaceChildren();
       }
     }
@@ -198,7 +225,7 @@
   const createTimeCard = (item) => {
     const card = node('article', 'landing-time-card');
     const copy = node('div', 'landing-time-copy');
-    const kicker = node('span', 'landing-time-kicker', translations[lang].projectTag);
+    const kicker = node('span', 'landing-time-kicker', currentCopy().projectTag);
     const title = node('h3', 'landing-time-title', item.title);
     const summary = node('p', 'landing-time-summary', item.homeSummary || item.description || '');
     const highlights = node('ul', 'landing-time-highlights');
@@ -208,15 +235,17 @@
       highlights.append(feature);
     });
     const actions = node('div', 'landing-time-actions');
-    const appUrl = typeof item.url === 'string' && /^https:\/\//.test(item.url) ? item.url : null;
+    const appUrl = validHref(item.url) ? item.url : null;
     if (appUrl) {
-      const visit = makeLink(appUrl, translations[lang].timeVisit + ' ↗',
+      const visit = makeLink(appUrl, currentCopy().timeVisit + ' ↗',
         'landing-time-button landing-time-primary');
-      visit.target = '_blank';
-      visit.rel = 'noopener noreferrer';
+      if (appUrl.startsWith('https://')) {
+        visit.target = '_blank';
+        visit.rel = 'noopener noreferrer';
+      }
       actions.append(visit);
     }
-    actions.append(makeLink(localHref('projects'), translations[lang].timeOverview + ' ↗',
+    actions.append(makeLink(localHref('timeOverview'), currentCopy().timeOverview + ' ↗',
       'landing-time-button landing-time-secondary'));
     copy.append(kicker, title, summary, highlights, actions);
 
@@ -246,10 +275,11 @@
     bar.append(left, address, refresh);
     const img = node('img', 'landing-time-screenshot');
     const preview = typeof item.previewImage === 'string' &&
-      /^assets\/[a-zA-Z0-9._-]+\.webp$/.test(item.previewImage) ? item.previewImage : null;
+      /^assets\/[a-zA-Z0-9/_-]+\.(webp|png|jpe?g)$/i.test(item.previewImage)
+      && !item.previewImage.includes('..') ? item.previewImage : null;
     if (preview) img.src = '/' + preview + '?v=balanced-2';
     else img.src = '/assets/logo/imoein-symbol.webp';
-    img.alt = translations[lang].timePreviewAlt;
+    img.alt = currentCopy().timePreviewAlt;
     img.loading = 'lazy';
     img.decoding = 'async';
     img.width = 1200;
@@ -264,11 +294,13 @@
     const items = siteData?.locales?.[lang]?.independentProjects;
     if (!Array.isArray(items)) {
       grid.replaceChildren(node('p','landing-featured-loading',
-        siteData ? translations[lang].projectError : translations[lang].loadingProjects));
+        siteData ? currentCopy().projectError : currentCopy().loadingProjects));
       return;
     }
-    const chosen = ['FARVAH / Smart Coffee','Device Sync','AI Detector']
-      .map(title=>items.find(item=>item.title===title)).filter(Boolean);
+    const selection=homeContent()?.projectSelection;
+    const titles=Array.isArray(selection?.cardTitles)
+      ? selection.cardTitles : ['FARVAH / Smart Coffee','Device Sync','AI Detector'];
+    const chosen = titles.map(title=>items.find(item=>item.title===title)).filter(Boolean);
     const cards = chosen.map(item=>{
       const card = node('article','landing-project-card');
       const art = projectVisual[item.title] || {monogram:'◆',skin:'general'};
@@ -276,35 +308,59 @@
       const icon = node('span','landing-project-icon is-'+art.skin,art.monogram);
       icon.setAttribute('aria-hidden','true');
       const typ = node('div','landing-project-type');
-      typ.append(node('span','landing-project-eyebrow',translations[lang].projectTag),node('h3','',item.title));
+      typ.append(node('span','landing-project-eyebrow',currentCopy().projectTag),node('h3','',item.title));
       header.append(icon,typ);
       const description=node('p','landing-project-description',item.description || '');
       const foot=node('div','landing-project-footer');
-      const publicUrl = typeof item.url === 'string' && /^https:\/\//.test(item.url) ? item.url : null;
+      const publicUrl = validHref(item.url) ? item.url : null;
       if (publicUrl) {
-        const link = makeLink(publicUrl, translations[lang].projectVisit + ' ↗','landing-project-link');
-        link.target = '_blank';
-        link.rel = 'noopener noreferrer';
+        const link = makeLink(publicUrl, currentCopy().projectVisit + ' ↗','landing-project-link');
+        if (publicUrl.startsWith('https://')) {
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+        }
         foot.append(node('span','',item.period || ''),link);
       } else {
-        foot.append(node('span','',item.period || ''),node('span','landing-project-coming-soon',translations[lang].comingSoon));
+        foot.append(node('span','',item.period || ''),node('span','landing-project-coming-soon',currentCopy().comingSoon));
       }
       card.append(header,description,foot);
       return card;
     });
-    const time = items.find(item => item.title === 'TIME' && item.url === 'https://time.imoein.com/');
+    const featuredTitle=selection?.featuredTitle ?? 'TIME';
+    const time = featuredTitle ? items.find(item => item.title === featuredTitle) : null;
     grid.replaceChildren(...(time ? [createTimeCard(time)] : []), ...cards);
   };
   const updateSocial = () => {
     const links = siteData?.socialLinks || [];
-    const url = (name, fallback) => {
-      const item=links.find(s=>s.label===name && s.enabled!==false);
-      return item && /^https:\/\//.test(item.url) ? item.url : fallback;
+    const update = (id,name,fallback) => {
+      const item=links.find(s=>s.label===name) || (name==='Telegram Chat' ? links.find(s=>s.label==='Telegram') : undefined);
+      const el=document.getElementById(id);
+      if (!el) return;
+      el.hidden=item?.enabled===false;
+      el.href=item && validHref(item.url) ? item.url : fallback;
+      const icon=el.querySelector('img');
+      const asset=item?.iconSrc;
+      if (icon && typeof asset==='string' &&
+          /^assets\/[a-zA-Z0-9/_-]+\.(png|webp|jpe?g)$/i.test(asset) && !asset.includes('..')) {
+        icon.src='/' + asset;
+      }
     };
-    $('#hero-linkedin').href = url('LinkedIn','https://www.linkedin.com/in/moeinghezelbash/');
-    $('#hero-github').href = url('GitHub','https://github.com/iMoein');
-    $('#contact-telegram').href = url('Telegram','https://t.me/moeinghezelbash');
-    $('#contact-whatsapp').href = url('WhatsApp','https://wa.me/989120137435');
+    update('hero-linkedin','LinkedIn','https://www.linkedin.com/in/moeinghezelbash/');
+    update('hero-github','GitHub','https://github.com/iMoein');
+    update('contact-telegram','Telegram Chat','https://t.me/moeinghezelbash');
+    // A channel is a broadcast destination, never a replacement for the chat.
+    // It remains hidden until a distinct URL is configured and enabled.
+    const channel=links.find(s=>s.label==='Telegram Channel');
+    const channelLink=document.getElementById('contact-telegram-channel');
+    if (channelLink) {
+      const chat=links.find(s=>s.label==='Telegram Chat' || s.label==='Telegram');
+      const active=channel?.enabled===true && validHref(channel.url)
+        && channel.url.startsWith('https://') && channel.url!==chat?.url;
+      channelLink.hidden=!active;
+      if (active) channelLink.href=channel.url;
+      else channelLink.removeAttribute('href');
+    }
+    update('contact-whatsapp','WhatsApp','https://wa.me/989120137435');
   };
   const renderLanguageControl = () => {
     const switcher = $('#locale-switcher');
@@ -324,11 +380,16 @@
     switcher.dataset.locale=lang;
   };
   const updateMeta = () => {
-    const t=translations[lang];
+    const t=currentCopy();
     document.title=t.title;
     $('#meta-description').content=t.description;
     $('#og-title').content=t.title;
     $('#og-description').content=t.description;
+    const ogImage=homeContent()?.seo?.ogImage;
+    if (validHref(ogImage)) {
+      $('#og-image').content=ogImage;
+      $('#twitter-image').content=ogImage;
+    }
     $('#og-locale').content=lang==='fa'?'fa_IR':'en_GB';
     const url='https://imoein.com/' + (lang==='en'?'?lang=en':'');
     $('#og-url').content=url;
@@ -341,22 +402,68 @@
     const copyright = $('#landing-copyright');
     if (copyright) copyright.textContent='© ' + new Intl.NumberFormat(lang==='fa'?'fa-IR':'en-GB',{useGrouping:false}).format(new Date().getFullYear())+' '+t.copyright;
   };
+  const firstHero = document.getElementById('landing-hero-image');
+  const originalHero = {
+    src:firstHero?.getAttribute('src'),
+    srcset:firstHero?.getAttribute('srcset'),
+    sizes:firstHero?.getAttribute('sizes')
+  };
+  const safeImageUrl = value => {
+    if (typeof value !== 'string' || !value.trim() || !validHref(value)) return null;
+    return value.startsWith('/assets/') || value.startsWith('https://') ? value : null;
+  };
+  const syncHomeImages = () => {
+    const images=homeContent()?.media;
+    if (!images) return;
+    const hero=document.getElementById('landing-hero-image');
+    const requested=safeImageUrl(images.heroPortrait);
+    if (hero && requested) {
+      if (hero.getAttribute('src') !== requested) hero.src=requested;
+      if (requested === originalHero.src) {
+        if (originalHero.srcset) hero.setAttribute('srcset',originalHero.srcset);
+        if (originalHero.sizes) hero.setAttribute('sizes',originalHero.sizes);
+      } else {
+        hero.removeAttribute('srcset');
+        hero.removeAttribute('sizes');
+      }
+    }
+    for (const [key,id] of [
+      ['aboutIcon','landing-about-icon'],['projectsIcon','landing-projects-icon'],
+      ['resumeIcon','landing-resume-icon']
+    ]) {
+      const img=document.getElementById(id);
+      const src=safeImageUrl(images[key]);
+      if (img && src && img.getAttribute('src')!==src) img.src=src;
+    }
+  };
+  const applyLandingCopy = () => {
+    const t=currentCopy();
+    $$('[data-i18n]').forEach(el=>{
+      const key=el.dataset.i18n;
+      if (Object.hasOwn(t,key)) el.textContent=t[key];
+    });
+    $$('[data-local-link]').forEach(el=>{
+      const dest=localHref(el.dataset.localLink);
+      if (!dest) return;
+      el.href=dest;
+      if (dest.startsWith('https://')) {
+        el.target='_blank';
+        el.rel='noopener noreferrer';
+      } else {
+        el.removeAttribute('target');
+        el.removeAttribute('rel');
+      }
+    });
+    updateMeta();
+    syncHomeImages();
+  };
   const renderLocale = () => {
-    const t=translations[lang];
     document.documentElement.lang=lang;
     document.documentElement.dir=lang==='fa'?'rtl':'ltr';
     document.body.classList.toggle('locale-fa',lang==='fa');
     document.body.classList.toggle('locale-en',lang==='en');
-    $$('[data-i18n]').forEach(el=>{
-      const key=el.dataset.i18n;
-      if (t[key]) el.textContent=t[key];
-    });
-    $$('[data-local-link]').forEach(el=>{
-      const dest=localHref(el.dataset.localLink);
-      if (dest)el.href=dest;
-    });
+    applyLandingCopy();
     renderLanguageControl();
-    updateMeta();
     renderProjects();
     window.renderHomeCollaborations?.(siteData, lang);
     const blogReady = renderBlog();
@@ -386,13 +493,16 @@
     .then(response=>response.ok?response.json():Promise.reject())
     .then(data=>{
       siteData=data;
+      applyLandingCopy();
       updateSocial();
       renderProjects();
       window.renderHomeCollaborations?.(siteData, lang);
+      // Rebuild the article cards with the localized Studio button labels.
+      renderBlog();
     })
     .catch(()=>{
       $('#landing-independent-grid').replaceChildren(
-        node('p','landing-featured-loading',translations[lang].projectError));
+        node('p','landing-featured-loading',currentCopy().projectError));
       document.getElementById('landing-collaborations').hidden = true;
     });
   // The static hero and navigation paint immediately. Dynamic sections

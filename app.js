@@ -99,7 +99,7 @@ const renderStructuredData = (content, data) => {
   if (!schema) return;
 
   const sameAs = data.socialLinks
-    .filter((item) => item.enabled !== false)
+    .filter((item) => item.enabled !== false && /^https:\/\//.test(item.url))
     .map((item) => item.url);
   const knowsAbout = content.expertise
     .flatMap((item) => (typeof item === "string" ? [item] : [item.title, item.body]))
@@ -197,7 +197,8 @@ const renderAbout = (content) => {
 const renderSocialLinks = (links) => {
   const target = $("#social-links");
   clear(target);
-  links.filter((item) => item.enabled !== false).forEach(({ label, url, icon, iconSrc }) => {
+  links.filter((item) => item.enabled !== false && /^https:\/\//.test(item.url))
+    .forEach(({ label, url, icon, iconSrc }) => {
     const link = document.createElement("a");
     link.href = url;
     const mark = document.createElement("span");
@@ -215,7 +216,10 @@ const renderSocialLinks = (links) => {
       mark.textContent = icon || label.slice(0, 2);
     }
     const text = document.createElement("span");
-    text.textContent = label;
+    const telegramLabel = state.locale === "fa"
+      ? {"Telegram Chat": "گفتگو در تلگرام", "Telegram Channel": "کانال تلگرام"}[label]
+      : null;
+    text.textContent = telegramLabel || label;
     link.append(mark, text);
     target.appendChild(link);
   });
