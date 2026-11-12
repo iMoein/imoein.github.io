@@ -269,16 +269,20 @@
     }
   });
 
-  draw();
-  // This is the existing public data source, not a new API or database.
+  // Resolve the configured labels before the first paint of navigation.
+  // Drawing once prevents a flash of the fallback label followed by the
+  // Site Studio label (e.g. «صفحه اصلی» changing to «درباره من»).
+  let navigationReady = false;
   fetch('/resume/site-data.json')
     .then(response => response.ok ? response.json() : null)
     .then(data => {
-      if (data?.siteNavigation) {
-        studioNavigation = data.siteNavigation;
-        draw();
-      }
+      if (data?.siteNavigation) studioNavigation = data.siteNavigation;
     })
-    .catch(() => {});
-  new MutationObserver(draw).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
+    .catch(() => {})
+    .finally(() => { navigationReady = true; draw(); });
+  new MutationObserver(() => {
+    // During the initial request there is no nav yet; the eventual draw uses
+    // the latest document language, so no temporary language is displayed.
+    if (navigationReady) draw();
+  }).observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] });
 })();
