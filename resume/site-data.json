@@ -1324,5 +1324,9 @@
         "resumeIcon": "/assets/icons/home-resume.webp"
       }
     }
+  },
+  "analytics": {
+    "enabled": true,
+    "measurementId": "G-HB3GEEFTFX"
   }
 }
