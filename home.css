@@ -71,6 +71,8 @@ html[lang="en"] .landing-hero h1 {font-size:clamp(2.15rem,3.4vw,3.25rem);line-he
 .landing-shortcut-copy small {font-size:.79rem;color:#58717f;line-height:1.8;}
 .landing-shortcut-arrow {display:grid;place-items:center;flex:0 0 31px;width:31px;height:31px;margin-inline-start:auto;background:rgba(31,138,138,.08);border-radius:50%;color:#176d80;font-size:1.1rem;}
 .landing-section {margin-top:41px;}
+/* The journal is present only after a published post exists. */
+.landing-journal[hidden] {display:none!important;}
 .landing-section-heading {display:flex;align-items:center;gap:14px;margin-bottom:18px;}
 .landing-section-heading:after {content:"";height:2px;min-width:18px;flex:1;background:linear-gradient(90deg,var(--primary),rgba(184,115,51,.20),transparent);order:1;}
 html[dir="rtl"] .landing-section-heading:after {background:linear-gradient(270deg,var(--primary),rgba(184,115,51,.20),transparent);}
@@ -104,7 +106,7 @@ html[lang="en"] .landing-story-body {direction:ltr;}
 .landing-story h3 a:hover {color:#0c7e89;}
 .landing-story-excerpt {font-size:.94rem;color:#597281;line-height:1.9;margin:0 0 13px;}
 .landing-tags {display:flex;gap:7px;flex-wrap:wrap;margin-bottom:15px;}
-.landing-tag {font:650 .68rem Inter,system-ui,sans-serif;color:#4a7180;background:rgba(31,138,138,.07);border:1px solid rgba(31,138,138,.18);padding:5px 8px;border-radius:99px;max-width:100%;overflow-wrap:anywhere;}
+.landing-tag {font-family:inherit;font-weight:700;font-size:.73rem;line-height:1.6;color:#4a7180;background:rgba(31,138,138,.07);border:1px solid rgba(31,138,138,.18);padding:5px 9px;border-radius:99px;max-width:100%;overflow-wrap:anywhere;}
 .landing-story-footer {margin-top:auto;border-top:1px solid rgba(31,138,138,.16);padding-top:13px;display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:.77rem;color:#587081;}
 .landing-read-link {color:#136d77;font-weight:800;text-decoration:none;}
 .landing-read-link:hover {text-decoration:underline;}
@@ -122,7 +124,6 @@ html[lang="en"] .landing-story-body {direction:ltr;}
 .landing-mini-cover.is-contained img {object-fit:contain;}
 .landing-mini-bottom {display:flex;align-items:center;justify-content:space-between;gap:11px;margin-top:auto;padding-top:12px;border-top:1px solid rgba(30,91,107,.1);font-size:.75rem;color:#66808c;}
 .landing-mini-arrow {display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:#e1f4f1;color:#18717b;text-decoration:none;font-size:1.16rem;}
-.landing-journal-note {margin:12px 2px 0;font-size:.78rem;line-height:1.8;color:#6c8391;}
 .landing-section-intro {font-size:.93rem;line-height:1.9;color:#5a7080;margin:-7px 0 18px;max-width:850px;}
 .landing-independent-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;}
 .landing-project-card {display:flex;flex-direction:column;gap:13px;min-width:0;min-height:238px;padding:22px;border:1px solid rgba(28,92,107,.15);border-radius:22px;background:#fff;box-shadow:0 10px 27px rgba(15,55,72,.055);}
@@ -180,7 +181,7 @@ html[data-color-scheme="dark"] .landing-project-card {background:#1b3142;border-
 html[data-color-scheme="dark"] .landing-story h3 a,
 html[data-color-scheme="dark"] .landing-mini-post h3 a,
 html[data-color-scheme="dark"] .landing-project-type h3 {color:#f1f9fb;}
-html[data-color-scheme="dark"] :is(.landing-story-excerpt,.landing-mini-bottom,.landing-project-description,.landing-project-footer,.landing-section-intro,.landing-journal-note,.landing-shortcut-copy small) {color:#b9cdd4;}
+html[data-color-scheme="dark"] :is(.landing-story-excerpt,.landing-mini-bottom,.landing-project-description,.landing-project-footer,.landing-section-intro,.landing-shortcut-copy small) {color:#b9cdd4;}
 html[data-color-scheme="dark"] .landing-story-footer,
 html[data-color-scheme="dark"] .landing-mini-bottom,
 html[data-color-scheme="dark"] .landing-project-footer {border-color:rgba(145,200,209,.2);}
