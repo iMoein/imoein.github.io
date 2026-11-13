@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Day 1 of 1,000 Product Manager Interview Questions">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/designing-products-for-limited-access/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="Designing an Everyday Product for People with Limited Access | iMoein">
+  <meta property="og:description" content="Day 1 of 1,000 Product Manager Interview Questions">
+  <meta property="og:url" content="https://imoein.com/blog/en/designing-products-for-limited-access/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/designing-products-for-limited-access-b9843fb53e0b.webp">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/designing-products-for-limited-access-b9843fb53e0b.webp">
+  <meta property="og:image:alt" content="Designing an Everyday Product for People with Limited Access">
+  <meta property="article:published_time" content="2026-11-01">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="Product Design &amp; UX">
+<meta property="article:tag" content="Accessibility"><meta property="article:tag" content="Inclusive Design"><meta property="article:tag" content="User Needs"><meta property="article:tag" content="Offline-first Design"><meta property="article:tag" content="User Research"><meta property="article:tag" content="Product Success Metrics">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Designing an Everyday Product for People with Limited Access | iMoein">
+  <meta name="twitter:description" content="Day 1 of 1,000 Product Manager Interview Questions">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/designing-products-for-limited-access/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/designing-products-for-limited-access-b9843fb53e0b.webp">
+  <meta name="twitter:image:alt" content="Designing an Everyday Product for People with Limited Access">
+  <title>Designing an Everyday Product for People with Limited Access | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/designing-products-for-limited-access/#article", "headline": "Designing an Everyday Product for People with Limited Access", "description": "Day 1 of 1,000 Product Manager Interview Questions", "url": "https://imoein.com/blog/en/designing-products-for-limited-access/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/designing-products-for-limited-access/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-01", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/designing-products-for-limited-access-b9843fb53e0b.webp", "articleSection": "Product Design & UX", "keywords": ["Accessibility", "Inclusive Design", "User Needs", "Offline-first Design", "User Research", "Product Success Metrics"], "wordCount": 2379, "timeRequired": "PT13M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/designing-products-for-limited-access/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/?lang=en"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "Product Design & UX", "item": "https://imoein.com/blog/en/category/product-design-and-ux/"}, {"@type": "ListItem", "position": 4, "name": "Designing an Everyday Product for People with Limited Access", "item": "https://imoein.com/blog/en/designing-products-for-limited-access/"}]}</script>  <link rel="stylesheet" href="/site-footer.css">
+  <link rel="stylesheet" href="/site-analytics.css">
+  <script defer src="/site-analytics.js"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/designing-products-for-limited-access/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/?lang=en">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a><span aria-hidden="true">/</span><span aria-current="page">Designing an Everyday Product for People with Limited Access</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-01" data-iso="2026-11-01">2026-11-01</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>13 min read</span>
+    </div>
+    <h1>Designing an Everyday Product for People with Limited Access</h1>
+    <p>Day 1 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="https://imoein.com/assets/blog/media/covers/designing-products-for-limited-access-b9843fb53e0b.webp" alt="Designing an Everyday Product for People with Limited Access" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine sending an important message to a family member just as your internet connection drops. Your messaging app appears to have accepted it, but you cannot tell whether it has reached anyone. If this happens repeatedly, would adding more features improve your experience?</strong></p>
+<p>This seemingly simple situation exposes a difficult product design question: <strong>how do you build a product that works beyond ideal conditions?</strong></p>
+<h2 id="the-interview-question-and-what-it-actually-tests">The interview question and what it actually tests</h2>
+<p>The first question in the 1,000 Product Manager interview series asks:</p>
+<p><strong>“Design a product that you use every day for someone with limited access.”</strong></p>
+<p>The prompt deliberately leaves several things undefined. It does not specify the product, the user group or even the kind of access limitation involved.</p>
+<p>That ambiguity is part of the assessment.</p>
+<p>The interviewer wants to see whether you can define a meaningful problem, identify a particular group of users, choose between competing solutions and propose a credible way to evaluate your decision.</p>
+<p>A strong answer is not a catalogue of imaginative features. It explains why a particular problem deserves attention, which alternatives have been rejected and what evidence would justify changing course.</p>
+<h2 id="first-define-what-limited-access-means">First, define what limited access means</h2>
+<p>A common mistake is to interpret limited access immediately as either disability or unreliable internet.</p>
+<p>In practice, several different constraints may be involved.</p>
+<ul>
+<li><strong>Technical constraints:</strong> Unreliable connectivity, older devices, limited storage or poor battery life.</li>
+<li><strong>Physical or sensory constraints:</strong> Difficulties with vision, hearing, movement or precise motor control.</li>
+<li><strong>Financial constraints:</strong> The cost of connectivity, hardware or subscriptions.</li>
+<li><strong>Digital literacy constraints:</strong> Limited familiarity with technology or difficulty understanding the interface language.</li>
+<li><strong>Situational constraints:</strong> Using a product while travelling, in a noisy environment or with limited access to a device.</li>
+</ul>
+<p>These groups do not necessarily need the same solution.</p>
+<p>Increasing button sizes may help somebody with reduced dexterity. It will not, by itself, solve a failed message delivery caused by an intermittent connection.</p>
+<p>The Product Manager's first decision is therefore not which feature to build. It is <strong>which problem to solve</strong>.</p>
+<p>In an interview, I would clarify what the interviewer means by limited access. If they deliberately leave the definition open, I would state a reasonable assumption and proceed.</p>
+<h2 id="choose-one-everyday-product-and-one-specific-group">Choose one everyday product and one specific group</h2>
+<p>For this exercise, I will choose a <strong>mobile messaging application</strong>.</p>
+<p>My assumed target group is people using relatively inexpensive smartphones who regularly experience weak or intermittent internet connectivity.</p>
+<p>This is not a claim that their needs are more important than those of other groups. It is a deliberate narrowing of the problem so that we can make a testable decision.</p>
+<p>The next question is what these users are trying to achieve.</p>
+<p>Do they need video calls, file sharing or large group conversations?</p>
+<p>For an initial investigation, I would focus on one fundamental job:</p>
+<p><strong>Sending a short text message and knowing its actual delivery status.</strong></p>
+<p>A preliminary problem statement might be:</p>
+<p>“People with unreliable connectivity cannot consistently tell whether a message has been saved, is waiting to send or has genuinely reached its destination.”</p>
+<p>That statement is still a hypothesis, not a research finding.</p>
+<p>We would need to investigate users' existing behaviour, understand how often the problem occurs and establish whether its consequences are significant enough to justify investment.</p>
+<h2 id="separate-the-underlying-need-from-a-feature-request">Separate the underlying need from a feature request</h2>
+<p>Suppose users tell us, “We want messaging to work without the internet.”</p>
+<p>It would be tempting to interpret this as a request for a fully offline messaging application. But that may be considerably more than they actually need.</p>
+<p>Instead, I would ask:</p>
+<ul>
+<li>At which point in the messaging journey does connectivity usually fail?</li>
+<li>Is the main difficulty composing the message, sending it or understanding its status?</li>
+<li>Do people resend messages because they cannot tell whether the first attempt succeeded?</li>
+<li>What workaround do they use today?</li>
+<li>Which delays are acceptable, and which situations require immediate confirmation?</li>
+</ul>
+<p>Observing behaviour matters as much as collecting opinions.</p>
+<p>If people repeatedly tap Send after losing connectivity, the problem may primarily be unclear feedback.</p>
+<p>If messages disappear when the application reconnects, however, better wording will not solve the underlying reliability defect.</p>
+<p><strong>Two problems that look similar from the user's perspective may require entirely different product decisions.</strong></p>
+<h2 id="compare-credible-solutions-before-choosing-one">Compare credible solutions before choosing one</h2>
+<p>There are at least three approaches worth considering.</p>
+<h3 id="option-one-build-a-separate-lightweight-application">Option one: Build a separate lightweight application</h3>
+<p>A dedicated version could minimise data consumption, reduce memory requirements and provide a simpler experience for less capable devices.</p>
+<p>That offers considerable scope for optimisation.</p>
+<p>The drawback is the potential cost of maintaining and testing two applications, alongside the fragmentation of the user experience.</p>
+<p>Without strong evidence that the need is sufficiently widespread, this would be a substantial commitment to an unproven solution.</p>
+<h3 id="option-two-improve-the-existing-message-sending-journey">Option two: Improve the existing message-sending journey</h3>
+<p>Rather than creating another product, we could make the core messaging interaction more dependable.</p>
+<p>For example, the application could:</p>
+<ul>
+<li>Save composed messages securely on the device before attempting transmission.</li>
+<li>Clearly distinguish messages waiting for connectivity from those successfully transmitted.</li>
+<li>Retry appropriately once connectivity returns.</li>
+<li>Differentiate between pending, accepted by the server, delivered and failed states.</li>
+<li>Prioritise text and reduce unnecessary automatic downloads of large attachments.</li>
+</ul>
+<p>This direction is consistent with offline-first principles described in Android's official architecture guidance. Such systems preserve essential local functionality instead of assuming that a network connection is always available.</p>
+<p>However, offline persistence and retries introduce engineering responsibilities. The team must address local data protection, privacy, duplicate prevention, authentication, retry behaviour and error recovery.</p>
+<h3 id="option-three-offer-an-alternative-channel-such-as-sms">Option three: Offer an alternative channel such as SMS</h3>
+<p>A further possibility is to use text messaging when internet connectivity is unavailable.</p>
+<p>This might be valuable in specific circumstances, but it raises questions about user consent, cost, security and operational feasibility.</p>
+<p>It would also be inappropriate to imply that a standard messaging application can guarantee emergency or time-critical communications.</p>
+<h3 id="which-approach-would-i-recommend">Which approach would I recommend?</h3>
+<p>If the evidence supports our initial hypothesis — that unreliable connections and ambiguous delivery feedback are the main barriers — I would start with option two.</p>
+<p>It targets a smaller, more precisely defined problem. It can be tested within the existing product and should provide useful evidence before the organisation commits to a separate application.</p>
+<p>If research instead reveals that storage, processing power or the cost of data is the dominant constraint, a lightweight product may become the better investment.</p>
+<p>The recommendation depends on the evidence, not a preference for a particular architecture.</p>
+<h2 id="a-hypothetical-software-product-scenario">A hypothetical software-product scenario</h2>
+<p>Consider a hypothetical messaging company whose product team notices repeated sending attempts among users in areas with unreliable connectivity.</p>
+<p>At this stage, the team does not know what causes the behaviour.</p>
+<p>Perhaps messages never reach the server. Perhaps they arrive successfully but their status updates are delayed. Perhaps users do not understand the existing status indicators.</p>
+<p>The Product Manager works with a UX designer, mobile and backend engineers, and customer support to investigate three sources of evidence: technical error records, observed task completion and interviews about users' actual experience.</p>
+<p>The team then designs a limited prototype that preserves messages through a connection failure and provides clearer feedback.</p>
+<p>During testing, network access is deliberately interrupted and restored.</p>
+<p>Participants must compose a short message, understand what has happened to it and verify its status after the connection returns.</p>
+<p>Automated retries alone would not prove success. If users still cannot distinguish pending from delivered messages, an important part of the original problem remains unresolved.</p>
+<p>Accessibility also matters. Critical feedback should not depend exclusively on colour or an ambiguous symbol. W3C's WCAG 2.2 guidance on status messages explains how status changes in web content can be made available to assistive technologies.</p>
+<p>This is an illustrative scenario, not a description of an actual company's product results.</p>
+<h2 id="define-success-around-the-user-s-outcome">Define success around the user's outcome</h2>
+<p>Another common mistake is to measure success purely through daily active users or the total number of messages sent.</p>
+<p>Those numbers may be useful, but they do not establish whether the experience has improved for people with unreliable connectivity.</p>
+<p>I would use three levels of measurement.</p>
+<h3 id="outcome-metric">Outcome metric</h3>
+<p>The proportion of eligible message-sending attempts in the target cohort that are successfully accepted by the server within a defined period after connectivity returns, with an accurate and understandable status shown to the user.</p>
+<p>The denominator should include all eligible attempts in the experiment, not merely those that already succeeded.</p>
+<p>The observation period must be agreed before testing. A 24-hour window after reconnection, for instance, might be an initial experimental assumption rather than a universal benchmark.</p>
+<h3 id="diagnostic-metrics">Diagnostic metrics</h3>
+<p>Useful diagnostic measures include manual retry frequency, time spent in the sending queue, synchronisation failures and participants' ability to interpret message states correctly during usability testing.</p>
+<p>These measures help explain why the outcome changes.</p>
+<h3 id="guardrail-metrics">Guardrail metrics</h3>
+<p>We should also monitor duplicate messages, data and battery consumption, message loss, security defects and any deterioration experienced by users with reliable connectivity.</p>
+<p>An increase in the number of messages recorded is not automatically positive; some of that increase could represent accidental duplicates.</p>
+<p>We must also distinguish server acceptance from recipient delivery. The interface should never claim a message has been delivered before the relevant confirmation exists.</p>
+<h2 id="what-if-you-have-only-two-weeks">What if you have only two weeks?</h2>
+<p>This is one of the original follow-up questions attached to the interview prompt.</p>
+<p>With only two weeks available, the objective would be to reduce uncertainty, not to build a complete alternative product.</p>
+<p><strong>During the first week</strong>, I would define the target cohort, conduct focused interviews and observed task tests, review relevant error data and develop a lightweight prototype of clearer message states.</p>
+<p><strong>During the second week</strong>, I would test the prototype with people in the target group under unreliable network conditions. I would assess whether they understand message status while engineers investigate the feasibility of local persistence and reliable retries.</p>
+<p>The decision at the end of the fortnight should be whether the problem and proposed improvement merit further investment, or whether the team needs more evidence or a different direction.</p>
+<h2 id="what-evidence-would-make-you-reject-your-solution">What evidence would make you reject your solution?</h2>
+<p>This is the second follow-up question in the source material, and it tests an essential product management skill.</p>
+<p>A convincing candidate should be able not only to defend a decision but also to identify the evidence that would invalidate it.</p>
+<p>Suppose usability research shows that people already understand delivery states, while their real difficulty is repeated application crashes caused by insufficient storage. Our proposed solution would be incomplete.</p>
+<p>If automatic retries create duplicate messages or data loss, improved feedback would not justify shipping the design.</p>
+<p>Or suppose research demonstrates that most affected users cannot afford the data needed to launch the application at all. Improving send-state feedback would no longer be the first priority.</p>
+<p>Each finding would require us to reconsider the original hypothesis.</p>
+<h2 id="an-example-of-a-natural-interview-answer">An example of a natural interview answer</h2>
+<p>A candidate could bring these ideas together in a spoken response like this:</p>
+<blockquote>
+<p>“I'd start by clarifying what limited access means, because unreliable internet, an older device and a physical accessibility need would lead me towards different problems.</p>
+<p>For this example, I'll choose a messaging app and focus on people who regularly experience poor connectivity.</p>
+<p>Rather than immediately building a separate lightweight app, I'd find out which part of their main task is failing. My initial hypothesis is that sending a short message and knowing whether it has actually arrived is a significant problem.</p>
+<p>I'd validate that through user observation, interviews and relevant error data. If the evidence supports it, I'd test a smaller improvement: saving messages securely, retrying after reconnection and making delivery states clearer.</p>
+<p>I'd measure whether users can complete that task and correctly understand what happened, while monitoring duplicates, data use and security issues.</p>
+<p>If the evidence points instead to affordability or device performance as the main barrier, I'd change direction. I'm trying to solve a real user problem with proportionate effort and risk, not simply deliver more features.”</p>
+</blockquote>
+<p>This demonstrates the complete reasoning process, from framing and evidence gathering to prioritisation, experimentation and revision.</p>
+<h2 id="what-makes-an-answer-weak">What makes an answer weak?</h2>
+<p><strong>“I'd create a simpler version for everyone.”</strong></p>
+<p>This fails to identify a specific user group or access limitation. A simpler interface does not necessarily address unreliable connectivity.</p>
+<p><strong>“I'd make every feature work offline.”</strong></p>
+<p>This ignores feasibility, cost and the difference between activities that can be performed locally and those requiring remote confirmation or interaction with another person.</p>
+<p><strong>“I'd measure success through an increase in active users.”</strong></p>
+<p>That metric does not directly demonstrate that the target users can send messages more reliably. Overall activity could increase without any improvement in the problem we set out to solve.</p>
+<p><strong>“This is clearly the best solution.”</strong></p>
+<p>Excessive certainty before research or testing is not persuasive product judgement. A stronger answer explains its assumptions, limitations and the conditions under which the recommendation would change.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Designing an everyday product for someone with limited access begins with identifying whose access is limited, in what way and during which task. A single solution cannot adequately address every technical, physical, economic or situational constraint. The Product Manager must select a meaningful problem, examine existing behaviour and compare solutions in terms of value, cost, uncertainty and risk.</p>
+<p>In our messaging example, improving the existing sending journey is an appropriate first step if the dominant problem is intermittent connectivity and unclear message status. Building a separate application is not automatically justified. If subsequent evidence identifies a different primary barrier, the decision should change accordingly.</p>
+<p><strong>The strongest Product Manager is not the person with a ready-made solution for every user. It is the person who can identify which user's problem deserves solving, justify the decision and recognise when the evidence calls for a different approach.</strong></p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://www.reforge.com/blog/product-manager-interview-questions" rel="noopener noreferrer" target="_blank">Reforge — 7 Product Manager Interview Questions From Top Product Leaders</a> — Context on reasoning and assumptions in scenario-based interviews; not evidence that this precise question came from a particular official interview.</li>
+<li><a href="https://developer.android.com/topic/architecture/data-layer/offline-first" rel="noopener noreferrer" target="_blank">Android Developers — Build an Offline-first App</a> — Official guidance on local data, operation queues and synchronisation.</li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/status-messages" rel="noopener noreferrer" target="_blank">W3C — WCAG 2.2: Understanding Status Messages</a> — Accessibility requirements concerning status announcements in web content.</li>
+</ol>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a><a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/accessibility/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Accessibility</span></a><a class="blog-post-term tag" href="/blog/en/tag/inclusive-design/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Inclusive Design</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-needs/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Needs</span></a><a class="blog-post-term tag" href="/blog/en/tag/offline-first-design/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Offline-first Design</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-research/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Research</span></a><a class="blog-post-term tag" href="/blog/en/tag/product-success-metrics/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Product Success Metrics</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#the-interview-question-and-what-it-actually-tests" class="h2">The interview question and what it actually tests</a>
+          <a href="#first-define-what-limited-access-means" class="h2">First, define what limited access means</a>
+          <a href="#choose-one-everyday-product-and-one-specific-group" class="h2">Choose one everyday product and one specific group</a>
+          <a href="#separate-the-underlying-need-from-a-feature-request" class="h2">Separate the underlying need from a feature request</a>
+          <a href="#compare-credible-solutions-before-choosing-one" class="h2">Compare credible solutions before choosing one</a>
+          <a href="#option-one-build-a-separate-lightweight-application" class="h3">Option one: Build a separate lightweight application</a>
+          <a href="#option-two-improve-the-existing-message-sending-journey" class="h3">Option two: Improve the existing message-sending journey</a>
+          <a href="#option-three-offer-an-alternative-channel-such-as-sms" class="h3">Option three: Offer an alternative channel such as SMS</a>
+          <a href="#which-approach-would-i-recommend" class="h3">Which approach would I recommend?</a>
+          <a href="#a-hypothetical-software-product-scenario" class="h2">A hypothetical software-product scenario</a>
+          <a href="#define-success-around-the-user-s-outcome" class="h2">Define success around the user&#39;s outcome</a>
+          <a href="#outcome-metric" class="h3">Outcome metric</a>
+          <a href="#diagnostic-metrics" class="h3">Diagnostic metrics</a>
+          <a href="#guardrail-metrics" class="h3">Guardrail metrics</a>
+          <a href="#what-if-you-have-only-two-weeks" class="h2">What if you have only two weeks?</a>
+          <a href="#what-evidence-would-make-you-reject-your-solution" class="h2">What evidence would make you reject your solution?</a>
+          <a href="#an-example-of-a-natural-interview-answer" class="h2">An example of a natural interview answer</a>
+          <a href="#what-makes-an-answer-weak" class="h2">What makes an answer weak?</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+          <a href="#sources" class="h2">Sources</a>
+        </nav>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/designing-products-for-limited-access/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong>Moein Ghezelbash</strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/" class="blog-end-next">
+      <span>More writing <span aria-hidden="true">↗</span></span>
+      <strong>Browse all articles</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">Home</a>
+        <a data-site-footer-link="about" href="/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">Projects</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js"></script>
+  <script src="/site-footer.js"></script>
+</body>
+</html>
