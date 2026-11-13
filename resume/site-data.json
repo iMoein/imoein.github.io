@@ -1181,10 +1181,6 @@
       "journal": {
         "latest": "تازه‌ترین یادداشت‌ها",
         "allPosts": "همه یادداشت‌ها",
-        "loadingPosts": "در حال بارگذاری یادداشت‌ها…",
-        "blogError": "فهرست یادداشت‌ها در دسترس نیست. از صفحه بلاگ دیدن کنید.",
-        "noPosts": "هنوز یادداشتی منتشر نشده است.",
-        "moreSoon": "سه جایگاه دیگر با انتشار یادداشت‌های تازه تکمیل می‌شوند.",
         "featured": "منتخب",
         "minRead": "دقیقه مطالعه",
         "read": "مطالعه مقاله"
@@ -1263,10 +1259,6 @@
       "journal": {
         "latest": "Latest writing",
         "allPosts": "Explore all articles",
-        "loadingPosts": "Loading articles…",
-        "blogError": "Articles are temporarily unavailable. Visit the journal instead.",
-        "noPosts": "No published articles yet.",
-        "moreSoon": "Three more articles will appear here as new writing is published.",
         "featured": "Featured",
         "minRead": "min read",
         "read": "Read article"

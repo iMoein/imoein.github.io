@@ -42,7 +42,7 @@
   </script>
   <script src="/site-theme.js"></script>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/home.css?v=featured-mirror-a0d5a0d">
+  <link rel="stylesheet" href="/home.css?v=journal-conditional-20261114">
   <script type="application/ld+json" id="homepage-schema"></script>
   <link rel="stylesheet" href="/site-footer.css">
   <script defer src="/site-analytics.js"></script>
@@ -95,16 +95,13 @@
       </a>
     </section>
 
-    <section class="landing-section landing-journal" id="landing-journal" aria-labelledby="landing-journal-title">
+    <section class="landing-section landing-journal" id="landing-journal" aria-labelledby="landing-journal-title" hidden>
       <div class="landing-section-heading">
         <h2 id="landing-journal-title" data-i18n="latest">تازه‌ترین یادداشت‌ها</h2>
         <a class="landing-section-link" data-local-link="allPosts" href="/blog/fa/"><span data-i18n="allPosts">همه یادداشت‌ها</span><span aria-hidden="true">↗</span></a>
       </div>
-      <div id="landing-featured" class="landing-featured" aria-live="polite">
-        <div class="landing-featured-loading" data-i18n="loadingPosts">در حال بارگذاری یادداشت‌ها…</div>
-      </div>
+      <div id="landing-featured" class="landing-featured" aria-live="polite"></div>
       <div id="landing-posts" class="landing-posts" aria-live="polite"></div>
-      <p id="landing-journal-note" class="landing-journal-note" hidden></p>
     </section>
 
     <section class="landing-section landing-independent" aria-labelledby="landing-independent-title">
@@ -162,7 +159,7 @@
   </footer>
   <script src="/site-navigation.js"></script>
   <script src="/home-collaborations.js?v=marquee-grid-2"></script>
-  <script src="/home.js"></script>
+  <script src="/home.js?v=journal-conditional-20261114"></script>
   <script src="/site-footer.js"></script>
 </body>
 </html>

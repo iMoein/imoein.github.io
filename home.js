@@ -11,9 +11,7 @@
       heroLead: 'با ترکیب نگاه کسب‌وکار، فناوری و داده، مسائل واقعی را به محصولاتی قابل‌استفاده تبدیل می‌کنم؛ از کشف مسئله و MVP تا توسعه و تحویل.',
       aboutDetail: 'مسیر و تجربه حرفه‌ای', projectsDetail: 'محصولات و تجربه‌های اجرایی', resumeDetail: 'سوابق، مهارت‌ها و دستاوردها',
       collaborationsTitle: 'همکاری‌ها و تجربه‌های حرفه‌ای', collaborationsIntro: 'از همکاری تمام‌وقت و مشاوره تا پروژه‌ها و مشارکت‌های مستقل.',
-      latest: 'تازه‌ترین یادداشت‌ها', allPosts: 'همه یادداشت‌ها', loadingPosts: 'در حال بارگذاری یادداشت‌ها…',
-      blogError: 'فهرست یادداشت‌ها در دسترس نیست. از صفحه بلاگ دیدن کنید.',
-      noPosts: 'هنوز یادداشتی منتشر نشده است.', moreSoon: 'سه جایگاه دیگر با انتشار یادداشت‌های تازه تکمیل می‌شوند.',
+      latest: 'تازه‌ترین یادداشت‌ها', allPosts: 'همه یادداشت‌ها',
       featured: 'منتخب', minRead: 'دقیقه مطالعه', read: 'مطالعه مقاله',
       independent: 'پروژه‌های مستقل', allProjects: 'همه پروژه‌ها',
       independentIntro: 'محصولاتی که مستقل یا در همکاری‌های کوچک، از ایده تا ساخت و توسعه‌شان پیش رفته‌ام. صفحه اختصاصی هر محصول به‌مرور اضافه می‌شود.',
@@ -36,9 +34,7 @@
       heroLead: 'I turn real business and user problems into usable digital products, combining product thinking, technical depth and data — from discovery and MVP to delivery.',
       aboutDetail: 'My experience and professional journey', projectsDetail: 'Products and hands-on work', resumeDetail: 'Experience, skills and achievements',
       collaborationsTitle: 'Companies & collaborations', collaborationsIntro: 'From full-time roles and consulting engagements to independent ventures and professional contributions.',
-      latest: 'Latest writing', allPosts: 'Explore all articles', loadingPosts: 'Loading articles…',
-      blogError: 'Articles are temporarily unavailable. Visit the journal instead.',
-      noPosts: 'No published articles yet.', moreSoon: 'Three more articles will appear here as new writing is published.',
+      latest: 'Latest writing', allPosts: 'Explore all articles',
       featured: 'Featured', minRead: 'min read', read: 'Read article',
       independent: 'Independent projects', allProjects: 'Explore all projects',
       independentIntro: 'Products I have taken from idea to delivery, independently or with small teams. Each will have its own dedicated page over time.',
@@ -57,6 +53,7 @@
   let lang = document.documentElement.lang === 'en' ? 'en' : 'fa';
   let siteData = null;
   let latestRequest = 0;
+  let journalCache = null;
   const node = (tag, cls, text) => {
     const el = document.createElement(tag);
     if (cls) el.className = cls;
@@ -110,7 +107,7 @@
     a.href = href;
     return a;
   };
-  const createFeatured = (post) => {
+  const createFeatured = (post, showFeaturedBadge = false) => {
     const article = node('article', 'landing-story');
     const media = makeLink(safeBlogUrl(post.url), '', 'landing-story-media' + (post.coverFit === 'contain' ? ' is-contained' : ''));
     const img = node('img');
@@ -121,7 +118,7 @@
     media.append(img);
     const content = node('div', 'landing-story-body');
     const meta = node('div', 'landing-story-meta');
-    if (post.featured) meta.append(node('span','landing-featured-pill','✦ ' + currentCopy().featured));
+    if (showFeaturedBadge) meta.append(node('span','landing-featured-pill','✦ ' + currentCopy().featured));
     meta.append(node('span','landing-category',post.category || 'Product'));
     meta.append(node('span','landing-read-time',(post.minutes || 1) + ' ' + currentCopy().minRead));
     const title = node('h3');
@@ -179,40 +176,50 @@
     card.append(link);
     return card;
   };
-  const renderBlog = async () => {
-    const request = ++latestRequest;
+  const paintJournal = (published) => {
+    const section = $('#landing-journal');
     const featured = $('#landing-featured');
     const more = $('#landing-posts');
-    const note = $('#landing-journal-note');
-    featured.replaceChildren(node('p','landing-featured-loading',currentCopy().loadingPosts));
+    featured.replaceChildren();
     more.replaceChildren();
-    note.hidden = true;
+    if (!published.length) {
+      section.hidden = true;
+      return;
+    }
+    if (published.length < 4) {
+      // One to three articles: show only the newest article.
+      featured.replaceChildren(createFeatured(published[0]));
+    } else {
+      // Four or more: the selected lead plus exactly three other recent cards.
+      const recent = published.slice(0,4);
+      const lead = recent.find(post => post.featured) || recent[0];
+      featured.replaceChildren(createFeatured(lead, true));
+      more.replaceChildren(...recent.filter(post => post !== lead).map(createSmallPost));
+    }
+    section.hidden = false;
+  };
+  const renderBlog = async () => {
+    const request = ++latestRequest;
+    const requestedLang = lang;
+    journalCache = null;
+    // The heading, controls and empty skeleton stay hidden until an article
+    // is confirmed in the public index. This also prevents cross-locale flash.
+    $('#landing-journal').hidden = true;
+    $('#landing-featured').replaceChildren();
+    $('#landing-posts').replaceChildren();
     try {
-      const response = await fetch('/blog/' + lang + '/index.json', {cache:'no-cache'});
+      const response = await fetch('/blog/' + requestedLang + '/index.json', {cache:'no-cache'});
       if (!response.ok) throw new Error('Could not fetch public blog index');
       const data = await response.json();
-      if (request !== latestRequest) return;
+      if (request !== latestRequest || requestedLang !== lang) return;
       const published = Array.isArray(data.posts) ? data.posts.filter(p =>
-        p && typeof p.url === 'string' && p.url.startsWith('/blog/' + lang + '/')) : [];
+        p && typeof p.url === 'string' && p.url.startsWith('/blog/' + requestedLang + '/')) : [];
       published.sort((a,b) => (b.date || '').localeCompare(a.date || ''));
-      const four = published.slice(0,4);
-      if (!four.length) {
-        featured.replaceChildren(node('p','landing-featured-loading',currentCopy().noPosts));
-        return;
-      }
-      const lead = four.find(p=>p.featured) || four[0];
-      featured.replaceChildren(createFeatured(lead));
-      const ordinary = four.filter(p=>p!==lead);
-      more.replaceChildren(...ordinary.map(createSmallPost));
-      if (ordinary.length < 3) {
-        note.textContent = currentCopy().moreSoon;
-        note.hidden = false;
-      }
+      journalCache = {lang: requestedLang, posts: published};
+      paintJournal(published);
     } catch (_) {
-      if (request === latestRequest) {
-        featured.replaceChildren(node('p','landing-featured-loading',currentCopy().blogError));
-        more.replaceChildren();
-      }
+      // Fail closed: no visible empty section or technical error messages.
+      if (request === latestRequest) paintJournal([]);
     }
   };
   const projectVisual = {
@@ -497,8 +504,9 @@
       updateSocial();
       renderProjects();
       window.renderHomeCollaborations?.(siteData, lang);
-      // Rebuild the article cards with the localized Studio button labels.
-      renderBlog();
+      // When site-data arrives, reapply Studio labels without a second
+      // network request or a brief flash of the entire article section.
+      if (journalCache?.lang === lang) paintJournal(journalCache.posts);
     })
     .catch(()=>{
       $('#landing-independent-grid').replaceChildren(
