@@ -35,7 +35,7 @@ jobs:
 
           # The studio and private Markdown are deliberately not part of this deployment.
           # Only website entry files and known static directories can enter _site.
-          for name in index.html about.html portfolio.html 404.html CNAME favicon.ico site.webmanifest robots.txt sitemap.xml portfolio.json styles.css home.css site-footer.css app.js home.js home-collaborations.js portfolio.js site-navigation.js site-theme.js site-loader.js site-footer.js; do
+          for name in index.html about.html portfolio.html 404.html CNAME favicon.ico site.webmanifest robots.txt sitemap.xml portfolio.json styles.css home.css site-footer.css site-analytics.css site-analytics.js app.js home.js home-collaborations.js portfolio.js site-navigation.js site-theme.js site-loader.js site-footer.js; do
             test -f "$name" || { echo "::error::Missing required site file $name"; exit 1; }
             cp "$name" "_site/$name"
           done
