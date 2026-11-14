@@ -310,11 +310,11 @@
         cover.append(text('span', 'blog-cover-placeholder-shape'));
         article.append(cover);
       }
+      const body = showFeatured ? text('div', 'blog-featured-body') : article;
       const top = text('div', 'blog-list-card-top');
       const labels = text('div', 'blog-card-labels');
       const categoryLink = text('a', 'blog-category-tag', post.category);
       categoryLink.href = post.categoryUrl || baseUrl;
-      labels.append(categoryLink);
       if (showFeatured) {
         const mark = text('span', 'blog-featured-mark');
         const star = text('span', '', '✦');
@@ -322,22 +322,23 @@
         mark.append(star, document.createTextNode(' ' + (lang === 'fa' ? 'منتخب' : 'Featured')));
         labels.append(mark);
       }
+      labels.append(categoryLink);
       top.append(labels);
       top.append(text('span', 'blog-readtime', numbers.format(post.minutes) + ' ' + (lang === 'fa' ? 'دقیقه مطالعه' : 'min read')));
-      article.append(top);
+      body.append(top);
       const heading = text('h3');
       const titleLink = text('a', '', post.title);
       titleLink.href = post.url;
       heading.append(titleLink);
-      article.append(heading);
-      article.append(text('p', 'blog-card-summary', post.summary));
+      body.append(heading);
+      body.append(text('p', 'blog-card-summary', post.summary));
       const tags = text('div', 'blog-card-tags');
       (post.tags || []).slice(0, 3).forEach((tag, i) => {
         const link = text('a', '', tag);
         link.href = (post.tagUrls || [])[i] || baseUrl;
         tags.append(link);
       });
-      article.append(tags);
+      body.append(tags);
       const bottom = text('div', 'blog-card-bottom');
       const date = text('time', 'blog-date');
       date.dateTime = post.date;
@@ -347,7 +348,8 @@
       readLink.append(text('span', '', '↗'));
       readLink.lastChild.setAttribute('aria-hidden', 'true');
       bottom.append(date, readLink);
-      article.append(bottom);
+      body.append(bottom);
+      if (showFeatured) article.append(body);
       return article;
     };
 
