@@ -2442,3 +2442,42 @@ html[data-color-scheme="dark"] .blog-page .blog-content-section .blog-article-gr
     margin-inline-start:0;
   }
 }
+
+/* Editorial placeholder for coverless posts and blocked external images.
+   This uses one shared brand asset and CSS rather than a generated image per post. */
+.blog-page .blog-cover.blog-cover-placeholder,
+.blog-page .blog-featured-image.blog-cover-placeholder {
+  position:relative;isolation:isolate;overflow:hidden;
+  background:radial-gradient(ellipse at 80% 12%,rgba(106,221,204,.23),transparent 44%),
+    linear-gradient(132deg,#16374d,#1c5a68);
+}
+.blog-page .blog-cover.blog-cover-placeholder::before,
+.blog-page .blog-featured-image.blog-cover-placeholder::before {
+  content:'';position:absolute;z-index:0;
+  inset:auto auto -40% -15%;width:58%;aspect-ratio:1;
+  border-radius:50%;border:1px solid rgba(181,233,225,.17);
+  box-shadow:0 0 0 36px rgba(181,233,225,.045),0 0 0 95px rgba(181,233,225,.025);
+  transform:none;
+}
+.blog-page :is(.blog-cover,.blog-featured-image).blog-cover-placeholder .blog-cover-placeholder-shape {
+  position:absolute;inset:0;z-index:1;transform:none;
+  width:100%;height:100%;opacity:1;filter:none;background:none;
+  display:flex;flex-direction:column;gap:8px;align-items:center;justify-content:center;
+  color:#e9ffff;font-size:clamp(17px,2vw,23px);font-weight:850;letter-spacing:.015em;
+}
+.blog-page :is(.blog-cover,.blog-featured-image).blog-cover-placeholder .blog-cover-placeholder-shape::before {
+  content:'';display:block;width:clamp(56px,7vw,86px);height:clamp(56px,7vw,86px);
+  background:url('/assets/logo/imoein-symbol.webp') center/contain no-repeat;
+  filter:drop-shadow(0 8px 20px rgba(0,16,30,.22));
+}
+.blog-page :is(.blog-cover,.blog-featured-image).blog-cover-placeholder .blog-cover-placeholder-shape::after {
+  content:'iMoein';color:#fff;font-size:clamp(18px,2.2vw,25px);
+  letter-spacing:.015em;line-height:1.2;
+}
+.blog-page .blog-featured-image.blog-cover-placeholder {aspect-ratio:16/9;max-height:450px;border-radius:22px;}
+.blog-page .blog-featured-image.blog-cover-placeholder .blog-cover-placeholder-shape::before {width:90px;height:90px;}
+@media(max-width:560px){
+  .blog-page :is(.blog-cover,.blog-featured-image).blog-cover-placeholder .blog-cover-placeholder-shape::before {
+    width:65px;height:65px;
+  }
+}

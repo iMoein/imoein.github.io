@@ -16,6 +16,28 @@
     const dt = new Date(iso + 'T12:00:00Z');
     node.textContent = Number.isNaN(dt.getTime()) ? iso : formatter.format(dt);
   };
+  const coverPlaceholder = (container) => {
+    if (!container || container.classList.contains('blog-cover-placeholder')) return;
+    container.classList.add('blog-cover-placeholder');
+    container.querySelectorAll('img').forEach(image => image.remove());
+    if (!container.querySelector('.blog-cover-placeholder-shape')) {
+      const mark = document.createElement('span');
+      mark.className = 'blog-cover-placeholder-shape';
+      mark.setAttribute('aria-hidden', 'true');
+      container.append(mark);
+    }
+  };
+  const recoverCover = (element) => {
+    if (!(element instanceof HTMLImageElement)) return;
+    const host = element.closest('.blog-cover, .blog-featured-image');
+    if (host && !element.naturalWidth) coverPlaceholder(host);
+  };
+  document.addEventListener('error', event => recoverCover(event.target), true);
+  // An eager cover image can fail before the footer script is executed.
+  document.querySelectorAll('.blog-cover img, .blog-featured-image img').forEach(image => {
+    if (image.complete && image.naturalWidth === 0) recoverCover(image);
+  });
+
   document.querySelectorAll('.blog-date[data-iso]').forEach(node => displayDate(node, node.dataset.iso));
 
   // Preserve real <table> markup and accessible column headers. Never shrink
@@ -302,6 +324,7 @@
         const img = document.createElement('img');
         img.src = post.cover; img.alt = post.coverAlt || '';
         img.loading = 'lazy'; img.decoding = 'async';
+        img.referrerPolicy = 'no-referrer';
         cover.append(img);
         article.append(cover);
       } else {
