@@ -12,9 +12,9 @@
     const lang = document.documentElement.lang === 'en' ? 'en' : 'fa';
     const words = translations[lang];
     const routes = {
-      home: '/' + (lang === 'en' ? '?lang=en' : ''),
-      about: '/about.html' + (lang === 'en' ? '?lang=en' : ''),
-      projects: '/portfolio.html?lang=' + lang,
+      home: lang === 'en' ? '/en/' : '/',
+      about: lang === 'en' ? '/en/about.html' : '/about.html',
+      projects: lang === 'en' ? '/en/portfolio.html' : '/portfolio.html',
       resume: '/resume/moein-ghezelbash-' + lang + '.html',
       blog: '/blog/' + lang + '/'
     };
@@ -29,6 +29,11 @@
         link.removeAttribute('aria-current');
       }
     });
+    const guide = footer.querySelector('[data-site-footer-guide]');
+    if (guide) {
+      guide.href = '/product-management.html';
+      guide.textContent = lang === 'en' ? 'Technical product management (Persian)' : 'مدیریت محصول';
+    }
     const copy = footer.querySelector('.site-footer-copy');
     if (copy) {
       const year = new Intl.NumberFormat(lang === 'fa' ? 'fa-IR' : 'en-GB',

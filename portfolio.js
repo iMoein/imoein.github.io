@@ -2,7 +2,7 @@ const $ = (selector) => document.querySelector(selector);
 
 const state = {
   data: null,
-  locale: new URLSearchParams(window.location.search).get("lang") || localStorage.getItem("site-locale") || "fa"
+  locale: window.location.pathname.startsWith("/en/") ? "en" : "fa"
 };
 
 const clear = (element) => {
@@ -36,6 +36,7 @@ const createButton = (text, onClick, isActive = false) => {
 
 const renderLocaleSwitcher = () => {
   const switcher = $("#locale-switcher");
+  if (!switcher) return; // Navigation may still be loading on a slow connection.
   switcher.dataset.locale = state.locale;
   // Keep the animated thumb alive so its transform can transition.
   switcher.querySelectorAll("button").forEach((button) => button.remove());
@@ -52,8 +53,10 @@ const renderLocaleSwitcher = () => {
 };
 
 const renderSeo = (content) => {
-  const title = `${content.title} | Moein Ghezelbash`;
-  const url = `https://imoein.com/portfolio.html${state.locale === "en" ? "?lang=en" : ""}`;
+  const title = state.locale === "fa"
+    ? "نمونه‌کارهای معین قزلباش | مدیریت محصول و پلتفرم‌های B2B"
+    : "Product Portfolio | Moein Ghezelbash";
+  const url = state.locale === "en" ? "https://imoein.com/en/portfolio.html" : "https://imoein.com/portfolio.html";
   const keywords = content.seo.keywords?.join(", ") || "";
 
   document.title = title;
@@ -75,10 +78,10 @@ const renderSchema = (content) => {
   schema.textContent = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "@id": `https://imoein.com/portfolio.html${state.locale === "en" ? "?lang=en" : ""}#portfolio`,
+    "@id": "https://imoein.com" + (state.locale === "en" ? "/en/portfolio.html" : "/portfolio.html") + "#portfolio",
     name: content.title,
     description: content.seo.description,
-    url: `https://imoein.com/portfolio.html${state.locale === "en" ? "?lang=en" : ""}`,
+    url: "https://imoein.com" + (state.locale === "en" ? "/en/portfolio.html" : "/portfolio.html"),
     inLanguage: content.lang,
     author: {
       "@type": "Person",
@@ -150,7 +153,7 @@ const renderFooter = (content) => {
   if (!nav) return; // Common footer owns the links on all pages.
   clear(nav);
   [
-    { label: content.nav.home, href: `/${state.locale === "en" ? "?lang=en" : ""}` },
+    { label: content.nav.home, href: state.locale === "en" ? "/en/" : "/" },
     { label: content.nav.resumeFa, href: "/resume/moein-ghezelbash-fa.html" },
     { label: content.nav.resumeEn, href: "/resume/moein-ghezelbash-en.html" }
   ].forEach((item) => {
@@ -192,16 +195,10 @@ const setLocale = (locale) => {
   if (locale === state.locale) return;
   state.locale = locale;
   localStorage.setItem("site-locale", locale);
-  // Keep the selected language shareable and persistent after reload.
-  // No full navigation: the pill and content can animate in place.
-  const address = new URL(window.location.href);
-  if (locale === "en") address.searchParams.set("lang", "en");
-  else address.searchParams.delete("lang");
-  window.history.replaceState(window.history.state, "", address.pathname + address.search + address.hash);
-  renderPortfolio();
+  window.location.assign((locale === "en" ? "/en/" : "/") + "portfolio.html" + window.location.hash);
 };
 
-fetch("portfolio.json")
+fetch("/portfolio.json")
   .then((response) => {
     if (!response.ok) throw new Error("Portfolio data could not be loaded.");
     return response.json();

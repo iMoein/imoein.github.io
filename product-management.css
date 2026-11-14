@@ -1,0 +1,36 @@
+/* Search-focused professional product management guide. */
+.product-guide-page{background:#f5f8f9;color:#19384c;font-family:Vazirmatn,Tahoma,Arial,sans-serif;}
+.product-guide-page a{color:#126477;}
+.product-guide-page :is(h1,h2,h3){color:#153950;}
+.product-guide-main{max-width:1120px;padding-top:28px;padding-bottom:70px;}
+.product-guide-skip{position:absolute;top:-80px;right:16px;z-index:90;padding:11px 14px;background:#fff;border-radius:9px;}
+.product-guide-skip:focus{top:12px;}
+.product-guide-breadcrumb{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:13px;color:#657f8d;margin-bottom:20px;}
+.product-guide-hero{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(250px,.7fr);gap:28px;align-items:center;padding:clamp(28px,4vw,55px);border-radius:24px;background:#fff;border:1px solid #e0e9ec;box-shadow:0 18px 44px rgba(15,41,56,.035);}
+.product-guide-eyebrow{font-size:13px;font-weight:800;color:#317c74;letter-spacing:.1px;}
+.product-guide-hero h1{font-size:clamp(27px,3.8vw,43px);line-height:1.6;font-weight:900;margin:10px 0 20px;}
+.product-guide-lead{font-size:16px;line-height:2.2;color:#3d5b6a;margin:0;}
+.product-guide-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;}
+.product-guide-actions a,.product-guide-secondary{display:inline-flex;align-items:center;justify-content:center;padding:11px 19px;border-radius:10px;font-size:13px;font-weight:800;text-decoration:none;}
+.product-guide-actions a.product-guide-primary{background:#173e52;color:#fff;}
+.product-guide-actions a.product-guide-secondary,.product-guide-secondary{border:1px solid #c8dadd;color:#245970;background:#f9fdfd;}
+.product-guide-facts{background:#eef6f4;border:1px solid #d8eae6;padding:22px;border-radius:17px;}
+.product-guide-facts strong{font-weight:900;display:block;margin-bottom:13px;}
+.product-guide-facts p{font-size:13px;line-height:1.9;padding:9px 0;margin:0;border-top:1px solid #dce9e7;}
+.product-guide-article{max-width:930px;margin:20px auto 0;}
+.product-guide-article>section{margin:18px 0;padding:clamp(24px,4vw,42px);background:#fff;border:1px solid #e0e9ec;border-radius:20px;}
+.product-guide-article h2{font-size:clamp(21px,2.6vw,28px);line-height:1.65;font-weight:900;margin:0 0 20px;}
+.product-guide-article h3{font-size:17px;line-height:1.8;font-weight:850;margin:0 0 9px;}
+.product-guide-article p{font-size:14.5px;line-height:2.2;color:#365467;margin:0 0 18px;}
+.product-guide-steps,.product-guide-cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;}
+.product-guide-steps>div,.product-guide-cases>div{border:1px solid #e5edef;background:#fafcfc;border-radius:14px;padding:20px;}
+.product-guide-steps p,.product-guide-cases p{font-size:13.5px;margin-bottom:0;}
+.product-guide-contact{border-color:#c5dfd8!important;background:#f8fcfa!important;}
+.product-guide-footer{border-top:1px solid #dce7e9;background:#fff;}
+.product-guide-footer .container{display:flex;gap:22px;flex-wrap:wrap;padding-top:22px;padding-bottom:22px;}
+.product-guide-footer a{font-size:13px;text-decoration:none;font-weight:700;}
+@media(max-width:850px){.product-guide-hero{grid-template-columns:1fr;}.product-guide-main{padding-inline:17px;}.product-guide-steps,.product-guide-cases{grid-template-columns:1fr;}}
+@media(max-width:430px){.product-guide-hero{padding:22px;}.product-guide-article>section{padding:22px;}.product-guide-actions>a{width:100%;}}
+
+/* This original Persian guide has no equivalent English edition yet. */
+.product-guide-page .locale-switcher{display:none!important;}

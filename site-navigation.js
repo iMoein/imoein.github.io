@@ -15,9 +15,9 @@
   const items = (lang) => {
     const words = studioNavigation?.[lang] || fallbackNavigation[lang];
     return [
-      {label:words.home,href:'/' + (lang === 'en' ? '?lang=en' : '')},
-      {label:words.about || fallbackNavigation[lang].about,href:'/about.html' + (lang === 'en' ? '?lang=en' : '')},
-      {label:words.projects,href:'/portfolio.html?lang=' + lang},
+      {label:words.home,href:lang==='en'?'/en/':'/'},
+      {label:words.about || fallbackNavigation[lang].about,href:lang==='en'?'/en/about.html':'/about.html'},
+      {label:words.projects,href:lang==='en'?'/en/portfolio.html':'/portfolio.html'},
       {label:words.resume,href:'/resume/moein-ghezelbash-' + lang + '.html'},
       {label:words.blog,href:'/blog/' + lang + '/'}
     ];
@@ -185,9 +185,9 @@
       const page = location.pathname;
       const active = item.href.startsWith('/blog/') ? page.startsWith('/blog/') :
         item.href.startsWith('/resume/') ? page.includes('/resume/') :
-        item.href.startsWith('/portfolio') ? page.includes('portfolio.html') :
-        item.href.startsWith('/about.html') ? page.endsWith('/about.html') :
-        page === '/' || page.endsWith('/index.html');
+        item.href.includes('portfolio.html') ? page.includes('portfolio.html') :
+        item.href.includes('about.html') ? page.endsWith('/about.html') :
+        page === '/' || page === '/en/' || page.endsWith('/index.html');
       if (active) link.setAttribute('aria-current', 'page');
       links.appendChild(link);
     });

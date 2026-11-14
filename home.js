@@ -7,7 +7,7 @@
       linkedinText:'LinkedIn', githubText:'GitHub',
       skip: 'رفتن به محتوا', home: 'خانه', about: 'درباره من', projects: 'پروژه‌ها', resume: 'رزومه', blog: 'بلاگ',
       eyebrow: 'از مسئله تا محصول', heroName: 'معین قزلباش',
-      heroRole: 'مدیر ارشد محصول فنی · سازنده محصول',
+      heroRole: 'مدیر ارشد محصول فنی · مدیر محصول و سازنده محصول',
       heroLead: 'با ترکیب نگاه کسب‌وکار، فناوری و داده، مسائل واقعی را به محصولاتی قابل‌استفاده تبدیل می‌کنم؛ از کشف مسئله و MVP تا توسعه و تحویل.',
       aboutDetail: 'مسیر و تجربه حرفه‌ای', projectsDetail: 'محصولات و تجربه‌های اجرایی', resumeDetail: 'سوابق، مهارت‌ها و دستاوردها',
       collaborationsTitle: 'همکاری‌ها و تجربه‌های حرفه‌ای', collaborationsIntro: 'از همکاری تمام‌وقت و مشاوره تا پروژه‌ها و مشارکت‌های مستقل.',
@@ -19,11 +19,14 @@
       projectTag: 'محصول مستقل', projectPending: 'در حال تکامل', projectVisit: 'مشاهده محصول', comingSoon: 'صفحه اختصاصی به‌زودی',
       timeVisit: 'ورود به وب‌اپ TIME', timeOverview: 'معرفی پروژه',
       timePreviewAlt: 'پیش‌نمایش داشبورد TIME؛ ساعت تهران، تقویم و اطلاعات روشنایی روز',
+      productGuideKicker:'رویکرد حرفه‌ای', productGuideTitle:'مدیریت محصول فنی در عمل',
+      productGuideDescription:'از شناخت نیاز کاربر و تعریف MVP تا نقشه راه، تصمیم‌های فنی و سنجش ارزش واقعی محصول؛ با نمونه‌هایی از پروژه‌های معین قزلباش.',
+      productGuideLink:'آشنایی با رویکرد من به مدیریت محصول',
       contactKicker: 'ارتباط مستقیم', contactTitle: 'گفتگو، مشاوره یا شروع همکاری',
       contactLead: 'اگر ایده‌ای داری، با چالش محصول روبه‌رو شده‌ای یا می‌خواهی درباره یک همکاری صحبت کنیم، خوشحال می‌شوم گفتگو کنیم.',
       telegram: 'گفتگو در تلگرام', telegramChannel:'عضویت در کانال تلگرام', whatsapp: 'گفتگو در واتساپ',
-      title: 'معین قزلباش | از مسئله تا محصول',
-      description: 'معین قزلباش، مدیر ارشد محصول فنی و سازنده محصولات مستقل؛ یادداشت‌های مدیریت محصول، پروژه‌ها و راه‌های شروع همکاری.',
+      title: 'معین قزلباش | مدیر ارشد محصول فنی و مدیر محصول',
+      description: 'معین قزلباش، مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در مدیریت محصول، پلتفرم‌های B2B، توسعه محصول با هوش مصنوعی و فناوری سفر؛ رزومه، نمونه‌کارها و مقالات تخصصی.',
       copyright: 'معین قزلباش'
     },
     en: {
@@ -42,11 +45,14 @@
       projectTag: 'Independent product', projectPending: 'Evolving product', projectVisit: 'Visit product', comingSoon: 'Dedicated page coming soon',
       timeVisit: 'Open TIME web app', timeOverview: 'Project overview',
       timePreviewAlt: 'Preview of the TIME dashboard with Tehran clock, calendar and daylight information',
+      productGuideKicker:'HOW I WORK', productGuideTitle:'Technical product management in practice',
+      productGuideDescription:'From product discovery and MVP scope to technical trade-offs and measurable outcomes, informed by real B2B product work.',
+      productGuideLink:'Explore the approach (in Persian)',
       contactKicker: 'GET IN TOUCH', contactTitle: 'Let’s talk, consult or collaborate',
       contactLead: 'Have an idea, a product challenge, or a project worth building? I would love to explore it with you.',
       telegram: 'Message on Telegram', telegramChannel:'Follow Telegram Channel', whatsapp: 'Chat on WhatsApp',
-      title: 'Moein Ghezelbash | From problem to product',
-      description: 'Moein Ghezelbash, Senior Technical Product Manager and independent product builder. Explore projects, product writing and ways to collaborate.',
+      title: 'Moein Ghezelbash | Senior Technical Product Manager',
+      description: 'Moein Ghezelbash is a Senior Technical Product Manager focused on B2B platforms, product strategy and AI-augmented development. Explore his portfolio, resume and writing.',
       copyright: 'Moein Ghezelbash'
     }
   };
@@ -107,14 +113,14 @@
   };
   const localHref = (name) => {
     const defaults={
-      home:'/' + (lang==='en'?'?lang=en':''),
-      about:'/about.html' + (lang==='en'?'?lang=en':''),
-      projects:'/portfolio.html?lang=' + lang + '#live-projects',
+      home:lang==='en'?'/en/':'/',
+      about:lang==='en'?'/en/about.html':'/about.html',
+      projects:(lang==='en'?'/en/portfolio.html':'/portfolio.html')+'#live-projects',
       resume:'/resume/moein-ghezelbash-' + lang + '.html',
       blog:'/blog/' + lang + '/',
       allPosts:'/blog/' + lang + '/',
-      allProjects:'/portfolio.html?lang=' + lang + '#live-projects',
-      timeOverview:'/portfolio.html?lang=' + lang + '#live-projects'
+      allProjects:(lang==='en'?'/en/portfolio.html':'/portfolio.html')+'#live-projects',
+      timeOverview:(lang==='en'?'/en/portfolio.html':'/portfolio.html')+'#live-projects'
     };
     const configured=homeContent()?.links?.[name];
     return validHref(configured) ? configured : defaults[name];
@@ -409,13 +415,13 @@
       $('#twitter-image').content=ogImage;
     }
     $('#og-locale').content=lang==='fa'?'fa_IR':'en_GB';
-    const url='https://imoein.com/' + (lang==='en'?'?lang=en':'');
+    const url='https://imoein.com' + (lang==='en'?'/en/':'/');
     $('#og-url').content=url;
     $('#canonical-url').href=url;
     $('#homepage-schema').textContent=JSON.stringify({
       '@context':'https://schema.org','@type':'WebPage',
       name:t.title,description:t.description,url,
-      about:{'@type':'Person',name:'Moein Ghezelbash',url:'https://imoein.com/about.html'}
+      about:{'@id':'https://imoein.com/#person'}
     });
     const copyright = $('#landing-copyright');
     if (copyright) copyright.textContent='© ' + new Intl.NumberFormat(lang==='fa'?'fa-IR':'en-GB',{useGrouping:false}).format(new Date().getFullYear())+' '+t.copyright;
@@ -493,17 +499,12 @@
   };
   const setLocale = (requested) => {
     if (lang===requested) return;
-    lang=requested;
-    try {localStorage.setItem('site-locale',lang);}catch(_){}
-    const url=new URL(location.href);
-    if(lang==='en')url.searchParams.set('lang','en');
-    else url.searchParams.delete('lang');
-    history.replaceState(null,'',url.pathname+url.search+url.hash);
-    renderLocale();
+    try {localStorage.setItem('site-locale',requested);}catch(_){}
+    location.assign((requested==='en'?'/en/':'/')+location.hash);
   };
   window.addEventListener('popstate',()=>{
     const requested=new URLSearchParams(location.search).get('lang');
-    lang=requested==='en'?'en':'fa';
+    lang=location.pathname.startsWith('/en/')?'en':'fa';
     renderLocale();
   });
   // First paint is localized without waiting for either content request.
