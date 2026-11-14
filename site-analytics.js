@@ -18,6 +18,23 @@
   })();
   if (previouslyDeclined) return;
 
+  // Cloudflare Web Analytics: existing, verified site token for imoein.com.
+  // Independent of GA4 consent-mode reporting. Does not set cookies or add a
+  // visitor-facing prompt. Automatically excluded for local/staging/noindex.
+  // If the Cloudflare zone is ever switched to automatic beacon injection,
+  // avoid injecting the same script a second time.
+  function startCloudflareWebAnalytics() {
+    if ([...document.scripts].some(script =>
+      script.hasAttribute('data-cf-beacon') ||
+      /static\.cloudflareinsights\.com\/beacon\.min\.js/.test(script.src))) return;
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    script.dataset.cfBeacon = JSON.stringify({token: '0e9545ebc3c345f58a738098695d40bf'});
+    document.head.append(script);
+  }
+  startCloudflareWebAnalytics();
+
   const currentLanguage = () => document.documentElement.lang === 'en' ? 'en' : 'fa';
   const validId = value => /^G-[A-Z0-9]{6,16}$/.test(value || '');
   let measurementId = '';
