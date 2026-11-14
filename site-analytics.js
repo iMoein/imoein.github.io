@@ -1,7 +1,8 @@
-/* iMoein: independent Cloudflare Web Analytics and opt-in GA4.
- * Cloudflare: anonymous cookieless site metrics; respect legacy opt-outs.
- * GA4: no Google tag or analytics cookies until the visitor explicitly agrees.
- * A compact bilingual consent choice is always revisitable from the footer.
+/* iMoein: Cloudflare Web Analytics and direct GA4 measurement.
+ * Neither provider displays an automatic consent banner. GA4 starts by
+ * default on production pages, except for prior explicit analytics opt-outs.
+ * Visitors can disable GA4 in the footer's privacy settings at any time.
+ * All Google advertising storage and personalization permissions stay denied.
  * GTM is not installed: use only the existing direct GA4 implementation.
  */
 (() => {
@@ -19,7 +20,8 @@
   };
   let consent = getStoredConsent(CONSENT_KEY);
   if (consent !== 'granted' && consent !== 'denied') {
-    consent = getStoredConsent(LEGACY_KEY) === 'declined' ? 'denied' : 'unset';
+    // Honor earlier opt-outs, while tracking new visits without a prompt.
+    consent = getStoredConsent(LEGACY_KEY) === 'declined' ? 'denied' : 'granted';
   }
   let legacyOptOut = getStoredConsent(LEGACY_KEY) === 'declined';
 
@@ -72,16 +74,9 @@
     started = true;
     window.dataLayer = window.dataLayer || [];
     window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
-    // Google consent-mode v2: establish denied defaults synchronously
-    // *before* loading the Google tag, then grant only analytics storage on
-    // explicit opt-in. All advertising permissions remain denied.
+    // Analytics enabled by default; ad storage and personalization denied.
+    // Explicitly opted-out visitors never reach this initialization path.
     window.gtag('consent', 'default', {
-      analytics_storage: 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
-    window.gtag('consent', 'update', {
       analytics_storage: 'granted',
       ad_storage: 'denied',
       ad_user_data: 'denied',
@@ -156,19 +151,19 @@
   const copy = {
     fa: {
       title: 'آمار بازدید با Google Analytics',
-      description: 'Cloudflare بازدیدها را بدون کوکی ثبت می‌کند. با موافقت شما، Google Analytics هم آمار کامل‌تری از استفاده سایت جمع‌آوری می‌کند.',
+      description: 'Cloudflare آمار بدون کوکی را ثبت می‌کند. Google Analytics هم برای آمار بازدید سایت فعاله و می‌تونی غیرفعالش کنی.',
       accept: 'موافقم', reject: 'فعلاً نه', settings: 'تنظیمات حریم خصوصی',
       settingsTitle: 'تنظیمات آمار بازدید',
-      settingsDescription: 'Cloudflare برای آمار بدون کوکی فعال است. اندازه‌گیری با Google Analytics اختیاری است و می‌توانی هر زمان نظرت را تغییر بدهی.',
+      settingsDescription: 'Cloudflare آمار بدون کوکی را ثبت می‌کند. Google Analytics برای آمار بازدید فعاله؛ می‌تونی اینجا غیرفعالش کنی یا دوباره فعالش کنی.',
       close: 'بستن', granted: 'Google Analytics فعال است', denied: 'Google Analytics غیرفعال است',
       save: 'تغییر تصمیم', label: 'انتخاب استفاده از Google Analytics'
     },
     en: {
       title: 'Google Analytics measurement',
-      description: 'Cloudflare measures visits without cookies. With your permission, Google Analytics can collect more complete site usage statistics.',
+      description: 'Cloudflare measures visits without cookies. Google Analytics measures site visits and can be disabled here.',
       accept: 'Allow analytics', reject: 'Not now', settings: 'Privacy settings',
       settingsTitle: 'Analytics privacy settings',
-      settingsDescription: 'Cloudflare provides cookieless metrics. Google Analytics is optional and you can change your choice at any time.',
+      settingsDescription: 'Cloudflare provides cookieless metrics. Google Analytics is on for site measurements; turn it off or on here whenever you want.',
       close: 'Close', granted: 'Google Analytics is on', denied: 'Google Analytics is off',
       save: 'Change choice', label: 'Choose whether to allow Google Analytics'
     }
@@ -283,7 +278,8 @@
     notice.append(title, description, state, actions);
     document.body.append(notice);
     renderPrivacyUI();
-    if (consent === 'unset') showPrivacyChoice(false);
+    // No automatic banner. Settings remain available only when opened
+    // intentionally from the footer.
     new MutationObserver(renderPrivacyUI).observe(document.documentElement,
       {attributes: true, attributeFilter: ['lang']});
   }
