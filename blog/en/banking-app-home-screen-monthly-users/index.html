@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Day 5 of 1,000 Product Manager Interview Questions">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/banking-app-home-screen-monthly-users/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month? | iMoein">
+  <meta property="og:description" content="Day 5 of 1,000 Product Manager Interview Questions">
+  <meta property="og:url" content="https://imoein.com/blog/en/banking-app-home-screen-monthly-users/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/post-20261114-c9xde-b53fc2eb5f15.png">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/post-20261114-c9xde-b53fc2eb5f15.png">
+  <meta property="og:image:alt" content="How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?">
+  <meta property="article:published_time" content="2026-11-05">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="1000 Product Manager Interview Questions">
+<meta property="article:tag" content="Home Screen Design"><meta property="article:tag" content="Digital Banking"><meta property="article:tag" content="Monthly Users"><meta property="article:tag" content="Accessibility"><meta property="article:tag" content="Usability Testing">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month? | iMoein">
+  <meta name="twitter:description" content="Day 5 of 1,000 Product Manager Interview Questions">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/banking-app-home-screen-monthly-users/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/post-20261114-c9xde-b53fc2eb5f15.png">
+  <meta name="twitter:image:alt" content="How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?">
+  <title>How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month? | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/banking-app-home-screen-monthly-users/#article", "headline": "How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?", "description": "Day 5 of 1,000 Product Manager Interview Questions", "url": "https://imoein.com/blog/en/banking-app-home-screen-monthly-users/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/banking-app-home-screen-monthly-users/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-05", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/post-20261114-c9xde-b53fc2eb5f15.png", "articleSection": "1000 Product Manager Interview Questions", "keywords": ["Home Screen Design", "Digital Banking", "Monthly Users", "Accessibility", "Usability Testing"], "wordCount": 2924, "timeRequired": "PT15M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/banking-app-home-screen-monthly-users/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/?lang=en"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "1000 Product Manager Interview Questions", "item": "https://imoein.com/blog/en/category/1000-product-manager-interview-questions/"}, {"@type": "ListItem", "position": 4, "name": "How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?", "item": "https://imoein.com/blog/en/banking-app-home-screen-monthly-users/"}]}</script>  <link rel="stylesheet" href="/site-footer.css">
+  <link rel="stylesheet" href="/site-analytics.css">
+  <script defer src="/site-analytics.js"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/banking-app-home-screen-monthly-users/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/?lang=en">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><span aria-hidden="true">/</span><span aria-current="page">How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-05" data-iso="2026-11-05">2026-11-05</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>15 min read</span>
+    </div>
+    <h1>How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?</h1>
+    <p>Day 5 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/post-20261114-c9xde-b53fc2eb5f15.webp" alt="How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine someone opening their banking app after a month away. They want to check their balance and pay a bill, but instead find a crowded home screen filled with financial charts, loan offers, promotional messages and services they rarely use.</strong></p>
+<p>Should we simplify the home screen for this customer? Or could removing information and features actually make their experience worse?</p>
+<p>This is precisely the kind of judgement a Product Manager needs to make through an understanding of user behaviour, evidence and business constraints.</p>
+<h2 id="what-is-the-interviewer-really-assessing">What Is the Interviewer Really Assessing?</h2>
+<p>The interview question is:</p>
+<p><strong>How would you design the home page of a banking app for a user who only logs in once a month?</strong></p>
+<p>This is a Product Design and User Experience question, but the interviewer is not simply asking for an attractive interface or a list of potential features.</p>
+<p>A strong response should demonstrate that you can:</p>
+<ul>
+<li>Identify the underlying user problem rather than jumping straight into a design.</li>
+<li>Investigate infrequent usage without assuming that it represents dissatisfaction.</li>
+<li>Balance simplicity, efficient access, security and commercial objectives.</li>
+<li>Compare feasible design approaches and explain your choice.</li>
+<li>Measure success through meaningful user outcomes.</li>
+<li>Explain what evidence would make you reconsider your initial recommendation.</li>
+</ul>
+<p>The central skill being tested is product judgement rather than interface design alone.</p>
+<h2 id="step-one-understand-why-the-user-logs-in-only-once-a-month">Step One: Understand Why the User Logs In Only Once a Month</h2>
+<p>One of the easiest mistakes is to treat login frequency as a direct measure of customer satisfaction.</p>
+<p>Yet monthly usage is not necessarily a problem.</p>
+<p>A customer might open their banking app only when their salary arrives, when they need to pay a bill or when they want to review their transactions. For that person, a monthly visit may represent perfectly successful product usage.</p>
+<p>Another customer might visit infrequently because the interface is confusing, they struggle to remember where services are located, or they have previously encountered an unsuccessful transaction.</p>
+<p>These users exhibit similar behaviour, but their underlying needs are very different.</p>
+<p>Before proposing a design, I would investigate several questions:</p>
+<ol>
+<li>What are monthly users primarily trying to accomplish?</li>
+<li>Can they complete those tasks successfully?</li>
+<li>Is their limited usage intentional, or does it reflect friction in the experience?</li>
+<li>Which services are essential to them, and which merely add complexity?</li>
+<li>Are their difficulties related to navigation, understanding account information or concerns about security?</li>
+</ol>
+<p>We can investigate these questions through behavioural analytics, navigation paths, error patterns, customer support enquiries and short user interviews.</p>
+<p><strong>The important principle is not to assume that infrequent usage needs fixing before understanding what causes it.</strong></p>
+<h2 id="step-two-choose-a-specific-user-segment">Step Two: Choose a Specific User Segment</h2>
+<p>Designing a single home screen for everyone who logs in once a month would be an imprecise starting point.</p>
+<p>We could identify at least three distinct groups:</p>
+<ul>
+<li>Customers who mainly check balances and recent transactions.</li>
+<li>Customers who make periodic payments, such as bills, loan repayments or bank transfers.</li>
+<li>Customers who use digital banking less often because they find it difficult or worry about making mistakes.</li>
+</ul>
+<p>For each group, I would examine the importance and frequency of their tasks, the friction they encounter and the alternatives currently available to them.</p>
+<p>Suppose the initial research suggests that customers making monthly payments have a particularly clear and testable problem.</p>
+<p>We could then frame the design challenge as follows:</p>
+<p><strong>How might we help customers who make monthly payments complete their primary banking tasks quickly, without unnecessary searching or an increased risk of mistakes?</strong></p>
+<p>This is more actionable than simply deciding to create a cleaner interface.</p>
+<p>It identifies the user, the desired behavioural outcome and the constraints that matter.</p>
+<h2 id="step-three-what-should-the-home-screen-help-the-user-understand">Step Three: What Should the Home Screen Help the User Understand?</h2>
+<p>For somebody returning after several weeks, an effective home screen should address three needs.</p>
+<h3 id="1-what-is-the-current-state-of-my-account">1. What Is the Current State of My Account?</h3>
+<p>The customer may want to know what has happened since their previous visit without navigating through several screens.</p>
+<p>Useful information might include the available balance, recent transactions and significant changes since the last login.</p>
+<p>However, this information must be presented responsibly:</p>
+<ul>
+<li>Show when account information was last updated.</li>
+<li>Never present outdated information as though it were current.</li>
+<li>Allow users to conceal balances and other sensitive details.</li>
+<li>Clearly distinguish important account messages from promotional content.</li>
+</ul>
+<p>A summary of changes since the previous visit could be valuable, provided the underlying information is accurate and sufficiently complete.</p>
+<h3 id="2-how-do-i-complete-the-task-i-came-here-to-do">2. How Do I Complete the Task I Came Here to Do?</h3>
+<p>Frequent users may remember the steps required to reach a particular service.</p>
+<p>Someone who visits only once a month may need to rediscover that navigation path every time.</p>
+<p>This connects to the usability principle of <strong>recognition rather than recall</strong>.</p>
+<p>Nielsen Norman Group explains that recognising available options generally requires less mental effort than retrieving them from memory without contextual cues.</p>
+<p>For a monthly banking customer, the home screen should therefore make important actions easy to recognise through clear, descriptive labels.</p>
+<p>Depending on user research, these might include:</p>
+<ul>
+<li>Transfer money</li>
+<li>Pay a bill</li>
+<li>View transactions</li>
+<li>Make a loan repayment</li>
+</ul>
+<p>The precise actions and their priority should be determined by evidence, not assumptions about what banking customers usually do.</p>
+<p>Importantly, making a transaction easier to find should not mean bypassing the checks necessary to complete it securely.</p>
+<h3 id="3-is-there-anything-important-i-need-to-know">3. Is There Anything Important I Need to Know?</h3>
+<p>Someone who has been away for a month may have missed significant updates concerning their account or banking services.</p>
+<p>A genuinely relevant notification could provide considerably more value than another promotional offer.</p>
+<p>For example, a forthcoming loan repayment or an important change to the status of an application might deserve prominent placement.</p>
+<p>Nevertheless, such messages must be accurate, timely and actionable.</p>
+<p>An outdated notification or an ambiguous financial warning could create anxiety or prompt an inappropriate decision.</p>
+<h2 id="step-four-compare-the-design-options">Step Four: Compare the Design Options</h2>
+<p>There are three credible approaches to consider.</p>
+<h3 id="option-one-a-standard-home-screen-for-everyone">Option One: A Standard Home Screen for Everyone</h3>
+<p>All customers see the same arrangement of banking information and services.</p>
+<p>This is relatively straightforward to develop, predictable to use and easier to maintain.</p>
+<p>However, monthly customers may still need to search through numerous irrelevant functions to accomplish their primary task.</p>
+<h3 id="option-two-a-fully-personalised-home-screen">Option Two: A Fully Personalised Home Screen</h3>
+<p>The application dynamically changes its content and layout according to each customer's transaction history, usage patterns and predicted needs.</p>
+<p>When reliable data and sufficient technical capability are available, this could be valuable.</p>
+<p>However, it also introduces complexity and risk.</p>
+<p>A customer who logs in monthly may generate too little behavioural information for accurate predictions.</p>
+<p>Furthermore, if navigation elements continually move, the customer may encounter what feels like an unfamiliar interface on every visit.</p>
+<p>Personalisation can therefore undermine the very predictability that an infrequent user needs.</p>
+<h3 id="option-three-a-stable-layout-with-contextual-assistance">Option Three: A Stable Layout With Contextual Assistance</h3>
+<p>This would be my preferred starting point.</p>
+<p>The home screen retains a consistent structure. Account information, primary actions and access to other services remain in predictable locations.</p>
+<p>Alongside this stable foundation, a small, carefully controlled section can display information relevant to the customer's monthly visit.</p>
+<p>For example, it might show important changes since their previous login or provide a shortcut to a recurring payment they have made before.</p>
+<p>The distinction is that <strong>relevant information can change without constantly rearranging the interface itself</strong>.</p>
+<p>Compared with full personalisation, this approach is easier to test, limits the need for customers to relearn navigation and allows the value of contextual features to be assessed independently.</p>
+<h2 id="an-essential-constraint-simplicity-must-not-compromise-security">An Essential Constraint: Simplicity Must Not Compromise Security</h2>
+<p>In banking, fewer taps do not always mean a better experience.</p>
+<p>Allowing a customer to reach a money-transfer screen directly may be useful. Removing necessary identity verification, payment confirmation or other security controls is an entirely different matter.</p>
+<p>Likewise, displaying sensitive financial information on the home screen requires careful consideration of privacy.</p>
+<p>Accessibility also matters.</p>
+<p>Readable text, meaningful labels, sufficiently large touch targets and compatibility with different visual or motor abilities should all be evaluated.</p>
+<p>The W3C's WCAG 2.2 provides an established reference for accessible digital interfaces, although its application to native mobile applications needs to be interpreted according to the technology and relevant requirements.</p>
+<p>Commercial objectives introduce another potential conflict.</p>
+<p>A bank may want to promote financial products, but the home screen should not prioritise sales so aggressively that essential customer tasks become harder.</p>
+<p>For example, the UK Financial Conduct Authority's Consumer Duty framework emphasises understandable communications, effective customer support and the avoidance of foreseeable harm.</p>
+<p>This is a UK regulatory framework rather than a universal banking requirement, but it offers a useful perspective on balancing customer outcomes with commercial interests.</p>
+<h2 id="practical-example-redesigning-a-digital-banking-home-screen">Practical Example: Redesigning a Digital Banking Home Screen</h2>
+<p><strong>Hypothetical scenario</strong></p>
+<p>Imagine a digital bank whose product team notices that a segment of customers returns at roughly monthly intervals.</p>
+<p>Initial analytics indicate that some of these customers move between several sections before reaching bill payments or transaction history.</p>
+<p>However, that behaviour alone does not establish that navigation is problematic. Customers might simply be exploring the available services.</p>
+<p>The Product Manager works with a data analyst, UX researcher and customer support team to investigate the circumstances surrounding these navigation patterns.</p>
+<p>They look for evidence of errors, abandoned tasks or support enquiries associated with the journeys.</p>
+<p>Two potential solutions emerge:</p>
+<p><strong>Option A:</strong> Introduce clearly labelled shortcuts to frequently used banking services.</p>
+<p><strong>Option B:</strong> Retain those shortcuts while adding a concise summary of important account changes since the previous visit.</p>
+<p>Rather than immediately implementing both, the team first evaluates prototypes through usability testing.</p>
+<p>If customers successfully complete their tasks using a stable home screen with clearer shortcuts, building an additional account-summary feature might be unnecessary.</p>
+<p>If the evidence instead suggests that customers struggle to understand what has happened between visits, the summary could deliver greater value.</p>
+<p>The UX designer is responsible for making the interface understandable. Engineering assesses implementation feasibility, while security specialists review sensitive interactions.</p>
+<p>The Product Manager brings this evidence together to decide which opportunity deserves investment and what outcome the team should pursue.</p>
+<p>In organisations using Scrum, the Product Owner is accountable for maximising product value and ensuring effective Product Backlog management. That accountability is not automatically identical to the job title Product Manager. Where a Project Manager role exists, its focus is more closely associated with coordinating delivery and managing execution constraints.</p>
+<p>These responsibilities may overlap in practice, but distinguishing them helps prevent confusion over who owns the product decision.</p>
+<h2 id="how-would-we-measure-success">How Would We Measure Success?</h2>
+<p>A tempting but potentially misleading metric is login frequency.</p>
+<p>If somebody needs to use their bank once a month, encouraging daily visits does not necessarily create additional customer value.</p>
+<p>A better measurement approach focuses on whether customers achieve their intended outcomes.</p>
+<h3 id="1-primary-task-completion-rate">1. Primary Task Completion Rate</h3>
+<p>Measure the proportion of customers who successfully complete a clearly defined task, such as paying a bill or obtaining a statement, during their monthly visit.</p>
+<p>The denominator matters.</p>
+<p>We should measure success among customers with that specific intention or identified task, rather than treating every login as a payment attempt.</p>
+<p>In usability research, the task can be established beforehand. In product analytics, identifiable transaction or service journeys can be evaluated separately.</p>
+<h3 id="2-time-to-complete-the-task">2. Time to Complete the Task</h3>
+<p>Measure the time between entering the relevant journey and successfully completing the action.</p>
+<p>For example, how long does it take somebody to complete a bill payment?</p>
+<p>This helps establish whether the experience has genuinely improved rather than simply moving buttons to different positions.</p>
+<h3 id="3-error-and-abandonment-rates">3. Error and Abandonment Rates</h3>
+<p>Monitor observable errors, failed attempts and journeys abandoned before completion.</p>
+<p>These should be analysed by task type so that problems in bill payments are not obscured by performance elsewhere.</p>
+<h3 id="4-guardrail-metrics">4. Guardrail Metrics</h3>
+<p>The redesign must not produce unacceptable increases in mistaken or failed transactions, security and authentication problems, related support enquiries or customer complaints.</p>
+<p>The team should agree on the relevant guardrails and acceptable thresholds before the experiment begins.</p>
+<p>Because the target customers return approximately monthly, a meaningful production evaluation should ideally cover several natural usage cycles.</p>
+<p>A few days of encouraging results would not provide sufficient evidence of sustained improvement for this particular segment.</p>
+<p>Financial data collection must also remain proportionate: sensitive account details should not be unnecessarily recorded in analytics merely to measure interface performance.</p>
+<h2 id="a-natural-interview-answer">A Natural Interview Answer</h2>
+<p>Here is how I would bring that reasoning together in an interview:</p>
+<p>"First, I'd want to understand why the customer only logs in once a month. That might not be a problem at all. They could simply use the app for monthly payments or checking their balance.</p>
+<p>"I'd look at their behaviour and speak to a few customers to understand what they're trying to accomplish and where they encounter difficulties.</p>
+<p>"If their main need is to complete a small number of regular banking tasks, I'd favour a stable, predictable home screen where balances, transfers, bill payments and transaction history are easy to find.</p>
+<p>"If research shows that customers struggle to understand what has changed since their previous visit, I'd also test a simple account summary.</p>
+<p>"I'd measure success through task completion, time to completion and errors rather than trying to increase login frequency. Security and privacy would remain non-negotiable constraints.</p>
+<p>"And if the evidence suggests the real problem is authentication or payment confirmation rather than navigation, I'd change the priority and address that instead."</p>
+<p>This response offers a decision-making process rather than merely listing attractive interface features.</p>
+<p>It also explains the conditions under which the recommendation should change.</p>
+<h2 id="likely-interview-follow-up-questions">Likely Interview Follow-Up Questions</h2>
+<h3 id="question-one-what-would-you-do-if-you-had-only-two-weeks">Question One: What Would You Do If You Had Only Two Weeks?</h3>
+<p>Two weeks would not be enough to confidently measure the long-term effect of a redesign on customers who return monthly.</p>
+<p>However, it would be enough to reduce uncertainty and determine whether further investment is justified.</p>
+<p>I would focus on:</p>
+<ul>
+<li>Identifying important monthly customer journeys from existing analytics.</li>
+<li>Interviewing a small, relevant sample to understand their tasks and difficulties.</li>
+<li>Working with a designer to prepare one or two inexpensive prototypes.</li>
+<li>Conducting usability tests to identify observable task-completion problems.</li>
+<li>Using those findings to decide whether a limited production experiment is warranted.</li>
+</ul>
+<p>The objective would not be to claim improved retention or sustained behavioural change after two weeks.</p>
+<p>It would be to answer the most important unanswered questions at a reasonable cost.</p>
+<h3 id="question-two-what-evidence-would-make-you-reject-your-proposed-solution">Question Two: What Evidence Would Make You Reject Your Proposed Solution?</h3>
+<p>If research showed that monthly customers already completed their tasks without meaningful difficulty, I would lower the priority of a home-screen redesign.</p>
+<p>If testing revealed that new shortcuts increased mistakes, confusion or difficulty accessing essential services, I would revise or remove them.</p>
+<p>The evidence might also show that the biggest problem occurs before customers reach the home screen, perhaps during password recovery, authentication or transaction confirmation.</p>
+<p>In that situation, continuing to redesign the home screen would be addressing the wrong problem.</p>
+<p>A competent Product Manager should be able to defend a decision while remaining willing to abandon it when better evidence emerges.</p>
+<h2 id="common-mistakes-and-weak-answers">Common Mistakes and Weak Answers</h2>
+<p><strong>"They don't use the app very often, so I'd remove all the unnecessary features."</strong></p>
+<p>This assumes that infrequent usage automatically calls for fewer features. A rarely used service may still be essential to a particular customer.</p>
+<p>Without understanding the relevant tasks, removing functionality is not a defensible decision.</p>
+<p><strong>"I'd use AI to personalise the entire home screen."</strong></p>
+<p>This jumps to a technically ambitious solution before establishing whether the bank has sufficient data, whether predictions would be reliable or whether customers would benefit.</p>
+<p>Poorly designed personalisation could make an already unfamiliar interface even harder to navigate.</p>
+<p><strong>"I'd redesign the app to make customers log in every day."</strong></p>
+<p>This confuses increased engagement with customer value.</p>
+<p>More sessions are not necessarily a desirable outcome for somebody whose banking needs are already being met through one monthly visit.</p>
+<p><strong>"I'd remove transaction confirmation steps to make everything faster."</strong></p>
+<p>Simplification in a financial product must account for fraud, payment errors, privacy and security requirements.</p>
+<p>Reducing friction does not justify removing essential safeguards.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Designing a banking app home screen for somebody who logs in once a month should begin with understanding why they return and what they need to accomplish.</p>
+<p>If the evidence points to difficulty finding and completing recurring tasks, a stable layout, clearly labelled primary actions and a small amount of relevant contextual information provide a sensible starting point. This approach is easier to evaluate than extensive personalisation and reduces the risk of making navigation unpredictable.</p>
+<p>But it remains a testable recommendation, not a universal answer. If research indicates that the real difficulty lies in authentication, understanding financial information, security or another part of the journey, the product priorities should change accordingly.</p>
+<p><strong>The Product Manager's job is not to maximise the time customers spend inside a banking app. It is to help them achieve their intended outcomes confidently, with minimal unnecessary effort and without compromising security.</strong></p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://www.reforge.com/blog/product-manager-interview-questions" rel="noopener noreferrer" target="_blank">Reforge — Product Manager Interview Questions</a> — Guidance on assessing product judgement in interviews; not official verification of this exact banking scenario.</li>
+<li><a href="https://www.nngroup.com/articles/recognition-and-recall/" rel="noopener noreferrer" target="_blank">Nielsen Norman Group — Memory Recognition and Recall in User Interfaces</a> — Research-informed guidance on recognition and recall in interface design.</li>
+<li><a href="https://www.w3.org/TR/WCAG22/" rel="noopener noreferrer" target="_blank">W3C — Web Content Accessibility Guidelines (WCAG) 2.2</a> — Accessibility requirements and recommendations for digital interfaces.</li>
+<li><a href="https://www.fca.org.uk/firms/consumer-duty/about" rel="noopener noreferrer" target="_blank">Financial Conduct Authority — About the Consumer Duty</a> — UK regulatory expectations concerning customer understanding, support and consumer outcomes.</li>
+</ol>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/home-screen-design/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Home Screen Design</span></a><a class="blog-post-term tag" href="/blog/en/tag/digital-banking/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Digital Banking</span></a><a class="blog-post-term tag" href="/blog/en/tag/monthly-users/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Monthly Users</span></a><a class="blog-post-term tag" href="/blog/en/tag/accessibility/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Accessibility</span></a><a class="blog-post-term tag" href="/blog/en/tag/usability-testing/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Usability Testing</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#what-is-the-interviewer-really-assessing" class="h2">What Is the Interviewer Really Assessing?</a>
+          <a href="#step-one-understand-why-the-user-logs-in-only-once-a-month" class="h2">Step One: Understand Why the User Logs In Only Once a Month</a>
+          <a href="#step-two-choose-a-specific-user-segment" class="h2">Step Two: Choose a Specific User Segment</a>
+          <a href="#step-three-what-should-the-home-screen-help-the-user-understand" class="h2">Step Three: What Should the Home Screen Help the User Understand?</a>
+          <a href="#1-what-is-the-current-state-of-my-account" class="h3">1. What Is the Current State of My Account?</a>
+          <a href="#2-how-do-i-complete-the-task-i-came-here-to-do" class="h3">2. How Do I Complete the Task I Came Here to Do?</a>
+          <a href="#3-is-there-anything-important-i-need-to-know" class="h3">3. Is There Anything Important I Need to Know?</a>
+          <a href="#step-four-compare-the-design-options" class="h2">Step Four: Compare the Design Options</a>
+          <a href="#option-one-a-standard-home-screen-for-everyone" class="h3">Option One: A Standard Home Screen for Everyone</a>
+          <a href="#option-two-a-fully-personalised-home-screen" class="h3">Option Two: A Fully Personalised Home Screen</a>
+          <a href="#option-three-a-stable-layout-with-contextual-assistance" class="h3">Option Three: A Stable Layout With Contextual Assistance</a>
+          <a href="#an-essential-constraint-simplicity-must-not-compromise-security" class="h2">An Essential Constraint: Simplicity Must Not Compromise Security</a>
+          <a href="#practical-example-redesigning-a-digital-banking-home-screen" class="h2">Practical Example: Redesigning a Digital Banking Home Screen</a>
+          <a href="#how-would-we-measure-success" class="h2">How Would We Measure Success?</a>
+          <a href="#1-primary-task-completion-rate" class="h3">1. Primary Task Completion Rate</a>
+          <a href="#2-time-to-complete-the-task" class="h3">2. Time to Complete the Task</a>
+          <a href="#3-error-and-abandonment-rates" class="h3">3. Error and Abandonment Rates</a>
+          <a href="#4-guardrail-metrics" class="h3">4. Guardrail Metrics</a>
+          <a href="#a-natural-interview-answer" class="h2">A Natural Interview Answer</a>
+          <a href="#likely-interview-follow-up-questions" class="h2">Likely Interview Follow-Up Questions</a>
+          <a href="#question-one-what-would-you-do-if-you-had-only-two-weeks" class="h3">Question One: What Would You Do If You Had Only Two Weeks?</a>
+          <a href="#question-two-what-evidence-would-make-you-reject-your-proposed-solution" class="h3">Question Two: What Evidence Would Make You Reject Your Proposed Solution?</a>
+          <a href="#common-mistakes-and-weak-answers" class="h2">Common Mistakes and Weak Answers</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+          <a href="#sources" class="h2">Sources</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">More writing</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/en/first-lesson-dropoff/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Users Install Your Learning App but Never Finish Lesson One. What Would You Do?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-04">2026-11-04</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/designing-products-for-limited-access/">
+            <span class="blog-sidebar-item-category">Product Design &amp; UX</span>
+            <strong>Designing an Everyday Product for People with Limited Access</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-01">2026-11-01</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/daily-planning-for-working-parents/">
+            <span class="blog-sidebar-item-category">Product Design &amp; UX</span>
+            <strong>How Would You Design a Product to Help Working Parents Plan Their Day?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-03">2026-11-03</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/en/">Browse all articles <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/banking-app-home-screen-monthly-users/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong>Moein Ghezelbash</strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/first-lesson-dropoff/" class="blog-end-next">
+      <span>Read next <span aria-hidden="true">↗</span></span>
+      <strong>Users Install Your Learning App but Never Finish Lesson One. What Would You Do?</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">Home</a>
+        <a data-site-footer-link="about" href="/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">Projects</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js"></script>
+</body>
+</html>
