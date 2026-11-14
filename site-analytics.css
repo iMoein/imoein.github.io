@@ -1,0 +1,62 @@
+/* Sitewide, accessible and non-blocking opt-in for Google Analytics.
+   Cloudflare's separate cookieless collection does not use this prompt. */
+.site-privacy-choice[hidden] {display:none!important;}
+.site-privacy-choice {
+  position:fixed;inset-inline-end:18px;bottom:18px;z-index:15000;
+  width:min(410px,calc(100vw - 30px));box-sizing:border-box;
+  padding:17px 18px 15px;border-radius:17px;
+  border:1px solid rgba(29,130,142,.27);
+  background:#fff;color:#17354a;
+  box-shadow:0 16px 45px rgba(13,44,61,.23);
+  font-family:inherit;text-align:start;line-height:1.7;
+}
+.site-privacy-choice strong {display:block;font-weight:850;font-size:14px;line-height:1.7;}
+.site-privacy-choice p {margin:5px 0 0;color:#536b7c;font-size:12px;line-height:1.85;}
+.site-privacy-choice .site-privacy-state {font-size:11px;color:#2b777e;font-weight:700;}
+.site-privacy-choice .site-privacy-state:empty {display:none;}
+.site-privacy-actions {display:flex;gap:9px;flex-wrap:wrap;margin-top:13px;}
+.site-privacy-actions button {
+  min-width:94px;min-height:42px;flex:1 1 0;
+  padding:9px 12px;border-radius:10px;
+  font:inherit;font-size:12px;font-weight:800;line-height:1.55;
+  cursor:pointer;transition:background .15s,border-color .15s;
+}
+.site-privacy-accept {background:#157985;border:1px solid #157985;color:#fff;}
+.site-privacy-accept:hover {background:#0c6871;}
+.site-privacy-reject,.site-privacy-close {background:transparent;border:1px solid #9cbfc6;color:#285367;}
+.site-privacy-reject:hover,.site-privacy-close:hover {background:#eef8f7;}
+.site-privacy-actions button:focus-visible,.site-privacy-settings:focus-visible {
+  outline:3px solid #26a6af;outline-offset:3px;
+}
+.site-unified-footer .site-footer-nav .site-privacy-settings {
+  display:inline-flex;align-items:center;justify-content:center;
+  background:transparent;border:0;padding:4px 1px;border-radius:2px;
+  color:#284b60;font:inherit;font-size:.79rem;font-weight:750;
+  line-height:1.6;cursor:pointer;
+}
+.site-unified-footer .site-footer-nav .site-privacy-settings:hover {
+  color:#16838b;text-decoration:underline;
+}
+html[data-color-scheme="dark"] .site-privacy-choice {
+  background:#1b3142;color:#e1f6f5;
+  border-color:rgba(129,200,205,.32);
+  box-shadow:0 16px 44px rgba(0,12,27,.46);
+}
+html[data-color-scheme="dark"] .site-privacy-choice p {color:#bfd0d9;}
+html[data-color-scheme="dark"] .site-privacy-choice .site-privacy-state {color:#90e7dd;}
+html[data-color-scheme="dark"] .site-privacy-accept {background:#1c8c92;color:#fff;border-color:#1c8c92;}
+html[data-color-scheme="dark"] .site-privacy-accept:hover {background:#16767b;}
+html[data-color-scheme="dark"] .site-privacy-reject,
+html[data-color-scheme="dark"] .site-privacy-close {
+  background:#213f50;color:#d6ebed;border-color:rgba(150,203,209,.42);
+}
+html[data-color-scheme="dark"] .site-privacy-reject:hover,
+html[data-color-scheme="dark"] .site-privacy-close:hover {background:#2d5060;}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-nav .site-privacy-settings {color:#c4dfe5;}
+html[data-color-scheme="dark"] .site-unified-footer .site-footer-nav .site-privacy-settings:hover {color:#9eeadf;}
+@media(max-width:560px) {
+  .site-privacy-choice {inset-inline-start:12px;inset-inline-end:12px;width:auto;bottom:12px;padding:14px 15px;max-height:75dvh;overflow:auto;}
+  .site-privacy-actions {gap:8px;}
+  .site-privacy-actions button {min-height:44px;}
+}
+@media print {.site-privacy-choice,.site-privacy-settings {display:none!important;}}
