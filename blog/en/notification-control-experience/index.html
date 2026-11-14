@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Day 7 of 1,000 Product Manager Interview Questions">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/notification-control-experience/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts? | iMoein">
+  <meta property="og:description" content="Day 7 of 1,000 Product Manager Interview Questions">
+  <meta property="og:url" content="https://imoein.com/blog/en/notification-control-experience/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/post-20261114-nmjf1-d2f97e40cb20.png">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/post-20261114-nmjf1-d2f97e40cb20.png">
+  <meta property="og:image:alt" content="How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?">
+  <meta property="article:published_time" content="2026-11-07">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="1000 Product Manager Interview Questions">
+<meta property="article:tag" content="Notification management"><meta property="article:tag" content="Notification fatigue"><meta property="article:tag" content="User preferences"><meta property="article:tag" content="Usability Testing">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts? | iMoein">
+  <meta name="twitter:description" content="Day 7 of 1,000 Product Manager Interview Questions">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/notification-control-experience/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/post-20261114-nmjf1-d2f97e40cb20.png">
+  <meta name="twitter:image:alt" content="How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?">
+  <title>How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts? | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/notification-control-experience/#article", "headline": "How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?", "description": "Day 7 of 1,000 Product Manager Interview Questions", "url": "https://imoein.com/blog/en/notification-control-experience/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/notification-control-experience/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-07", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/post-20261114-nmjf1-d2f97e40cb20.png", "articleSection": "1000 Product Manager Interview Questions", "keywords": ["Notification management", "Notification fatigue", "User preferences", "Usability Testing"], "wordCount": 2567, "timeRequired": "PT14M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/notification-control-experience/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/?lang=en"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "1000 Product Manager Interview Questions", "item": "https://imoein.com/blog/en/category/1000-product-manager-interview-questions/"}, {"@type": "ListItem", "position": 4, "name": "How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?", "item": "https://imoein.com/blog/en/notification-control-experience/"}]}</script>  <link rel="stylesheet" href="/site-footer.css">
+  <link rel="stylesheet" href="/site-analytics.css">
+  <script defer src="/site-analytics.js"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/notification-control-experience/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/?lang=en">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><span aria-hidden="true">/</span><span aria-current="page">How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-07" data-iso="2026-11-07">2026-11-07</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>14 min read</span>
+    </div>
+    <h1>How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?</h1>
+    <p>Day 7 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/post-20261114-nmjf1-d2f97e40cb20.webp" alt="How Would You Design Notification Controls for Users Overwhelmed by Too Many Alerts?" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine someone installs a task management app to make sure nothing important slips through the cracks. Before long, every comment, status change, message and reminder becomes another interruption. Frustrated, they decide to switch off notifications altogether.</strong></p>
+<p>That might solve the immediate problem of distraction. But what happens when an important update, one that genuinely requires their attention, gets lost along with everything else?</p>
+<p>This creates a familiar product design dilemma: <strong>How do we reduce unnecessary interruptions without preventing users from receiving information that matters?</strong></p>
+<p>That is the challenge behind the seventh question in this series of 1,000 Product Manager interview questions.</p>
+<h2 id="the-interview-question-and-what-it-tests">The Interview Question and What It Tests</h2>
+<p><strong>Question:</strong> Design a notification control experience for a user who is tired of receiving too many notifications.</p>
+<p>The source material classifies this as a difficult product sense and design question.</p>
+<p>The interviewer is not simply looking for a list of notification settings. They want to understand whether the candidate can:</p>
+<ul>
+<li>Identify the underlying problem rather than immediately responding to the apparent request.</li>
+<li>Select a meaningful user segment and investigate its needs.</li>
+<li>Balance user convenience, the value of timely information and business objectives.</li>
+<li>Recommend a solution that can be tested with limited cost and risk.</li>
+<li>Define success measures and explain when the initial decision should be reconsidered.</li>
+</ul>
+<p>What distinguishes a strong answer is not the number of features proposed, but the reasoning behind the decision.</p>
+<h2 id="first-understand-what-is-actually-frustrating-the-user">First, Understand What Is Actually Frustrating the User</h2>
+<p>When someone says, "This app sends too many notifications", the problem is not necessarily the number of notifications.</p>
+<p>Several different issues might be involved.</p>
+<p><strong>Excessive volume:</strong> The application generates a separate notification for every minor event.</p>
+<p><strong>Irrelevance:</strong> People receive updates that have little connection to their responsibilities or interests.</p>
+<p><strong>Poor timing:</strong> A notification may be useful, but it arrives during a meeting, a period of concentration or personal time.</p>
+<p><strong>Weak prioritisation:</strong> A promotional message and an urgent operational alert are presented with similar prominence.</p>
+<p><strong>Lack of control:</strong> Users cannot stop unwanted notifications without disabling everything, including information they need.</p>
+<p>These problems require different interventions.</p>
+<p>For example, if the underlying issue is irrelevant content, introducing a Do Not Disturb option may hide the symptoms without addressing the cause. If delivery timing is the problem, simply reducing volume may achieve very little.</p>
+<p>Before designing anything, we need to establish what users actually want to change.</p>
+<h2 id="which-users-should-we-prioritise">Which Users Should We Prioritise?</h2>
+<p>A common mistake in product design interviews is trying to solve the problem for everyone simultaneously.</p>
+<p>A better starting point is a segment where the problem is particularly severe, frequent and observable.</p>
+<p>For our hypothetical task management application, we could focus on highly active users who collaborate across several projects and receive frequent notifications about comments, assignments and deadlines.</p>
+<p>This does not mean other users are unimportant. It simply gives us a concrete situation in which to investigate the problem.</p>
+<p>There are four questions worth exploring.</p>
+<p><strong>How severe is the problem?</strong> Are people mildly irritated, or have they disabled notifications completely?</p>
+<p><strong>How frequently does it occur?</strong> Is the problem constant, or concentrated around particular activities and working hours?</p>
+<p><strong>What workarounds already exist?</strong> Do users mute their devices, rely on operating-system settings or simply ignore notifications?</p>
+<p><strong>Which notifications are genuinely valuable?</strong> Do all alerts prompt meaningful action, or do only particular categories matter?</p>
+<p>Answering these questions requires a combination of user interviews, observation and product analytics.</p>
+<p>Behavioural data can reveal which notification types are sent, how frequently they appear and what happens afterwards. However, those data alone cannot reliably explain the user's motivation.</p>
+<p>Someone might not open a notification because the information displayed in the notification itself was sufficient, rather than because it was irrelevant.</p>
+<p>This is why qualitative research matters.</p>
+<h2 id="what-solutions-could-we-consider">What Solutions Could We Consider?</h2>
+<p>There are three credible approaches.</p>
+<h3 id="option-1-allow-users-to-disable-all-notifications">Option 1: Allow Users to Disable All Notifications</h3>
+<p>The simplest approach is a single switch that turns every notification on or off.</p>
+<p>Its advantage is immediate control with almost no complexity.</p>
+<p>The disadvantage is that it treats important information and unnecessary interruptions identically.</p>
+<p>Users should retain this option, but it is not an adequate solution to notification fatigue on its own.</p>
+<h3 id="option-2-provide-highly-granular-notification-settings">Option 2: Provide Highly Granular Notification Settings</h3>
+<p>We could introduce individual controls for every event, message type, project and activity.</p>
+<p>This offers considerable flexibility, but it also increases complexity.</p>
+<p>Someone already frustrated by notifications may have little interest in navigating dozens of switches to regain control.</p>
+<p>Advanced settings can be valuable for experienced users, but they should not make the default experience unnecessarily demanding.</p>
+<h3 id="option-3-combine-sensible-prioritisation-with-simple-controls">Option 3: Combine Sensible Prioritisation with Simple Controls</h3>
+<p>This would be my preferred starting point.</p>
+<p>Rather than treating every notification equally, the product groups notifications according to their value, urgency and expected user action.</p>
+<p>The user receives a small number of understandable options for controlling delivery.</p>
+<p>For example:</p>
+<p><strong>Action-required notifications:</strong> Task assignments or changes that require a timely decision or response.</p>
+<p><strong>Routine updates:</strong> Comments, status changes and other information that can usually wait.</p>
+<p><strong>Recommendations and promotions:</strong> New feature announcements, offers and other optional communications that users should explicitly choose to receive.</p>
+<p>These categories are illustrative, not a universal classification. Research must establish what genuinely counts as urgent in the product's context.</p>
+<p>The benefit is that we can reduce interruption without eliminating useful communication.</p>
+<p>The trade-off is the additional complexity of classifying events correctly, including the risk of incorrectly assigning urgency.</p>
+<h2 id="what-should-the-experience-actually-look-like">What Should the Experience Actually Look Like?</h2>
+<p>Instead of designing a complicated preferences screen, I would organise the experience around a few understandable behaviours.</p>
+<h3 id="1-establish-sensible-defaults">1. Establish Sensible Defaults</h3>
+<p>Users should not have to configure numerous settings before they can enjoy a relatively calm experience.</p>
+<p>Low-priority events could be delivered quietly, while related updates could be grouped rather than generating repeated interruptions.</p>
+<p>Promotional notifications should require appropriate user consent rather than being enabled automatically.</p>
+<h3 id="2-let-users-control-notifications-in-context">2. Let Users Control Notifications in Context</h3>
+<p>When a notification becomes annoying, users should be able to change how similar notifications behave in future.</p>
+<p>Possible actions include:</p>
+<ul>
+<li>Mute similar notifications.</li>
+<li>Pause notifications from a particular project.</li>
+<li>Receive a summary instead of separate alerts.</li>
+<li>Open the settings for that notification category.</li>
+</ul>
+<p>Changes should be easy to understand, straightforward to reverse and available without unnecessary steps.</p>
+<h3 id="3-group-non-urgent-notifications">3. Group Non-Urgent Notifications</h3>
+<p>Instead of sending several individual messages about changes to the same project, the application could consolidate them into a summary.</p>
+<p>Users should ideally be able to choose when they receive these summaries.</p>
+<p>However, reducing notification volume must not become an excuse for delaying information that genuinely requires immediate action.</p>
+<h3 id="4-respect-time-and-concentration">4. Respect Time and Concentration</h3>
+<p>Users should be able to define quiet hours or periods when interruptions are undesirable.</p>
+<p>Where an operating system already provides features such as Focus and scheduled notification delivery, the product should respect those preferences rather than attempting to bypass them.</p>
+<p>Apple's official notification guidance supports this principle, recommending timely, valuable information, avoiding unnecessary repetition and accurately representing urgency.</p>
+<h3 id="5-explain-why-a-notification-was-sent">5. Explain Why a Notification Was Sent</h3>
+<p>People should understand why they are receiving an alert.</p>
+<p>For example, "You're responsible for this task" provides more useful context than a vague notification indicating that something has changed.</p>
+<p>Sensitive information must also be handled carefully, particularly when notifications may appear on a locked device.</p>
+<p>An important technical consideration is that in-app preferences do not replace operating-system controls.</p>
+<p>Android notification channels allow users to manage notification categories through system settings. On Android 13 and later, non-exempt notifications also require runtime permission. Apple platforms similarly require applications to respect notification permissions and system-level delivery preferences.</p>
+<h2 id="hypothetical-scenario-redesigning-a-project-management-app">Hypothetical Scenario: Redesigning a Project Management App</h2>
+<p>Consider a fictional software company operating a collaborative task management platform.</p>
+<p>Its support team receives complaints about excessive notifications from active users. Product analytics also indicate that some users have disabled notifications entirely.</p>
+<p>These observations suggest a problem, but do not establish its underlying cause.</p>
+<p>The Product Manager and UX designer investigate notification behaviour and interview affected users.</p>
+<p>Suppose the research indicates that users want to receive alerts about important assignments and approaching deadlines, but do not need an interruption every time someone posts a routine comment or makes a minor status change.</p>
+<p>The team compares three approaches: reducing notification volume across the board, building a comprehensive preferences interface, and introducing a limited set of categories with better defaults.</p>
+<p>They choose the third option for an initial experiment.</p>
+<p>The proposed experience includes:</p>
+<ul>
+<li>Consolidating consecutive comments relating to the same task.</li>
+<li>Delivering summaries of non-urgent changes at user-selected times.</li>
+<li>Preserving timely notifications for action-required events.</li>
+<li>Providing quick controls to mute a category or project.</li>
+<li>Offering simple default preferences with access to more advanced settings.</li>
+</ul>
+<p>Engineers handle notification delivery, platform permissions and notification channels. The designer tests whether the categories and controls make sense to users. Support monitors confusion and reports of missed important updates.</p>
+<p>The Product Manager makes the trade-offs between user value, business outcomes, implementation effort and risk.</p>
+<p>If the organisation uses Scrum, the Product Owner is accountable for maximising product value and effective Product Backlog management under the Scrum Guide. Where a Project Manager is involved, their responsibilities may include coordinating delivery against agreed time and resource constraints. The division of these responsibilities varies between organisations.</p>
+<p>The proposed changes are tested with a limited group of eligible users, while a comparison group retains the existing experience.</p>
+<p>This is a hypothetical experiment; no actual performance results are being claimed.</p>
+<h2 id="how-would-we-measure-success">How Would We Measure Success?</h2>
+<p>A reduction in notification volume does not automatically indicate success.</p>
+<p>The application might send far fewer notifications while simultaneously causing users to miss important work.</p>
+<p>We therefore need three different kinds of measures.</p>
+<p><strong>Outcome metric:</strong> The proportion of eligible high-priority events that users address appropriately within a time window relevant to the event's urgency. The denominator includes all eligible important events, not just notifications that were opened.</p>
+<p><strong>Diagnostic metric:</strong> The number of preventable interruptions per active user per week, alongside adoption of muting, summaries and notification preferences.</p>
+<p><strong>Guardrail metrics:</strong> Missed or delayed responses to important events, complete notification opt-outs, user complaints, and privacy or permission-related issues.</p>
+<p>The observation period should be defined before the experiment and reflect how frequently important events occur.</p>
+<p>If critical events are relatively uncommon, a short experiment may not provide sufficient evidence to support a confident conclusion.</p>
+<p>Results should also be reviewed across user segments and operating systems.</p>
+<p><strong>Notification open rate is not an appropriate primary success metric.</strong></p>
+<p>A lower open rate might be positive if users can understand the information directly from notifications without opening the application.</p>
+<p>Conversely, if important notifications no longer lead to appropriate action, the design needs reconsideration.</p>
+<h2 id="how-would-i-answer-this-in-an-interview">How Would I Answer This in an Interview?</h2>
+<p><strong>Example spoken response:</strong></p>
+<p>"I'd start by understanding what the user is actually frustrated by. Is it the volume of notifications, their relevance, when they arrive, or the lack of control?</p>
+<p>"Then I'd choose a specific user segment. For example, people who work across several projects in a task management app and receive frequent updates throughout the day.</p>
+<p>"I'd use behavioural data and interviews to understand which notifications genuinely help users take action and which ones create unnecessary interruptions.</p>
+<p>"For the first solution, rather than building a complicated preferences page, I'd group notifications into a few meaningful categories. I'd keep important alerts timely, consolidate lower-priority updates and give users quick ways to mute or adjust what they receive.</p>
+<p>"I'd then test the experience with a limited group. I wouldn't measure success purely by counting fewer notifications. I'd want to see whether unnecessary interruptions decrease without reducing users' ability to respond to important events.</p>
+<p>"If users remain frustrated or start missing relevant alerts, I'd revisit the categories and defaults."</p>
+<p>This is a stronger answer because it demonstrates a clear decision, explains why that decision makes sense, and identifies what evidence would lead to a different approach.</p>
+<h2 id="two-important-interview-follow-up-questions">Two Important Interview Follow-Up Questions</h2>
+<h3 id="1-what-would-you-do-if-you-had-only-two-weeks">1. What Would You Do If You Had Only Two Weeks?</h3>
+<p>I would not attempt to build a comprehensive notification management system.</p>
+<p>First, I would examine existing data by notification type, frequency, permission status and user segment. In parallel, I would interview a small number of highly active or dissatisfied users to identify the main source of frustration.</p>
+<p>I would then select a small, reversible intervention.</p>
+<p>For example, we might consolidate repetitive notifications within one category or add a quick mute control for that category.</p>
+<p>Before releasing the change, I would define success criteria and acceptable guardrail thresholds.</p>
+<p>Two weeks might be sufficient for initial diagnosis and usability testing, but not necessarily enough to establish long-term impact. I would make that limitation explicit rather than overstating what the results prove.</p>
+<h3 id="2-what-evidence-would-make-you-reject-your-proposed-solution">2. What Evidence Would Make You Reject Your Proposed Solution?</h3>
+<p>If notification summaries caused users to respond more slowly to important events, I would reconsider the classification or delivery timing.</p>
+<p>Similarly, if users struggled to understand the simplified settings, repeatedly reversed their preferences or continued disabling all notifications, the assumption that our design was sufficiently simple would be questionable.</p>
+<p>Research might also reveal that the primary issue is not notification volume at all, but poor relevance.</p>
+<p>In that case, improving notification targeting and event-generation rules would probably be a better investment than introducing additional controls.</p>
+<p><strong>Good product judgement means defending a decision through evidence without becoming attached to the solution itself.</strong></p>
+<h2 id="what-would-make-an-interview-answer-weak">What Would Make an Interview Answer Weak?</h2>
+<p><strong>"I'd add a switch to turn off notifications."</strong></p>
+<p>That provides control, but does not solve the distinction between useful information and unwanted interruptions.</p>
+<p><strong>"I'd make every notification type configurable."</strong></p>
+<p>Without understanding user needs, this simply transfers the design complexity to the user.</p>
+<p><strong>"I'd use AI to decide which alerts matter."</strong></p>
+<p>Without reliable data, a clear decision mechanism, acceptable error rates and user correction controls, this is a technological promise rather than a credible product recommendation.</p>
+<p><strong>"I'd optimise notification click-through rates."</strong></p>
+<p>Higher notification engagement is not necessarily better user experience. It may even conflict with the objective of reducing interruptions.</p>
+<p><strong>"This feature would benefit everyone."</strong></p>
+<p>A user waiting for a time-critical operational alert has different needs from someone who only wants an occasional activity summary.</p>
+<p>All these weak answers share the same underlying problem: they select a solution before adequately establishing the user need.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>For users overwhelmed by notifications, the best starting point is neither a comprehensive settings interface nor switching everything off. We first need to identify which notifications create genuine value, which cause unnecessary disruption and how user context changes what counts as important.</p>
+<p>My recommendation is <strong>a combination of user-centred prioritisation, sensible defaults, consolidated low-priority updates, and simple, reversible controls</strong>. It should be tested against actual user outcomes and reconsidered if it delays important responses or increases confusion.</p>
+<p>Better product design does not always mean adding more features. Sometimes the most valuable design decision is knowing when the product should leave the user alone.</p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/notifications" rel="noopener noreferrer" target="_blank">Apple Human Interface Guidelines — Notifications</a></li>
+<li><a href="https://developer.apple.com/design/human-interface-guidelines/managing-notifications" rel="noopener noreferrer" target="_blank">Apple Human Interface Guidelines — Managing Notifications</a></li>
+<li><a href="https://developer.android.com/develop/ui/compose/notifications/channels" rel="noopener noreferrer" target="_blank">Android Developers — Create and Manage Notification Channels</a></li>
+<li><a href="https://developer.android.com/develop/ui/compose/notifications/notification-permission" rel="noopener noreferrer" target="_blank">Android Developers — Notification Runtime Permission</a></li>
+<li><a href="https://www.reforge.com/blog/product-manager-interview-questions" rel="noopener noreferrer" target="_blank">Reforge — Product Manager Interview Questions</a></li>
+</ol>
+<p>The fifth source provides general interview design and evaluation context.</p>
+<p>Question 7 is presented as a contextual product design exercise in the series' reference material, not as a verified official interview question from a particular company.</p>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/notification-management/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Notification management</span></a><a class="blog-post-term tag" href="/blog/en/tag/notification-fatigue/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Notification fatigue</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-preferences/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User preferences</span></a><a class="blog-post-term tag" href="/blog/en/tag/usability-testing/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Usability Testing</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#the-interview-question-and-what-it-tests" class="h2">The Interview Question and What It Tests</a>
+          <a href="#first-understand-what-is-actually-frustrating-the-user" class="h2">First, Understand What Is Actually Frustrating the User</a>
+          <a href="#which-users-should-we-prioritise" class="h2">Which Users Should We Prioritise?</a>
+          <a href="#what-solutions-could-we-consider" class="h2">What Solutions Could We Consider?</a>
+          <a href="#option-1-allow-users-to-disable-all-notifications" class="h3">Option 1: Allow Users to Disable All Notifications</a>
+          <a href="#option-2-provide-highly-granular-notification-settings" class="h3">Option 2: Provide Highly Granular Notification Settings</a>
+          <a href="#option-3-combine-sensible-prioritisation-with-simple-controls" class="h3">Option 3: Combine Sensible Prioritisation with Simple Controls</a>
+          <a href="#what-should-the-experience-actually-look-like" class="h2">What Should the Experience Actually Look Like?</a>
+          <a href="#1-establish-sensible-defaults" class="h3">1. Establish Sensible Defaults</a>
+          <a href="#2-let-users-control-notifications-in-context" class="h3">2. Let Users Control Notifications in Context</a>
+          <a href="#3-group-non-urgent-notifications" class="h3">3. Group Non-Urgent Notifications</a>
+          <a href="#4-respect-time-and-concentration" class="h3">4. Respect Time and Concentration</a>
+          <a href="#5-explain-why-a-notification-was-sent" class="h3">5. Explain Why a Notification Was Sent</a>
+          <a href="#hypothetical-scenario-redesigning-a-project-management-app" class="h2">Hypothetical Scenario: Redesigning a Project Management App</a>
+          <a href="#how-would-we-measure-success" class="h2">How Would We Measure Success?</a>
+          <a href="#how-would-i-answer-this-in-an-interview" class="h2">How Would I Answer This in an Interview?</a>
+          <a href="#two-important-interview-follow-up-questions" class="h2">Two Important Interview Follow-Up Questions</a>
+          <a href="#1-what-would-you-do-if-you-had-only-two-weeks" class="h3">1. What Would You Do If You Had Only Two Weeks?</a>
+          <a href="#2-what-evidence-would-make-you-reject-your-proposed-solution" class="h3">2. What Evidence Would Make You Reject Your Proposed Solution?</a>
+          <a href="#what-would-make-an-interview-answer-weak" class="h2">What Would Make an Interview Answer Weak?</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+          <a href="#sources" class="h2">Sources</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">More writing</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/en/google-maps-discovery-for-first-time-travellers/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-14">2026-11-14</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/banking-app-home-screen-monthly-users/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-05">2026-11-05</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/first-lesson-dropoff/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Users Install Your Learning App but Never Finish Lesson One. What Would You Do?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-04">2026-11-04</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/en/">Browse all articles <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/notification-control-experience/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong>Moein Ghezelbash</strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/google-maps-discovery-for-first-time-travellers/" class="blog-end-next">
+      <span>Read next <span aria-hidden="true">↗</span></span>
+      <strong>Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">Home</a>
+        <a data-site-footer-link="about" href="/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">Projects</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js"></script>
+</body>
+</html>
