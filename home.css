@@ -774,3 +774,26 @@ html[data-color-scheme="dark"] .landing-time-primary:hover {background:#167481;}
    button's explicit display style would override the UA [hidden] rule. */
 .landing-hero-social a[hidden],
 .landing-contact-actions a[hidden] {display:none!important;}
+
+/* One high-definition branded treatment, not a pixelated logo thumbnail. */
+.landing-story-media.is-placeholder,.landing-mini-cover.is-placeholder {
+  isolation:isolate;overflow:hidden;
+  background:radial-gradient(ellipse at 78% 15%,rgba(111,222,208,.23),transparent 44%),
+    linear-gradient(132deg,#16374d,#1d5e6a);
+}
+.landing-story-media.is-placeholder::before,.landing-mini-cover.is-placeholder::before {
+  content:'';position:absolute;left:-18%;bottom:-50%;width:62%;aspect-ratio:1;
+  border:1px solid rgba(190,237,228,.17);border-radius:50%;
+  box-shadow:0 0 0 42px rgba(190,237,228,.045),0 0 0 100px rgba(190,237,228,.025);
+}
+.landing-cover-brand {position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:8px;color:#fff;z-index:1;}
+.landing-cover-brand-symbol {
+  display:block;width:clamp(57px,7vw,90px);height:clamp(57px,7vw,90px);
+  background:url('/assets/logo/imoein-symbol.webp') center/contain no-repeat;
+  filter:drop-shadow(0 9px 20px rgba(0,13,29,.22));
+}
+.landing-cover-brand-name {font-size:clamp(18px,2.1vw,24px);font-weight:850;letter-spacing:.02em;}
+.landing-mini-cover.is-placeholder .landing-cover-brand-symbol {width:56px;height:56px;}
+.landing-mini-cover.is-placeholder .landing-cover-brand-name {font-size:16px;}
+.landing-mini-cover.is-placeholder:hover .landing-cover-brand {transform:none;}

@@ -80,8 +80,31 @@
   };
   const safeBlogUrl = (value) => typeof value === 'string' && value.startsWith('/blog/' + lang + '/') && !value.includes('//')
     ? value : '/blog/' + lang + '/';
-  const safeCoverUrl = (value) => typeof value === 'string' && value.startsWith('/assets/blog/media/')
-    ? value : '/assets/logo/imoein-symbol.webp';
+  const safeCoverUrl = (value) => {
+    if (typeof value !== 'string') return '';
+    if (/^\/assets\/blog\/media\/(covers|images)\/[a-zA-Z0-9._-]+$/.test(value)) return value;
+    return value.startsWith('https://') && validHref(value) ? value : '';
+  };
+  const brandCover = container => {
+    if (container.classList.contains('is-placeholder')) return;
+    container.classList.add('is-placeholder');
+    container.querySelectorAll('img').forEach(img => img.remove());
+    const brand = node('span', 'landing-cover-brand');
+    brand.setAttribute('aria-hidden','true');
+    brand.append(node('span','landing-cover-brand-symbol'),node('span','landing-cover-brand-name','iMoein'));
+    container.append(brand);
+  };
+  const addCover = (container, url, alt='') => {
+    if (!url) {brandCover(container);return;}
+    const img = node('img');
+    img.src = url;
+    img.alt = alt;
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    img.referrerPolicy = 'no-referrer';
+    img.addEventListener('error', () => brandCover(container), {once:true});
+    container.append(img);
+  };
   const localHref = (name) => {
     const defaults={
       home:'/' + (lang==='en'?'?lang=en':''),
@@ -110,12 +133,7 @@
   const createFeatured = (post, showFeaturedBadge = false) => {
     const article = node('article', 'landing-story');
     const media = makeLink(safeBlogUrl(post.url), '', 'landing-story-media' + (post.coverFit === 'contain' ? ' is-contained' : ''));
-    const img = node('img');
-    img.src = safeCoverUrl(post.cover);
-    img.alt = post.coverAlt || '';
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    media.append(img);
+    addCover(media, safeCoverUrl(post.cover), post.coverAlt || '');
     const content = node('div', 'landing-story-body');
     const meta = node('div', 'landing-story-meta');
     if (showFeaturedBadge) meta.append(node('span','landing-featured-pill','✦ ' + currentCopy().featured));
@@ -142,16 +160,9 @@
     const titleText = post.title || (lang === 'fa' ? 'یادداشت' : 'Article');
     // Let the visible card text supply the accessible name. An aria-label
     // containing only the title conflicts with the link's other visible text.
-    const hasCover = typeof post.cover === 'string' && post.cover.startsWith('/assets/blog/media/');
-    const visual = node('div', 'landing-mini-cover'
-      + (post.coverFit === 'contain' ? ' is-contained' : '')
-      + (!hasCover ? ' is-placeholder' : ''));
-    const img = node('img');
-    img.src = safeCoverUrl(post.cover);
-    img.alt = '';
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    visual.append(img);
+    const coverUrl = safeCoverUrl(post.cover);
+    const visual = node('div', 'landing-mini-cover' + (post.coverFit === 'contain' ? ' is-contained' : ''));
+    addCover(visual, coverUrl);
 
     const content = node('div', 'landing-mini-info');
     const meta = node('div', 'landing-mini-meta');
