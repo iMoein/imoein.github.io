@@ -98,8 +98,20 @@ html[lang="en"] .landing-story {direction:rtl;}
 .landing-story-body {direction:rtl;display:flex;flex-direction:column;justify-content:center;min-width:0;padding:8px 0 6px;padding-inline-start:5px;}
 html[lang="en"] .landing-story-body {direction:ltr;}
 .landing-story-meta {display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:15px;}
-.landing-featured-pill {background:linear-gradient(130deg,#1b7680,#218b90);color:#fff;border-radius:999px;padding:5px 11px;font-size:.76rem;font-weight:800;}
-.landing-category {border-radius:999px;padding:5px 11px;background:rgba(31,138,138,.10);color:#1b737d;font-size:.77rem;font-weight:800;}
+/* Featured marker uses the same rounded-chip geometry in both themes. */
+.landing-featured-pill {
+  display:inline-flex;align-items:center;justify-content:center;flex:0 0 auto;
+  border:1px solid transparent;border-radius:999px;box-sizing:border-box;
+  padding:5px 12px;min-height:35px;line-height:1.65;white-space:nowrap;
+  font-family:inherit;font-size:.77rem;font-weight:800;
+  color:#fff;background:linear-gradient(135deg,#176c77,#218b90);
+}
+.landing-category {
+  display:inline-flex;align-items:center;box-sizing:border-box;min-height:35px;
+  border:1px solid transparent;border-radius:999px;padding:5px 11px;
+  background:rgba(31,138,138,.10);color:#1b737d;font-size:.77rem;font-weight:800;
+  line-height:1.65;
+}
 .landing-read-time {margin-inline-start:auto;font-size:.75rem;color:#526d7c;white-space:nowrap;}
 .landing-story h3 {font-size:clamp(1.4rem,2.5vw,2.2rem);font-weight:900;line-height:1.65;letter-spacing:-.02em;margin:0 0 8px;overflow-wrap:anywhere;}
 .landing-story h3 a {text-decoration:none;color:#102a43;}
@@ -211,6 +223,12 @@ html[data-color-scheme="dark"] .landing-story h3 a:focus-visible {
   outline:2px solid #95ede3;
   outline-offset:4px;
   border-radius:3px;
+}
+html[data-color-scheme="dark"] .landing-featured-pill {
+  color:#c9fff2;
+  background:rgba(34,120,128,.28);
+  border-color:rgba(153,228,215,.48);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.07);
 }
 html[data-color-scheme="dark"] .landing-category {
   color:#b7f2ed;
