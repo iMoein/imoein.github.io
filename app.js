@@ -89,6 +89,7 @@ const renderProfileImage = (data, content) => {
   };
 
   image.hidden = false;
+  image.alt = content.lang === "en" ? "Portrait of Moein Ghezelbash" : "پرتره معین قزلباش";
   initials.hidden = true;
   image.onerror = tryNextImage;
   tryNextImage();
