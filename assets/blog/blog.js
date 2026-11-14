@@ -18,6 +18,58 @@
   };
   document.querySelectorAll('.blog-date[data-iso]').forEach(node => displayDate(node, node.dataset.iso));
 
+  // Preserve real <table> markup and accessible column headers. Never shrink
+  // a wide data table into unreadable mobile columns: scroll its own frame.
+  const enhanceArticleTables = () => {
+    const tables = document.querySelectorAll('.blog-article-content table');
+    tables.forEach((table, index) => {
+      if (table.closest('.blog-table-frame')) return;
+      const columns = Math.max(0, ...[...table.rows].map(row =>
+        [...row.cells].reduce((sum, cell) => sum + cell.colSpan, 0)));
+      if (!columns) return;
+      const frame = document.createElement('div');
+      frame.className = 'blog-table-frame';
+      frame.classList.add(columns === 2 ? 'is-two-column' : columns > 2 ? 'is-wide' : 'is-single-column');
+      const viewport = document.createElement('div');
+      viewport.className = 'blog-table-viewport';
+      const hint = document.createElement('p');
+      hint.className = 'blog-table-hint';
+      hint.hidden = true;
+      const label = lang === 'fa' ? 'جدول داده‌ها؛ پیمایش افقی' : 'Data table; horizontally scrollable';
+      hint.textContent = lang === 'fa'
+        ? 'برای مشاهده ستون‌های بیشتر، جدول را به چپ یا راست بکشید.'
+        : 'Swipe left or right to see more columns.';
+      hint.id = `blog-table-hint-${index + 1}`;
+      frame.style.setProperty('--blog-table-min-width', (150 + (columns - 1) * 190) + 'px');
+      table.before(frame);
+      frame.append(hint, viewport);
+      viewport.append(table);
+      // Only offer a keyboard scroll target/landmark when it is actually needed.
+      const update = () => {
+        const scrollable = viewport.scrollWidth > viewport.clientWidth + 2;
+        frame.classList.toggle('is-scrollable', scrollable);
+        hint.hidden = !scrollable;
+        if (scrollable) {
+          viewport.tabIndex = 0;
+          viewport.setAttribute('role', 'region');
+          viewport.setAttribute('aria-label', label);
+          viewport.setAttribute('aria-describedby', hint.id);
+        } else {
+          viewport.removeAttribute('tabindex');
+          viewport.removeAttribute('role');
+          viewport.removeAttribute('aria-label');
+          viewport.removeAttribute('aria-describedby');
+        }
+      };
+      update();
+      if (typeof ResizeObserver !== 'undefined') {
+        const observer = new ResizeObserver(update);
+        observer.observe(viewport);
+      } else window.addEventListener('resize', update, {passive:true});
+    });
+  };
+  enhanceArticleTables();
+
   const normalize = (value) => String(value || '')
     .normalize('NFKC')
     .replace(/[يى]/g, 'ی').replace(/ك/g, 'ک')
