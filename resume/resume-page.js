@@ -1,4 +1,6 @@
 const root = document.querySelector('#resume-root');
+// Preserve the server-rendered overview if the JSON request cannot complete.
+const fallbackMarkup = root.innerHTML;
 const locale = document.documentElement.lang || 'en';
 const dataUrl = 'site-data.json';
 
@@ -144,6 +146,8 @@ const renderContactPanel = (content, contact, data) => {
 };
 
 const render = (data) => {
+  // Replace the crawlable HTML fallback only when the full JSON resume is ready.
+  root.replaceChildren();
   const content = data.locales[locale] || data.locales.en;
   const contact = data.contact;
 
@@ -321,6 +325,7 @@ fetch(dataUrl)
     window.siteReady?.();
   })
   .catch((error) => {
-    root.textContent = error.message;
+    console.error("Resume could not be loaded:", error);
+    root.innerHTML = fallbackMarkup;
     window.siteReady?.();
   });

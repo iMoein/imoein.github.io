@@ -435,6 +435,7 @@
     if (!images) return;
     const hero=document.getElementById('landing-hero-image');
     const requested=safeImageUrl(images.heroPortrait);
+    if (hero) hero.alt = lang === 'en' ? 'Portrait of Moein Ghezelbash' : 'پرتره معین قزلباش';
     if (hero && requested) {
       if (hero.getAttribute('src') !== requested) hero.src=requested;
       if (requested === originalHero.src) {

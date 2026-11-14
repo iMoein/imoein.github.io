@@ -166,6 +166,8 @@ const renderPortfolio = () => {
   const content = state.data.locales[state.locale] || state.data.locales[state.data.defaultLocale];
   document.documentElement.lang = content.lang;
   document.documentElement.dir = content.dir;
+  const photo = document.querySelector('.portfolio-hero img[src*="profile-photo"]');
+  if (photo) photo.alt = content.lang === "en" ? "Portrait of Moein Ghezelbash" : "پرتره معین قزلباش";
   document.body.className = `locale-${content.lang}`;
 
   renderSeo(content);
