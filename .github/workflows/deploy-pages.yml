@@ -10,6 +10,7 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  actions: read  # Verify newly uploaded Pages artifact is indexed before deploy
 
 concurrency:
   group: github-pages
@@ -69,9 +70,41 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload public site artifact
+        id: pages_artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: _site
+
+      # GitHub's artifact upload and Pages deployment services can briefly
+      # disagree about newly finalized artifacts. Confirm this exact upload
+      # is visible before asking deploy-pages to resolve it (HTTP 200 but
+      # "Found 0 artifact(s)" was observed on immediate deployment).
+      - name: Wait for Pages artifact to become visible
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EXPECTED_ARTIFACT_ID: ${{ steps.pages_artifact.outputs.artifact_id }}
+        run: |
+          set -euo pipefail
+          [[ "$EXPECTED_ARTIFACT_ID" =~ ^[0-9]+$ ]] || {
+            echo "::error::No valid uploaded artifact ID was returned."
+            exit 1
+          }
+          for attempt in {1..20}; do
+            count="$(gh api "repos/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}/artifacts" \
+              --jq "[.artifacts[] | select(.id == ${EXPECTED_ARTIFACT_ID} and .name == \"github-pages\" and (.expired | not))] | length" \
+              2>/dev/null || echo 0)"
+            if [[ "$count" == "1" ]]; then
+              echo "Uploaded Pages artifact $EXPECTED_ARTIFACT_ID is indexed."
+              # Also allow the internal deployment artifact service to catch up.
+              sleep 12
+              exit 0
+            fi
+            echo "Waiting for artifact registration (attempt $attempt)."
+            sleep 3
+          done
+          echo "::error::Pages artifact $EXPECTED_ARTIFACT_ID was not indexed."
+          exit 1
 
       - name: Deploy to GitHub Pages
         id: deployment
