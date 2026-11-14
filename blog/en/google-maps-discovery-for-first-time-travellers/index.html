@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Day 6 of 1,000 Product Manager Interview Questions">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices | iMoein">
+  <meta property="og:description" content="Day 6 of 1,000 Product Manager Interview Questions">
+  <meta property="og:url" content="https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/post-20261114-n2inj-4c3ae39892e3.png">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/post-20261114-n2inj-4c3ae39892e3.png">
+  <meta property="og:image:alt" content="Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices">
+  <meta property="article:published_time" content="2026-11-14">
+<meta property="article:modified_time" content="2026-11-14">  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="1000 Product Manager Interview Questions">
+<meta property="article:tag" content="User Experience"><meta property="article:tag" content="User Research"><meta property="article:tag" content="Product Prioritisation"><meta property="article:tag" content="Usability Testing"><meta property="article:tag" content="Google Maps">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices | iMoein">
+  <meta name="twitter:description" content="Day 6 of 1,000 Product Manager Interview Questions">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/post-20261114-n2inj-4c3ae39892e3.png">
+  <meta name="twitter:image:alt" content="Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices">
+  <title>Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/#article", "headline": "Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices", "description": "Day 6 of 1,000 Product Manager Interview Questions", "url": "https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-14", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/post-20261114-n2inj-4c3ae39892e3.png", "articleSection": "1000 Product Manager Interview Questions", "keywords": ["User Experience", "User Research", "Product Prioritisation", "Usability Testing", "Google Maps"], "wordCount": 2601, "timeRequired": "PT14M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}, "dateModified": "2026-11-14"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/?lang=en"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "1000 Product Manager Interview Questions", "item": "https://imoein.com/blog/en/category/1000-product-manager-interview-questions/"}, {"@type": "ListItem", "position": 4, "name": "Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices", "item": "https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/"}]}</script>  <link rel="stylesheet" href="/site-footer.css">
+  <link rel="stylesheet" href="/site-analytics.css">
+  <script defer src="/site-analytics.js"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/" data-blog-alt-en="/blog/en/google-maps-discovery-for-first-time-travellers/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/?lang=en">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><span aria-hidden="true">/</span><span aria-current="page">Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-14" data-iso="2026-11-14">2026-11-14</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>14 min read</span>
+    </div>
+    <h1>Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices</h1>
+    <p>Day 6 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/post-20261114-n2inj-4c3ae39892e3.webp" alt="Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine arriving in an unfamiliar city with just 90 minutes to spare. Google Maps shows dozens of cafés, museums, parks and attractions, yet you still cannot decide where to go. The nearest attraction might be uninteresting, the highest-rated place might be crowded, and reaching a popular destination could consume most of your available time.</strong></p>
+<p>The problem is not necessarily a lack of information. In fact, having too many options can make the decision more difficult.</p>
+<p>Now imagine facing this Product Manager interview question:</p>
+<p><strong>"Redesign the Google Maps location discovery experience for the inexperienced traveller."</strong></p>
+<p>At first glance, this sounds like a user experience design exercise. A strong answer, however, requires more than proposing additional features.</p>
+<p>The interviewer wants to understand whether you can identify the underlying user problem, prioritise different needs, recognise product constraints and recommend a solution whose effectiveness can be tested.</p>
+<h2 id="start-by-defining-the-problem-not-the-interface">Start by defining the problem, not the interface</h2>
+<p>Before proposing any redesign, I would distinguish between two different user needs.</p>
+<p><strong>Finding a known place:</strong> The user already knows the name of a restaurant, hotel or attraction and wants to locate it.</p>
+<p><strong>Discovering a suitable place:</strong> The user has not decided where to go and expects the product to help them choose.</p>
+<p>This interview question concerns the second situation.</p>
+<p>Someone visiting a new city may not recognise neighbourhood names, understand the local geography or know how to interpret ratings and reviews in the context of their own circumstances.</p>
+<p>Importantly, being an inexperienced traveller does not necessarily mean being inexperienced with technology.</p>
+<p>Someone might be highly capable of using mobile applications but have no familiarity with the city or country they are visiting.</p>
+<p>This distinction matters because defining the problem incorrectly could lead us to build a tutorial for Google Maps rather than improve the experience of choosing somewhere to visit.</p>
+<p>For the purpose of this discussion, I would make a specific assumption: <strong>our primary user is someone exploring an unfamiliar city on a smartphone, with limited time, no predetermined destination and an expectation of making short journeys on foot.</strong></p>
+<p>That is a starting hypothesis, not a description of all travellers.</p>
+<p>Someone travelling with children, requiring step-free access or dealing with unreliable connectivity might have substantially different needs.</p>
+<h2 id="does-google-maps-actually-need-another-feature">Does Google Maps actually need another feature?</h2>
+<p>Before recommending a new capability, we need to understand what the existing product already offers.</p>
+<p>Google Maps supports nearby searches, ratings and reviews, place details and discovery through its Explore section.</p>
+<p>According to <a href="https://support.google.com/maps/answer/10014587?hl=en" rel="noopener noreferrer" target="_blank">Google Maps' official documentation</a>, Explore recommendations can adapt to location and time of day. Google also explains that local search ranking is influenced primarily by relevance, distance and prominence.</p>
+<p>It would therefore be inaccurate to suggest that users currently have no way to discover places.</p>
+<p>The more useful question is:</p>
+<p><strong>Do these existing capabilities adequately help travellers who have not yet decided what they want to visit?</strong></p>
+<p>There is a meaningful difference between displaying relevant places and helping someone make a decision appropriate to their circumstances.</p>
+<p>But that difference remains a hypothesis until we validate it.</p>
+<p>Research might reveal that travellers are satisfied with existing recommendations and merely struggle to find certain filters.</p>
+<p>If so, a smaller usability improvement could be more valuable than a new discovery experience.</p>
+<h2 id="understand-the-user-before-choosing-a-solution">Understand the user before choosing a solution</h2>
+<p>I would segment users according to their circumstances and the task they are trying to accomplish, rather than simply by age, nationality or technical confidence.</p>
+<p>For example:</p>
+<p><strong>Time-constrained travellers</strong> want to find somewhere worthwhile without spending too much time travelling or comparing alternatives.</p>
+<p><strong>Experience-seeking travellers</strong> want places aligned with their interests, rather than necessarily visiting the most famous attractions.</p>
+<p><strong>Travellers with additional constraints</strong> may care more about accessibility, cost, language support or connectivity.</p>
+<p>We should not attempt to solve every segment's problems in the first release.</p>
+<p>For our initial target group, I would investigate four questions:</p>
+<ol>
+<li>Where does the difficulty occur: finding options, comparing them or trusting the available information?</li>
+<li>What information influences a traveller's decision to visit or reject a particular place?</li>
+<li>How do travellers make these decisions today? Do they consult Google Search, social media, friends or local residents?</li>
+<li>Does the problem occur repeatedly, or mainly when travellers face constraints such as limited time or unfamiliar languages?</li>
+</ol>
+<p>I would combine contextual observation, short interviews, usability sessions and analysis of existing product journeys.</p>
+<p>Click data alone would not answer these questions.</p>
+<p>A traveller might open five place profiles, return to the results and still fail to choose a destination. More engagement would not necessarily mean a better experience.</p>
+<h2 id="three-possible-approaches-to-redesigning-place-discovery">Three possible approaches to redesigning place discovery</h2>
+<p>Once the problem has been validated, I would compare at least three approaches.</p>
+<h3 id="option-1-simplify-existing-search-and-filters">Option 1: Simplify existing search and filters</h3>
+<p>We could make search categories and filtering controls more visible and easier to understand.</p>
+<p>This approach would generally involve less disruption and preserve familiar user behaviour.</p>
+<p>However, if someone does not know what type of place they want, better filters may not solve the fundamental problem.</p>
+<h3 id="option-2-build-a-dedicated-tourist-mode">Option 2: Build a dedicated tourist mode</h3>
+<p>We could introduce a separate travelling experience with local recommendations, itinerary planning and destination guidance.</p>
+<p>This could address a broader range of needs.</p>
+<p>The trade-off is additional design, engineering, maintenance and interface complexity.</p>
+<p>We also have no evidence yet that travellers want an entirely separate experience rather than improvements to the Google Maps interface they already recognise.</p>
+<h3 id="option-3-provide-optional-guided-place-discovery">Option 3: Provide optional, guided place discovery</h3>
+<p>My preferred starting point would be to test a lightweight, guided discovery journey within existing Google Maps functionality.</p>
+<p>The experience could begin with a straightforward question:</p>
+<p>"What would you like to do right now?"</p>
+<p>The traveller might choose a short walk, somewhere to relax, a meal or a cultural experience.</p>
+<p>Where relevant, they could then specify their available time and preferred way of getting around.</p>
+<p>Instead of presenting a long list, the product would offer a small number of relevant suggestions, explaining why each might suit the traveller.</p>
+<p>Those explanations could include:</p>
+<ul>
+<li>Relevance to the selected activity</li>
+<li>Estimated journey time and the traveller's time constraints</li>
+<li>Available opening-hours information</li>
+<li>Supporting evidence, such as place attributes and reviews</li>
+</ul>
+<p>Each recommendation would allow the traveller to examine the details, save the place or request directions.</p>
+<p><strong>I would choose the third approach as a testable hypothesis, not as a predetermined answer.</strong></p>
+<p>The guided experience must remain optional.</p>
+<p>Users should be able to dismiss it and return to ordinary search or browse all results without unnecessary friction.</p>
+<h2 id="why-fewer-recommendations-are-not-automatically-better">Why fewer recommendations are not automatically better</h2>
+<p>Offering three suggestions instead of thirty might appear to simplify decision-making.</p>
+<p>But there is an important risk: a recommendation system can inadvertently hide suitable options if its assumptions are wrong.</p>
+<p>Reducing the number of choices is not, by itself, evidence of improvement.</p>
+<p>Recommendations need to reflect the traveller's actual requirements, and the reasons behind them should be understandable.</p>
+<p>Users must also retain the ability to change their preferences and explore alternatives.</p>
+<p>A highly rated place is not necessarily appropriate for every traveller.</p>
+<p>For example, a popular restaurant might require more travel time than the user can afford. A highly recommended museum might close before they arrive.</p>
+<p>There is also a distinction between displaying information and guaranteeing that it is correct.</p>
+<p>Opening hours, facilities and other place attributes can be incomplete or outdated. The product should communicate uncertainty where information is insufficient rather than imply unwarranted confidence.</p>
+<p>Connectivity introduces another constraint.</p>
+<p>Google Maps supports downloadable offline maps, but its <a href="https://support.google.com/maps/answer/6291838?hl=en" rel="noopener noreferrer" target="_blank">official documentation</a> explains that walking directions are unavailable when offline.</p>
+<p>We therefore cannot promise a complete offline walking-discovery experience simply because an area has been downloaded.</p>
+<p>A credible Product Manager answer needs to acknowledge such limitations before recommending an implementation.</p>
+<h2 id="a-practical-hypothetical-software-product-scenario">A practical hypothetical software-product scenario</h2>
+<p>Imagine the Google Maps product team wants to test this concept with inexperienced travellers.</p>
+<p>Our hypothetical user has arrived in Lisbon for the first time.</p>
+<p>They have approximately 90 minutes before returning to their hotel and would like to visit somewhere culturally interesting.</p>
+<p>In the existing experience, they might search for "attractions near me", open several results, inspect photographs and ratings, then repeatedly check distance and opening hours.</p>
+<p>In our proposed experience, the user enters an optional "I have some free time" journey through Explore.</p>
+<p>They select a cultural activity, a time allowance of up to 90 minutes and walking as their preferred transport mode.</p>
+<p>The product presents a few options with estimated journey times, opening-hours information and explanations of why the places fit the chosen criteria.</p>
+<p>The traveller can still browse all results or return directly to the standard search experience.</p>
+<p>This is a hypothetical product-design exercise, not a description of an actual Google experiment or a confirmed existing feature.</p>
+<p>The Product Manager would define the target problem, desired outcomes and prioritisation. The UX designer would develop and test the interaction. Engineers would assess data availability, response times and technical constraints. A product analyst would help design the evaluation.</p>
+<p>Location data introduces additional privacy considerations.</p>
+<p>Any location-dependent functionality should give users clear control over permissions, and selecting an area manually should remain a practical alternative.</p>
+<h2 id="how-would-we-measure-success">How would we measure success?</h2>
+<p>If our objective is to help travellers make better decisions, the number of place-profile views should not be our primary success metric.</p>
+<p>I would structure measurement around three levels.</p>
+<h3 id="1-primary-metric-successful-place-selection">1. Primary metric: Successful place selection</h3>
+<p>In a usability study, we could evaluate whether participants can select a suitable destination within a defined scenario and explain why it meets their requirements.</p>
+<p>The task would include explicit constraints, such as available time, transport mode and preferred activity.</p>
+<p><strong>Task success rate = Participants making a valid, constraint-compatible choice ÷ All participants attempting the same task</strong></p>
+<p>The definition of a valid choice must be agreed before testing.</p>
+<p>For example, the selected destination should be compatible with the time allowance, transport constraints and available evidence about the place.</p>
+<p>In production, saving a place or starting directions might serve as a behavioural proxy for progress towards a decision.</p>
+<p>Neither action proves that the traveller arrived or was satisfied with their choice.</p>
+<h3 id="2-diagnostic-metrics">2. Diagnostic metrics</h3>
+<p>I would examine the time required to choose a destination, unnecessary switching between results, uptake of the optional guide and the rate at which users return to standard search.</p>
+<p>These measures would help identify where the proposed experience reduces friction and where it introduces additional effort.</p>
+<h3 id="3-guardrail-metrics">3. Guardrail metrics</h3>
+<p>We must also monitor unintended harm.</p>
+<p>Relevant guardrails include incorrect place information, recommendations that do not meet user constraints, slower response times, privacy-related friction and increased abandonment of the discovery journey.</p>
+<p>I would evaluate the proposed experience against the existing one using comparable groups, and examine differences between new and experienced users, languages and geographical contexts.</p>
+<p>The goal is not merely to make choices faster.</p>
+<p><strong>It is to help people make choices that are faster, better justified and more appropriate to their circumstances.</strong></p>
+<h2 id="what-if-we-had-only-two-weeks">What if we had only two weeks?</h2>
+<p>This is one of the two follow-up questions included in the original interview-question reference.</p>
+<p>With only two weeks, I would avoid attempting to build a complete new capability.</p>
+<p>I would begin with targeted observations and interviews to identify where the current journey fails.</p>
+<p>Next, the team would build a lightweight interactive prototype of the proposed discovery flow, using existing place information wherever practical.</p>
+<p>We would test that prototype with people representing the target segment, using realistic or carefully simulated travel scenarios.</p>
+<p>At the end of the two weeks, I would not expect a fully developed product.</p>
+<p>I would expect enough evidence to answer three questions:</p>
+<p>Do these travellers genuinely need more help choosing destinations? Does guided discovery improve their decisions? Is the evidence strong enough to justify further investment?</p>
+<p>If the evidence does not support the hypothesis, continuing simply because the concept seems appealing would be poor product judgement.</p>
+<h2 id="what-evidence-would-make-you-reject-your-proposed-solution">What evidence would make you reject your proposed solution?</h2>
+<p>The second follow-up question asks whether we can recognise when our preferred idea is wrong.</p>
+<p>If research showed that inexperienced travellers already make effective decisions through existing search and filters, the underlying hypothesis would be weakened.</p>
+<p>I would also reconsider the proposal if testing showed that the guided journey increased decision time, concealed relevant places or produced unreliable recommendations because of incomplete data.</p>
+<p>We might discover that travellers do not need a new recommendation experience at all.</p>
+<p>Perhaps they simply need clearer opening hours, journey information or accessibility details when comparing existing results.</p>
+<p>In that case, improving how place information is presented could be a better investment than adding another discovery journey.</p>
+<p>Being willing to abandon a personally appealing solution is part of sound product management.</p>
+<h2 id="a-natural-interview-answer">A natural interview answer</h2>
+<p>If I were answering this question in an interview, I would bring the reasoning together like this:</p>
+<blockquote>
+<p>"Before changing Google Maps, I'd want to understand where inexperienced travellers actually struggle. Finding the address of a known place and choosing somewhere to visit in an unfamiliar city are two different problems.</p>
+<p>"My initial hypothesis is that some travellers, particularly those with limited time, struggle to compare the available options and choose somewhere suitable.</p>
+<p>"I'd first look at how they make that decision today and whether the existing discovery features are genuinely insufficient.</p>
+<p>"If we validated that problem, I'd test a small, optional guided experience inside Explore rather than immediately building a separate tourist mode.</p>
+<p>"It could ask what the traveller wants to do, how much time they have and how they intend to travel, then suggest a few relevant places with clear explanations.</p>
+<p>"I'd measure whether that helps people choose suitable destinations, not just whether it generates more clicks. If recommendations were unreliable or the experience introduced additional friction, I'd change the approach."</p>
+</blockquote>
+<h2 id="common-mistakes-in-answering-this-question">Common mistakes in answering this question</h2>
+<p><strong>Starting with a feature list:</strong> Artificial intelligence, augmented reality and dedicated tourist modes might sound impressive, but they are not automatically worthwhile investments. We first need to establish which user problem they solve.</p>
+<p><strong>Designing for every traveller:</strong> Someone visiting a city for the first time may have very different needs from a frequent visitor. A strong answer identifies and prioritises a meaningful segment.</p>
+<p><strong>Ignoring existing functionality:</strong> Without understanding what Google Maps already offers, we risk proposing duplicate capabilities or addressing the wrong problem.</p>
+<p><strong>Over-relying on ratings and popularity:</strong> A highly rated destination might be unsuitable for a particular user's time, budget or purpose.</p>
+<p><strong>Mistaking engagement for success:</strong> More clicks on recommendations do not prove that travellers are making better decisions.</p>
+<p><strong>Showing false certainty:</strong> Product Managers should state their assumptions and explain what evidence would cause them to revise their choices.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Redesigning place discovery in Google Maps should begin with understanding why some travellers struggle to choose destinations despite having access to extensive information. If that problem is validated, I would start with a short, optional discovery experience that considers the traveller's goals and constraints rather than introducing an entirely separate product journey.</p>
+<p>The final decision must depend on evidence. If the new experience does not help travellers choose more suitable places, or if it undermines their trust in the recommendations, the approach should change. <strong>Strong Product Managers are not distinguished by how many features they propose, but by their ability to identify the right problem and make defensible, measurable decisions about solving it.</strong></p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://support.google.com/maps/answer/10014587?hl=en" rel="noopener noreferrer" target="_blank">Google Maps Help — Find nearby inspiration in the Explore tab</a></li>
+<li><a href="https://support.google.com/maps/answer/4610185?co=GENIE.Platform%3DAndroid&amp;hl=en-en" rel="noopener noreferrer" target="_blank">Google Maps Help — Search for nearby places and explore the area</a></li>
+<li><a href="https://support.google.com/maps/answer/7280933?co=GENIE.Platform%3DAndroid&amp;hl=en-en" rel="noopener noreferrer" target="_blank">Google Maps Help — Create a list of places</a></li>
+</ol>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/user-experience/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Experience</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-research/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Research</span></a><a class="blog-post-term tag" href="/blog/en/tag/product-prioritisation/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Product Prioritisation</span></a><a class="blog-post-term tag" href="/blog/en/tag/usability-testing/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Usability Testing</span></a><a class="blog-post-term tag" href="/blog/en/tag/google-maps/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Google Maps</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#start-by-defining-the-problem-not-the-interface" class="h2">Start by defining the problem, not the interface</a>
+          <a href="#does-google-maps-actually-need-another-feature" class="h2">Does Google Maps actually need another feature?</a>
+          <a href="#understand-the-user-before-choosing-a-solution" class="h2">Understand the user before choosing a solution</a>
+          <a href="#three-possible-approaches-to-redesigning-place-discovery" class="h2">Three possible approaches to redesigning place discovery</a>
+          <a href="#option-1-simplify-existing-search-and-filters" class="h3">Option 1: Simplify existing search and filters</a>
+          <a href="#option-2-build-a-dedicated-tourist-mode" class="h3">Option 2: Build a dedicated tourist mode</a>
+          <a href="#option-3-provide-optional-guided-place-discovery" class="h3">Option 3: Provide optional, guided place discovery</a>
+          <a href="#why-fewer-recommendations-are-not-automatically-better" class="h2">Why fewer recommendations are not automatically better</a>
+          <a href="#a-practical-hypothetical-software-product-scenario" class="h2">A practical hypothetical software-product scenario</a>
+          <a href="#how-would-we-measure-success" class="h2">How would we measure success?</a>
+          <a href="#1-primary-metric-successful-place-selection" class="h3">1. Primary metric: Successful place selection</a>
+          <a href="#2-diagnostic-metrics" class="h3">2. Diagnostic metrics</a>
+          <a href="#3-guardrail-metrics" class="h3">3. Guardrail metrics</a>
+          <a href="#what-if-we-had-only-two-weeks" class="h2">What if we had only two weeks?</a>
+          <a href="#what-evidence-would-make-you-reject-your-proposed-solution" class="h2">What evidence would make you reject your proposed solution?</a>
+          <a href="#a-natural-interview-answer" class="h2">A natural interview answer</a>
+          <a href="#common-mistakes-in-answering-this-question" class="h2">Common mistakes in answering this question</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+          <a href="#sources" class="h2">Sources</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">More writing</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/en/banking-app-home-screen-monthly-users/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-05">2026-11-05</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/first-lesson-dropoff/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Users Install Your Learning App but Never Finish Lesson One. What Would You Do?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-04">2026-11-04</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/daily-planning-for-working-parents/">
+            <span class="blog-sidebar-item-category">Product Design &amp; UX</span>
+            <strong>How Would You Design a Product to Help Working Parents Plan Their Day?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-03">2026-11-03</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/en/">Browse all articles <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/google-maps-discovery-for-first-time-travellers/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong>Moein Ghezelbash</strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/banking-app-home-screen-monthly-users/" class="blog-end-next">
+      <span>Read next <span aria-hidden="true">↗</span></span>
+      <strong>How Should You Design a Banking App Home Screen for Someone Who Logs In Once a Month?</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+  <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">Home</a>
+        <a data-site-footer-link="about" href="/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">Projects</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js"></script>
+</body>
+</html>
