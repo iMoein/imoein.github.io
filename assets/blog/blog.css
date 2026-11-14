@@ -228,8 +228,6 @@ html[data-color-scheme="dark"] .blog-back-link { background:#267987;color:#fff; 
 .blog-related-card .blog-read-link { margin-top:auto; }
 
 @media (max-width:760px) {
-  .site-navigation .primary-nav-links { grid-template-columns:repeat(4,minmax(0,1fr)); }
-  .site-navigation .primary-nav-links a { padding-inline:3px;font-size:.78rem; }
   .blog-hero { margin:11px 0 28px;grid-template-columns:1fr;gap:10px;min-height:0;
     padding:32px 24px;border-radius:26px; }
   .blog-hero-symbol { display:none; }
@@ -244,7 +242,6 @@ html[data-color-scheme="dark"] .blog-back-link { background:#267987;color:#fff; 
   .blog-article-content { border-radius:20px; }
 }
 @media (max-width:360px) {
-  .site-navigation .primary-nav-links a { font-size:.71rem;letter-spacing:-.02em; }
   .blog-category { padding:7px 11px; }
   .blog-article-content { padding:19px; }
 }
