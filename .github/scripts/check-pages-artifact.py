@@ -116,6 +116,34 @@ def validate_english_about_assets(site: Path) -> None:
             raise ValueError("English about resume file missing in artifact: " + href)
 
 
+
+def validate_home_time_preview(site: Path) -> None:
+    """Avoid deploying the generic logo in place of TIME's actual screenshot."""
+    image = site / "assets/time-preview.webp"
+    if not image.is_file() or image.stat().st_size < 1000:
+        raise ValueError("TIME screenshot is not in the Pages artifact")
+    data = json.loads((site / "resume/site-data.json").read_text(encoding="utf-8"))
+    for lang in ("fa", "en"):
+        entries = [p for p in data["locales"][lang]["independentProjects"]
+                   if p.get("title") == "TIME"]
+        if len(entries) != 1 or entries[0].get("previewImage") != "/assets/time-preview.webp":
+            raise ValueError("TIME public preview URL is missing or inconsistent in site data")
+
+    for filename in ("index.html", "en/index.html"):
+        html = (site / filename).read_text(encoding="utf-8")
+        if "/home.js?v=time-preview-20261115-r1" not in html:
+            raise ValueError("Homepage TIME image fix may be masked by cached home.js")
+    script = (site / "home.js").read_text(encoding="utf-8")
+    if "fetch('/resume/site-data.json?v=time-preview-20261115-r1'" not in script:
+        raise ValueError("Homepage data URL may return a stale TIME preview path")
+    page = AssetAndLinkParser()
+    page.feed((site / "en/index.html").read_text(encoding="utf-8"))
+    screenshots = [img for img in page.images
+                   if "landing-time-screenshot" in img.get("class", "").split()]
+    if len(screenshots) != 1 or urlsplit(screenshots[0].get("src", "")).path != "/assets/time-preview.webp":
+        raise ValueError("English homepage is publishing a fallback instead of TIME's screenshot")
+
+
 def verify(site: Path) -> None:
     missing = [str(site / path) for path in REQUIRED
                if not (site / path).is_file()]
@@ -153,6 +181,7 @@ def verify(site: Path) -> None:
             "\n  ".join(sorted(set(missing)))
         )
     validate_english_about_assets(site)
+    validate_home_time_preview(site)
     print(f"Pages artifact validated: {len(listed)} public sitemap URLs, "
           f"{len(alternates)} hreflang links, {len(REQUIRED)} required files.")
 

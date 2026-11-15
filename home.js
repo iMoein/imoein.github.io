@@ -299,9 +299,11 @@
     bar.append(left, address, refresh);
     const img = node('img', 'landing-time-screenshot');
     const preview = typeof item.previewImage === 'string' &&
-      /^assets\/[a-zA-Z0-9/_-]+\.(webp|png|jpe?g)$/i.test(item.previewImage)
+      /^\/?assets\/[a-zA-Z0-9/_-]+\.(webp|png|jpe?g)$/i.test(item.previewImage)
       && !item.previewImage.includes('..') ? item.previewImage : null;
-    if (preview) img.src = '/' + preview + '?v=balanced-2';
+    // Studio content uses root-relative URLs. Normalize both historic
+    // assets/foo.webp and current /assets/foo.webp without adding //.
+    if (preview) img.src = '/' + preview.replace(/^\/+/, '') + '?v=time-preview-20261115-r1';
     else img.src = '/assets/logo/imoein-symbol.webp';
     img.alt = currentCopy().timePreviewAlt;
     img.loading = 'lazy';
@@ -511,7 +513,7 @@
   });
   // First paint is localized without waiting for either content request.
   renderLocale();
-  fetch('/resume/site-data.json', {cache:'no-cache'})
+  fetch('/resume/site-data.json?v=time-preview-20261115-r1', {cache:'no-cache'})
     .then(response=>response.ok?response.json():Promise.reject())
     .then(data=>{
       siteData=data;
