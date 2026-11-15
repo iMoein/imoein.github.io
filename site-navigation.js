@@ -173,6 +173,9 @@
   });
   themePicker.append(themeAuto, themeSwitch);
   document.addEventListener('site-theme-change', updateThemeControl);
+  // Non-serialized marker: build-time Chrome snapshots remain clearly static,
+  // so site-theme.js can still activate their controls before hydration.
+  mount.__siteNavigationHydrated = true;
   mount.replaceChildren(brand, links, themePicker, switcher); // Replace prerendered header, never duplicate.
   function draw() {
     const lang = locale();

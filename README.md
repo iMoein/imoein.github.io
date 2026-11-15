@@ -72,3 +72,20 @@ timeline outcomes use logical inline padding for RTL/LTR parity, project
 insights stretch across the card, KPI rows fill the measure panel, and FAQs
 take the full content width. Test light and dark mode at 390, 820, 980 and
 1440px before further visual edits.
+
+
+### Theme switch cold load (November 2026)
+
+The shared site-theme.js controls effective appearance and persists the
+chosen mode (auto/light/dark). On prerendered headers it now synchronizes
+the initially displayed day/night and Auto controls with the saved mode.
+The prerendered buttons also work before site-navigation.js hydrates the
+header; once hydrated, an ephemeral property prevents double toggles.
+Back/forward-cache restores re-read the saved preference.
+Versioned theme/navigation script tags on core pages and resumes prevent
+previous browser caches from obscuring these changes.
+
+The two side-by-side secondary product cases share the same four CSS
+subgrid rows from 701px upward, keeping Core challenge and Product question
+aligned even when titles or paragraphs wrap differently. At mobile sizes
+each case retains a standalone flexible layout.
