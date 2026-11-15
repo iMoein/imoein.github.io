@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Imagine someone listening to a podcast on their daily commute. Their internet connection drops for a few seconds, playback stops, and the app fails to resume properly when connectivity returns. After several attempts, they give up and close it.">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/content-app-poor-connectivity/">
+  <link rel="alternate" hreflang="fa" href="https://imoein.com/blog/fa/content-app-poor-connectivity/">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/blog/en/content-app-poor-connectivity/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start? | iMoein">
+  <meta property="og:description" content="Imagine someone listening to a podcast on their daily commute. Their internet connection drops for a few seconds, playback stops, and the app fails to resume properly when connectivity returns. After several attempts, they give up and close it.">
+  <meta property="og:url" content="https://imoein.com/blog/en/content-app-poor-connectivity/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fa_IR">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png">
+  <meta property="og:image:alt" content="Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?">
+  <meta property="og:image:width" content="1180">
+  <meta property="og:image:height" content="350">
+  <meta property="article:published_time" content="2026-11-11">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="1000 Product Manager Interview Questions">
+<meta property="article:tag" content="Unreliable Connectivity"><meta property="article:tag" content="Offline-first Design"><meta property="article:tag" content="Media Playback Experience"><meta property="article:tag" content="Adaptive Streaming"><meta property="article:tag" content="Success Metrics">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start? | iMoein">
+  <meta name="twitter:description" content="Imagine someone listening to a podcast on their daily commute. Their internet connection drops for a few seconds, playback stops, and the app fails to resume properly when connectivity returns. After several attempts, they give up and close it.">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/content-app-poor-connectivity/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png">
+  <meta name="twitter:image:alt" content="Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?">
+  <title>Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start? | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/content-app-poor-connectivity/#article", "headline": "Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?", "description": "Imagine someone listening to a podcast on their daily commute. Their internet connection drops for a few seconds, playback stops, and the app fails to resume properly when connectivity returns. After several attempts, they give up and close it.", "url": "https://imoein.com/blog/en/content-app-poor-connectivity/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/content-app-poor-connectivity/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-11", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/en/about.html", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/en/about.html", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png", "articleSection": "1000 Product Manager Interview Questions", "keywords": ["Unreliable Connectivity", "Offline-first Design", "Media Playback Experience", "Adaptive Streaming", "Success Metrics"], "wordCount": 2750, "timeRequired": "PT14M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/content-app-poor-connectivity/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/en/about.html"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "1000 Product Manager Interview Questions", "item": "https://imoein.com/blog/en/category/1000-product-manager-interview-questions/"}, {"@type": "ListItem", "position": 4, "name": "Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?", "item": "https://imoein.com/blog/en/content-app-poor-connectivity/"}]}</script>  <link rel="stylesheet" href="/site-footer.css?v=footer-unified-20261115">
+  <link rel="stylesheet" href="/site-analytics.css?v=ga4-consent-v2-20261114">
+  <script defer src="/site-analytics.js?v=ga4-no-prompt-20261114-r2"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/content-app-poor-connectivity/" data-blog-alt-en="/blog/en/content-app-poor-connectivity/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/en/about.html">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><span aria-hidden="true">/</span><span aria-current="page">Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-11" data-iso="2026-11-11">2026-11-11</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>14 min read</span>
+    </div>
+    <h1>Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?</h1>
+    <p>Day 11 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.webp" alt="Redesigning a Content App for Unreliable Internet: Where Should a Product Manager Start?" width="1180" height="350" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine someone listening to a podcast on their daily commute. Their internet connection drops for a few seconds, playback stops, and the app fails to resume properly when connectivity returns. After several attempts, they give up and close it.</strong></p>
+<p>The product team decides to improve the experience for users with unreliable connections. One colleague suggests offline downloads, another proposes lowering streaming quality, and the designer recommends making the home screen lighter.</p>
+<p>All three ideas could be useful. But <strong>which one actually solves the user's most important problem?</strong></p>
+<p>That is the product judgement behind the eleventh question in this interview series.</p>
+<h2 id="what-is-the-interview-question">What Is the Interview Question?</h2>
+<p><strong>Which part of a content app would you redesign for users who have unstable internet?</strong></p>
+<p>On the surface, this looks like a user interface design question. In practice, the interviewer is testing whether a candidate can make a defensible product decision under uncertainty.</p>
+<p>A strong answer should demonstrate the ability to:</p>
+<ul>
+<li>Distinguish the underlying user problem from proposed features.</li>
+<li>Identify a particular user segment and its most important need.</li>
+<li>Compare possible solutions against value, cost and risk.</li>
+<li>Make a decision that can be tested and revised.</li>
+<li>Measure success through meaningful user behaviour rather than feature delivery.</li>
+</ul>
+<p>A weak candidate starts by listing features. A stronger candidate first asks where, why and how users are prevented from accomplishing their intended task.</p>
+<h2 id="1-understand-what-unreliable-internet-actually-prevents">1. Understand What Unreliable Internet Actually Prevents</h2>
+<p>An unstable connection does not create the same problem for every content consumer.</p>
+<p>Someone reading an article might struggle with missing images or a page that repeatedly reloads. A video viewer may experience constant buffering. For a podcast listener, losing playback position or being unable to resume may be more frustrating than waiting a few extra seconds.</p>
+<p>The network conditions themselves also vary. Some users have consistently low bandwidth, some experience brief interruptions, and others appear to be connected despite making almost no progress downloading data.</p>
+<p>Before deciding what to redesign, I would establish four things.</p>
+<p><strong>Who are the users?</strong> Are they frequent listeners, first-time visitors or people who primarily use the product while travelling?</p>
+<p><strong>What are they trying to accomplish?</strong> Reading an article, listening to an episode, watching a video or saving something for later?</p>
+<p><strong>Where does their journey break down?</strong> During discovery, search, initial loading, playback, navigation or returning to the app?</p>
+<p><strong>What constraints apply?</strong> Development capacity, device storage, data costs, content licensing and the product's existing technical architecture?</p>
+<p>Without answers to these questions, selecting a screen to redesign is largely guesswork.</p>
+<h2 id="2-choose-a-specific-user-segment-rather-than-designing-for-everyone">2. Choose a Specific User Segment Rather Than Designing for Everyone</h2>
+<p>Suppose we are working on an app offering podcasts and video content, with a substantial proportion of listening taking place over mobile networks.</p>
+<p>I would initially focus on <strong>active listeners who consume audio during their commute and regularly experience intermittent connectivity</strong>.</p>
+<p>This does not mean other users are unimportant. It means we are selecting a clearly defined problem that can be investigated and addressed.</p>
+<p>Three criteria help establish whether this segment deserves priority.</p>
+<p><strong>Severity:</strong> Does the connection issue cause a minor delay, or does it prevent the listener from completing their task?</p>
+<p><strong>Frequency:</strong> How often does it happen during a session or across a typical week?</p>
+<p><strong>Existing workarounds:</strong> Do people wait, restart playback, change quality settings or abandon the app altogether?</p>
+<p>To understand these behaviours, I would combine product analytics with observation and user interviews.</p>
+<p>Playback interruptions, retries and exits are useful signals, but they do not automatically explain why someone stopped listening.</p>
+<p>A person might leave because their train has reached its destination or because they deliberately want to finish the episode later.</p>
+<p>That distinction matters. Not every abandoned session represents a technical failure.</p>
+<h2 id="3-which-part-of-the-product-should-we-redesign">3. Which Part of the Product Should We Redesign?</h2>
+<p>If early evidence indicates that interruptions are concentrated during content consumption, I would prioritise <strong>the playback and content-resumption experience</strong>, rather than redesigning the entire home screen.</p>
+<p>There are three credible approaches to consider.</p>
+<h3 id="option-a-reduce-interface-weight-and-loading-requirements">Option A: Reduce Interface Weight and Loading Requirements</h3>
+<p>We could defer non-essential images, reduce network requests and prioritise essential text or previously stored content.</p>
+<p>This would be particularly useful if people encounter blank screens, unsuccessful searches or excessive waiting before reaching the content.</p>
+<p>However, if the principal frustration is an interruption halfway through a podcast, making the home screen lighter may have little effect on the core problem.</p>
+<h3 id="option-b-make-playback-more-resilient">Option B: Make Playback More Resilient</h3>
+<p>This approach concentrates on continuity when the network becomes unreliable.</p>
+<p>Possible improvements include:</p>
+<ul>
+<li>Reliably preserving playback position and resuming from the correct point.</li>
+<li>Retrying failed requests in a controlled manner without creating endless loops.</li>
+<li>Explaining whether the player is reconnecting, waiting or using previously stored content.</li>
+<li>Adjusting media quality where the streaming format supports it.</li>
+<li>Preserving the current playback state when users navigate between screens.</li>
+</ul>
+<p>This is especially relevant when connectivity fluctuates but is not absent for extended periods.</p>
+<p>Apple's official documentation explains that HTTP Live Streaming (HLS) supports alternative media streams at different bitrates, allowing compatible players to respond to changing network conditions.</p>
+<p>However, this capability depends on suitable media preparation, distribution infrastructure and player implementation. It is not something a designer can enable simply by changing a button.</p>
+<h3 id="option-c-introduce-an-offline-consumption-experience">Option C: Introduce an Offline Consumption Experience</h3>
+<p>If users regularly travel through areas without coverage, making online playback more reliable may not be enough.</p>
+<p>In that case, I would consider selective downloads, saved-content management, download progress indicators and the ability to resume interrupted transfers.</p>
+<p>Nevertheless, offline functionality involves considerably more than adding a download button.</p>
+<p>The team must decide how long downloaded content remains available, how incomplete files are handled, what storage limits apply, whether licensing permits downloads and how playback progress is synchronised when connectivity returns.</p>
+<p>An offline-first architecture does not necessarily mean every feature must function without internet access. Rather, the product should preserve its most important functions whenever practical.</p>
+<p>The official Android offline-first guidance and Google's documentation on offline data storage describe the technical considerations behind this approach.</p>
+<h3 id="my-initial-decision">My Initial Decision</h3>
+<p>Assuming the main problem is short network interruptions during playback, I would prioritise Option B.</p>
+<p>I would first make playback recovery reliable. If subsequent evidence showed that users were regularly disconnected for long periods, offline downloads would become a stronger candidate for the next investment.</p>
+<p>This strikes a reasonable balance between immediate user value, engineering complexity and speed of learning.</p>
+<p>However, if investigation revealed that users could not discover or open content in the first place, I would change the priority to content discovery, search or initial loading.</p>
+<p>The choice depends on the evidence, not on a universal rule about which screen matters most.</p>
+<h2 id="4-a-hypothetical-software-product-example">4. A Hypothetical Software Product Example</h2>
+<p><strong>Hypothetical scenario:</strong> Consider an audio-content application called Ava.</p>
+<p>The support team receives complaints that listeners lose part of their podcast experience when travelling through tunnels or switching between mobile networks.</p>
+<p>These reports do not yet prove that poor connectivity is the root cause. Player defects, server-side issues or unreliable playback-position storage could produce similar symptoms.</p>
+<p>The Product Manager works with an analyst, designer and engineers to examine the journey from episode selection through playback, interruption, recovery and potential abandonment.</p>
+<p>Customer support categorises recurring problems, while engineers reproduce slow connections and temporary outages in a controlled environment.</p>
+<p>For this example, assume the preliminary investigation finds that brief interruptions sometimes lead to prolonged playback failures and lost listening positions.</p>
+<p>The team now has two realistic approaches.</p>
+<p><strong>Approach A:</strong> Improve playback behaviour by preserving listening position, introducing controlled retries, restoring player state and displaying clear recovery messages.</p>
+<p><strong>Approach B:</strong> Build an offline download system, including file management, storage controls and synchronisation.</p>
+<p>Approach B could deliver greater value to people who remain disconnected for extended periods. However, it would probably require more engineering and maintenance effort. The team would also need to consider distribution rights, stored-file security and device storage consumption.</p>
+<p>For the specific assumptions in this scenario, Approach A is a better starting point.</p>
+<p>The team tests a limited implementation under simulated network conditions before exposing it to a small group of real users.</p>
+<p>If playback recovery improves but people still fail to consume content because they spend long periods offline, investment in downloads becomes easier to justify.</p>
+<p>The initial decision is not a permanent commitment to one solution.</p>
+<h2 id="5-how-would-we-measure-success">5. How Would We Measure Success?</h2>
+<p>Counting downloads or visits to the player screen could create a misleading impression of improvement.</p>
+<p>For this problem, I would define three types of measures.</p>
+<h3 id="outcome-metric-successful-content-consumption">Outcome Metric: Successful Content Consumption</h3>
+<p>We could measure the proportion of eligible playback sessions in which listeners consume a meaningful amount of their intended content without technical failure.</p>
+<p>For example, a team might provisionally define success for a particular episode type as reaching 80% of its duration.</p>
+<p>That threshold would need justification and validation. It is not a universal standard.</p>
+<p>The denominator should be eligible sessions in which playback actually started, rather than every user who installed the application.</p>
+<p>Results should also be segmented by connectivity conditions so improvements for stable-network users do not hide continuing failures elsewhere.</p>
+<h3 id="diagnostic-metrics-understanding-interruptions">Diagnostic Metrics: Understanding Interruptions</h3>
+<p>Useful measures include involuntary playback stalls, time to recovery after an interruption and the proportion of recoveries that succeed.</p>
+<p>Where possible, the team should distinguish deliberate pauses from technically induced interruptions.</p>
+<p>This helps explain whether changes in the outcome metric genuinely reflect a better experience.</p>
+<h3 id="guardrail-metrics-cost-and-quality">Guardrail Metrics: Cost and Quality</h3>
+<p>An improvement is questionable if it introduces substantial harm elsewhere.</p>
+<p>Relevant guardrails might include mobile data consumption per successfully played minute, battery usage, device storage, application errors and the business's data-delivery costs.</p>
+<p>For instance, a player might recover more reliably while generating repeated network requests that significantly increase users' data consumption.</p>
+<p>That would require further investigation rather than an automatic declaration of success.</p>
+<p>Before running an experiment, I would agree the baseline, observation window, decision criteria and rollback conditions. A possible approach would be to compare eligible sessions in a controlled rollout against a comparison group over a two-week period.</p>
+<p>The measurement plan must be established before interpreting the results.</p>
+<h2 id="6-an-overlooked-risk-synchronisation-and-user-trust">6. An Overlooked Risk: Synchronisation and User Trust</h2>
+<p>Imagine someone listens to part of an episode offline while a different playback position is recorded on another device.</p>
+<p>When connectivity returns, which position should the application preserve?</p>
+<p>If the system blindly replaces one record with another, the user may lose their place.</p>
+<p>Similar conflicts can occur with bookmarks, incomplete downloads and listened-status updates.</p>
+<p>This makes local storage and synchronisation product concerns, not merely implementation details.</p>
+<p>The Product Manager and engineering team must agree how the product should resolve conflicts, which state matters to the user and how any uncertainty should be communicated.</p>
+<p>The <a href="https://developer.android.com/topic/architecture/data-layer/offline-first" rel="noopener noreferrer" target="_blank">Android offline-first guidance</a> discusses local data sources, synchronisation and conflict-resolution strategies.</p>
+<p>For web applications, we must also avoid assuming that every background synchronisation feature is universally available.</p>
+<p>MDN identifies the Background Synchronization API as having limited browser availability. A dependable web solution therefore needs an alternative, such as synchronising when the application is opened again.</p>
+<h2 id="7-a-natural-interview-answer">7. A Natural Interview Answer</h2>
+<p><strong>Example spoken answer from a candidate:</strong></p>
+<blockquote>
+<p>"Before choosing a particular area to redesign, I'd want to understand exactly where users are struggling. An unstable connection can affect search, page loading and content playback in very different ways.</p>
+<p>"If we assume this is a podcast app and the main problem is brief interruptions during commuting, I'd start with the playback experience.</p>
+<p>"I'd look at how often playback stops unexpectedly, how long recovery takes and whether users lose their listening position.</p>
+<p>"Then I'd compare a few possible solutions, such as automatic playback recovery, adaptive quality and offline downloads.</p>
+<p>"Given those assumptions, I'd probably start with a small improvement to playback-state preservation and recovery, then test it with a limited group.</p>
+<p>"My main success measure would be successful content consumption, supported by interruption duration, data usage and error rates.</p>
+<p>"If the evidence showed that users were mostly offline for long periods, or that most failures happened before playback started, I'd change my priority.</p>
+<p>"I wouldn't want to commit to a particular feature before understanding which problem it actually solves."</p>
+</blockquote>
+<p>This response makes a decision without pretending that the available information is complete. It also explains what evidence would justify changing direction.</p>
+<h2 id="8-interview-follow-up-questions">8. Interview Follow-up Questions</h2>
+<h3 id="what-would-you-do-if-you-had-only-two-weeks-to-figure-it-out">What Would You Do if You Had Only Two Weeks to Figure It Out?</h3>
+<p>This is one of the two follow-up questions in the original Q0011 reference.</p>
+<p>With two weeks available, I would not attempt to build a comprehensive offline platform.</p>
+<p>Instead, I would aim to reduce the most consequential uncertainty at the lowest reasonable cost.</p>
+<p>During the opening days, I would review playback events and support reports, speak to a small number of affected users and reproduce failures under poor network conditions.</p>
+<p>Next, I would prototype or implement one narrowly scoped improvement, such as reliable playback-position preservation and recovery after a brief disconnection.</p>
+<p>At the end of the period, the team would compare its observations with the baseline and decide whether to continue, revise or reject the proposed approach.</p>
+<p><strong>The most valuable output of those two weeks may be a better-supported decision, not a fully released feature.</strong></p>
+<h3 id="what-evidence-would-make-you-reject-your-proposed-solution">What Evidence Would Make You Reject Your Proposed Solution?</h3>
+<p>This is the second follow-up in the original reference.</p>
+<p>If most affected users abandoned the product before reaching the player, playback redesign would be the wrong priority.</p>
+<p>If the predominant problem were extended periods without connectivity, short-interruption recovery would not adequately address their needs.</p>
+<p>I would also reconsider the approach if an experiment showed no meaningful improvement in successful consumption, or if data usage and technical errors increased unacceptably.</p>
+<p>Being prepared to reject one's own proposal is an important part of sound product judgement.</p>
+<h2 id="9-common-mistakes-to-avoid">9. Common Mistakes to Avoid</h2>
+<p><strong>Starting with features instead of the problem.</strong> Saying "I'd add offline downloads" without establishing where the user journey fails demonstrates premature solution selection.</p>
+<p><strong>Designing for everybody.</strong> An article reader, podcast listener and live-video viewer have different needs. A strong response identifies which group should come first and why.</p>
+<p><strong>Confusing connectivity with successful usage.</strong> A device showing an internet connection does not guarantee that media can load or play reliably.</p>
+<p><strong>Relying on vanity metrics.</strong> More downloads or playback starts do not establish that users are successfully consuming content or having a better experience.</p>
+<p><strong>Ignoring costs and constraints.</strong> Offline storage introduces licensing, storage and synchronisation issues. Automatic retries can also increase data consumption.</p>
+<p><strong>Displaying unjustified certainty.</strong> A Product Manager should state the assumptions behind a recommendation and what would change it, rather than treating an untested feature as the obvious answer.</p>
+<p>It is also useful to distinguish responsibilities. The Product Manager focuses on the user problem, desired outcomes and product decision, working with designers and engineers on feasible solutions. In Scrum, the Product Owner is accountable for maximising product value and effective Product Backlog management. A Project Manager, where the organisation uses that role, is more concerned with coordinating delivery within agreed project constraints. Exact responsibilities depend on the organisation.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>If I had to select one part of a content application to redesign for users with unstable internet, <strong>I would initially choose playback and content resumption, provided the evidence showed that interruptions occurred primarily during consumption</strong>.</p>
+<p>Preserving playback position, recovering gracefully after disconnections and communicating system status clearly would offer a focused, testable starting point.</p>
+<p>That decision would change if users could not reach their content in the first place, in which case discovery and loading would deserve priority. If users spent extended periods disconnected, offline downloads would become more important.</p>
+<p>The strength of a Product Manager's interview answer does not lie in how many features they can suggest. It lies in showing <strong>whose problem they are solving, why they chose it, what evidence supports the decision and which trade-offs they are prepared to accept</strong>.</p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://developer.android.com/topic/architecture/data-layer/offline-first" rel="noopener noreferrer" target="_blank">Android Developers — Build an offline-first app</a></li>
+<li><a href="https://developer.apple.com/documentation/http-live-streaming" rel="noopener noreferrer" target="_blank">Apple Developer — HTTP Live Streaming</a></li>
+<li><a href="https://web.dev/learn/pwa/offline-data" rel="noopener noreferrer" target="_blank">web.dev — Offline data</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API" rel="noopener noreferrer" target="_blank">MDN — Background Synchronization API</a></li>
+<li><a href="https://www.reforge.com/blog/product-manager-interview-questions" rel="noopener noreferrer" target="_blank">Reforge — Product Manager Interview Questions</a></li>
+</ol>
+<p>The main question and two follow-ups are taken from Q0011 in the educational 1,000 Product Manager interview-question collection.</p>
+<p>Ava is a hypothetical example. The technical references support the discussion of implementation options.</p>
+<p>The Reforge article addresses Product Manager interview assessment practices; it does not establish that this exact question was asked by any particular company.</p>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/unreliable-connectivity/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Unreliable Connectivity</span></a><a class="blog-post-term tag" href="/blog/en/tag/offline-first-design/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Offline-first Design</span></a><a class="blog-post-term tag" href="/blog/en/tag/media-playback-experience/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Media Playback Experience</span></a><a class="blog-post-term tag" href="/blog/en/tag/adaptive-streaming/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Adaptive Streaming</span></a><a class="blog-post-term tag" href="/blog/en/tag/success-metrics/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Success Metrics</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#what-is-the-interview-question" class="h2">What Is the Interview Question?</a>
+          <a href="#1-understand-what-unreliable-internet-actually-prevents" class="h2">1. Understand What Unreliable Internet Actually Prevents</a>
+          <a href="#2-choose-a-specific-user-segment-rather-than-designing-for-everyone" class="h2">2. Choose a Specific User Segment Rather Than Designing for Everyone</a>
+          <a href="#3-which-part-of-the-product-should-we-redesign" class="h2">3. Which Part of the Product Should We Redesign?</a>
+          <a href="#option-a-reduce-interface-weight-and-loading-requirements" class="h3">Option A: Reduce Interface Weight and Loading Requirements</a>
+          <a href="#option-b-make-playback-more-resilient" class="h3">Option B: Make Playback More Resilient</a>
+          <a href="#option-c-introduce-an-offline-consumption-experience" class="h3">Option C: Introduce an Offline Consumption Experience</a>
+          <a href="#my-initial-decision" class="h3">My Initial Decision</a>
+          <a href="#4-a-hypothetical-software-product-example" class="h2">4. A Hypothetical Software Product Example</a>
+          <a href="#5-how-would-we-measure-success" class="h2">5. How Would We Measure Success?</a>
+          <a href="#outcome-metric-successful-content-consumption" class="h3">Outcome Metric: Successful Content Consumption</a>
+          <a href="#diagnostic-metrics-understanding-interruptions" class="h3">Diagnostic Metrics: Understanding Interruptions</a>
+          <a href="#guardrail-metrics-cost-and-quality" class="h3">Guardrail Metrics: Cost and Quality</a>
+          <a href="#6-an-overlooked-risk-synchronisation-and-user-trust" class="h2">6. An Overlooked Risk: Synchronisation and User Trust</a>
+          <a href="#7-a-natural-interview-answer" class="h2">7. A Natural Interview Answer</a>
+          <a href="#8-interview-follow-up-questions" class="h2">8. Interview Follow-up Questions</a>
+          <a href="#what-would-you-do-if-you-had-only-two-weeks-to-figure-it-out" class="h3">What Would You Do if You Had Only Two Weeks to Figure It Out?</a>
+          <a href="#what-evidence-would-make-you-reject-your-proposed-solution" class="h3">What Evidence Would Make You Reject Your Proposed Solution?</a>
+          <a href="#9-common-mistakes-to-avoid" class="h2">9. Common Mistakes to Avoid</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+          <a href="#sources" class="h2">Sources</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">More writing</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/en/designing-products-for-limited-access/">
+            <span class="blog-sidebar-item-category">Product Design &amp; UX</span>
+            <strong>Designing an Everyday Product for People with Limited Access</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-01">2026-11-01</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/help-users-choose-similar-products/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>How Do You Help Users Choose Between Similar Products?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-10">2026-11-10</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/accessible-airbnb-booking-experience/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-09">2026-11-09</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/en/">Browse all articles <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/content-app-poor-connectivity/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong><a href="/en/about.html">Moein Ghezelbash</a></strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/designing-products-for-limited-access/" class="blog-end-next">
+      <span>Read next <span aria-hidden="true">↗</span></span>
+      <strong>Designing an Everyday Product for People with Limited Access</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+    <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/en/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/en/">Home</a>
+        <a data-site-footer-link="about" href="/en/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/en/portfolio.html">Projects</a>
+        <a data-site-footer-guide href="/en/product-management.html">Product management</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-en.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/en/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js?v=footer-unified-20261115"></script>
+</body>
+</html>

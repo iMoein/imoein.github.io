@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="کاربری را تصور کنید که در مسیر رفت‌وآمد روزانه مشغول گوش‌دادن به یک پادکست است. اینترنت برای چند ثانیه قطع می‌شود، پخش متوقف می‌شود و بعد از اتصال مجدد، برنامه به‌درستی ادامه نمی‌دهد. کاربر چند بار تلاش می‌کند و در نهایت اپلیکیشن را می‌بندد.">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/fa/content-app-poor-connectivity/">
+  <link rel="alternate" hreflang="fa" href="https://imoein.com/blog/fa/content-app-poor-connectivity/">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/blog/en/content-app-poor-connectivity/">
+  <link rel="alternate" type="application/rss+xml" title="یادداشت‌ها | iMoein" href="/blog/fa/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟ | iMoein">
+  <meta property="og:description" content="کاربری را تصور کنید که در مسیر رفت‌وآمد روزانه مشغول گوش‌دادن به یک پادکست است. اینترنت برای چند ثانیه قطع می‌شود، پخش متوقف می‌شود و بعد از اتصال مجدد، برنامه به‌درستی ادامه نمی‌دهد. کاربر چند بار تلاش می‌کند و در نهایت اپلیکیشن را می‌بندد.">
+  <meta property="og:url" content="https://imoein.com/blog/fa/content-app-poor-connectivity/">
+  <meta property="og:locale" content="fa_IR">
+  <meta property="og:locale:alternate" content="en_GB">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png">
+  <meta property="og:image:alt" content="بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟">
+  <meta property="og:image:width" content="1180">
+  <meta property="og:image:height" content="350">
+  <meta property="article:published_time" content="2026-11-11">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="هزار سوال مصاحبه مدیر محصول">
+<meta property="article:tag" content="اینترنت ناپایدار"><meta property="article:tag" content="طراحی آفلاین"><meta property="article:tag" content="تجربه پخش محتوا"><meta property="article:tag" content="پخش تطبیقی"><meta property="article:tag" content="سنجش موفقیت">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟ | iMoein">
+  <meta name="twitter:description" content="کاربری را تصور کنید که در مسیر رفت‌وآمد روزانه مشغول گوش‌دادن به یک پادکست است. اینترنت برای چند ثانیه قطع می‌شود، پخش متوقف می‌شود و بعد از اتصال مجدد، برنامه به‌درستی ادامه نمی‌دهد. کاربر چند بار تلاش می‌کند و در نهایت اپلیکیشن را می‌بندد.">
+  <meta name="twitter:url" content="https://imoein.com/blog/fa/content-app-poor-connectivity/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png">
+  <meta name="twitter:image:alt" content="بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟">
+  <title>بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟ | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/fa/content-app-poor-connectivity/#article", "headline": "بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟", "description": "کاربری را تصور کنید که در مسیر رفت‌وآمد روزانه مشغول گوش‌دادن به یک پادکست است. اینترنت برای چند ثانیه قطع می‌شود، پخش متوقف می‌شود و بعد از اتصال مجدد، برنامه به‌درستی ادامه نمی‌دهد. کاربر چند بار تلاش می‌کند و در نهایت اپلیکیشن را می‌بندد.", "url": "https://imoein.com/blog/fa/content-app-poor-connectivity/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/fa/content-app-poor-connectivity/"}, "inLanguage": "fa-IR", "isAccessibleForFree": true, "datePublished": "2026-11-11", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/about.html", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/about.html", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.png", "articleSection": "هزار سوال مصاحبه مدیر محصول", "keywords": ["اینترنت ناپایدار", "طراحی آفلاین", "تجربه پخش محتوا", "پخش تطبیقی", "سنجش موفقیت"], "wordCount": 2753, "timeRequired": "PT17M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/fa/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/fa/content-app-poor-connectivity/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "معین قزلباش", "item": "https://imoein.com/about.html"}, {"@type": "ListItem", "position": 2, "name": "یادداشت‌ها", "item": "https://imoein.com/blog/fa/"}, {"@type": "ListItem", "position": 3, "name": "هزار سوال مصاحبه مدیر محصول", "item": "https://imoein.com/blog/fa/category/%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%88%D8%A7%D9%84-%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87-%D9%85%D8%AF%DB%8C%D8%B1-%D9%85%D8%AD%D8%B5%D9%88%D9%84/"}, {"@type": "ListItem", "position": 4, "name": "بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟", "item": "https://imoein.com/blog/fa/content-app-poor-connectivity/"}]}</script>  <link rel="stylesheet" href="/site-footer.css?v=footer-unified-20261115">
+  <link rel="stylesheet" href="/site-analytics.css?v=ga4-consent-v2-20261114">
+  <script defer src="/site-analytics.js?v=ga4-no-prompt-20261114-r2"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-fa blog-page" data-blog-alt-fa="/blog/fa/content-app-poor-connectivity/" data-blog-alt-en="/blog/en/content-app-poor-connectivity/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="در حال بارگذاری صفحه">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/about.html">معین قزلباش</a><span aria-hidden="true">/</span>
+    <a href="/blog/fa/">یادداشت‌ها و تجربه‌ها</a><span aria-hidden="true">/</span>
+    <a href="/blog/fa/category/%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%88%D8%A7%D9%84-%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87-%D9%85%D8%AF%DB%8C%D8%B1-%D9%85%D8%AD%D8%B5%D9%88%D9%84/">هزار سوال مصاحبه مدیر محصول</a><span aria-hidden="true">/</span><span aria-current="page">بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-11" data-iso="2026-11-11">2026-11-11</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>17 دقیقه مطالعه</span>
+    </div>
+    <h1>بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟</h1>
+    <p>روز ۱۱ از هزار سوال مصاحبه مدیر محصول</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/post-20261115-nznld-44f4d3a7c51b.webp" alt="بازطراحی اپلیکیشن محتوا برای اینترنت ناپایدار؛ از کدام بخش شروع کنیم؟" width="1180" height="350" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>کاربری را تصور کنید که در مسیر رفت‌وآمد روزانه مشغول گوش‌دادن به یک پادکست است. اینترنت برای چند ثانیه قطع می‌شود، پخش متوقف می‌شود و بعد از اتصال مجدد، برنامه به‌درستی ادامه نمی‌دهد. کاربر چند بار تلاش می‌کند و در نهایت اپلیکیشن را می‌بندد.</strong></p>
+<p>حالا تیم محصول تصمیم گرفته تجربه کاربران با اینترنت ضعیف را بهبود دهد. یک نفر پیشنهاد می‌کند امکان دانلود محتوا اضافه شود، دیگری سراغ کاهش کیفیت پخش می‌رود و طراح محصول معتقد است باید صفحه اصلی را سبک‌تر کنیم.</p>
+<p>هر سه پیشنهاد می‌توانند مفید باشند، اما <strong>کدام‌یک واقعا مسئله اصلی کاربر را حل می‌کند؟</strong></p>
+<p>این همان تصمیمی است که در سؤال یازدهم مجموعه هزار سؤال مصاحبه مدیر محصول بررسی می‌کنیم.</p>
+<h2 id="سؤال-مصاحبه-چیست؟">سؤال مصاحبه چیست؟</h2>
+<p><strong>اگر کاربران یک اپلیکیشن محتوا اینترنت ناپایداری داشته باشند، کدام بخش محصول را بازطراحی می‌کنید؟</strong></p>
+<p>در نگاه اول، سؤال درباره طراحی رابط کاربری به نظر می‌رسد؛ اما مصاحبه‌کننده بیشتر از آنکه دنبال یک قابلیت جدید باشد، می‌خواهد شیوه تصمیم‌گیری مدیر محصول را بسنجد.</p>
+<p>یک پاسخ قوی باید نشان دهد که می‌توانیم:</p>
+<ul>
+<li>مسئله واقعی را از راه‌حل‌های پیشنهادی جدا کنیم.</li>
+<li>گروه مشخصی از کاربران و مهم‌ترین نیازشان را انتخاب کنیم.</li>
+<li>چند راه‌حل را با توجه به ارزش، هزینه و ریسک مقایسه کنیم.</li>
+<li>تصمیمی بگیریم که امکان آزمایش و اصلاح آن وجود داشته باشد.</li>
+<li>موفقیت را با رفتار واقعی کاربر بسنجیم، نه تعداد قابلیت‌های منتشرشده.</li>
+</ul>
+<p>پاسخ ضعیف معمولا با فهرستی از قابلیت‌ها شروع می‌شود. پاسخ حرفه‌ای از این سؤال شروع می‌کند که کاربر دقیقا کجا و چرا از انجام کارش بازمی‌ماند.</p>
+<h2 id="۱-اول-مشخص-کنیم-اینترنت-ناپایدار-چه-مشکلی-ایجاد-کرده-است">۱. اول مشخص کنیم اینترنت ناپایدار چه مشکلی ایجاد کرده است</h2>
+<p>اینترنت ناپایدار برای همه کاربران یک معنی ندارد.</p>
+<p>کسی که مقاله می‌خواند، ممکن است با بازنشدن تصاویر یا بارگذاری دوباره صفحه مشکل داشته باشد. کاربری که ویدئو تماشا می‌کند، احتمالا از توقف‌های مکرر پخش ناراضی است. برای کسی که پادکست گوش می‌دهد، حفظ موقعیت پخش و ادامه‌دادن بدون دردسر می‌تواند مهم‌تر باشد.</p>
+<p>حتی نوع اختلال هم یکسان نیست. گاهی سرعت پایین است، گاهی اتصال برای چند ثانیه قطع می‌شود و گاهی شبکه ظاهرا متصل است، اما دریافت داده عملا پیش نمی‌رود.</p>
+<p>بنابراین قبل از طراحی، چهار موضوع را روشن می‌کنیم:</p>
+<p><strong>کاربر کیست؟</strong> کاربران روزانه، مخاطبان تازه‌وارد یا افرادی که بیشتر هنگام رفت‌وآمد از محصول استفاده می‌کنند؟</p>
+<p><strong>می‌خواهد چه کاری انجام دهد؟</strong> خواندن مقاله، گوش‌دادن به پادکست، تماشای ویدئو یا ذخیره محتوا برای بعد؟</p>
+<p><strong>اختلال کجا اتفاق می‌افتد؟</strong> هنگام ورود، جست‌وجو، شروع پخش، ادامه مصرف محتوا یا بازگشت به برنامه؟</p>
+<p><strong>محدودیت ما چیست؟</strong> زمان توسعه، ظرفیت ذخیره‌سازی دستگاه، هزینه انتقال داده، حقوق انتشار محتوا و امکانات فنی فعلی محصول؟</p>
+<p>تا زمانی که به این پرسش‌ها پاسخ نداده‌ایم، انتخاب یک صفحه برای بازطراحی بیشتر حدس است تا تصمیم محصولی.</p>
+<h2 id="۲-به-جای-همه-کاربران،-یک-گروه-مشخص-را-انتخاب-کنیم">۲. به جای همه کاربران، یک گروه مشخص را انتخاب کنیم</h2>
+<p>فرض کنیم با یک اپلیکیشن پادکست و ویدئو روبه‌رو هستیم که کاربران آن اغلب با اینترنت موبایل محتوا مصرف می‌کنند.</p>
+<p>برای شروع، یک گروه محدود انتخاب می‌کنیم: <strong>کاربران فعالی که هنگام رفت‌وآمد به محتوای صوتی گوش می‌دهند و در همان مسیر با قطع‌ووصلی اتصال روبه‌رو می‌شوند.</strong></p>
+<p>این انتخاب به معنی بی‌اهمیت‌بودن نیاز سایر کاربران نیست. هدف این است که مسئله‌ای مشخص، پرتکرار و قابل بررسی پیدا کنیم.</p>
+<p>سه معیار می‌توانند در این انتخاب کمک کنند:</p>
+<ul>
+<li><strong>شدت مشکل:</strong> اختلال فقط چند ثانیه تأخیر ایجاد می‌کند یا کاربر را از ادامه کار منصرف می‌کند؟</li>
+<li><strong>تکرار مشکل:</strong> چند بار در یک هفته یا در یک جلسه مصرف محتوا اتفاق می‌افتد؟</li>
+<li><strong>راه‌حل فعلی کاربر:</strong> منتظر می‌ماند، کیفیت را تغییر می‌دهد، دوباره تلاش می‌کند یا سراغ محصول دیگری می‌رود؟</li>
+</ul>
+<p>برای پاسخ، داده‌های محصول را با مشاهده و گفت‌وگو ترکیب می‌کنیم. رویدادهای توقف پخش، تلاش مجدد و خروج از برنامه می‌توانند نشانه باشند؛ اما به‌تنهایی علت رفتار کاربر را توضیح نمی‌دهند.</p>
+<p>مثلا خروج از پخش همیشه به معنی شکست نیست. ممکن است کاربر به مقصد رسیده باشد یا عمدا ادامه محتوا را به زمان دیگری موکول کرده باشد.</p>
+<p>این تفاوت اهمیت زیادی دارد؛ چون قرار نیست هر خروجی را به حساب اینترنت ضعیف بگذاریم.</p>
+<h2 id="۳-کدام-بخش-را-بازطراحی-کنیم؟">۳. کدام بخش را بازطراحی کنیم؟</h2>
+<p>اگر بررسی‌های اولیه نشان دهد بیشترین اختلال در زمان مصرف محتوا رخ می‌دهد، پیشنهاد من <strong>بازطراحی تجربه پخش و ادامه مصرف محتوا</strong> است، نه تغییر کامل صفحه اصلی یا همه بخش‌های اپلیکیشن.</p>
+<p>سه مسیر اصلی پیش روی ما قرار دارد.</p>
+<h3 id="مسیر-اول-سبک-کردن-رابط-کاربری-و-بارگذاری-محتوا">مسیر اول: سبک‌کردن رابط کاربری و بارگذاری محتوا</h3>
+<p>می‌توانیم تصاویر غیرضروری را دیرتر بارگذاری کنیم، حجم درخواست‌ها را کاهش دهیم و اطلاعات متنی یا فهرست محتوای ذخیره‌شده را زودتر نشان دهیم.</p>
+<p>این راهکار زمانی ارزش بیشتری دارد که کاربران حتی پیش از رسیدن به محتوا با صفحه‌های خالی، جست‌وجوی ناموفق یا انتظار طولانی روبه‌رو باشند.</p>
+<p>اما اگر مشکل اصلی توقف پخش در میانه یک پادکست باشد، سبک‌ترشدن صفحه اصلی احتمالا تأثیر محدودی خواهد داشت.</p>
+<h3 id="مسیر-دوم-مقاوم-کردن-تجربه-پخش-در-برابر-اختلال-شبکه">مسیر دوم: مقاوم‌کردن تجربه پخش در برابر اختلال شبکه</h3>
+<p>در این رویکرد، روی حفظ پیوستگی تجربه تمرکز می‌کنیم:</p>
+<ul>
+<li>ذخیره مطمئن موقعیت پخش و ادامه از همان نقطه</li>
+<li>تلاش مجدد کنترل‌شده پس از قطع اتصال، بدون درخواست‌های بی‌پایان</li>
+<li>نمایش وضعیت قابل فهم برای کاربر، مثل انتظار برای اتصال یا آماده‌بودن محتوای ذخیره‌شده</li>
+<li>تنظیم کیفیت متناسب با شرایط شبکه، در قالب‌هایی که از آن پشتیبانی می‌کنند</li>
+<li>جلوگیری از نابودی وضعیت فعلی پخش هنگام جابه‌جایی میان صفحه‌ها</li>
+</ul>
+<p>این انتخاب برای کاربری مناسب است که اتصالش نوسان دارد، اما کاملا و برای مدت طولانی آفلاین نیست.</p>
+<p>برای نمونه، مستندات رسمی Apple توضیح می‌دهد که HLS می‌تواند میان جریان‌های رسانه‌ای با نرخ بیت متفاوت جابه‌جا شود تا پخش با شرایط شبکه سازگارتر شود. البته این قابلیت به تنظیم درست فایل‌های رسانه‌ای، زیرساخت توزیع و پخش‌کننده هم وابسته است.</p>
+<h3 id="مسیر-سوم-طراحی-تجربه-آفلاین">مسیر سوم: طراحی تجربه آفلاین</h3>
+<p>اگر کاربران در مسیرهای طولانی یا مناطق فاقد پوشش شبکه از محصول استفاده می‌کنند، مقاوم‌کردن پخش آنلاین ممکن است کافی نباشد.</p>
+<p>در این شرایط می‌توانیم دانلود انتخابی، ذخیره محتوا برای استفاده بعدی، نمایش وضعیت دانلود و ادامه انتقال فایل پس از اختلال را بررسی کنیم.</p>
+<p>اما طراحی آفلاین فقط اضافه‌کردن یک دکمه دانلود نیست.</p>
+<p>باید مشخص شود محتوا تا چه زمانی قابل استفاده است، فایل ناقص چگونه مدیریت می‌شود، چه میزان فضا مصرف می‌کند، آیا کاربر اجازه ذخیره آن را دارد و اطلاعاتی مثل موقعیت پخش چطور بعد از اتصال مجدد هماهنگ می‌شوند.</p>
+<p>در معماری Offline-first نیز هدف این نیست که همه قابلیت‌ها لزوما بدون اینترنت کار کنند؛ بلکه بخش‌های ضروری محصول باید تا حد امکان به اتصال لحظه‌ای وابسته نباشند.</p>
+<p>راهنمای رسمی Android درباره طراحی Offline-first و مستندات Google برای ذخیره داده در برنامه‌های وب، مبانی فنی این انتخاب را توضیح می‌دهند.</p>
+<h3 id="تصمیم-اولیه-من-چیست؟">تصمیم اولیه من چیست؟</h3>
+<p>با فرض اینکه کاربران عمدتا با قطع‌ووصلی کوتاه شبکه روبه‌رو هستند و مشکل در زمان پخش رخ می‌دهد، مسیر دوم را در اولویت قرار می‌دهم.</p>
+<p>ابتدا تجربه پخش و بازیابی آن را اصلاح می‌کنیم. اگر شواهد نشان دهند کاربران برای مدت طولانی بدون اتصال می‌مانند، دانلود آفلاین را به‌عنوان مرحله بعد بررسی می‌کنیم.</p>
+<p>این تصمیم تعادلی میان ارزش قابل مشاهده برای کاربر، پیچیدگی فنی و سرعت یادگیری ایجاد می‌کند. البته اگر داده‌ها نشان دهند کاربران اساسا نمی‌توانند محتوای موردنظرشان را پیدا یا باز کنند، باید اولویت را به صفحه فهرست، جست‌وجو یا بارگذاری اولیه تغییر دهیم.</p>
+<h2 id="۴-یک-مثال-نرم-افزاری-فرضی">۴. یک مثال نرم‌افزاری فرضی</h2>
+<p><strong>سناریوی فرضی:</strong> یک اپلیکیشن محتوای صوتی به نام «آوا» داریم. تیم پشتیبانی پیام‌هایی دریافت می‌کند که کاربران هنگام ورود به تونل یا جابه‌جایی میان شبکه‌های موبایل، بخشی از تجربه شنیدن پادکست را از دست می‌دهند.</p>
+<p>این گزارش‌ها هنوز اثبات نمی‌کنند که مشکل از اینترنت است؛ ممکن است خطای پخش‌کننده، محدودیت سرور یا مشکل ذخیره موقعیت شنیدن هم وجود داشته باشد.</p>
+<p>مدیر محصول همراه تحلیلگر داده، طراح و توسعه‌دهندگان ابتدا مسیر کاربر را بررسی می‌کند: انتخاب اپیزود، شروع پخش، بروز اختلال، تلاش برای ادامه و خروج احتمالی.</p>
+<p>تیم پشتیبانی نمونه‌های خطا را دسته‌بندی می‌کند و تیم فنی با شبیه‌سازی سرعت پایین و قطع موقت شبکه، رفتار پخش‌کننده را آزمایش می‌کند.</p>
+<p>در این سناریو فرض می‌کنیم شواهد اولیه نشان می‌دهند قطع کوتاه شبکه گاهی باعث توقف طولانی پخش و از دست رفتن موقعیت شنیدن می‌شود.</p>
+<p>دو راه‌حل عملی داریم:</p>
+<p><strong>گزینه A:</strong> بازطراحی رفتار پخش‌کننده؛ حفظ موقعیت شنیدن، تلاش مجدد کنترل‌شده، بازیابی وضعیت و پیام‌های روشن.</p>
+<p><strong>گزینه B:</strong> ساخت سامانه دانلود آفلاین با مدیریت فایل، فضای ذخیره‌سازی و هماهنگ‌سازی اطلاعات.</p>
+<p>گزینه B برای کاربرانی که اتصال ندارند ارزش بیشتری ایجاد می‌کند، اما احتمالا هزینه توسعه و نگهداری بالاتری دارد. همچنین باید مسائل حقوق انتشار، امنیت فایل‌های ذخیره‌شده و مصرف حافظه دستگاه را بررسی کنیم.</p>
+<p>برای این فرض مشخص، گزینه A نقطه شروع مناسب‌تری است.</p>
+<p>تیم نسخه آزمایشی را ابتدا در شرایط شبکه شبیه‌سازی‌شده و سپس روی گروه محدودی از کاربران واقعی بررسی می‌کند. اگر بازیابی پخش بهتر شود، اما کاربران همچنان به دلیل قطعی‌های طولانی نتوانند محتوا را مصرف کنند، تصمیم بعدی می‌تواند سرمایه‌گذاری روی دانلود آفلاین باشد.</p>
+<p>نکته مهم این است که انتخاب اولیه، تعهد همیشگی به یک راه‌حل نیست.</p>
+<h2 id="۵-موفقیت-بازطراحی-را-با-چه-شاخص-هایی-می-سنجیم؟">۵. موفقیت بازطراحی را با چه شاخص‌هایی می‌سنجیم؟</h2>
+<p>اگر فقط تعداد دانلودها یا تعداد بازدید از صفحه پخش را اندازه بگیریم، ممکن است تصویری اشتباه از موفقیت به دست بیاوریم.</p>
+<p>برای این مسئله، سه نوع شاخص نیاز داریم.</p>
+<h3 id="شاخص-نتیجه-مصرف-موفق-محتوا">شاخص نتیجه: مصرف موفق محتوا</h3>
+<p>برای نمونه، می‌توانیم سهم جلساتی را اندازه بگیریم که کاربر پس از شروع پخش، بخش معناداری از محتوای موردنظرش را بدون شکست فنی مصرف می‌کند.</p>
+<p>اگر برای یک نوع اپیزود، رسیدن به ۸۰ درصد مدت محتوا را به‌عنوان معیار آزمایشی انتخاب کنیم، باید تعریف کنیم چرا این آستانه مناسب است؛ این عدد یک استاندارد عمومی نیست.</p>
+<p>مخرج شاخص نیز اهمیت دارد: تعداد جلسات واجد شرایطی که پخش را شروع کرده‌اند، نه تعداد کل کاربران نصب‌کننده برنامه.</p>
+<p>همچنین نتیجه را باید برای گروه‌های دارای اتصال پایدار و ناپایدار جداگانه ببینیم.</p>
+<h3 id="شاخص-تشخیصی-تجربه-اختلال">شاخص تشخیصی: تجربه اختلال</h3>
+<p>مواردی مانند تعداد توقف‌های ناخواسته، زمان لازم برای ادامه پخش پس از اختلال و نرخ بازیابی موفق می‌توانند نشان دهند مشکل از کجا می‌آید.</p>
+<p>توقف عمدی کاربر باید تا حد امکان از توقف ناشی از خطای فنی تفکیک شود.</p>
+<h3 id="شاخص-محافظتی-هزینه-و-کیفیت">شاخص محافظتی: هزینه و کیفیت</h3>
+<p>باید مراقب باشیم بهبود یک بخش به بخش دیگری آسیب نزند.</p>
+<p>مصرف اینترنت به ازای هر دقیقه پخش موفق، مصرف باتری، اشغال حافظه، خطاهای برنامه و هزینه انتقال داده برای کسب‌وکار از شاخص‌های محافظتی هستند.</p>
+<p>مثلا اگر پخش مقاوم‌تر شود، اما درخواست‌های تکراری مصرف اینترنت کاربر را به‌شدت افزایش دهند، نمی‌توانیم بدون بررسی این هزینه، نتیجه را موفق بدانیم.</p>
+<p>بهتر است پیش از آزمایش، مقدار پایه، بازه مشاهده، معیار تصمیم و شرایط توقف یا بازگشت را مشخص کنیم؛ مثلا عملکرد را در جلسات واجد شرایط طی دو هفته پس از انتشار آزمایشی با گروه مقایسه بررسی کنیم.</p>
+<h2 id="۶-یک-ریسک-کمتر-دیده-شده-هماهنگ-سازی-و-اعتماد-کاربر">۶. یک ریسک کمتر دیده‌شده: هماهنگ‌سازی و اعتماد کاربر</h2>
+<p>فرض کنیم کاربر بخشی از پادکست را بدون اتصال گوش داده و هم‌زمان روی دستگاه دیگری موقعیت پخش متفاوتی ثبت شده است.</p>
+<p>وقتی اتصال برمی‌گردد، کدام موقعیت باید نگه داشته شود؟</p>
+<p>اگر برنامه بدون منطق مشخص، آخرین داده دریافتی را جایگزین کند، ممکن است تجربه کاربر خراب شود.</p>
+<p>این مسئله در نشان‌کردن محتوا، دانلودهای نیمه‌تمام و تغییر وضعیت «شنیده‌شده» هم وجود دارد.</p>
+<p>به همین دلیل ذخیره محلی و هماهنگ‌سازی، مسئله‌ای صرفا فنی نیست. مدیر محصول باید همراه تیم فنی درباره رفتار مورد انتظار، مدیریت تعارض و پیام‌هایی که کاربر می‌بیند تصمیم بگیرد.</p>
+<p>برای برنامه‌های وب هم نباید فرض کنیم هر قابلیت هماهنگ‌سازی در پس‌زمینه روی همه مرورگرها قابل استفاده است. مستندات MDN نشان می‌دهد Background Synchronization API پشتیبانی یکسانی در مرورگرهای مختلف ندارد. بنابراین باید مسیر جایگزینی مانند هماهنگ‌سازی هنگام بازشدن مجدد برنامه در نظر بگیریم.</p>
+<h2 id="۷-پاسخ-پیشنهادی-در-مصاحبه">۷. پاسخ پیشنهادی در مصاحبه</h2>
+<p><strong>نمونه پاسخ شفاهی یک داوطلب:</strong></p>
+<blockquote>
+<p>«من قبل از انتخاب بخشی برای بازطراحی، می‌خواهم بدانم کاربران دقیقا کجا با مشکل روبه‌رو می‌شوند. چون اینترنت ناپایدار می‌تواند روی جست‌وجو، بارگذاری صفحه یا پخش محتوا تأثیر متفاوتی داشته باشد.</p>
+<p>اگر فرض کنیم محصول ما یک اپلیکیشن پادکست است و بیشتر کاربران هنگام رفت‌وآمد با قطع‌ووصلی کوتاه شبکه مواجه می‌شوند، اول سراغ تجربه پخش می‌روم.</p>
+<p>بررسی می‌کنم چند بار پخش ناخواسته متوقف می‌شود، چقدر طول می‌کشد دوباره ادامه پیدا کند و آیا کاربر موقعیت شنیدنش را از دست می‌دهد یا نه.</p>
+<p>بعد چند راه‌حل را مقایسه می‌کنم؛ مثلا بازیابی خودکار پخش، کاهش کیفیت متناسب با شبکه و دانلود آفلاین.</p>
+<p>با این فرض، ترجیح می‌دهم ابتدا یک نسخه کوچک برای حفظ موقعیت و بازیابی پخش بسازیم و روی گروه محدودی آزمایش کنیم. شاخص اصلی‌ام مصرف موفق محتواست و در کنارش زمان توقف، مصرف اینترنت و خطاها را هم می‌سنجم.</p>
+<p>اگر مشخص شود قطعی‌ها طولانی‌اند یا بیشتر شکست‌ها پیش از شروع پخش اتفاق می‌افتند، اولویتم را تغییر می‌دهم. برای من مهم است راه‌حل را بر اساس مسئله واقعی انتخاب کنم، نه اینکه از ابتدا روی یک قابلیت خاص اصرار داشته باشم.»</p>
+</blockquote>
+<p>این پاسخ نشان می‌دهد داوطلب هم می‌تواند تصمیم بگیرد و هم می‌داند چه شواهدی باید باعث تغییر تصمیمش شوند.</p>
+<h2 id="۸-سؤال-های-تکمیلی-مصاحبه">۸. سؤال‌های تکمیلی مصاحبه</h2>
+<h3 id="اگر-فقط-دو-هفته-برای-بررسی-و-تصمیم-گیری-فرصت-داشته-باشید،-چه-می-کنید؟">اگر فقط دو هفته برای بررسی و تصمیم‌گیری فرصت داشته باشید، چه می‌کنید؟</h3>
+<p>این پرسش در منبع اصلی سؤال یازدهم مطرح شده است.</p>
+<p>در دو هفته نباید تلاش کنیم یک سامانه آفلاین کامل بسازیم. هدف این است که مهم‌ترین فرض را با کمترین هزینه ممکن بررسی کنیم.</p>
+<p>در چند روز نخست، رخدادهای پخش و گزارش‌های پشتیبانی را بررسی می‌کنیم، با تعدادی از کاربران دارای تجربه اختلال گفت‌وگو می‌کنیم و رفتار برنامه را روی شبکه ضعیف بازسازی می‌کنیم.</p>
+<p>سپس یک نمونه محدود، مثل ذخیره مطمئن موقعیت پخش و بازیابی پس از قطعی کوتاه، پیاده‌سازی یا نمونه‌سازی می‌کنیم.</p>
+<p>در پایان دوره، نتیجه آزمایش را با مقدار پایه مقایسه می‌کنیم و درباره ادامه، اصلاح یا کنارگذاشتن راه‌حل تصمیم می‌گیریم.</p>
+<p><strong>خروجی دو هفته، لزوما یک قابلیت کامل نیست؛ می‌تواند یک تصمیم معتبرتر با شواهد روشن باشد.</strong></p>
+<h3 id="چه-شواهدی-باعث-می-شوند-راه-حل-پیشنهادی-خودتان-را-رد-کنید؟">چه شواهدی باعث می‌شوند راه‌حل پیشنهادی خودتان را رد کنید؟</h3>
+<p>این دومین پرسش تکمیلی منبع اصلی است.</p>
+<p>اگر بفهمیم بیشتر کاربران قبل از رسیدن به پخش از محصول خارج می‌شوند، بازطراحی پخش‌کننده اولویت درستی نیست.</p>
+<p>اگر داده‌ها نشان دهند بیشتر کاربران در دوره‌های طولانی فاقد اینترنت هستند، بازیابی اتصال کوتاه کافی نخواهد بود.</p>
+<p>اگر آزمایش نسخه جدید بهبود معناداری در مصرف موفق محتوا نشان ندهد، یا هزینه مصرف داده و خطاها افزایش پیدا کند، باید راه‌حل را اصلاح یا متوقف کنیم.</p>
+<p>توانایی ردکردن پیشنهاد خودمان، بخشی از تصمیم‌گیری حرفه‌ای است.</p>
+<h2 id="۹-اشتباهات-رایج-در-پاسخ-به-این-سؤال">۹. اشتباهات رایج در پاسخ به این سؤال</h2>
+<p><strong>شروع با قابلیت‌ها به جای مسئله:</strong> گفتن «دانلود آفلاین اضافه می‌کنم» بدون اینکه بدانیم کاربر کجا متوقف شده، نشان‌دهنده عجله در انتخاب راه‌حل است.</p>
+<p><strong>طراحی برای همه کاربران:</strong> نیاز کسی که مقاله می‌خواند با مخاطب ویدئوی زنده یکسان نیست. پاسخ باید مشخص کند کدام گروه را اول انتخاب کرده‌ایم و چرا.</p>
+<p><strong>برابر دانستن اتصال و تجربه موفق:</strong> متصل‌بودن دستگاه به اینترنت تضمین نمی‌کند محتوا به‌درستی بارگذاری یا پخش شود.</p>
+<p><strong>تمرکز صرف بر شاخص‌های ظاهری:</strong> افزایش تعداد پخش‌ها یا دانلودها، بدون بررسی مصرف موفق و رضایت کاربر، اثبات‌کننده رفع مشکل نیست.</p>
+<p><strong>نادیده‌گرفتن هزینه و محدودیت‌ها:</strong> ذخیره آفلاین می‌تواند با محدودیت حافظه، حق انتشار یا هماهنگ‌سازی روبه‌رو شود. پخش مجدد خودکار هم ممکن است مصرف اینترنت را افزایش دهد.</p>
+<p><strong>قطعیت بی‌دلیل:</strong> مدیر محصول قرار نیست بدون داده، با اطمینان اعلام کند کدام راه‌حل بهترین است. باید فرض‌ها و شرایط تغییر تصمیم را توضیح دهد.</p>
+<p>در این مسئله نقش مدیر محصول انتخاب مسئله و نتیجه مطلوب است؛ طراح و مهندسان در طراحی و امکان‌سنجی راه‌حل مشارکت می‌کنند. اگر تیم از Scrum استفاده کند، Product Owner نسبت به بیشینه‌کردن ارزش محصول و مدیریت مؤثر بک‌لاگ پاسخ‌گوست و Project Manager، در صورت وجود این نقش، بیشتر بر هماهنگی تحویل در محدوده و محدودیت‌های پروژه تمرکز دارد. تقسیم دقیق مسئولیت‌ها به ساختار سازمان بستگی دارد.</p>
+<h2 id="جمع-بندی">جمع‌بندی</h2>
+<p>اگر قرار باشد یک بخش از اپلیکیشن محتوا را برای کاربران با اینترنت ناپایدار بازطراحی کنیم، <strong>با فرض اینکه اختلال اصلی هنگام مصرف محتوا رخ می‌دهد، تجربه پخش و ادامه مصرف محتوا انتخاب مناسب‌تری است.</strong> حفظ موقعیت، بازیابی پس از قطع اتصال و نمایش وضعیت روشن، می‌توانند نقطه شروعی کوچک و قابل آزمایش باشند.</p>
+<p>اما این انتخاب مطلق نیست. اگر شواهد نشان دهند کاربران اصلا نمی‌توانند محتوا را پیدا کنند، باید از مسیر جست‌وجو و بارگذاری شروع کنیم. اگر مدت زیادی آفلاین می‌مانند، دانلود و مصرف آفلاین اهمیت بیشتری پیدا می‌کند.</p>
+<p>در مصاحبه مدیریت محصول، ارزش پاسخ در تعداد قابلیت‌هایی نیست که پیشنهاد می‌دهیم؛ در این است که نشان دهیم <strong>برای چه کسی، کدام مشکل را، با چه شواهدی و در برابر چه هزینه‌ای حل می‌کنیم.</strong></p>
+<h2 id="منابع">منابع</h2>
+<ol>
+<li><a href="https://developer.android.com/topic/architecture/data-layer/offline-first" rel="noopener noreferrer" target="_blank">Android Developers — Build an offline-first app</a></li>
+<li><a href="https://developer.apple.com/documentation/http-live-streaming" rel="noopener noreferrer" target="_blank">Apple Developer — HTTP Live Streaming</a></li>
+<li><a href="https://web.dev/learn/pwa/offline-data" rel="noopener noreferrer" target="_blank">web.dev — Offline data</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Background_Synchronization_API" rel="noopener noreferrer" target="_blank">MDN — Background Synchronization API</a></li>
+<li><a href="https://www.reforge.com/blog/product-manager-interview-questions" rel="noopener noreferrer" target="_blank">Reforge — Product Manager Interview Questions</a></li>
+</ol>
+<p>سؤال اصلی و دو پرسش تکمیلی از نسخه آموزشی سؤال Q0011 در مجموعه هزار سؤال مصاحبه مدیر محصول گرفته شده‌اند.</p>
+<p>مثال «آوا» فرضی است و منابع فنی برای بررسی راهکارها به کار رفته‌اند.</p>
+<p>مقاله Reforge درباره شیوه ارزیابی داوطلبان مدیریت محصول است، نه مدرکی مبنی بر اینکه همین سؤال مشخص در مصاحبه شرکتی مطرح شده است.</p>
+
+      <footer class="blog-article-taxonomy" aria-label="دسته‌بندی‌ها و برچسب‌های مقاله">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">دسته‌بندی‌ها</h2>
+          <nav class="blog-post-terms" aria-label="دسته‌بندی‌ها">
+<a class="blog-post-term blog-category-term" href="/blog/fa/category/%D9%87%D8%B2%D8%A7%D8%B1-%D8%B3%D9%88%D8%A7%D9%84-%D9%85%D8%B5%D8%A7%D8%AD%D8%A8%D9%87-%D9%85%D8%AF%DB%8C%D8%B1-%D9%85%D8%AD%D8%B5%D9%88%D9%84/">هزار سوال مصاحبه مدیر محصول</a><a class="blog-post-term blog-category-term" href="/blog/fa/category/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D9%85%D8%AD%D8%B5%D9%88%D9%84-%D9%88-%D8%AA%D8%AC%D8%B1%D8%A8%D9%87-%DA%A9%D8%A7%D8%B1%D8%A8%D8%B1%DB%8C/">طراحی محصول و تجربه کاربری</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">برچسب‌ها</h2>
+          <nav class="blog-post-terms" aria-label="برچسب‌ها">
+<a class="blog-post-term tag" href="/blog/fa/tag/%D8%A7%DB%8C%D9%86%D8%AA%D8%B1%D9%86%D8%AA-%D9%86%D8%A7%D9%BE%D8%A7%DB%8C%D8%AF%D8%A7%D8%B1/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>اینترنت ناپایدار</span></a><a class="blog-post-term tag" href="/blog/fa/tag/%D8%B7%D8%B1%D8%A7%D8%AD%DB%8C-%D8%A2%D9%81%D9%84%D8%A7%DB%8C%D9%86/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>طراحی آفلاین</span></a><a class="blog-post-term tag" href="/blog/fa/tag/%D8%AA%D8%AC%D8%B1%D8%A8%D9%87-%D9%BE%D8%AE%D8%B4-%D9%85%D8%AD%D8%AA%D9%88%D8%A7/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>تجربه پخش محتوا</span></a><a class="blog-post-term tag" href="/blog/fa/tag/%D9%BE%D8%AE%D8%B4-%D8%AA%D8%B7%D8%A8%DB%8C%D9%82%DB%8C/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>پخش تطبیقی</span></a><a class="blog-post-term tag" href="/blog/fa/tag/%D8%B3%D9%86%D8%AC%D8%B4-%D9%85%D9%88%D9%81%D9%82%DB%8C%D8%AA/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>سنجش موفقیت</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="فهرست و مقاله‌های پیشنهادی">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">در این مقاله</h2>
+        <nav aria-label="در این مقاله">
+          <a href="#سؤال-مصاحبه-چیست؟" class="h2">سؤال مصاحبه چیست؟</a>
+          <a href="#۱-اول-مشخص-کنیم-اینترنت-ناپایدار-چه-مشکلی-ایجاد-کرده-است" class="h2">۱. اول مشخص کنیم اینترنت ناپایدار چه مشکلی ایجاد کرده است</a>
+          <a href="#۲-به-جای-همه-کاربران،-یک-گروه-مشخص-را-انتخاب-کنیم" class="h2">۲. به جای همه کاربران، یک گروه مشخص را انتخاب کنیم</a>
+          <a href="#۳-کدام-بخش-را-بازطراحی-کنیم؟" class="h2">۳. کدام بخش را بازطراحی کنیم؟</a>
+          <a href="#مسیر-اول-سبک-کردن-رابط-کاربری-و-بارگذاری-محتوا" class="h3">مسیر اول: سبک‌کردن رابط کاربری و بارگذاری محتوا</a>
+          <a href="#مسیر-دوم-مقاوم-کردن-تجربه-پخش-در-برابر-اختلال-شبکه" class="h3">مسیر دوم: مقاوم‌کردن تجربه پخش در برابر اختلال شبکه</a>
+          <a href="#مسیر-سوم-طراحی-تجربه-آفلاین" class="h3">مسیر سوم: طراحی تجربه آفلاین</a>
+          <a href="#تصمیم-اولیه-من-چیست؟" class="h3">تصمیم اولیه من چیست؟</a>
+          <a href="#۴-یک-مثال-نرم-افزاری-فرضی" class="h2">۴. یک مثال نرم‌افزاری فرضی</a>
+          <a href="#۵-موفقیت-بازطراحی-را-با-چه-شاخص-هایی-می-سنجیم؟" class="h2">۵. موفقیت بازطراحی را با چه شاخص‌هایی می‌سنجیم؟</a>
+          <a href="#شاخص-نتیجه-مصرف-موفق-محتوا" class="h3">شاخص نتیجه: مصرف موفق محتوا</a>
+          <a href="#شاخص-تشخیصی-تجربه-اختلال" class="h3">شاخص تشخیصی: تجربه اختلال</a>
+          <a href="#شاخص-محافظتی-هزینه-و-کیفیت" class="h3">شاخص محافظتی: هزینه و کیفیت</a>
+          <a href="#۶-یک-ریسک-کمتر-دیده-شده-هماهنگ-سازی-و-اعتماد-کاربر" class="h2">۶. یک ریسک کمتر دیده‌شده: هماهنگ‌سازی و اعتماد کاربر</a>
+          <a href="#۷-پاسخ-پیشنهادی-در-مصاحبه" class="h2">۷. پاسخ پیشنهادی در مصاحبه</a>
+          <a href="#۸-سؤال-های-تکمیلی-مصاحبه" class="h2">۸. سؤال‌های تکمیلی مصاحبه</a>
+          <a href="#اگر-فقط-دو-هفته-برای-بررسی-و-تصمیم-گیری-فرصت-داشته-باشید،-چه-می-کنید؟" class="h3">اگر فقط دو هفته برای بررسی و تصمیم‌گیری فرصت داشته باشید، چه می‌کنید؟</a>
+          <a href="#چه-شواهدی-باعث-می-شوند-راه-حل-پیشنهادی-خودتان-را-رد-کنید؟" class="h3">چه شواهدی باعث می‌شوند راه‌حل پیشنهادی خودتان را رد کنید؟</a>
+          <a href="#۹-اشتباهات-رایج-در-پاسخ-به-این-سؤال" class="h2">۹. اشتباهات رایج در پاسخ به این سؤال</a>
+          <a href="#جمع-بندی" class="h2">جمع‌بندی</a>
+          <a href="#منابع" class="h2">منابع</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">یادداشت‌های دیگر</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/fa/help-users-choose-similar-products/">
+            <span class="blog-sidebar-item-category">طراحی محصول و تجربه کاربری</span>
+            <strong>وقتی چند گزینه خرید شبیه هم‌اند، چطور به کاربر کمک کنیم تصمیم بگیرد؟</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-10">2026-11-10</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/fa/accessible-airbnb-booking-experience/">
+            <span class="blog-sidebar-item-category">هزار سوال مصاحبه مدیر محصول</span>
+            <strong>طراحی تجربه رزرو Airbnb برای مسافران با نیازهای حرکتی؛ از جست‌وجو تا اطمینان از اقامت</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-09">2026-11-09</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/fa/independent-digital-services-for-older-adults/">
+            <span class="blog-sidebar-item-category">هزار سوال مصاحبه مدیر محصول</span>
+            <strong>چطور خدمات دیجیتال را طوری طراحی کنیم که سالمندان بدون کمک دیگران از آن استفاده کنند؟</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-08">2026-11-08</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/fa/">مشاهده همه مقاله‌ها <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">اشتراک‌گذاری مقاله</h2>
+      <p>لینک این مطلب را برای دیگران بفرستید.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>اشتراک‌گذاری</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>کپی لینک</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/fa/content-app-poor-connectivity/" aria-label="کپی لینک">
+  </section>
+  <section class="blog-article-outro" aria-label="پایان مقاله و پیشنهاد مطالعه بعدی">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong><a href="/about.html">معین قزلباش</a></strong>
+        <span>مدیریت محصول فنی و توسعه محصولات دیجیتال</span>
+      </span>
+    </div>
+    <a href="/blog/fa/help-users-choose-similar-products/" class="blog-end-next">
+      <span>برای مطالعه بعدی <span aria-hidden="true">↗</span></span>
+      <strong>وقتی چند گزینه خرید شبیه هم‌اند، چطور به کاربر کمک کنیم تصمیم بگیرد؟</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="دسترسی سریع مقاله" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="بازگشت به بالای مقاله" title="بازگشت به بالای مقاله">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">بازگشت به بالای مقاله</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/fa/" aria-label="بازگشت به بلاگ" title="بازگشت به بلاگ">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>مقالات</span>
+  </a>
+</nav>
+    <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/">خانه</a>
+        <a data-site-footer-link="about" href="/about.html">درباره من</a>
+        <a data-site-footer-link="projects" href="/portfolio.html">پروژه‌ها</a>
+        <a data-site-footer-guide href="/product-management.html">مدیریت محصول</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">رزومه</a>
+        <a data-site-footer-link="blog" href="/blog/fa/">بلاگ</a>
+      </nav>
+      <small class="site-footer-copy">© ۲۰۲۶ معین قزلباش</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js?v=footer-unified-20261115"></script>
+</body>
+</html>
