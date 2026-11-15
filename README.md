@@ -60,3 +60,15 @@ product-management.html and en/product-management.html together.
 The Studio site-release preparation also regenerates the pair before staging.
 Styling lives in product-management.css with light and dark schemes.
 Footer and navigation remain site-global.
+
+
+### Product guide UI parity
+
+Both product guide URLs contain a static localized header for the first paint.
+The site navigation script replaces that header with interactive controls after
+loading; it should not be allowed to leave the first render blank.
+The Latin overline is direction-isolated within its local heading alignment,
+timeline outcomes use logical inline padding for RTL/LTR parity, project
+insights stretch across the card, KPI rows fill the measure panel, and FAQs
+take the full content width. Test light and dark mode at 390, 820, 980 and
+1440px before further visual edits.
