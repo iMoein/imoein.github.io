@@ -2,7 +2,7 @@ const $ = (selector) => document.querySelector(selector);
 
 const state = {
   data: null,
-  locale: new URLSearchParams(window.location.search).get("lang") || localStorage.getItem("site-locale") || "fa"
+  locale: window.location.pathname.startsWith("/en/") ? "en" : "fa"
 };
 
 const clear = (element) => {
@@ -46,6 +46,7 @@ const setLinkHref = (selector, value) => {
 
 const renderLocaleSwitcher = () => {
   const switcher = $("#locale-switcher");
+  if (!switcher) return; // Navigation may still be loading on a slow connection.
   switcher.dataset.locale = state.locale;
   // Keep the animated thumb alive so its transform can transition.
   switcher.querySelectorAll("button").forEach((button) => button.remove());
@@ -117,6 +118,11 @@ const renderStructuredData = (content, data) => {
       "Moein Ghezelbash"
     ],
     jobTitle: [data.locales.en.profile.title, data.locales.fa.profile.title].filter(Boolean),
+    hasOccupation: [
+      {"@type":"Occupation", name:"Senior Technical Product Manager"},
+      {"@type":"Occupation", name:"مدیر ارشد محصول فنی"},
+      {"@type":"Occupation", name:"مدیر محصول"}
+    ],
     description: content.seo.description,
     url: "https://imoein.com/",
     image: "https://imoein.com/assets/profile.jpg?v=3567fit",
@@ -135,10 +141,12 @@ const renderStructuredData = (content, data) => {
 };
 
 const renderSeo = (content, data) => {
-  const title = content.heroTitle ? `${content.heroName} | ${content.heroTitle}` : `${content.heroName} | ${content.sections.about}`;
+  const title = state.locale === "fa"
+    ? "درباره معین قزلباش | مدیر ارشد محصول فنی"
+    : "Moein Ghezelbash | Senior Technical Product Manager";
   const description = content.seo.description;
   const keywords = content.seo.keywords?.join(", ") || "";
-  const url = `https://imoein.com/about.html${state.locale === "en" ? "?lang=en" : ""}`;
+  const url = state.locale === "en" ? "https://imoein.com/en/about.html" : "https://imoein.com/about.html";
 
   document.title = title;
   setMetaContent("#meta-description", description);
@@ -421,16 +429,10 @@ const setLocale = (locale) => {
   if (locale === state.locale) return;
   state.locale = locale;
   localStorage.setItem("site-locale", locale);
-  // Keep the selected language shareable and persistent after reload.
-  // No full navigation: the pill and content can animate in place.
-  const address = new URL(window.location.href);
-  if (locale === "en") address.searchParams.set("lang", "en");
-  else address.searchParams.delete("lang");
-  window.history.replaceState(window.history.state, "", address.pathname + address.search + address.hash);
-  renderHome();
+  window.location.assign((locale === "en" ? "/en/" : "/") + "about.html" + window.location.hash);
 };
 
-fetch("resume/site-data.json")
+fetch("/resume/site-data.json")
   .then((response) => {
     if (!response.ok) throw new Error("Site data could not be loaded.");
     return response.json();

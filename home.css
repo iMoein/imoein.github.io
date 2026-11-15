@@ -797,3 +797,63 @@ html[data-color-scheme="dark"] .landing-time-primary:hover {background:#167481;}
 .landing-mini-cover.is-placeholder .landing-cover-brand-symbol {width:56px;height:56px;}
 .landing-mini-cover.is-placeholder .landing-cover-brand-name {font-size:16px;}
 .landing-mini-cover.is-placeholder:hover .landing-cover-brand {transform:none;}
+
+
+/* Product-management card shares the same palette as the home hero,
+   with a separate readable treatment for light and dark appearance. */
+.landing-product-management {
+  position:relative;isolation:isolate;overflow:hidden;
+  display:grid;grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;gap:clamp(17px,2.5vw,32px);
+  padding:clamp(25px,3.5vw,39px);
+  margin:34px 0 28px;
+  border:1px solid rgba(45,136,147,.23);border-radius:22px;
+  background:radial-gradient(circle at 98% 0%,rgba(46,168,172,.12),transparent 40%),
+    linear-gradient(118deg,#f6fbfb,#e8f5f2);
+  box-shadow:0 13px 33px rgba(14,60,78,.06);
+}
+.landing-product-management::after {
+  content:"";position:absolute;inset-inline-end:-125px;top:-130px;
+  width:260px;height:260px;border:1px solid rgba(41,131,145,.12);
+  border-radius:50%;box-shadow:0 0 0 38px rgba(29,133,140,.035);
+  pointer-events:none;z-index:-1;
+}
+.landing-product-management > div {min-width:0;}
+.landing-product-kicker {display:inline-block;font-size:.76rem;letter-spacing:.01em;color:#23777c;font-weight:820;margin-bottom:5px;}
+.landing-product-management h2 {font-size:clamp(1.28rem,2.3vw,1.75rem);line-height:1.6;font-weight:880;letter-spacing:-.018em;margin:0 0 9px;color:#173b51;}
+.landing-product-management p {font-size:clamp(.83rem,1.05vw,.93rem);line-height:2;color:#476477;margin:0;max-width:770px;}
+.landing-product-management > a {
+  display:inline-flex;align-items:center;justify-content:center;
+  flex:none;max-width:100%;min-height:44px;
+  text-decoration:none;text-align:center;white-space:normal;
+  border:1px solid rgba(23,110,119,.32);border-radius:999px;
+  color:#16586b;background:rgba(255,255,255,.65);
+  font-size:.79rem;font-weight:850;padding:11px 20px;
+  transition:transform .18s,border-color .18s,background .18s;
+}
+.landing-product-management > a:hover {transform:translateY(-2px);border-color:#268d91;background:#fff;}
+html[data-color-scheme="dark"] .landing-product-management {
+  border-color:rgba(127,198,209,.3);
+  background:radial-gradient(circle at 100% 4%,rgba(37,161,170,.24),transparent 48%),
+    linear-gradient(119deg,#19374a,#183f50 64%,#165362);
+  box-shadow:0 15px 31px rgba(0,12,25,.16);
+}
+html[data-color-scheme="dark"] .landing-product-management::after {border-color:rgba(141,211,215,.15);}
+html[data-color-scheme="dark"] .landing-product-kicker {color:#9de5d6;}
+html[data-color-scheme="dark"] .landing-product-management h2 {color:#f0fafb;}
+html[data-color-scheme="dark"] .landing-product-management p {color:#c0d9e0;}
+html[data-color-scheme="dark"] .landing-product-management > a {
+  color:#e8faff;background:rgba(32,117,132,.31);border-color:rgba(141,217,218,.38);
+}
+html[data-color-scheme="dark"] .landing-product-management > a:hover {background:rgba(38,153,164,.45);}
+@media(max-width:850px) {
+  .landing-product-management {grid-template-columns:1fr;gap:17px;margin-block:28px 22px;}
+  .landing-product-management > a {justify-self:start;}
+}
+@media(max-width:480px) {
+  .landing-product-management {padding:24px 21px;border-radius:19px;}
+  .landing-product-management > a {width:100%;justify-self:stretch;}
+}
+@media(prefers-reduced-motion:reduce) {
+  .landing-product-management > a {transition:none;}
+}

@@ -35,7 +35,7 @@
       },
       "profile": {
         "name": "Moein Ghezelbash",
-        "title": "Technical Product Manager",
+        "title": "Senior Technical Product Manager",
         "tagline": "B2B Platforms • Product & Technology Strategy • AI-Augmented Delivery",
         "location": "Tehran, Iran"
       },
@@ -500,11 +500,11 @@
       ],
       "footer": "ساخته‌شده برای GitHub Pages.",
       "seo": {
-        "description": "معین قزلباش مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، فناوری سفر، توسعه محصول با کمک هوش مصنوعی، تحلیل محصول، سیستم‌های کسب‌وکار و عملیات فنی است.",
+        "description": "معین قزلباش مدیر ارشد محصول فنی و مدیر محصول با بیش از ۱۰ سال تجربه در پلتفرم‌های B2B، راهبرد و توسعه محصول، فناوری سفر، هوش مصنوعی و تحلیل محصول است.",
         "keywords": [
           "معین قزلباش",
           "مدیر ارشد محصول فنی",
-          "مدیر ارشد محصول فنی",
+          "مدیر محصول",
           "مدیریت محصول",
           "پلتفرم‌های B2B",
           "استراتژی محصول",
@@ -1058,7 +1058,7 @@
       "projectCard": {
         "description": "A selection of products and projects I’ve worked on from idea to delivery.",
         "linkLabel": "View projects",
-        "href": "/portfolio.html?lang=en#live-projects"
+        "href": "/en/portfolio.html#live-projects"
       }
     }
   },
@@ -1100,7 +1100,7 @@
       },
       {
         "label": "Projects",
-        "href": "/portfolio.html?lang=en"
+        "href": "/en/portfolio.html"
       },
       {
         "label": "Persian Resume",
@@ -1164,7 +1164,7 @@
       "hero": {
         "eyebrow": "از مسئله تا محصول",
         "heroName": "معین قزلباش",
-        "heroRole": "مدیر ارشد محصول فنی · سازنده محصول",
+        "heroRole": "مدیر ارشد محصول فنی · مدیر محصول و سازنده محصول",
         "heroLead": "با ترکیب نگاه کسب‌وکار، فناوری و داده، مسائل واقعی را به محصولاتی قابل‌استفاده تبدیل می‌کنم؛ از کشف مسئله و MVP تا توسعه و تحویل.",
         "linkedinText": "LinkedIn",
         "githubText": "GitHub",
@@ -1211,8 +1211,8 @@
         "telegramChannel": "عضویت در کانال تلگرام"
       },
       "seo": {
-        "title": "معین قزلباش | از مسئله تا محصول",
-        "description": "معین قزلباش، مدیر ارشد محصول فنی و سازنده محصولات مستقل؛ یادداشت‌های مدیریت محصول، پروژه‌ها و راه‌های شروع همکاری.",
+        "title": "معین قزلباش | مدیر ارشد محصول فنی و مدیر محصول",
+        "description": "معین قزلباش، مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در مدیریت محصول، پلتفرم‌های B2B، توسعه محصول با هوش مصنوعی و فناوری سفر؛ رزومه، نمونه‌کارها و مقالات تخصصی.",
         "ogImage": "https://imoein.com/assets/og-site.jpg"
       },
       "links": {
@@ -1289,17 +1289,18 @@
         "telegramChannel": "Follow Telegram Channel"
       },
       "seo": {
-        "title": "Moein Ghezelbash | From problem to product",
-        "description": "Moein Ghezelbash, Senior Technical Product Manager and independent product builder. Explore projects, product writing and ways to collaborate.",
+        "title": "Moein Ghezelbash | Senior Technical Product Manager",
+        "description": "Moein Ghezelbash is a Senior Technical Product Manager focused on B2B platforms, product strategy and AI-augmented development. Explore his portfolio, resume and writing.",
         "ogImage": "https://imoein.com/assets/og-site.jpg"
       },
       "links": {
-        "about": "/about.html?lang=en",
-        "projects": "/portfolio.html?lang=en#live-projects",
+        "about": "/en/about.html",
+        "projects": "/en/portfolio.html#live-projects",
         "resume": "/resume/moein-ghezelbash-en.html",
         "allPosts": "/blog/en/",
-        "allProjects": "/portfolio.html?lang=en#live-projects",
-        "timeOverview": "/portfolio.html?lang=en#live-projects"
+        "allProjects": "/en/portfolio.html#live-projects",
+        "timeOverview": "/en/portfolio.html#live-projects",
+        "home": "/en/"
       },
       "projectSelection": {
         "featuredTitle": "TIME",

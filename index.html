@@ -9,42 +9,46 @@
   <link rel="manifest" href="/site.webmanifest">
   <link rel="canonical" id="canonical-url" href="https://imoein.com/">
   <link rel="alternate" hreflang="fa" href="https://imoein.com/">
-  <link rel="alternate" hreflang="en" href="https://imoein.com/?lang=en">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/en/">
   <link rel="alternate" hreflang="x-default" href="https://imoein.com/">
   <meta name="robots" content="index,follow">
   <meta name="author" content="Moein Ghezelbash">
-  <meta name="description" id="meta-description" content="معین قزلباش، مدیر ارشد محصول فنی و سازنده محصولات مستقل؛ یادداشت‌های مدیریت محصول، پروژه‌ها و راه‌های شروع همکاری.">
+  <meta name="description" id="meta-description" content="معین قزلباش، مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در مدیریت محصول، پلتفرم‌های B2B، توسعه محصول با هوش مصنوعی و فناوری سفر؛ رزومه، نمونه‌کارها و مقالات تخصصی.">
   <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
   <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
   <meta property="og:type" content="website">
   <meta property="og:url" id="og-url" content="https://imoein.com/">
-  <meta property="og:title" id="og-title" content="معین قزلباش | از مسئله تا محصول">
-  <meta property="og:description" id="og-description" content="معین قزلباش، مدیر ارشد محصول فنی و سازنده محصولات مستقل؛ یادداشت‌های مدیریت محصول، پروژه‌ها و راه‌های شروع همکاری.">
+  <meta property="og:title" id="og-title" content="معین قزلباش | مدیر ارشد محصول فنی و مدیر محصول">
+  <meta property="og:description" id="og-description" content="معین قزلباش، مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در مدیریت محصول، پلتفرم‌های B2B، توسعه محصول با هوش مصنوعی و فناوری سفر؛ رزومه، نمونه‌کارها و مقالات تخصصی.">
   <meta property="og:site_name" content="iMoein">
   <meta property="og:locale" id="og-locale" content="fa_IR">
   <meta property="og:image" id="og-image" content="https://imoein.com/assets/og-site.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" id="twitter-image" content="https://imoein.com/assets/og-site.jpg">
-  <title>معین قزلباش | از مسئله تا محصول</title>
+  <title>معین قزلباش | مدیر ارشد محصول فنی و مدیر محصول</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
     (() => {
       const requested = new URLSearchParams(location.search).get('lang');
+      if (requested === 'en' && !location.pathname.startsWith('/en/')) {
+        location.replace('/en/' + location.hash);
+        return;
+      }
       let saved = null;
       try { saved = localStorage.getItem('site-locale'); } catch (_) {}
-      const lang = ['fa','en'].includes(requested) ? requested : saved === 'en' ? 'en' : 'fa';
+      const lang = location.pathname.startsWith('/en/') ? 'en' : 'fa';
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === 'fa' ? 'rtl' : 'ltr';
       document.documentElement.classList.add('landing-initializing');
     })();
   </script>
-  <script src="/site-theme.js"></script>
+  <script src="/site-theme.js?v=theme-cold-hydration-20261115-r3"></script>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/home.css?v=cover-library-fallback-20261114">
-  <script type="application/ld+json" id="homepage-schema"></script>
-  <link rel="stylesheet" href="/site-footer.css">
+  <link rel="stylesheet" href="/home.css?v=product-card-themes-20261115">
+  <script type="application/ld+json" id="homepage-schema">{"@context":"https://schema.org","@type":"WebPage","name":"معین قزلباش | مدیر ارشد محصول فنی و مدیر محصول","description":"معین قزلباش، مدیر ارشد محصول فنی با بیش از ۱۰ سال تجربه در مدیریت محصول، پلتفرم‌های B2B، توسعه محصول با هوش مصنوعی و فناوری سفر؛ رزومه، نمونه‌کارها و مقالات تخصصی.","url":"https://imoein.com/","about":{"@id":"https://imoein.com/#person"}}</script>
+  <link rel="stylesheet" href="/site-footer.css?v=footer-unified-20261115">
   <link rel="stylesheet" href="/site-analytics.css?v=ga4-consent-v2-20261114">
   <script defer src="/site-analytics.js?v=ga4-no-prompt-20261114-r2"></script>
 </head>
@@ -57,7 +61,7 @@
       <div class="landing-hero-copy">
         <span class="landing-eyebrow" data-i18n="eyebrow">از مسئله تا محصول</span>
         <h1 id="landing-title" data-i18n="heroName">معین قزلباش</h1>
-        <p class="landing-role" data-i18n="heroRole">مدیر ارشد محصول فنی · سازنده محصول</p>
+        <p class="landing-role" data-i18n="heroRole">مدیر ارشد محصول فنی · مدیر محصول و سازنده محصول</p>
         <p class="landing-lead" data-i18n="heroLead">با ترکیب نگاه کسب‌وکار، فناوری و داده، مسائل واقعی را به محصولاتی قابل‌استفاده تبدیل می‌کنم؛ از کشف مسئله و MVP تا توسعه و تحویل.</p>
         <nav class="landing-hero-social" aria-label="Professional profiles">
           <a id="hero-linkedin" href="https://www.linkedin.com/in/moeinghezelbash/" target="_blank" rel="noopener noreferrer">
@@ -84,7 +88,7 @@
         <span class="landing-shortcut-copy"><strong data-i18n="about">درباره من</strong><small data-i18n="aboutDetail">مسیر و تجربه حرفه‌ای</small></span>
         <span class="landing-shortcut-arrow" aria-hidden="true">↗</span>
       </a>
-      <a class="landing-shortcut landing-projects" data-local-link="projects" href="/portfolio.html?lang=fa#live-projects">
+      <a class="landing-shortcut landing-projects" data-local-link="projects" href="/portfolio.html#live-projects">
         <span class="landing-shortcut-symbol" aria-hidden="true"><img id="landing-projects-icon" src="/assets/icons/home-projects.webp" alt="" width="112" height="112" decoding="async"></span>
         <span class="landing-shortcut-copy"><strong data-i18n="projects">پروژه‌ها</strong><small data-i18n="projectsDetail">محصولات و تجربه‌های اجرایی</small></span>
         <span class="landing-shortcut-arrow" aria-hidden="true">↗</span>
@@ -108,7 +112,7 @@
     <section class="landing-section landing-independent" aria-labelledby="landing-independent-title">
       <div class="landing-section-heading">
         <h2 id="landing-independent-title" data-i18n="independent">پروژه‌های مستقل</h2>
-        <a class="landing-section-link" data-local-link="allProjects" href="/portfolio.html?lang=fa#live-projects"><span data-i18n="allProjects">همه پروژه‌ها</span><span aria-hidden="true">↗</span></a>
+        <a class="landing-section-link" data-local-link="allProjects" href="/portfolio.html#live-projects"><span data-i18n="allProjects">همه پروژه‌ها</span><span aria-hidden="true">↗</span></a>
       </div>
       <p class="landing-section-intro" data-i18n="independentIntro">محصولاتی که مستقل یا در همکاری‌های کوچک، از ایده تا ساخت و توسعه‌شان پیش رفته‌ام. صفحه اختصاصی هر محصول به‌مرور اضافه می‌شود.</p>
       <div id="landing-independent-grid" class="landing-independent-grid">
@@ -125,6 +129,15 @@
     <ul class="landing-marquee-track" id="landing-marquee-track" aria-label="فهرست همکاری‌ها"></ul>
   </div>
 </section>
+
+    <section class="landing-product-management" aria-labelledby="landing-product-guide-title">
+      <div>
+        <span class="landing-product-kicker" data-i18n="productGuideKicker">رویکرد حرفه‌ای</span>
+        <h2 id="landing-product-guide-title" data-i18n="productGuideTitle">مدیریت محصول فنی در عمل</h2>
+        <p data-i18n="productGuideDescription">از کشف مسئله و شناخت نیاز کاربران تا طراحی MVP، اولویت‌بندی نقشه راه، تصمیم‌های فنی و سنجش نتیجه؛ تجربه من در مدیریت محصول B2B و ساخت محصولات دیجیتال، با مثال‌هایی از پروژه‌های واقعی.</p>
+      </div>
+      <a href="/product-management.html" data-i18n="productGuideLink">آشنایی با رویکرد من به مدیریت محصول</a>
+    </section>
 
     <section class="landing-contact" aria-labelledby="landing-contact-title">
       <div class="landing-contact-art" aria-hidden="true">
@@ -151,16 +164,17 @@
       <nav class="site-footer-nav" aria-label="Footer navigation">
         <a data-site-footer-link="home" href="/">خانه</a>
         <a data-site-footer-link="about" href="/about.html">درباره من</a>
-        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">پروژه‌ها</a>
+        <a data-site-footer-link="projects" href="/portfolio.html">پروژه‌ها</a>
+        <a data-site-footer-guide href="/product-management.html">مدیریت محصول</a>
         <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">رزومه</a>
         <a data-site-footer-link="blog" href="/blog/fa/">بلاگ</a>
       </nav>
       <small class="site-footer-copy">© ۲۰۲۶ معین قزلباش</small>
     </div>
   </footer>
-  <script src="/site-navigation.js"></script>
+  <script src="/site-navigation.js?v=theme-cold-hydration-20261115-r3"></script>
   <script src="/home-collaborations.js?v=marquee-grid-2"></script>
   <script src="/home.js?v=cover-library-fallback-20261114"></script>
-  <script src="/site-footer.js"></script>
+  <script src="/site-footer.js?v=footer-unified-20261115"></script>
 </body>
 </html>

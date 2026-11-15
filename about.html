@@ -13,13 +13,13 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" id="canonical-url" href="https://imoein.com/about.html">
   <link rel="alternate" hreflang="fa" href="https://imoein.com/about.html">
-  <link rel="alternate" hreflang="en" href="https://imoein.com/about.html?lang=en">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/en/about.html">
   <link rel="alternate" hreflang="x-default" href="https://imoein.com/about.html">
   <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
   <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
   <meta property="og:type" content="profile">
   <meta property="og:url" id="og-url" content="https://imoein.com/about.html">
-  <meta property="og:title" id="og-title" content="معین قزلباش | درباره من">
+  <meta property="og:title" id="og-title" content="درباره معین قزلباش | مدیر ارشد محصول فنی">
   <meta property="og:description" id="og-description" content="معین قزلباش مدیر ارشد محصول فنی و سازنده محصول با تمرکز بر پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی، فناوری سفر، تحلیل محصول و سیستم‌های کسب‌وکار است.">
   <meta property="og:site_name" content="Moein Ghezelbash">
   <meta property="og:locale" id="og-locale" content="fa_IR">
@@ -32,25 +32,29 @@
   <meta property="og:image:alt" content="پرتره معین قزلباش کنار عنوان مدیر ارشد محصول فنی و برند iMoein">
   <meta name="twitter:image" content="https://imoein.com/assets/og-site.jpg">
   <meta name="twitter:image:alt" content="پرتره معین قزلباش کنار عنوان مدیر ارشد محصول فنی و برند iMoein">
-  <meta name="twitter:title" id="twitter-title" content="معین قزلباش | درباره من">
+  <meta name="twitter:title" id="twitter-title" content="درباره معین قزلباش | مدیر ارشد محصول فنی">
   <meta name="twitter:description" id="twitter-description" content="معین قزلباش مدیر ارشد محصول فنی و سازنده محصول با تمرکز بر پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی، فناوری سفر، تحلیل محصول و سیستم‌های کسب‌وکار است.">
-  <title>معین قزلباش | درباره من</title>
+  <title>درباره معین قزلباش | مدیر ارشد محصول فنی</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script>
     (() => {
       const requested = new URLSearchParams(location.search).get("lang");
+      if (requested === 'en' && !location.pathname.startsWith('/en/')) {
+        location.replace('/en/about.html' + location.hash);
+        return;
+      }
       let saved = null;
       try { saved = localStorage.getItem("site-locale"); } catch (_) {}
-      const locale = ["fa", "en"].includes(requested) ? requested : (saved === "en" ? "en" : "fa");
+      const locale = location.pathname.startsWith('/en/') ? 'en' : 'fa';
       document.documentElement.lang = locale;
       document.documentElement.dir = locale === "fa" ? "rtl" : "ltr";
     })();
   </script>
-  <script src="site-theme.js"></script>
+  <script src="site-theme.js?v=theme-cold-hydration-20261115-r3"></script>
   <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json" id="person-schema"></script>
+  <script type="application/ld+json" id="person-schema">{"@context":"https://schema.org","@type":"Person","@id":"https://imoein.com/#person","name":"Moein Ghezelbash","alternateName":["معین قزلباش","معین قزلباش","Moein Ghezelbash"],"jobTitle":["Senior Technical Product Manager","مدیر ارشد محصول فنی"],"hasOccupation":[{"@type":"Occupation","name":"Senior Technical Product Manager"},{"@type":"Occupation","name":"مدیر ارشد محصول فنی"},{"@type":"Occupation","name":"مدیر محصول"}],"description":"معین قزلباش مدیر ارشد محصول فنی و سازنده محصول با تمرکز بر پلتفرم‌های B2B، توسعه محصول با کمک هوش مصنوعی، فناوری سفر، تحلیل محصول و سیستم‌های کسب‌وکار است.","url":"https://imoein.com/","image":"https://imoein.com/assets/profile.jpg?v=3567fit","email":"moeinghezelbash [at] gmail [dot] com","telephone":"+989120137435","address":{"@type":"PostalAddress","addressLocality":"Tehran, Iran","addressCountry":"IR"},"sameAs":["https://www.linkedin.com/in/moeinghezelbash/","https://github.com/iMoein","https://wa.me/989120137435","https://x.com/moeinghezelbash","https://www.instagram.com/moeinghezelbash/","https://t.me/iMoeinPV","https://www.tiktok.com/@imoein","https://www.threads.net/@moeinghezelbash","https://www.facebook.com/Moeinghezelbash"],"knowsAbout":["مدیریت محصول فنی","کشف محصول، تعریف نیازمندی، نقشه راه، تعریف MVP، اولویت‌بندی، تحویل و تحلیل Trade-offهای فنی در محصولات دیجیتال پیچیده.","پلتفرم‌های B2B و سیستم‌های کسب‌وکار","توسعه و بهبود پلتفرم‌های B2B گردشگری، یکپارچه‌سازی API، فرایندهای تأمین‌کننده، قیمت‌گذاری، موجودی، CRM و سیستم‌های عملیاتی.","توسعه محصول با کمک هوش مصنوعی","استفاده از Generative AI، AI Coding Agents، Prompt Engineering و Agentic Workflows برای کشف محصول، نمونه‌سازی سریع، بازبینی پیاده‌سازی، تست و تکرار.","تحلیل محصول و دانش فنی","استفاده از BI، تجمیع داده، پایگاه داده، API، معماری، زیرساخت و اتوماسیون برای تصمیم‌گیری بهتر در محصول و تحویل."],"alumniOf":[],"worksFor":[{"@type":"Organization","name":"گردش (Gardesh)"},{"@type":"Organization","name":"بسوی سامیار سفر"},{"@type":"Organization","name":"سفرهای علی‌بابا"}]}</script>
   <script>
     document.documentElement.classList.add("site-loading");
     // Fail open if the controller or data request never completes.
@@ -61,7 +65,7 @@
       if (overlay) overlay.hidden = true;
     }, 6500);
   </script>
-  <link rel="stylesheet" href="/site-footer.css">
+  <link rel="stylesheet" href="/site-footer.css?v=footer-unified-20261115">
   <link rel="stylesheet" href="/site-analytics.css?v=ga4-consent-v2-20261114">
   <script defer src="/site-analytics.js?v=ga4-no-prompt-20261114-r2"></script>
 </head>
@@ -109,7 +113,7 @@
         <div class="card info-card projects-card">
           <h3 id="projects-card-title">نمونه‌کارها و پروژه‌ها</h3>
           <p id="projects-card-description">منتخبی از محصولات و پروژه‌هایی که از ایده تا توسعه و اجرا روی آن‌ها کار کرده‌ام.</p>
-          <a class="projects-card-link" id="projects-card-link" href="/portfolio.html?lang=fa#live-projects">مشاهده پروژه‌ها</a>
+          <a class="projects-card-link" id="projects-card-link" href="/portfolio.html#live-projects">مشاهده پروژه‌ها</a>
         </div>
         <div class="card info-card social-links-card">
           <h3 id="social-title">شبکه‌های اجتماعی</h3>
@@ -157,7 +161,8 @@
       <nav class="site-footer-nav" aria-label="Footer navigation">
         <a data-site-footer-link="home" href="/">خانه</a>
         <a data-site-footer-link="about" href="/about.html">درباره من</a>
-        <a data-site-footer-link="projects" href="/portfolio.html?lang=fa">پروژه‌ها</a>
+        <a data-site-footer-link="projects" href="/portfolio.html">پروژه‌ها</a>
+        <a data-site-footer-guide href="/product-management.html">مدیریت محصول</a>
         <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-fa.html">رزومه</a>
         <a data-site-footer-link="blog" href="/blog/fa/">بلاگ</a>
       </nav>
@@ -165,9 +170,9 @@
     </div>
   </footer>
 
-  <script src="site-navigation.js"></script>
+  <script src="site-navigation.js?v=theme-cold-hydration-20261115-r3"></script>
   <script src="site-loader.js"></script>
   <script src="app.js"></script>
-  <script src="/site-footer.js"></script>
+  <script src="/site-footer.js?v=footer-unified-20261115"></script>
 </body>
 </html>

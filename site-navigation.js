@@ -4,6 +4,7 @@
   if (!mount) return;
   const isResume = document.body.classList.contains('resume-page');
   const isBlog = document.body.classList.contains('blog-page');
+  const isProductGuide = document.body.classList.contains('product-guide-page');
   const locale = () => document.documentElement.lang === 'en' ? 'en' : 'fa';
   // Text labels can now be changed in the local Site Studio. Keep a
   // hardcoded fallback for network failures and offline preview.
@@ -15,14 +16,14 @@
   const items = (lang) => {
     const words = studioNavigation?.[lang] || fallbackNavigation[lang];
     return [
-      {label:words.home,href:'/' + (lang === 'en' ? '?lang=en' : '')},
-      {label:words.about || fallbackNavigation[lang].about,href:'/about.html' + (lang === 'en' ? '?lang=en' : '')},
-      {label:words.projects,href:'/portfolio.html?lang=' + lang},
+      {label:words.home,href:lang==='en'?'/en/':'/'},
+      {label:words.about || fallbackNavigation[lang].about,href:lang==='en'?'/en/about.html':'/about.html'},
+      {label:words.projects,href:lang==='en'?'/en/portfolio.html':'/portfolio.html'},
       {label:words.resume,href:'/resume/moein-ghezelbash-' + lang + '.html'},
       {label:words.blog,href:'/blog/' + lang + '/'}
     ];
   };
-  const switcher = document.getElementById('locale-switcher') || document.createElement('div');
+  const switcher = document.createElement('div'); // Avoid reusing prerendered language controls.
   switcher.id = 'locale-switcher';
   switcher.classList.add('locale-switcher');
   switcher.setAttribute('aria-label', 'Language');
@@ -172,10 +173,14 @@
   });
   themePicker.append(themeAuto, themeSwitch);
   document.addEventListener('site-theme-change', updateThemeControl);
-  mount.append(brand, links, themePicker, switcher);
+  // Non-serialized marker: build-time Chrome snapshots remain clearly static,
+  // so site-theme.js can still activate their controls before hydration.
+  mount.__siteNavigationHydrated = true;
+  mount.replaceChildren(brand, links, themePicker, switcher); // Replace prerendered header, never duplicate.
   function draw() {
     const lang = locale();
     switcher.dataset.locale = lang;
+    brand.href = lang === 'en' ? '/en/' : '/';
     switcher.setAttribute('aria-label', lang === 'fa' ? 'انتخاب زبان سایت' : 'Choose site language');
     links.replaceChildren();
     items(lang).forEach((item) => {
@@ -185,9 +190,9 @@
       const page = location.pathname;
       const active = item.href.startsWith('/blog/') ? page.startsWith('/blog/') :
         item.href.startsWith('/resume/') ? page.includes('/resume/') :
-        item.href.startsWith('/portfolio') ? page.includes('portfolio.html') :
-        item.href.startsWith('/about.html') ? page.endsWith('/about.html') :
-        page === '/' || page.endsWith('/index.html');
+        item.href.includes('portfolio.html') ? page.includes('portfolio.html') :
+        item.href.includes('about.html') ? page.endsWith('/about.html') :
+        page === '/' || page === '/en/' || page.endsWith('/index.html');
       if (active) link.setAttribute('aria-current', 'page');
       links.appendChild(link);
     });
@@ -210,6 +215,22 @@
         link.addEventListener('click', () => {
           try { localStorage.setItem('site-locale', lng); } catch (_) {}
         });
+        switcher.appendChild(link);
+      });
+    } else if (isProductGuide) {
+      switcher.querySelectorAll('a').forEach(node => node.remove());
+      ['en','fa'].forEach(lng => {
+        const link = document.createElement('a');
+        link.href = lng === 'en' ? '/en/product-management.html' : '/product-management.html';
+        link.lang = lng;
+        link.dataset.lang = lng;
+        link.hreflang = lng;
+        link.textContent = lng === 'fa' ? 'فا' : 'EN';
+        link.setAttribute('aria-label', lng === 'fa' ? 'نسخه فارسی صفحه' : 'English version');
+        if (lng === lang) {
+          link.className = 'active';
+          link.setAttribute('aria-current', 'true');
+        }
         switcher.appendChild(link);
       });
     } else if (isResume) {
