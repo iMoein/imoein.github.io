@@ -76,6 +76,13 @@ def validate_english_about_assets(site: Path) -> None:
         raise ValueError("Relative profile image in site-data.json")
 
     page = site / "en/about.html"
+    english_html = page.read_text(encoding="utf-8")
+    persian_html = (site / "about.html").read_text(encoding="utf-8")
+    if not all('/app.js?v=' in html for html in (english_html, persian_html)):
+        raise ValueError("Unversioned About JS can serve stale cached assets")
+    js = (site / "app.js").read_text(encoding="utf-8")
+    if 'fetch("/resume/site-data.json?v=' not in js:
+        raise ValueError("Unversioned About JSON can be stale across releases")
     parser = AssetAndLinkParser()
     parser.feed(page.read_text(encoding="utf-8"))
     photo = [img for img in parser.images if img.get("id") == "profile-photo"]
