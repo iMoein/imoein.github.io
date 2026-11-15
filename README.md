@@ -43,3 +43,20 @@ uses product-management.css with both site-theme palettes.
 The homepage product card is directly before the contact/conversation
 section. It has distinct light and dark styling. Keep the Persian and
 English home copy in home.js and the rendered initial HTML consistent.
+
+
+### Editorial product-management guide (FA/EN)
+
+The product-management landing pages serve two intentions: a useful
+explanation of Product Manager / Technical Product Manager roles and an
+evidence-based introduction to Moein's own product work. Both language
+versions have original content, relevant public articles and case studies,
+explicit authorship and no fabricated metrics.
+
+The source of truth for BOTH HTML versions is the companion Studio script
+../imoein-blog-studio/scripts/build-product-guide.py.
+Run the script after editing either translation and commit the regenerated
+product-management.html and en/product-management.html together.
+The Studio site-release preparation also regenerates the pair before staging.
+Styling lives in product-management.css with light and dark schemes.
+Footer and navigation remain site-global.
