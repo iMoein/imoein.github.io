@@ -203,15 +203,14 @@
       section.hidden = true;
       return;
     }
+    // The selected lead can be older than the four newest posts. Selecting
+    // from a recent-only slice silently hid a valid Studio choice.
+    const lead = published.find(post => post.featured) || published[0];
     if (published.length < 4) {
-      // One to three articles: show only the newest article.
-      featured.replaceChildren(createFeatured(published[0]));
+      featured.replaceChildren(createFeatured(lead, Boolean(lead.featured)));
     } else {
-      // Four or more: the selected lead plus exactly three other recent cards.
-      const recent = published.slice(0,4);
-      const lead = recent.find(post => post.featured) || recent[0];
-      featured.replaceChildren(createFeatured(lead, true));
-      more.replaceChildren(...recent.filter(post => post !== lead).map(createSmallPost));
+      featured.replaceChildren(createFeatured(lead, Boolean(lead.featured)));
+      more.replaceChildren(...published.filter(post => post !== lead).slice(0,3).map(createSmallPost));
     }
     section.hidden = false;
   };

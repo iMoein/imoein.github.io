@@ -131,7 +131,7 @@ def validate_home_time_preview(site: Path) -> None:
 
     for filename in ("index.html", "en/index.html"):
         html = (site / filename).read_text(encoding="utf-8")
-        if "/home.js?v=time-preview-20261115-r1" not in html:
+        if "/home.js?v=featured-all-20261115-r1" not in html:
             raise ValueError("Homepage TIME image fix may be masked by cached home.js")
     script = (site / "home.js").read_text(encoding="utf-8")
     if "fetch('/resume/site-data.json?v=time-preview-20261115-r1'" not in script:
