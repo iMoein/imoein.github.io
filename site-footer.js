@@ -8,7 +8,33 @@
     en: {home:'Home',about:'About Me',projects:'Projects',resume:'Resume',blog:'Blog',name:'Moein Ghezelbash'}
   };
 
+  // Defensive hydration: older cached blog and resume HTML had only five
+  // navigation links, so recreate the missing canonical entry before
+  // translating. The canonical static HTML is produced by Site Studio.
+  function ensureLinks() {
+    const nav = footer.querySelector('.site-footer-nav');
+    if (!nav) return;
+    const sequence = ['home','about','projects','guide','resume','blog'];
+    const existing = new Map();
+    nav.querySelectorAll('a').forEach(link => {
+      const key = link.hasAttribute('data-site-footer-guide')
+        ? 'guide' : link.dataset.siteFooterLink;
+      if (key && sequence.includes(key) && !existing.has(key)) existing.set(key,link);
+      else link.remove(); // no stale, duplicated or unrecognised links
+    });
+    sequence.forEach(key => {
+      let link=existing.get(key);
+      if (!link) {
+        link=document.createElement('a');
+        if (key === 'guide') link.setAttribute('data-site-footer-guide','');
+        else link.dataset.siteFooterLink=key;
+      }
+      nav.appendChild(link); // stable ordering across every page
+    });
+  }
+
   function render() {
+    ensureLinks();
     const lang = document.documentElement.lang === 'en' ? 'en' : 'fa';
     const words = translations[lang];
     const routes = {
@@ -33,6 +59,11 @@
     if (guide) {
       guide.href = lang === 'en' ? '/en/product-management.html' : '/product-management.html';
       guide.textContent = lang === 'en' ? 'Product management' : 'مدیریت محصول';
+      if (location.pathname === new URL(guide.href,location.href).pathname) {
+        guide.setAttribute('aria-current','page');
+      } else {
+        guide.removeAttribute('aria-current');
+      }
     }
     const copy = footer.querySelector('.site-footer-copy');
     if (copy) {
@@ -41,7 +72,13 @@
       copy.textContent = '© ' + year + ' ' + words.name;
     }
     const logo = footer.querySelector('.site-footer-brand');
-    if (logo) logo.href = routes.home;
+    if (logo) {
+      logo.href = routes.home;
+      logo.setAttribute('aria-label','iMoein home');
+    }
+    const linksNav = footer.querySelector('.site-footer-nav');
+    if (linksNav) linksNav.setAttribute('aria-label',
+      lang === 'fa' ? 'پیوندهای فوتر سایت' : 'Footer navigation');
   }
   render();
   new MutationObserver(render).observe(document.documentElement,
