@@ -432,7 +432,7 @@ const setLocale = (locale) => {
   window.location.assign((locale === "en" ? "/en/" : "/") + "about.html" + window.location.hash);
 };
 
-fetch("/resume/site-data.json")
+fetch("/resume/site-data.json?v=about-root-assets-20261115-r2")
   .then((response) => {
     if (!response.ok) throw new Error("Site data could not be loaded.");
     return response.json();
