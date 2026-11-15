@@ -36,7 +36,7 @@ jobs:
 
           # The studio and private Markdown are deliberately not part of this deployment.
           # Only website entry files and known static directories can enter _site.
-          for name in index.html about.html portfolio.html 404.html CNAME favicon.ico site.webmanifest robots.txt sitemap.xml portfolio.json styles.css home.css site-footer.css site-analytics.css site-analytics.js app.js home.js home-collaborations.js portfolio.js site-navigation.js site-theme.js site-loader.js site-footer.js; do
+          for name in index.html about.html portfolio.html product-management.html product-management.css 404.html CNAME favicon.ico site.webmanifest robots.txt sitemap.xml portfolio.json styles.css home.css site-footer.css site-analytics.css site-analytics.js app.js home.js home-collaborations.js portfolio.js site-navigation.js site-theme.js site-loader.js site-footer.js; do
             test -f "$name" || { echo "::error::Missing required site file $name"; exit 1; }
             cp "$name" "_site/$name"
           done
@@ -46,7 +46,7 @@ jobs:
             if test -f "$name"; then cp "$name" "_site/$name"; fi
           done
 
-          for directory in assets resume blog; do
+          for directory in assets resume blog en; do
             test -d "$directory" || { echo "::error::Missing website directory $directory"; exit 1; }
             mkdir -p "_site/$directory"
             rsync -a --exclude='.DS_Store' --exclude='.*' \
@@ -63,6 +63,12 @@ jobs:
           test ! -e _site/Blog\ Studio.command
           test -f _site/blog/fa/index.html
           test -f _site/blog/en/index.html
+
+          # Verify every URL submitted to search engines is actually present
+          # in the Pages artifact. A successful deploy must not serve 404s
+          # for newly added routes that the sitemap already advertises.
+          python3 .github/scripts/check-pages-artifact.py _site
+
           echo "Public files prepared:"
           find _site -type f | wc -l
 
