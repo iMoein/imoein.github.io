@@ -25,3 +25,21 @@ The initial search targets are branded full-name queries (FA/EN),
 "مدیر ارشد محصول فنی" and "مدیر محصول". Useful expert content and relevant
 internal links are intended to support discovery, not guarantee search rank.
 Monitor verified results in Google Search Console after deployment.
+
+
+## Responsive navigation and product-management guide
+
+English prerendered pages include HTML navigation for fast first paint.
+The shared site-navigation.js replaces rather than appends to this
+prerendered header at runtime. Never reuse a prerendered locale switcher,
+or duplicate navigation controls can appear.
+
+The original product-management article is available at
+/product-management.html (fa) and /en/product-management.html (en).
+Both are complete standalone documents with reciprocal hreflang,
+self-canonical, localized links and the shared site footer. The guide
+uses product-management.css with both site-theme palettes.
+
+The homepage product card is directly before the contact/conversation
+section. It has distinct light and dark styling. Keep the Persian and
+English home copy in home.js and the rendered initial HTML consistent.

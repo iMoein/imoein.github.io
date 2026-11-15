@@ -20,7 +20,7 @@
       timeVisit: 'ورود به وب‌اپ TIME', timeOverview: 'معرفی پروژه',
       timePreviewAlt: 'پیش‌نمایش داشبورد TIME؛ ساعت تهران، تقویم و اطلاعات روشنایی روز',
       productGuideKicker:'رویکرد حرفه‌ای', productGuideTitle:'مدیریت محصول فنی در عمل',
-      productGuideDescription:'از شناخت نیاز کاربر و تعریف MVP تا نقشه راه، تصمیم‌های فنی و سنجش ارزش واقعی محصول؛ با نمونه‌هایی از پروژه‌های معین قزلباش.',
+      productGuideDescription:'از کشف مسئله و شناخت نیاز کاربران تا طراحی MVP، اولویت‌بندی نقشه راه، تصمیم‌های فنی و سنجش نتیجه؛ تجربه من در مدیریت محصول B2B و ساخت محصولات دیجیتال، با مثال‌هایی از پروژه‌های واقعی.',
       productGuideLink:'آشنایی با رویکرد من به مدیریت محصول',
       contactKicker: 'ارتباط مستقیم', contactTitle: 'گفتگو، مشاوره یا شروع همکاری',
       contactLead: 'اگر ایده‌ای داری، با چالش محصول روبه‌رو شده‌ای یا می‌خواهی درباره یک همکاری صحبت کنیم، خوشحال می‌شوم گفتگو کنیم.',
@@ -46,8 +46,8 @@
       timeVisit: 'Open TIME web app', timeOverview: 'Project overview',
       timePreviewAlt: 'Preview of the TIME dashboard with Tehran clock, calendar and daylight information',
       productGuideKicker:'HOW I WORK', productGuideTitle:'Technical product management in practice',
-      productGuideDescription:'From product discovery and MVP scope to technical trade-offs and measurable outcomes, informed by real B2B product work.',
-      productGuideLink:'Explore the approach (in Persian)',
+      productGuideDescription:'From user discovery and defining an MVP to roadmap priorities, technical decisions and measurable outcomes. A practical look at how I build and improve B2B platforms and digital products.',
+      productGuideLink:'Explore my product approach',
       contactKicker: 'GET IN TOUCH', contactTitle: 'Let’s talk, consult or collaborate',
       contactLead: 'Have an idea, a product challenge, or a project worth building? I would love to explore it with you.',
       telegram: 'Message on Telegram', telegramChannel:'Follow Telegram Channel', whatsapp: 'Chat on WhatsApp',
@@ -463,6 +463,8 @@
   };
   const applyLandingCopy = () => {
     const t=currentCopy();
+    const guide = document.querySelector('.landing-product-management > a');
+    if (guide) guide.href = lang === 'en' ? '/en/product-management.html' : '/product-management.html';
     $$('[data-i18n]').forEach(el=>{
       const key=el.dataset.i18n;
       if (Object.hasOwn(t,key)) el.textContent=t[key];

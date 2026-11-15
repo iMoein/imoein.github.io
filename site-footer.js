@@ -31,8 +31,8 @@
     });
     const guide = footer.querySelector('[data-site-footer-guide]');
     if (guide) {
-      guide.href = '/product-management.html';
-      guide.textContent = lang === 'en' ? 'Technical product management (Persian)' : 'مدیریت محصول';
+      guide.href = lang === 'en' ? '/en/product-management.html' : '/product-management.html';
+      guide.textContent = lang === 'en' ? 'Product management' : 'مدیریت محصول';
     }
     const copy = footer.querySelector('.site-footer-copy');
     if (copy) {

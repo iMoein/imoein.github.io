@@ -69,5 +69,15 @@
   <url>
     <loc>https://imoein.com/product-management.html</loc>
     <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://imoein.com/product-management.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://imoein.com/en/product-management.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imoein.com/product-management.html" />
+  </url>
+  <url>
+    <loc>https://imoein.com/en/product-management.html</loc>
+    <lastmod>2026-11-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="fa" href="https://imoein.com/product-management.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://imoein.com/en/product-management.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://imoein.com/product-management.html" />
   </url>
 </urlset>
