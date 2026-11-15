@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Imagine a wheelchair user booking a property advertised as having step-free access. When they arrive, they discover that the bedroom doorway is too narrow for their wheelchair. The search worked, the payment went through, and the reservation was confirmed. Yet the product failed at the point that ma">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/accessible-airbnb-booking-experience/">
+  <link rel="alternate" hreflang="fa" href="https://imoein.com/blog/fa/accessible-airbnb-booking-experience/">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/blog/en/accessible-airbnb-booking-experience/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust | iMoein">
+  <meta property="og:description" content="Imagine a wheelchair user booking a property advertised as having step-free access. When they arrive, they discover that the bedroom doorway is too narrow for their wheelchair. The search worked, the payment went through, and the reservation was confirmed. Yet the product failed at the point that ma">
+  <meta property="og:url" content="https://imoein.com/blog/en/accessible-airbnb-booking-experience/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fa_IR">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/post-20261115-s9wa2-81556cc604a8.png">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/post-20261115-s9wa2-81556cc604a8.png">
+  <meta property="og:image:alt" content="Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust">
+  <meta property="og:image:width" content="1180">
+  <meta property="og:image:height" content="350">
+  <meta property="article:published_time" content="2026-11-09">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="1000 Product Manager Interview Questions">
+<meta property="article:tag" content="Accessibility"><meta property="article:tag" content="Booking Experience"><meta property="article:tag" content="User Research"><meta property="article:tag" content="Data Quality"><meta property="article:tag" content="Inclusive Design"><meta property="article:tag" content="Airbnb">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust | iMoein">
+  <meta name="twitter:description" content="Imagine a wheelchair user booking a property advertised as having step-free access. When they arrive, they discover that the bedroom doorway is too narrow for their wheelchair. The search worked, the payment went through, and the reservation was confirmed. Yet the product failed at the point that ma">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/accessible-airbnb-booking-experience/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/post-20261115-s9wa2-81556cc604a8.png">
+  <meta name="twitter:image:alt" content="Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust">
+  <title>Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/accessible-airbnb-booking-experience/#article", "headline": "Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust", "description": "Imagine a wheelchair user booking a property advertised as having step-free access. When they arrive, they discover that the bedroom doorway is too narrow for their wheelchair. The search worked, the payment went through, and the reservation was confirmed. Yet the product failed at the point that ma", "url": "https://imoein.com/blog/en/accessible-airbnb-booking-experience/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/accessible-airbnb-booking-experience/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-09", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/en/about.html", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/en/about.html", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/post-20261115-s9wa2-81556cc604a8.png", "articleSection": "1000 Product Manager Interview Questions", "keywords": ["Accessibility", "Booking Experience", "User Research", "Data Quality", "Inclusive Design", "Airbnb"], "wordCount": 3162, "timeRequired": "PT17M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/accessible-airbnb-booking-experience/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/en/about.html"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "1000 Product Manager Interview Questions", "item": "https://imoein.com/blog/en/category/1000-product-manager-interview-questions/"}, {"@type": "ListItem", "position": 4, "name": "Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust", "item": "https://imoein.com/blog/en/accessible-airbnb-booking-experience/"}]}</script>  <link rel="stylesheet" href="/site-footer.css?v=footer-unified-20261115">
+  <link rel="stylesheet" href="/site-analytics.css?v=ga4-consent-v2-20261114">
+  <script defer src="/site-analytics.js?v=ga4-no-prompt-20261114-r2"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/accessible-airbnb-booking-experience/" data-blog-alt-en="/blog/en/accessible-airbnb-booking-experience/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/en/about.html">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><span aria-hidden="true">/</span><span aria-current="page">Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-09" data-iso="2026-11-09">2026-11-09</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>17 min read</span>
+    </div>
+    <h1>Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust</h1>
+    <p>Day 9 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/post-20261115-s9wa2-81556cc604a8.webp" alt="Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust" width="1180" height="350" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine a wheelchair user booking a property advertised as having step-free access. When they arrive, they discover that the bedroom doorway is too narrow for their wheelchair. The search worked, the payment went through, and the reservation was confirmed. Yet the product failed at the point that mattered most.</strong></p>
+<p>This is a hypothetical scenario, but it illustrates a genuine product design challenge: <strong>finding accommodation with accessibility features is not necessarily the same as finding accommodation that meets a particular guest's needs.</strong></p>
+<p>The ninth question in our series of 1,000 Product Manager interview questions asks:</p>
+<p><strong>"Design an Airbnb booking experience for a guest with mobility needs."</strong></p>
+<p>This is not simply an exercise in improving a search interface or adding a few filters. The interviewer wants to understand whether you can identify a genuine user problem, prioritise different needs, propose a testable solution and establish meaningful measures of success.</p>
+<p>The reference question is presented as a contextual Airbnb product design exercise based on unofficial interview-related material. It should not be treated as a verified question from an official Airbnb interview.</p>
+<h2 id="define-the-problem-before-designing-the-solution">Define the problem before designing the solution</h2>
+<p>One of the easiest mistakes is to assume that everyone with mobility needs requires the same accommodation features.</p>
+<p>Someone using a manual wheelchair may need doorways of a particular width. Someone using a walking frame might be more concerned about steps and uneven surfaces. Another traveller may be able to negotiate a few stairs but require grab rails in the bathroom.</p>
+<p>Before discussing features, I would clarify several things:</p>
+<ul>
+<li>Which group of guests are we prioritising?</li>
+<li>Where do they experience the greatest difficulty between searching and arriving?</li>
+<li>What information is essential to their booking decision?</li>
+<li>What constraints exist around development time, listing data and host participation?</li>
+</ul>
+<p>For this exercise, I would make one explicit assumption:</p>
+<p><strong>Our initial target user is a guest who uses a wheelchair, wants to travel independently, and needs to establish whether the entrance, bedroom and bathroom are suitable before committing to a booking.</strong></p>
+<p>That does not mean all wheelchair users have identical requirements. Wheelchair dimensions, transfer abilities and the need for assistance or equipment can vary considerably.</p>
+<p>I would frame the product objective as follows:</p>
+<p><strong>Help guests discover, assess and book accommodation that meets their essential mobility requirements, without unnecessary exchanges with multiple hosts or disclosure of irrelevant personal information.</strong></p>
+<p>This is more useful than simply aiming to increase bookings because it incorporates the quality of the booking decision.</p>
+<h2 id="understand-what-airbnb-already-provides">Understand what Airbnb already provides</h2>
+<p>A strong interview answer should demonstrate awareness of the existing product rather than presenting established functionality as an original invention.</p>
+<p>Airbnb already offers accessibility search filters. Guests can search for properties with features such as step-free entrances, wider doorways, step-free bedroom access, bathroom grab rails and step-free showers.</p>
+<p>Airbnb also states that it reviews accessibility features submitted by accommodation hosts, using photographs, and allows guests to contact hosts for further clarification.</p>
+<p>Therefore, simply suggesting an accessibility filter would contribute relatively little to the current experience.</p>
+<p>The more useful question is:</p>
+<p><strong>Does the existing experience give guests enough reliable information to determine whether accommodation meets their specific requirements?</strong></p>
+<p>Answering that requires evidence from users, an assessment of listing information and an understanding of behaviour throughout the booking journey.</p>
+<p>We should not assume that Airbnb's current experience is failing, or that our proposed redesign would improve it, without testing those assumptions.</p>
+<h2 id="a-structured-approach-to-the-booking-experience">A structured approach to the booking experience</h2>
+<h3 id="1-separate-essential-requirements-from-preferences">1. Separate essential requirements from preferences</h3>
+<p>In a conventional accommodation search, a balcony, attractive view or proximity to the city centre may be a preference.</p>
+<p>For a wheelchair user, however, the ability to pass through the entrance doorway may be an absolute requirement.</p>
+<p>This distinction should influence the search and matching experience.</p>
+<p>I would divide the guest's stated needs into two groups.</p>
+<p><strong>Essential requirements:</strong> Features whose absence would make the accommodation unsuitable, such as step-free access to the bedroom.</p>
+<p><strong>Preferences:</strong> Desirable features that the guest might compromise on, such as proximity to a particular attraction.</p>
+<p>The guest should decide which requirements are essential. The platform should not assume that using a wheelchair automatically implies an identical set of requirements for everyone.</p>
+<p>Each feature also needs a clear information status: supported by available evidence, confirmed absent, or insufficiently documented.</p>
+<p>Unknown information must not be presented as evidence that a property is suitable.</p>
+<h3 id="2-create-trustworthy-matching-rather-than-more-filters">2. Create trustworthy matching rather than more filters</h3>
+<p>We could add increasingly detailed search filters, but increasing their number does not automatically make a booking decision easier.</p>
+<p>My initial proposal would be an optional search journey in which guests identify their essential requirements.</p>
+<p>The product would then present properties according to their documented compatibility with those requirements.</p>
+<p>For each result, guests should be able to see which requirements are supported by available evidence and which still require clarification.</p>
+<p>For example, a property might have a documented step-free entrance but no information about the bathroom doorway width.</p>
+<p>That property should not be presented as a fully suitable match without explaining the missing information.</p>
+<p>There is an important trade-off here.</p>
+<p>Strict matching could substantially reduce the number of visible properties, particularly in destinations where hosts have provided little structured accessibility information.</p>
+<p>To address this, the product could allow guests to choose whether to see properties with incomplete information, explore alternative dates or areas, and ask hosts targeted questions.</p>
+<p>The crucial principle is that <strong>the system should never silently compromise an essential requirement merely to display more results.</strong></p>
+<h3 id="3-explain-the-journey-through-the-property">3. Explain the journey through the property</h3>
+<p>The presence of an accessibility feature does not establish that an entire property is suitable.</p>
+<p>A building may have a step-free entrance but stairs leading to the bedroom. A bathroom doorway may be wide enough while the available turning space remains unsuitable for a particular wheelchair.</p>
+<p>The property details page therefore needs to support assessment of the guest's actual movement through the accommodation.</p>
+<p>That might mean understanding the route from the entrance to the bedroom, from the bedroom to the bathroom, and between other essential areas.</p>
+<p>Useful information could include doorway measurements, steps, lift availability and clear photographs of relevant routes, provided these details are available and trustworthy.</p>
+<p>Airbnb's official photography guidance already recommends showing doorway measurements, photographing accessibility features from several angles and identifying which rooms provide particular features.</p>
+<p>An incremental product improvement would be to make the evidence and verification status of each feature clearer.</p>
+<p>For instance, guests could distinguish between information supported by reviewed photographs and information that remains incomplete.</p>
+<p>Such transparency should not be confused with a universal guarantee of suitability. The guest must still be able to judge the information against their own requirements.</p>
+<h3 id="4-resolve-critical-uncertainty-before-payment">4. Resolve critical uncertainty before payment</h3>
+<p>One of the highest-risk moments occurs when a guest books accommodation despite unresolved questions about an essential requirement.</p>
+<p>I would explore a lightweight pre-booking review showing the requirements the guest has selected.</p>
+<p>Where sufficient information exists, the guest can proceed with a clearer understanding of the property.</p>
+<p>Where important details are missing, the product should identify the uncertainty and provide a direct way to ask the host.</p>
+<p>Instead of a generic instruction to contact the host, the platform could suggest a relevant question:</p>
+<p>"What is the clear width of the bathroom doorway when fully open?"</p>
+<p>A host's answer should not automatically become a definitive accessibility guarantee without appropriate supporting evidence.</p>
+<p>Guests should also have clear access to relevant support arrangements and applicable cancellation policies.</p>
+<p>We should not promise special refunds, accommodation guarantees or assistance that the business and its operating policies cannot actually provide.</p>
+<h3 id="5-make-the-booking-interface-accessible-too">5. Make the booking interface accessible too</h3>
+<p>So far, the focus has been on the physical characteristics of accommodation.</p>
+<p>However, the digital booking journey must also support accessible interaction.</p>
+<p>Guests should be able to navigate filters using a keyboard, select options, understand their states and complete payment without unnecessary barriers.</p>
+<p>Form controls need understandable labels. Errors should be described clearly rather than communicated through colour alone.</p>
+<p>The W3C's Web Content Accessibility Guidelines, particularly WCAG 2.2, provide an appropriate foundation for assessing these interactions.</p>
+<p>However, digital accessibility and physical accommodation suitability are different requirements.</p>
+<p><strong>The booking product needs to be usable, while also giving guests trustworthy information about the property they intend to book.</strong></p>
+<h2 id="which-solution-should-we-prioritise">Which solution should we prioritise?</h2>
+<p>An interview might produce several plausible proposals.</p>
+<p><strong>Option one: Add more filters and accessibility badges.</strong> This could be relatively straightforward to implement in some areas and make properties easier to discover. However, if the information is incomplete or inaccurate, it may increase perceived confidence without improving actual suitability.</p>
+<p><strong>Option two: Build a comprehensive personalised accessibility experience.</strong> This could support a wider range of requirements but would depend on substantial structured data, host participation, more complex interactions and ongoing maintenance.</p>
+<p><strong>Option three: Incrementally improve matching against documented essential requirements.</strong> Begin with a limited set of important requirements, expose information gaps and make clarification easier before booking.</p>
+<p>I would prioritise the third option.</p>
+<p>Not because it necessarily offers the most comprehensive experience, but because it allows us to test meaningful improvements within a manageable scope.</p>
+<p>We can learn about data quality, guest confidence and practical constraints before investing in a much larger solution.</p>
+<p>However, if research reveals that the main problem is a shortage of suitable accommodation rather than difficulty assessing existing properties, the priority should shift towards improving supply coverage and listing information.</p>
+<p>That is why understanding the problem matters more than becoming attached to the initial solution.</p>
+<h2 id="a-practical-software-product-example">A practical software product example</h2>
+<p><strong>Hypothetical scenario</strong></p>
+<p>Imagine a booking platform similar to Airbnb.</p>
+<p>Its product team observes that some guests who use accessibility filters repeatedly open property details but do not complete a booking.</p>
+<p>This behaviour alone does not prove that the problem is insufficient trust.</p>
+<p>The properties might be too expensive, unsuitable accommodation might be unavailable, or guests might simply be comparing options.</p>
+<p>The Product Manager works with a user researcher to interview travellers and evaluate the quality of existing property information.</p>
+<p>Suppose this research suggests that uncertainty about the route from the entrance to the bathroom is a recurring concern.</p>
+<p>The team considers two approaches:</p>
+<ul>
+<li>Introduce a general "wheelchair-friendly" badge.</li>
+<li>Display separate information about access to the entrance, bedroom and bathroom, supported by photographs and clear indications of missing details.</li>
+</ul>
+<p>The second approach becomes the initial recommendation because it provides information that guests can assess against their own requirements rather than relying on a broad label.</p>
+<p>The product designer develops a prototype. Engineers assess the available data and implementation constraints. Operations and support teams investigate how hosts could supply or correct information.</p>
+<p>The Product Manager defines the experiment and success criteria.</p>
+<p>The team then conducts a limited test using listings with reviewed accessibility information.</p>
+<p>If guests can make more accurate suitability judgements without significant new errors or confusion, expanding the approach becomes more defensible.</p>
+<p>But if guests still need repeated conversations with hosts to establish basic requirements, the redesign has not adequately solved the original problem.</p>
+<p>This is an illustrative scenario, not evidence of an actual Airbnb experiment or business result.</p>
+<h2 id="how-should-success-be-measured">How should success be measured?</h2>
+<p>Booking conversion matters, but it cannot be the only success measure.</p>
+<p>A redesign could increase bookings while also increasing the number of guests who discover, upon arrival, that accommodation does not meet their requirements.</p>
+<p>I would therefore define three levels of measurement.</p>
+<p><strong>1. Primary outcome metric</strong></p>
+<p>The proportion of bookings where the guest's stated essential requirements are actually met on arrival.</p>
+<p>We could investigate this through optional post-arrival feedback and recorded accessibility-related problems.</p>
+<p>The denominator must be explicit, such as bookings in the pilot with a valid post-arrival assessment.</p>
+<p>We would also need to acknowledge the risk of response bias: guests who provide feedback may differ from those who do not.</p>
+<p><strong>2. Diagnostic metrics</strong></p>
+<p>These could include the rate at which guests find at least one property matching their essential requirements, the time required to assess suitability, the number of unresolved essential questions before booking, and booking completion after accessibility requirements have been selected.</p>
+<p>We should examine both individual funnel stages and the full population of eligible accessibility searches.</p>
+<p>Otherwise, a shortage of suitable properties could be concealed by an apparently healthy conversion rate among the small number of guests who find a match.</p>
+<p><strong>3. Guardrail metrics</strong></p>
+<p>These would include cancellations and complaints caused by accessibility discrepancies, false-positive suitability matches, additional host support workload and unintended effects on other guests.</p>
+<p>The measurement window should be established before the experiment.</p>
+<p>Initial usability tests and data-quality assessments would be followed by a limited live pilot that also captures post-arrival outcomes.</p>
+<p>An improvement in clicks or initial bookings would not be sufficient evidence of success.</p>
+<h2 id="risks-and-implementation-considerations">Risks and implementation considerations</h2>
+<p>The greatest risk is creating false confidence.</p>
+<p>A broad label such as "wheelchair-friendly" may suggest suitability even when important requirements have not been established.</p>
+<p>The second risk is incomplete property information.</p>
+<p>Requiring extensive structured data from every host could create a significant operational burden and delay improvements.</p>
+<p>The third risk concerns privacy.</p>
+<p>Guests should not have to disclose medical diagnoses or sensitive personal details to identify the accommodation features they need.</p>
+<p>Requirements should be selected voluntarily, and the platform should avoid collecting unnecessary information.</p>
+<p>Hosts should provide accurate information about the property rather than decide whether a particular person is capable of staying there.</p>
+<p>Within the delivery team, the Product Manager is responsible for defining the outcome, prioritising the opportunity and assessing the result.</p>
+<p>Researchers, designers, engineers, operations and support colleagues contribute to understanding user needs, implementing the experience and ensuring that the information can be trusted.</p>
+<h2 id="a-natural-interview-answer">A natural interview answer</h2>
+<p><strong>Illustrative candidate response:</strong></p>
+<blockquote>
+<p>"I'd start by clarifying what we mean by mobility needs, because someone using a wheelchair may have very different requirements from someone using a walking frame.</p>
+<p>"For the purpose of this question, I'd focus initially on wheelchair users who need to establish whether the entrance, bedroom and bathroom are suitable before booking.</p>
+<p>"I'd review Airbnb's existing accessibility features and look at how guests use them. I'd also speak with travellers to understand whether the main difficulty is finding suitable accommodation, understanding the information or feeling confident enough to book.</p>
+<p>"Rather than immediately adding more filters, I'd explore separating essential requirements from preferences and showing clearly how each property matches those requirements.</p>
+<p>"I'd test a prototype using listings with reliable accessibility information.</p>
+<p>"My main measure of success wouldn't simply be booking conversion. I'd want to know whether guests successfully booked accommodation that actually met their essential requirements when they arrived.</p>
+<p>"And if the evidence showed that the real constraint was insufficient suitable inventory or unreliable host information, I'd change the priority towards improving supply and data quality rather than making the interface more complicated."</p>
+</blockquote>
+<h2 id="interview-follow-up-questions">Interview follow-up questions</h2>
+<h3 id="what-would-you-do-if-you-had-only-two-weeks-to-investigate">What would you do if you had only two weeks to investigate?</h3>
+<p>This question appears in the original reference and tests whether the candidate can narrow the problem and select an efficient learning approach.</p>
+<p>Two weeks would not be enough to build a comprehensive accessibility platform.</p>
+<p>I would begin by selecting a specific user group and speaking with travellers about their current booking journeys.</p>
+<p>I would observe how they search for properties and assess a sample of listings for completeness and clarity of information.</p>
+<p>The team would then create a simple prototype showing essential requirements and matching status, followed by usability testing with relevant users.</p>
+<p>By the end of the two weeks, we should understand which uncertainty is most consequential, whether our proposed presentation improves comprehension and what the largest implementation constraint is.</p>
+<p>The objective would be an evidence-based decision about the next experiment, not a claim that the entire problem had been solved.</p>
+<h3 id="what-evidence-would-make-you-reject-your-proposed-solution">What evidence would make you reject your proposed solution?</h3>
+<p>This is the second follow-up question in the reference material.</p>
+<p>If research showed that guests already understand the accessibility information but cannot find suitable accommodation at an acceptable price or location, improving presentation would probably not be the highest priority.</p>
+<p>If host information proved too incomplete or unreliable, a matching system could produce misleading results.</p>
+<p>Likewise, if usability testing revealed that guests misunderstood verification status, or post-stay evidence showed an increase in accessibility discrepancies, we would need to redesign or stop the experiment.</p>
+<p><strong>A Product Manager should be committed to the user outcome, not to defending their first proposed solution.</strong></p>
+<h3 id="what-if-the-redesign-reduces-bookings">What if the redesign reduces bookings?</h3>
+<p>This is an additional suggested practice question, rather than one of the two follow-ups in the original reference.</p>
+<p>I would first investigate why bookings had declined.</p>
+<p>If better information helped guests avoid properties that did not meet essential requirements, lower conversion might represent a better quality decision rather than a product failure.</p>
+<p>However, if the redesign introduced unnecessary complexity or incorrectly excluded suitable properties, we would need to correct it.</p>
+<p>The decision should consider successful stays, guest satisfaction, support costs and longer-term business outcomes, rather than conversion in isolation.</p>
+<h2 id="weak-answers-and-common-mistakes">Weak answers and common mistakes</h2>
+<p>Saying "I'd add a disability filter" is too broad. It does not specify an actual need and overlooks functionality Airbnb already provides.</p>
+<p>Suggesting "I'd put all accessible properties at the top of search results" is equally problematic without defining accessibility. A property may suit one person while being unsuitable for another.</p>
+<p>Proposing that artificial intelligence should determine wheelchair suitability from photographs is also difficult to defend without evidence of accuracy and careful evaluation of errors.</p>
+<p>Automated image analysis might help identify potential features, but an unverified inference should not be treated as a definitive assurance to the guest.</p>
+<p>Finally, evaluating success purely through booking conversion overlooks what happens when the guest arrives.</p>
+<p>The interviewer is ultimately assessing the quality of your problem framing, prioritisation and decision-making, not the number of features you can suggest.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>To design a better Airbnb booking experience for guests with mobility needs, I would not begin by adding more filters. I would select a clearly defined user group, understand their essential requirements and investigate where the existing booking journey leaves them without sufficient information or confidence.</p>
+<p>My initial recommendation would be <strong>transparent matching between essential user requirements and documented property features, with clear disclosure of uncertainty and a simpler way to resolve critical questions before payment</strong>. This should be tested with relevant users and trustworthy listing information, and evaluated against real accommodation outcomes.</p>
+<p>If evidence showed that the dominant problem was insufficient suitable inventory, unreliable host data or unnecessary complexity in our proposed experience, I would revise the approach. The aim is not merely to make booking easier. It is to help guests make informed, reliable decisions about accommodation that genuinely suits their needs.</p>
+<h2 id="sources">Sources</h2>
+<ol>
+<li><a href="https://www.airbnb.com/help/article/3138" rel="noopener noreferrer" target="_blank">Airbnb Help Centre — Search for listings with accessibility features</a></li>
+<li><a href="https://www.airbnb.com/accessibility" rel="noopener noreferrer" target="_blank">Airbnb — Accessibility at Airbnb</a></li>
+<li><a href="https://www.airbnb.com/resources/hosting-homes/a/how-to-photograph-accessibility-features-30" rel="noopener noreferrer" target="_blank">Airbnb — How to photograph accessibility features</a></li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard" rel="noopener noreferrer" target="_blank">W3C — WCAG 2.2: Keyboard Accessibility</a></li>
+<li><a href="https://www.w3.org/WAI/tutorials/forms/labels/" rel="noopener noreferrer" target="_blank">W3C — Labeling Controls in Forms</a></li>
+</ol>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/accessibility/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Accessibility</span></a><a class="blog-post-term tag" href="/blog/en/tag/booking-experience/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Booking Experience</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-research/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Research</span></a><a class="blog-post-term tag" href="/blog/en/tag/data-quality/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Data Quality</span></a><a class="blog-post-term tag" href="/blog/en/tag/inclusive-design/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Inclusive Design</span></a><a class="blog-post-term tag" href="/blog/en/tag/airbnb/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Airbnb</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#define-the-problem-before-designing-the-solution" class="h2">Define the problem before designing the solution</a>
+          <a href="#understand-what-airbnb-already-provides" class="h2">Understand what Airbnb already provides</a>
+          <a href="#a-structured-approach-to-the-booking-experience" class="h2">A structured approach to the booking experience</a>
+          <a href="#1-separate-essential-requirements-from-preferences" class="h3">1. Separate essential requirements from preferences</a>
+          <a href="#2-create-trustworthy-matching-rather-than-more-filters" class="h3">2. Create trustworthy matching rather than more filters</a>
+          <a href="#3-explain-the-journey-through-the-property" class="h3">3. Explain the journey through the property</a>
+          <a href="#4-resolve-critical-uncertainty-before-payment" class="h3">4. Resolve critical uncertainty before payment</a>
+          <a href="#5-make-the-booking-interface-accessible-too" class="h3">5. Make the booking interface accessible too</a>
+          <a href="#which-solution-should-we-prioritise" class="h2">Which solution should we prioritise?</a>
+          <a href="#a-practical-software-product-example" class="h2">A practical software product example</a>
+          <a href="#how-should-success-be-measured" class="h2">How should success be measured?</a>
+          <a href="#risks-and-implementation-considerations" class="h2">Risks and implementation considerations</a>
+          <a href="#a-natural-interview-answer" class="h2">A natural interview answer</a>
+          <a href="#interview-follow-up-questions" class="h2">Interview follow-up questions</a>
+          <a href="#what-would-you-do-if-you-had-only-two-weeks-to-investigate" class="h3">What would you do if you had only two weeks to investigate?</a>
+          <a href="#what-evidence-would-make-you-reject-your-proposed-solution" class="h3">What evidence would make you reject your proposed solution?</a>
+          <a href="#what-if-the-redesign-reduces-bookings" class="h3">What if the redesign reduces bookings?</a>
+          <a href="#weak-answers-and-common-mistakes" class="h2">Weak answers and common mistakes</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+          <a href="#sources" class="h2">Sources</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">More writing</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/en/designing-products-for-limited-access/">
+            <span class="blog-sidebar-item-category">Product Design &amp; UX</span>
+            <strong>Designing an Everyday Product for People with Limited Access</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-01">2026-11-01</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/google-maps-discovery-for-first-time-travellers/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Redesigning Google Maps Place Discovery: Helping Inexperienced Travellers Make Better Choices</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-14">2026-11-14</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/independent-digital-services-for-older-adults/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>How Can You Help Older Adults Complete Digital Services Independently?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-08">2026-11-08</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/en/">Browse all articles <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/accessible-airbnb-booking-experience/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong><a href="/en/about.html">Moein Ghezelbash</a></strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/designing-products-for-limited-access/" class="blog-end-next">
+      <span>Read next <span aria-hidden="true">↗</span></span>
+      <strong>Designing an Everyday Product for People with Limited Access</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+    <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/en/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/en/">Home</a>
+        <a data-site-footer-link="about" href="/en/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/en/portfolio.html">Projects</a>
+        <a data-site-footer-guide href="/en/product-management.html">Product management</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-en.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/en/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js?v=footer-unified-20261115"></script>
+</body>
+</html>
