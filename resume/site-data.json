@@ -1,8 +1,8 @@
 {
   "defaultLocale": "en",
   "resumeFiles": {
-    "en": "resume/moein-ghezelbash-en.html",
-    "fa": "resume/moein-ghezelbash-fa.html"
+    "en": "/resume/moein-ghezelbash-en.html",
+    "fa": "/resume/moein-ghezelbash-fa.html"
   },
   "contact": {
     "email": {
@@ -113,11 +113,11 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/gardesh.webp",
+            "src": "/assets/logo/gardesh.webp",
             "text": "G",
             "candidates": [
-              "assets/logo/gardesh.webp",
-              "assets/logo/gardesh.jpeg"
+              "/assets/logo/gardesh.webp",
+              "/assets/logo/gardesh.jpeg"
             ]
           }
         },
@@ -134,9 +134,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/samyarsafar.webp",
+            "src": "/assets/logo/samyarsafar.webp",
             "candidates": [
-              "assets/logo/samyarsafar.webp"
+              "/assets/logo/samyarsafar.webp"
             ]
           }
         },
@@ -153,9 +153,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/alibaba.webp",
+            "src": "/assets/logo/alibaba.webp",
             "candidates": [
-              "assets/logo/alibaba.webp"
+              "/assets/logo/alibaba.webp"
             ]
           }
         }
@@ -217,7 +217,7 @@
             "Persian & Gregorian dates",
             "Saved cities & time zones"
           ],
-          "previewImage": "assets/time-preview.webp"
+          "previewImage": "/assets/time-preview.webp"
         },
         {
           "title": "FARVAH / Smart Coffee",
@@ -225,10 +225,10 @@
           "description": "Farvah Cafe is an integrated cafe operations and customer-engagement platform, developed from an MVP into a multi-module commercial product. Its core areas include POS and order management, menus, CRM and loyalty, back-office workflows, and multi-branch operations. My role has focused on product roadmapping, feature prioritisation, and aligning operational needs with UX and technical delivery, with franchise capabilities on the future roadmap.",
           "url": "https://farvahcafe.com/",
           "logo": {
-            "src": "assets/logo/farvah.webp",
+            "src": "/assets/logo/farvah.webp",
             "candidates": [
-              "assets/logo/farvah.webp",
-              "assets/logo/farvah.jpeg"
+              "/assets/logo/farvah.webp",
+              "/assets/logo/farvah.jpeg"
             ]
           }
         },
@@ -261,9 +261,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/farazraya.webp",
+            "src": "/assets/logo/farazraya.webp",
             "candidates": [
-              "assets/logo/farazraya.webp"
+              "/assets/logo/farazraya.webp"
             ]
           }
         },
@@ -276,9 +276,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/3click.webp",
+            "src": "/assets/logo/3click.webp",
             "candidates": [
-              "assets/logo/3click.webp"
+              "/assets/logo/3click.webp"
             ]
           }
         },
@@ -291,9 +291,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/kavirmotor.webp",
+            "src": "/assets/logo/kavirmotor.webp",
             "candidates": [
-              "assets/logo/kavirmotor.webp"
+              "/assets/logo/kavirmotor.webp"
             ]
           }
         }
@@ -308,9 +308,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/livefm.webp",
+            "src": "/assets/logo/livefm.webp",
             "candidates": [
-              "assets/logo/livefm.webp"
+              "/assets/logo/livefm.webp"
             ]
           }
         },
@@ -323,11 +323,11 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/wordpress.webp",
+            "src": "/assets/logo/wordpress.webp",
             "text": "W",
             "candidates": [
-              "assets/logo/wordpress.webp",
-              "assets/logo/wordpress.jpeg"
+              "/assets/logo/wordpress.webp",
+              "/assets/logo/wordpress.jpeg"
             ]
           }
         }
@@ -423,11 +423,11 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/gardesh.webp",
+            "src": "/assets/logo/gardesh.webp",
             "text": "G",
             "candidates": [
-              "assets/logo/gardesh.webp",
-              "assets/logo/gardesh.jpeg"
+              "/assets/logo/gardesh.webp",
+              "/assets/logo/gardesh.jpeg"
             ]
           }
         },
@@ -444,9 +444,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/samyarsafar.webp",
+            "src": "/assets/logo/samyarsafar.webp",
             "candidates": [
-              "assets/logo/samyarsafar.webp"
+              "/assets/logo/samyarsafar.webp"
             ]
           }
         },
@@ -463,9 +463,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/alibaba.webp",
+            "src": "/assets/logo/alibaba.webp",
             "candidates": [
-              "assets/logo/alibaba.webp"
+              "/assets/logo/alibaba.webp"
             ]
           }
         }
@@ -528,7 +528,7 @@
             "تقویم شمسی و میلادی",
             "ذخیره شهرهای دلخواه"
           ],
-          "previewImage": "assets/time-preview.webp"
+          "previewImage": "/assets/time-preview.webp"
         },
         {
           "title": "FARVAH / Smart Coffee",
@@ -536,10 +536,10 @@
           "description": "Farvah Cafe یک پلتفرم یکپارچه برای مدیریت کافه و ارتباط با مشتری است که از MVP به یک محصول تجاری چندماژوله توسعه یافته است. امکانات اصلی آن فروش و سفارش‌گیری (POS)، مدیریت منو، CRM و باشگاه مشتریان، فرایندهای پشتیبان و مدیریت چندشعبه‌ای را در بر می‌گیرد. نقش من هدایت نقشه راه، اولویت‌بندی قابلیت‌ها و هماهنگی نیازهای عملیاتی با تجربه کاربری و توسعه فنی بوده است؛ توسعه ساختار فرانچایز نیز در نقشه راه آینده قرار دارد.",
           "url": "https://farvahcafe.com/",
           "logo": {
-            "src": "assets/logo/farvah.webp",
+            "src": "/assets/logo/farvah.webp",
             "candidates": [
-              "assets/logo/farvah.webp",
-              "assets/logo/farvah.jpeg"
+              "/assets/logo/farvah.webp",
+              "/assets/logo/farvah.jpeg"
             ]
           }
         },
@@ -572,9 +572,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/farazraya.webp",
+            "src": "/assets/logo/farazraya.webp",
             "candidates": [
-              "assets/logo/farazraya.webp"
+              "/assets/logo/farazraya.webp"
             ]
           }
         },
@@ -587,9 +587,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/3click.webp",
+            "src": "/assets/logo/3click.webp",
             "candidates": [
-              "assets/logo/3click.webp"
+              "/assets/logo/3click.webp"
             ]
           }
         },
@@ -602,9 +602,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/kavirmotor.webp",
+            "src": "/assets/logo/kavirmotor.webp",
             "candidates": [
-              "assets/logo/kavirmotor.webp"
+              "/assets/logo/kavirmotor.webp"
             ]
           }
         }
@@ -619,9 +619,9 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/livefm.webp",
+            "src": "/assets/logo/livefm.webp",
             "candidates": [
-              "assets/logo/livefm.webp"
+              "/assets/logo/livefm.webp"
             ]
           }
         },
@@ -634,88 +634,88 @@
           ],
           "achievements": [],
           "logo": {
-            "src": "assets/logo/wordpress.webp",
+            "src": "/assets/logo/wordpress.webp",
             "text": "W",
             "candidates": [
-              "assets/logo/wordpress.webp",
-              "assets/logo/wordpress.jpeg"
+              "/assets/logo/wordpress.webp",
+              "/assets/logo/wordpress.jpeg"
             ]
           }
         }
       ]
     }
   },
-  "profileImage": "assets/profile-photo.webp?v=3567fit",
+  "profileImage": "/assets/profile-photo.webp?v=3567fit",
   "socialLinks": [
     {
       "label": "LinkedIn",
       "url": "https://www.linkedin.com/in/moeinghezelbash/",
       "icon": "in",
       "enabled": true,
-      "iconSrc": "assets/social/linkedin.png"
+      "iconSrc": "/assets/social/linkedin.png"
     },
     {
       "label": "GitHub",
       "url": "https://github.com/iMoein",
       "icon": "gh",
       "enabled": true,
-      "iconSrc": "assets/social/github.png"
+      "iconSrc": "/assets/social/github.png"
     },
     {
       "label": "WhatsApp",
       "url": "https://wa.me/989120137435",
       "icon": "wa",
       "enabled": true,
-      "iconSrc": "assets/social/whatsapp.png"
+      "iconSrc": "/assets/social/whatsapp.png"
     },
     {
       "label": "X",
       "url": "https://x.com/moeinghezelbash",
       "icon": "𝕏",
       "enabled": true,
-      "iconSrc": "assets/social/twitter.png"
+      "iconSrc": "/assets/social/twitter.png"
     },
     {
       "label": "Instagram",
       "url": "https://www.instagram.com/moeinghezelbash/",
       "icon": "ig",
       "enabled": true,
-      "iconSrc": "assets/social/instagram.png"
+      "iconSrc": "/assets/social/instagram.png"
     },
     {
       "label": "Telegram Chat",
       "url": "https://t.me/iMoeinPV",
       "icon": "tg",
       "enabled": true,
-      "iconSrc": "assets/social/telegram.png"
+      "iconSrc": "/assets/social/telegram.png"
     },
     {
       "label": "Telegram Channel",
       "url": "https://t.me/moeinghezelbash",
       "icon": "tg",
       "enabled": false,
-      "iconSrc": "assets/social/telegram.png"
+      "iconSrc": "/assets/social/telegram.png"
     },
     {
       "label": "TikTok",
       "url": "https://www.tiktok.com/@imoein",
       "icon": "tt",
       "enabled": true,
-      "iconSrc": "assets/social/tiktok.png"
+      "iconSrc": "/assets/social/tiktok.png"
     },
     {
       "label": "Threads",
       "url": "https://www.threads.net/@moeinghezelbash",
       "icon": "th",
       "enabled": true,
-      "iconSrc": "assets/social/threads.png"
+      "iconSrc": "/assets/social/threads.png"
     },
     {
       "label": "Facebook",
       "url": "https://www.facebook.com/Moeinghezelbash",
       "icon": "fb",
       "enabled": true,
-      "iconSrc": "assets/social/facebook.png"
+      "iconSrc": "/assets/social/facebook.png"
     }
   ],
   "home": {
@@ -1063,12 +1063,12 @@
     }
   },
   "profileImageCandidates": [
-    "assets/profile-photo.webp?v=3567fit",
-    "assets/profile.jpg?v=3567fit"
+    "/assets/profile-photo.webp?v=3567fit",
+    "/assets/profile.jpg?v=3567fit"
   ],
   "resumeDownloads": {
-    "fa": "resume/معین قزلباش.pdf",
-    "en": "resume/MOEIN GHEZELBASH.pdf"
+    "fa": "/resume/معین قزلباش.pdf",
+    "en": "/resume/MOEIN GHEZELBASH.pdf"
   },
   "footerNavigation": {
     "fa": [

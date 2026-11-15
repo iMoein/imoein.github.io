@@ -370,8 +370,8 @@ const renderExperienceSummary = (content, data) => {
       companies.set(job.company, job.logo);
     }
   });
-  companies.set("iMoein", { src: "assets/logo/imoein.webp" });
-  companies.set("Farvah Cafe", { src: "assets/logo/farvah.webp" });
+  companies.set("iMoein", { src: "/assets/logo/imoein.webp" });
+  companies.set("Farvah Cafe", { src: "/assets/logo/farvah.webp" });
 
   const brandList = document.createElement("div");
   brandList.className = "brand-logo-list";
