@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" media="(min-width: 761px)" content="#102A43">
+  <meta name="theme-color" media="(max-width: 760px)" content="#E4ECE8">
+  <meta name="description" content="Imagine deciding to exercise three times a week, only to find that your plans repeatedly fall apart. Sometimes motivation is the problem. Sometimes exercising alone feels uninspiring. On other occasions, you simply cannot find someone whose schedule matches yours.">
+  <meta name="author" content="Moein Ghezelbash">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://imoein.com/blog/en/find-reliable-exercise-partner/">
+  <link rel="alternate" hreflang="fa" href="https://imoein.com/blog/fa/find-reliable-exercise-partner/">
+  <link rel="alternate" hreflang="en" href="https://imoein.com/blog/en/find-reliable-exercise-partner/">
+  <link rel="alternate" type="application/rss+xml" title="Journal | iMoein" href="/blog/en/feed.xml">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="iMoein">
+  <meta property="og:title" content="Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution | iMoein">
+  <meta property="og:description" content="Imagine deciding to exercise three times a week, only to find that your plans repeatedly fall apart. Sometimes motivation is the problem. Sometimes exercising alone feels uninspiring. On other occasions, you simply cannot find someone whose schedule matches yours.">
+  <meta property="og:url" content="https://imoein.com/blog/en/find-reliable-exercise-partner/">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:locale:alternate" content="fa_IR">
+  <meta property="og:image" content="https://imoein.com/assets/blog/media/covers/find-reliable-exercise-partner-ccb6f8bd9d5c.jpg">
+  <meta property="og:image:secure_url" content="https://imoein.com/assets/blog/media/covers/find-reliable-exercise-partner-ccb6f8bd9d5c.jpg">
+  <meta property="og:image:alt" content="Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution">
+  <meta property="og:image:width" content="1180">
+  <meta property="og:image:height" content="350">
+  <meta property="article:published_time" content="2026-11-13">
+  <meta property="article:author" content="https://imoein.com/">
+  <meta property="article:section" content="1000 Product Manager Interview Questions">
+<meta property="article:tag" content="Product Sense"><meta property="article:tag" content="User Research"><meta property="article:tag" content="Minimum Viable Product"><meta property="article:tag" content="User Matching"><meta property="article:tag" content="Trust and Safety"><meta property="article:tag" content="Product Metrics">  <link rel="author" href="https://imoein.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution | iMoein">
+  <meta name="twitter:description" content="Imagine deciding to exercise three times a week, only to find that your plans repeatedly fall apart. Sometimes motivation is the problem. Sometimes exercising alone feels uninspiring. On other occasions, you simply cannot find someone whose schedule matches yours.">
+  <meta name="twitter:url" content="https://imoein.com/blog/en/find-reliable-exercise-partner/">
+  <meta name="twitter:image" content="https://imoein.com/assets/blog/media/covers/find-reliable-exercise-partner-ccb6f8bd9d5c.jpg">
+  <meta name="twitter:image:alt" content="Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution">
+  <title>Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution | iMoein</title>
+  <script src="/site-theme.js"></script>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/assets/blog/blog.css?v=cover-library-fallback-20261114">
+<link rel="stylesheet" href="/blog/article-taxonomy.css">  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BlogPosting", "@id": "https://imoein.com/blog/en/find-reliable-exercise-partner/#article", "headline": "Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution", "description": "Imagine deciding to exercise three times a week, only to find that your plans repeatedly fall apart. Sometimes motivation is the problem. Sometimes exercising alone feels uninspiring. On other occasions, you simply cannot find someone whose schedule matches yours.", "url": "https://imoein.com/blog/en/find-reliable-exercise-partner/", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://imoein.com/blog/en/find-reliable-exercise-partner/"}, "inLanguage": "en-GB", "isAccessibleForFree": true, "datePublished": "2026-11-13", "author": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/en/about.html", "@id": "https://imoein.com/#person"}, "publisher": {"@type": "Person", "name": "Moein Ghezelbash", "url": "https://imoein.com/en/about.html", "@id": "https://imoein.com/#person"}, "image": "https://imoein.com/assets/blog/media/covers/find-reliable-exercise-partner-ccb6f8bd9d5c.jpg", "articleSection": "1000 Product Manager Interview Questions", "keywords": ["Product Sense", "User Research", "Minimum Viable Product", "User Matching", "Trust and Safety", "Product Metrics"], "wordCount": 2541, "timeRequired": "PT13M", "isPartOf": {"@type": "Blog", "url": "https://imoein.com/blog/en/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "@id": "https://imoein.com/blog/en/find-reliable-exercise-partner/#breadcrumbs", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Moein Ghezelbash", "item": "https://imoein.com/en/about.html"}, {"@type": "ListItem", "position": 2, "name": "Journal", "item": "https://imoein.com/blog/en/"}, {"@type": "ListItem", "position": 3, "name": "1000 Product Manager Interview Questions", "item": "https://imoein.com/blog/en/category/1000-product-manager-interview-questions/"}, {"@type": "ListItem", "position": 4, "name": "Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution", "item": "https://imoein.com/blog/en/find-reliable-exercise-partner/"}]}</script>  <link rel="stylesheet" href="/site-footer.css?v=footer-unified-20261115">
+  <link rel="stylesheet" href="/site-analytics.css?v=ga4-consent-v2-20261114">
+  <script defer src="/site-analytics.js?v=ga4-no-prompt-20261114-r2"></script>
+<script>
+  document.documentElement.classList.add('site-loading');
+  window.setTimeout(() => {
+    document.documentElement.classList.remove('site-loading');
+    document.documentElement.classList.add('site-ready');
+    const overlay = document.getElementById('site-loader');
+    if (overlay) overlay.hidden = true;
+  }, 7500);
+</script>
+</head>
+<body class="locale-en blog-page" data-blog-alt-fa="/blog/fa/find-reliable-exercise-partner/" data-blog-alt-en="/blog/en/find-reliable-exercise-partner/">
+<div id="site-loader" class="site-loader" role="status" aria-live="polite" aria-label="Loading page">
+  <div class="site-loader-inner">
+    <span class="site-loader-symbol" aria-hidden="true"><img src="/assets/logo/imoein-loader.webp" alt="" width="422" height="256" decoding="sync"></span>
+    <span class="site-loader-name">iMoein</span>
+    <span class="site-loader-progress" aria-hidden="true"><span></span></span>
+    <span class="site-loader-caption"><span class="loader-fa">در حال آماده‌سازی صفحه</span><span class="loader-en">Preparing your page</span></span>
+  </div>
+</div>
+  <div class="container site-navigation" id="site-navigation" role="navigation"></div>
+<main class="container blog-shell blog-article-shell" id="main-content">
+  <nav class="blog-breadcrumbs" aria-label="Breadcrumb">
+    <a href="/en/about.html">Moein Ghezelbash</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/">Notes &amp; insights</a><span aria-hidden="true">/</span>
+    <a href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><span aria-hidden="true">/</span><span aria-current="page">Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution</span>
+  </nav>
+
+  <header class="blog-post-header">
+    <div class="blog-post-meta">
+      <time class="blog-date" datetime="2026-11-13" data-iso="2026-11-13">2026-11-13</time>
+      <span class="blog-meta-dot" aria-hidden="true">·</span>
+      <span>13 min read</span>
+    </div>
+    <h1>Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution</h1>
+    <p>Day 13 of 1,000 Product Manager Interview Questions</p>
+  </header>
+
+  <figure class="blog-featured-image">
+    <img src="/assets/blog/media/covers/find-reliable-exercise-partner-ccb6f8bd9d5c.webp" alt="Designing a Product to Find a Reliable Exercise Partner: From User Needs to a Testable Solution" width="1180" height="350" decoding="async" fetchpriority="high">
+  </figure>
+
+  <div class="blog-reading-layout">
+    <article class="blog-article-content" id="article-content">
+      <p><strong>Imagine deciding to exercise three times a week, only to find that your plans repeatedly fall apart. Sometimes motivation is the problem. Sometimes exercising alone feels uninspiring. On other occasions, you simply cannot find someone whose schedule matches yours.</strong></p>
+<p>Now imagine an app that introduces people who enjoy the same activities. Would that solve the problem?</p>
+<p>Not necessarily. Finding someone with a shared interest is not the same as finding a reliable exercise partner.</p>
+<p>That distinction is at the heart of an interesting Product Manager interview question.</p>
+<h2 id="the-interview-question-how-would-you-design-a-product-to-find-a-reliable-exercise-partner">The Interview Question: How Would You Design a Product to Find a Reliable Exercise Partner?</h2>
+<p>This is a product sense and product design question. The interviewer is not looking for an immediate list of app features.</p>
+<p>They want to understand whether you can turn an ambiguous request into a specific user problem, identify an appropriate target audience, evaluate competing solutions and propose a product whose value can be tested.</p>
+<p>A strong answer demonstrates that you can:</p>
+<ul>
+<li>Distinguish the underlying user need from a proposed solution.</li>
+<li>Identify a focused initial market and user segment.</li>
+<li>Account for trust, safety, compatibility and sustained engagement.</li>
+<li>Balance user value, technical complexity and delivery costs.</li>
+<li>Define evidence that would support or challenge your decisions.</li>
+</ul>
+<p>Before designing anything, however, we need to answer a more fundamental question: why do people actually need an exercise partner?</p>
+<h2 id="1-understand-the-problem-before-designing-the-solution">1. Understand the Problem Before Designing the Solution</h2>
+<p>The phrase "finding an exercise partner" conceals several different needs.</p>
+<p>One person may need encouragement to maintain a routine. Another might want someone available for a morning run. A third may feel more comfortable exercising in public with a companion.</p>
+<p>Although these users appear to be requesting the same product, their criteria for a suitable partner are different.</p>
+<p>To clarify the problem, I would explore four questions.</p>
+<p><strong>Who is the target user?</strong> Someone starting to exercise, an experienced athlete, or someone trying to rebuild an established routine?</p>
+<p><strong>Where does the activity happen?</strong> At a gym, in a park, along a running route, or remotely?</p>
+<p><strong>What does reliability mean?</strong> Verified identity, punctuality, respectful behaviour, compatible fitness levels, or some combination?</p>
+<p><strong>What constitutes success?</strong> Finding a potential partner, completing a first session, or continuing to exercise together over several weeks?</p>
+<p>The answers materially affect the product we should build.</p>
+<p>For the remainder of this exercise, I will make an explicit assumption: we are designing for adults who want to exercise regularly in person but struggle to find suitable companions.</p>
+<p>This is a hypothesis to validate, not an established market fact.</p>
+<h2 id="2-resist-the-temptation-to-serve-everyone">2. Resist the Temptation to Serve Everyone</h2>
+<p>One of the most common product design mistakes is attempting to satisfy every potential user from the outset.</p>
+<p>For a product that requires two people to be available and compatible, this creates an additional problem: fragmented participation.</p>
+<p>A platform might attract users across different cities, activities and schedules, yet still struggle to produce useful matches.</p>
+<p>This resembles a marketplace liquidity problem: the platform needs sufficient relevant participation to create successful matches. Unlike a conventional buyer–seller marketplace, however, both participants belong to the same user category.</p>
+<p>An initial segment might be:</p>
+<p><strong>Adults who run or walk for exercise within a defined geographical area and want a partner with a compatible schedule.</strong></p>
+<p>Why choose this group?</p>
+<p>Because location, activity, availability and fitness level can be described relatively clearly. We can also observe whether participants want to meet again after their first session.</p>
+<p>This does not mean other activities are unimportant. It simply reduces the cost of learning.</p>
+<p>If discovery research reveals stronger unmet demand in another segment, or significantly easier access to initial participants, we should reconsider the choice.</p>
+<h2 id="3-turn-trust-into-something-we-can-design">3. Turn Trust into Something We Can Design</h2>
+<p>Reliability is not a single attribute that can be adequately represented by a five-star rating.</p>
+<p>For this product, I would distinguish at least four dimensions.</p>
+<h3 id="identity-confidence">Identity confidence</h3>
+<p>Users need reasonable confidence that they are interacting with genuine accounts.</p>
+<p>Phone verification, abuse prevention and proportionate identity checks may help.</p>
+<p>However, collecting identity documents from every participant without establishing necessity and appropriate data protection would create unnecessary privacy and operational risks.</p>
+<h3 id="commitment-reliability">Commitment reliability</h3>
+<p>Will the partner turn up? Will they communicate when their plans change?</p>
+<p>Attendance history, timely cancellations and post-session feedback may provide useful signals.</p>
+<p>Such information needs to be reasonably accurate, with mechanisms for challenging misleading reports.</p>
+<h3 id="compatibility">Compatibility</h3>
+<p>Two entirely trustworthy people may still be unsuitable exercise partners.</p>
+<p>Differences in running pace, fitness objectives, location or availability can undermine an otherwise promising match.</p>
+<p>Matching should therefore reflect the actual activity and user needs rather than geographical proximity alone.</p>
+<h3 id="personal-safety-and-privacy">Personal safety and privacy</h3>
+<p>Meeting an unfamiliar person introduces risks that cannot be addressed through a disclaimer alone.</p>
+<p>Public meeting locations, reporting and blocking mechanisms, limited disclosure of precise locations and clear behavioural rules should form part of the initial experience.</p>
+<p>Importantly, account verification and positive ratings must never be presented as guarantees of personal safety.</p>
+<h2 id="4-evaluate-the-possible-solutions">4. Evaluate the Possible Solutions</h2>
+<p>Once the problem is clearer, we can compare three approaches.</p>
+<p><strong>Option one: A comprehensive matching application</strong></p>
+<p>Users create profiles, apply filters, request connections and communicate with potential partners.</p>
+<p>This could support considerable future growth, but requires sufficient active users, trust infrastructure and effective abuse management.</p>
+<p><strong>Option two: Local exercise groups</strong></p>
+<p>Instead of directly matching individuals, the product recommends organised group sessions at particular times and locations.</p>
+<p>This might reduce the discomfort of meeting one stranger, although it may not fully serve people seeking a consistent individual partner.</p>
+<p><strong>Option three: A limited, managed matching service</strong></p>
+<p>Within one geographical area, users submit their preferences and availability. The product team then uses simple tools and some manual coordination to introduce potentially compatible participants.</p>
+<p>This approach does not scale efficiently, but it offers an important early advantage: we can test whether matching creates real value before investing in sophisticated algorithms.</p>
+<p><strong>My initial recommendation would be option three.</strong></p>
+<p>Not because manual matching is the ideal long-term product, but because building an elaborate matching engine before validating demand and trust requirements would be premature.</p>
+<p>If participants repeatedly establish useful partnerships, we can progressively automate the processes that demonstrate value.</p>
+<h2 id="5-what-should-the-minimum-viable-product-include">5. What Should the Minimum Viable Product Include?</h2>
+<p>The initial product should focus on capabilities directly contributing to a successful exercise partnership.</p>
+<p><strong>A simple activity profile:</strong> Exercise type, approximate location, fitness level, objectives and availability.</p>
+<p><strong>Compatible partner suggestions:</strong> A small selection of relevant matches rather than an overwhelming directory.</p>
+<p><strong>Mutual consent:</strong> Both participants must agree before a connection is established.</p>
+<p><strong>Session coordination:</strong> Agreeing on a public meeting location and time, with straightforward cancellation or rescheduling.</p>
+<p><strong>Post-session feedback:</strong> Brief questions about whether the session occurred, compatibility and willingness to meet again.</p>
+<p><strong>Safety controls:</strong> Reporting, blocking, visibility settings and a defined process for handling misuse.</p>
+<p>I would deliberately exclude a full social network, public athlete rankings, competitive challenges, AI-generated training plans and equipment sales.</p>
+<p>Those features might eventually become valuable, but we have not yet demonstrated that the core problem is worth solving through this product.</p>
+<h2 id="6-a-hypothetical-software-product-scenario">6. A Hypothetical Software Product Scenario</h2>
+<p>Consider a hypothetical team developing a service that helps people find running partners in one urban district.</p>
+<p>Its initial research aims to establish whether users struggle primarily with finding compatible people or maintaining commitments after arranging a session.</p>
+<p>The team interviews potential users and asks them to describe their most recent attempt to find an exercise partner.</p>
+<p>Suppose, hypothetically, that participants report finding people through messaging groups relatively easily, but struggle with incompatible schedules and repeated cancellations.</p>
+<p>If supported by research, that finding would challenge the assumption that advanced search is the most valuable feature.</p>
+<p>Instead, the team could test a simple service where participants select available time slots, receive suggestions based on compatibility and confirm attendance before meeting.</p>
+<p>Responsibilities would be divided accordingly:</p>
+<ul>
+<li>The Product Manager defines the problem, chooses the initial segment, prioritises opportunities and evaluates outcomes.</li>
+<li>The Product Designer creates a clear, accessible and safer user experience.</li>
+<li>Engineers make technical decisions about feasibility, data security and implementation costs.</li>
+<li>Support and operations contribute to reporting processes and incident handling.</li>
+</ul>
+<p>Where a separate Project Manager exists, their focus may include delivery coordination, schedules and dependencies. In a Scrum environment, the Product Owner is accountable for maximising product value and effective Product Backlog management, as defined in the Scrum Guide. Organisations may distribute or combine these responsibilities differently.</p>
+<h3 id="what-would-make-us-reconsider">What Would Make Us Reconsider?</h3>
+<p>Suppose testing reveals that users find compatible partners but rarely arrange a second session.</p>
+<p>Increasing the number of suggested matches would not necessarily address the problem.</p>
+<p>We would need to understand whether the underlying causes were fitness differences, uncomfortable experiences, scheduling difficulties or simply a temporary need that had already been satisfied.</p>
+<p>The next improvement might involve compatibility and retention rather than acquisition.</p>
+<h2 id="7-how-would-we-measure-product-success">7. How Would We Measure Product Success?</h2>
+<p>Installations, registrations and completed profiles help us understand the acquisition funnel, but do not establish whether users have found reliable exercise partners.</p>
+<p>I would define three levels of measurement.</p>
+<h3 id="primary-outcome-metric">Primary outcome metric</h3>
+<p><strong>Successful partnership rate:</strong> The proportion of eligible users who complete at least one confirmed joint exercise session within the evaluation period.</p>
+<p>For example, the denominator could include new users who have completed the information required for matching and have at least one potentially compatible participant available in the pilot area.</p>
+<p>The denominator must be defined before testing to avoid presenting an artificially favourable result.</p>
+<p>Because session completion may rely on self-reporting, we should also acknowledge the limitations of this evidence.</p>
+<h3 id="diagnostic-metrics">Diagnostic metrics</h3>
+<ul>
+<li>Median time from profile completion to the first acceptable match</li>
+<li>Mutual match acceptance rate</li>
+<li>Conversion from scheduled sessions to completed sessions</li>
+<li>Proportion of users with at least one compatible partner</li>
+<li>Repeat-session rate with the same partner over four weeks</li>
+</ul>
+<p>These measures help identify where the experience breaks down.</p>
+<h3 id="guardrail-metrics">Guardrail metrics</h3>
+<ul>
+<li>Reports of harassment or inappropriate behaviour per scheduled session</li>
+<li>Late cancellation and non-attendance rates</li>
+<li>Time taken to respond to safety reports</li>
+<li>Privacy-related complaints</li>
+<li>Proportion of users without suitable matches in each geographical area</li>
+</ul>
+<p>More completed sessions are not necessarily a positive outcome if they come with disproportionate increases in safety incidents, dissatisfaction or privacy problems.</p>
+<p>An initial four-week observation window could be appropriate for a pilot. This is an illustrative experimental choice, not a universal standard. Acceptance and stopping criteria should be established beforehand according to sample size, risks and operational constraints.</p>
+<h2 id="8-what-if-you-had-only-two-weeks">8. What If You Had Only Two Weeks?</h2>
+<p>This is one of the follow-up questions included in the original interview material.</p>
+<p>Two weeks would not be enough to build a comprehensive platform or establish long-term product success.</p>
+<p>However, it could be sufficient to investigate the most important assumptions.</p>
+<p><strong>Week one:</strong> Interview target users, examine their existing methods of finding partners, identify scheduling and trust difficulties, and select a small pilot area.</p>
+<p><strong>Week two:</strong> Run a limited experiment using a preference form, managed matching and coordination of sessions in public locations, supported by participant consent and a reporting process.</p>
+<p>At the end of the fortnight, I would examine how many participants received suitable suggestions, accepted them and completed sessions, alongside the obstacles encountered.</p>
+<p>I would not claim to have established product–market fit.</p>
+<p>Sustained partnerships and changes in exercise habits would require a longer observation period.</p>
+<h2 id="9-what-evidence-would-make-you-reject-your-proposed-solution">9. What Evidence Would Make You Reject Your Proposed Solution?</h2>
+<p>This is the second follow-up question from the original interview material.</p>
+<p>It tests whether the candidate can challenge their own recommendation rather than becoming attached to it.</p>
+<p>If research suggests that users strongly prefer existing clubs or established social groups and are unwilling to meet unfamiliar people, the proposed value proposition becomes weaker.</p>
+<p>If the geographical area cannot support enough compatible participants, the matching model may be operationally unsustainable.</p>
+<p>If users accept matches but repeatedly cancel sessions, the more important problem may concern commitment and scheduling.</p>
+<p>And if safety risks cannot be reduced to an acceptable level with the available safeguards and operational capacity, growth should not take priority over participant protection.</p>
+<p>Depending on the evidence, I might explore organised group activities, partnerships with gyms or coordination tools for people who already know one another.</p>
+<p>I would also be prepared to stop the initiative entirely.</p>
+<h2 id="10-a-natural-interview-answer">10. A Natural Interview Answer</h2>
+<p>A candidate could bring the analysis together in a response such as this:</p>
+<blockquote>
+<p>"I'd start by clarifying what we mean by a reliable exercise partner and whose problem we're solving.</p>
+<p>"My initial assumption would be to focus on adults who want to run regularly in a particular area but struggle to find someone with a compatible schedule and fitness level.</p>
+<p>"Before building anything, I'd speak to potential users to understand whether the main difficulty is discovering people, coordinating availability or trusting potential partners.</p>
+<p>"For an initial test, I'd avoid building a complete matching application. Instead, I'd run a small, managed matching experiment. Users could share their availability, location preferences and exercise goals, and we'd suggest compatible partners with mutual consent.</p>
+<p>"I'd include safety and privacy considerations from the beginning.</p>
+<p>"I also wouldn't measure success through registrations alone. I'd look at how many people actually complete sessions, whether they choose to exercise together again, and what problems occur along the way.</p>
+<p>"If the evidence shows that users don't trust the model or that matches rarely lead to real sessions, I'd reconsider the solution.</p>
+<p>"The goal isn't to build a matching app for its own sake. It's to help people establish reliable, sustainable exercise partnerships."</p>
+</blockquote>
+<h2 id="11-what-makes-an-interview-answer-weak">11. What Makes an Interview Answer Weak?</h2>
+<p><strong>Starting with features:</strong> Suggesting chat, maps, artificial intelligence and ratings before understanding the problem does not explain why those capabilities are necessary.</p>
+<p><strong>Targeting every athlete:</strong> Someone seeking a mountaineering companion has different needs from someone who wants to run in a local park three mornings a week. Serving both immediately increases complexity and makes learning harder.</p>
+<p><strong>Overestimating ratings:</strong> Positive feedback may provide useful information, but it cannot guarantee safety, commitment or compatibility. Ratings can also be biased or manipulated.</p>
+<p><strong>Relying on vanity metrics:</strong> Thousands of registrations without successful exercise sessions do not demonstrate that the product is solving its intended problem.</p>
+<p><strong>Ignoring marketplace constraints:</strong> Even an exceptionally designed matching product may provide little value without sufficient compatible participants.</p>
+<p><strong>Expressing unjustified certainty:</strong> Claiming that an intelligent algorithm will always identify the ideal partner replaces evidence with speculation.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Designing a product to find reliable exercise partners should begin with a clearly defined user segment and a testable need. Reliability must then be translated into practical dimensions such as identity confidence, commitment, compatibility and personal safety.</p>
+<p>My initial recommendation would be a managed matching experiment within a limited geographical area. This is not necessarily the ideal long-term solution, but it offers a relatively inexpensive way to learn whether the proposition creates genuine value.</p>
+<p>If users reject the experience, partnerships do not continue, or safety risks prove unmanageable, the strategy should change.</p>
+<p><strong>The strongest product is not necessarily the one that introduces the greatest number of people. It is the one that helps users establish suitable, safer and repeatable exercise partnerships.</strong></p>
+
+      <footer class="blog-article-taxonomy" aria-label="Article categories and tags">
+        <section class="blog-taxonomy-group blog-taxonomy-categories" aria-labelledby="article-categories-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-categories-heading">Categories</h2>
+          <nav class="blog-post-terms" aria-label="Categories">
+<a class="blog-post-term blog-category-term" href="/blog/en/category/1000-product-manager-interview-questions/">1000 Product Manager Interview Questions</a><a class="blog-post-term blog-category-term" href="/blog/en/category/product-design-and-ux/">Product Design &amp; UX</a>          </nav>
+        </section>
+        <section class="blog-taxonomy-group blog-taxonomy-tags" aria-labelledby="article-tags-heading">
+          <h2 class="blog-taxonomy-group-title" id="article-tags-heading">Tags</h2>
+          <nav class="blog-post-terms" aria-label="Tags">
+<a class="blog-post-term tag" href="/blog/en/tag/product-sense/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Product Sense</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-research/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Research</span></a><a class="blog-post-term tag" href="/blog/en/tag/minimum-viable-product/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Minimum Viable Product</span></a><a class="blog-post-term tag" href="/blog/en/tag/user-matching/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>User Matching</span></a><a class="blog-post-term tag" href="/blog/en/tag/trust-and-safety/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Trust and Safety</span></a><a class="blog-post-term tag" href="/blog/en/tag/product-metrics/"><span class="blog-tag-hash" aria-hidden="true">#</span><span>Product Metrics</span></a>          </nav>
+        </section>
+      </footer>
+    </article>
+
+    <aside class="blog-sidebar" aria-label="Article sections and more posts">
+      <section class="blog-toc" aria-labelledby="blog-toc-heading">
+        <h2 id="blog-toc-heading">In this article</h2>
+        <nav aria-label="In this article">
+          <a href="#the-interview-question-how-would-you-design-a-product-to-find-a-reliable-exercise-partner" class="h2">The Interview Question: How Would You Design a Product to Find a Reliable Exercise Partner?</a>
+          <a href="#1-understand-the-problem-before-designing-the-solution" class="h2">1. Understand the Problem Before Designing the Solution</a>
+          <a href="#2-resist-the-temptation-to-serve-everyone" class="h2">2. Resist the Temptation to Serve Everyone</a>
+          <a href="#3-turn-trust-into-something-we-can-design" class="h2">3. Turn Trust into Something We Can Design</a>
+          <a href="#identity-confidence" class="h3">Identity confidence</a>
+          <a href="#commitment-reliability" class="h3">Commitment reliability</a>
+          <a href="#compatibility" class="h3">Compatibility</a>
+          <a href="#personal-safety-and-privacy" class="h3">Personal safety and privacy</a>
+          <a href="#4-evaluate-the-possible-solutions" class="h2">4. Evaluate the Possible Solutions</a>
+          <a href="#5-what-should-the-minimum-viable-product-include" class="h2">5. What Should the Minimum Viable Product Include?</a>
+          <a href="#6-a-hypothetical-software-product-scenario" class="h2">6. A Hypothetical Software Product Scenario</a>
+          <a href="#what-would-make-us-reconsider" class="h3">What Would Make Us Reconsider?</a>
+          <a href="#7-how-would-we-measure-product-success" class="h2">7. How Would We Measure Product Success?</a>
+          <a href="#primary-outcome-metric" class="h3">Primary outcome metric</a>
+          <a href="#diagnostic-metrics" class="h3">Diagnostic metrics</a>
+          <a href="#guardrail-metrics" class="h3">Guardrail metrics</a>
+          <a href="#8-what-if-you-had-only-two-weeks" class="h2">8. What If You Had Only Two Weeks?</a>
+          <a href="#9-what-evidence-would-make-you-reject-your-proposed-solution" class="h2">9. What Evidence Would Make You Reject Your Proposed Solution?</a>
+          <a href="#10-a-natural-interview-answer" class="h2">10. A Natural Interview Answer</a>
+          <a href="#11-what-makes-an-interview-answer-weak" class="h2">11. What Makes an Interview Answer Weak?</a>
+          <a href="#conclusion" class="h2">Conclusion</a>
+        </nav>
+      </section>
+      <section class="blog-sidebar-related" aria-labelledby="blog-sidebar-more">
+        <div class="blog-side-heading">
+          <h2 id="blog-sidebar-more">More writing</h2>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="blog-sidebar-list">
+          <a class="blog-sidebar-article" href="/blog/en/daily-planning-for-working-parents/">
+            <span class="blog-sidebar-item-category">Product Design &amp; UX</span>
+            <strong>How Would You Design a Product to Help Working Parents Plan Their Day?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-03">2026-11-03</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/help-users-choose-similar-products/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>How Do You Help Users Choose Between Similar Products?</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-10">2026-11-10</span>
+          </a>
+          <a class="blog-sidebar-article" href="/blog/en/accessible-airbnb-booking-experience/">
+            <span class="blog-sidebar-item-category">1000 Product Manager Interview Questions</span>
+            <strong>Designing an Accessible Airbnb Booking Experience: From Search to a Stay Guests Can Trust</strong>
+            <span class="blog-sidebar-item-date blog-date" data-iso="2026-11-09">2026-11-09</span>
+          </a>
+        </div>
+        <a class="blog-sidebar-view-all" href="/blog/en/">Browse all articles <span aria-hidden="true">↗</span></a>
+      </section>
+    </aside>
+  </div>
+
+  <section class="blog-share" aria-labelledby="blog-share-heading">
+    <div class="blog-share-copy">
+      <h2 id="blog-share-heading">Share this article</h2>
+      <p>Send this article to someone else.</p>
+      <p class="blog-share-status" id="blog-share-status" role="status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+    <div class="blog-share-actions">
+      <button type="button" class="blog-share-button blog-share-native" id="blog-share-native" hidden>
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V3m-5 5 5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>
+        <span>Share</span>
+      </button>
+      <button type="button" class="blog-share-button blog-share-copy-link" id="blog-share-copy-link">
+        <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+        <span>Copy link</span>
+      </button>
+    </div>
+    <input class="blog-share-url" id="blog-share-url" type="text" readonly hidden value="https://imoein.com/blog/en/find-reliable-exercise-partner/" aria-label="Copy link">
+  </section>
+  <section class="blog-article-outro" aria-label="Continue reading">
+    <div class="blog-end-author">
+      <span class="blog-end-author-photo" aria-hidden="true"><img src="/assets/profile-avatar.webp?v=3567" alt="" width="48" height="48" loading="lazy"></span>
+      <span class="blog-end-author-info">
+        <strong><a href="/en/about.html">Moein Ghezelbash</a></strong>
+        <span>Technical product management and digital platforms</span>
+      </span>
+    </div>
+    <a href="/blog/en/daily-planning-for-working-parents/" class="blog-end-next">
+      <span>Read next <span aria-hidden="true">↗</span></span>
+      <strong>How Would You Design a Product to Help Working Parents Plan Their Day?</strong>
+    </a>
+  </section>
+</main>
+
+<nav class="blog-floating-actions" id="blog-floating-actions" aria-label="Article shortcuts" data-visible="false">
+  <button type="button" class="blog-float-control blog-scroll-top" id="blog-scroll-top" aria-label="Back to top of article" title="Back to top of article">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M12 19V5m-6 6 6-6 6 6"/>
+    </svg>
+    <span class="blog-sr-only">Back to top of article</span>
+  </button>
+  <a class="blog-float-control blog-float-back" href="/blog/en/" aria-label="Back to the journal" title="Back to the journal">
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+      <path d="M4 12h16M11 5l-7 7 7 7"/>
+    </svg>
+    <span>Articles</span>
+  </a>
+</nav>
+    <footer class="footer site-unified-footer" aria-label="Site footer">
+    <div class="container site-footer-inner">
+      <a class="site-footer-brand" href="/en/" aria-label="iMoein home"><img src="/assets/logo/imoein.com.webp" alt="iMoein" width="116" height="48" loading="lazy"></a>
+      <nav class="site-footer-nav" aria-label="Footer navigation">
+        <a data-site-footer-link="home" href="/en/">Home</a>
+        <a data-site-footer-link="about" href="/en/about.html">About Me</a>
+        <a data-site-footer-link="projects" href="/en/portfolio.html">Projects</a>
+        <a data-site-footer-guide href="/en/product-management.html">Product management</a>
+        <a data-site-footer-link="resume" href="/resume/moein-ghezelbash-en.html">Resume</a>
+        <a data-site-footer-link="blog" href="/blog/en/">Blog</a>
+      </nav>
+      <small class="site-footer-copy">© 2026 Moein Ghezelbash</small>
+    </div>
+  </footer>
+  <script src="/site-navigation.js"></script>
+  <script src="/site-loader.js"></script>
+  <script src="/assets/blog/blog.js?v=cover-library-fallback-20261114"></script>
+  <script src="/site-footer.js?v=footer-unified-20261115"></script>
+</body>
+</html>
