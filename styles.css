@@ -1,3 +1,19 @@
+/* Shared navigation fonts: independent of page-specific font stylesheets. */
+@font-face {
+  font-family: "SiteNavLatin";
+  src: url("/assets/fonts/inter-UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SiteNavPersian";
+  src: url("/assets/fonts/vazirmatn-Dxxo8j6PP2D_kU2muijlGMWWIGroe7ll.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
 @font-face {
   font-family: "IRANSansXFaNum";
   src: url("assets/IRANSansXFaNum-Regular.ttf") format("truetype");
@@ -2692,11 +2708,14 @@ body.resume-page .resume-hero > * { position: relative; z-index: 1; }
   text-shadow:none;
   text-align:center;
   text-decoration:none;
-  font:750 .82rem/1.3 Inter,"Vazirmatn",system-ui,sans-serif;
+  font:750 .82rem/1.3 "SiteNavLatin","SiteNavPersian",sans-serif;
   cursor:pointer;
   -webkit-tap-highlight-color:transparent;
   transition:color .34s ease,transform .52s cubic-bezier(.2,1,.3,1),
              opacity .28s ease,text-shadow .3s ease;
+}
+.site-navigation .locale-switcher.locale-animated :is(button,a)[data-lang="fa"] {
+  font-family: "SiteNavPersian","SiteNavLatin",sans-serif;
 }
 .site-navigation .locale-switcher.locale-animated :is(button,a):hover:not(.active) {
   color:#176e75;
@@ -3266,3 +3285,25 @@ html:not([data-color-scheme="dark"]) .resume-page #resume-root .independent-proj
   color:#176e70;
 }
 html:not([data-color-scheme="dark"]) .resume-page #resume-root .resume-period {color:#95591f;}
+
+/* Navigation typography is a single shared contract on every page and locale. */
+.site-navigation .primary-nav-links a {
+  font-family: "SiteNavLatin", "SiteNavPersian", sans-serif;
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: normal;
+  padding-inline: 13px;
+}
+html[lang="fa"] .site-navigation .primary-nav-links a {
+  font-family: "IRANSansXFaNum", "SiteNavPersian", "SiteNavLatin", sans-serif;
+}
+@media (max-width: 760px) {
+  .site-navigation .primary-nav-links a { font-size: .75rem; padding-inline: 1px; }
+}
+@media (max-width: 580px) {
+  .site-navigation .primary-nav-links a { font-size: .72rem; }
+}
+@media (max-width: 365px) {
+  .site-navigation .primary-nav-links a { font-size: .66rem; padding-inline: 0; }
+}

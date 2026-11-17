@@ -274,7 +274,6 @@ html[lang="fa"][data-color-scheme="dark"] .landing-page .landing-project-link:ho
   /* Reserve both header rows before JS mounts shared navigation. */
   .landing-page .site-navigation {min-height:116px;}
   .landing-page .site-navigation .primary-nav-links {grid-template-columns:repeat(5,minmax(0,1fr));}
-  .landing-page .site-navigation .primary-nav-links a {font-size:.75rem;padding-inline:1px;}
   .landing-hero {grid-template-columns:minmax(0,1fr) 170px;min-height:300px;padding:28px 26px 0;}
   .landing-hero h1 {font-size:clamp(2.2rem,6vw,3.4rem);}
   html[lang="en"] .landing-hero h1 {font-size:clamp(2rem,4.4vw,2.85rem);}
@@ -294,7 +293,6 @@ html[lang="fa"][data-color-scheme="dark"] .landing-page .landing-project-link:ho
   .landing-contact-art>img {width:70px;height:70px;padding:11px;}
 }
 @media(max-width:580px) {
-  .landing-page .site-navigation .primary-nav-links a {font-size:.72rem;}
   .landing-hero {display:block;min-height:0;padding:31px 24px 0;border-radius:24px;}
   .landing-hero-copy {padding-bottom:24px;}
   .landing-hero h1 {font-size:clamp(2.4rem,10vw,3.8rem);}
@@ -336,7 +334,6 @@ html[lang="fa"][data-color-scheme="dark"] .landing-page .landing-project-link:ho
   .landing-copyright {order:3;width:100%;}
 }
 @media(max-width:365px) {
-  .landing-page .site-navigation .primary-nav-links a {font-size:.66rem;padding-inline:0;}
   .landing-section-heading h2 {font-size:1.17rem;}
   .landing-section-link {font-size:.66rem;}
   .landing-contact-button {flex:1 1 100%;}
