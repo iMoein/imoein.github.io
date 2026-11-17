@@ -3209,3 +3209,60 @@ body {
   .resume-page .resume-hero { margin-block-start: var(--imoein-hero-gap); }
   .blog-page .blog-hero { margin-block-start: var(--imoein-hero-gap); }
 }
+
+/* Shared breadcrumb component — the journal is the visual reference. */
+:root {
+  --breadcrumb-link:#126f76;
+  --breadcrumb-top:26px;
+  --breadcrumb-bottom:20px;
+}
+html[data-color-scheme="dark"] { --breadcrumb-link:#79DBD5; }
+:is(.site-breadcrumbs,.blog-breadcrumbs,.product-guide-breadcrumb) {
+  display:flex;align-items:center;flex-wrap:wrap;gap:10px;
+  margin-block:var(--breadcrumb-top) var(--breadcrumb-bottom);
+  color:var(--muted);font-size:.85rem;font-weight:400;
+  line-height:1.9;overflow-wrap:anywhere;
+}
+:is(.site-breadcrumbs,.blog-breadcrumbs,.product-guide-breadcrumb) a {
+  color:var(--breadcrumb-link);font-weight:inherit;text-decoration:none;
+}
+:is(.site-breadcrumbs,.blog-breadcrumbs,.product-guide-breadcrumb) a:hover {
+  text-decoration:none;opacity:.8;
+}
+:is(.site-breadcrumbs,.blog-breadcrumbs,.product-guide-breadcrumb) a:focus-visible {
+  outline:2px solid var(--primary);outline-offset:3px;
+}
+@media screen {
+  .site-navigation + .hero:has(> .site-breadcrumbs) {
+    padding-block-start:var(--breadcrumb-top);
+  }
+  .hero > .site-breadcrumbs {margin-block-start:0;}
+  .resume-page .resume-hero {margin-block-start:0;}
+  .blog-page .blog-breadcrumbs + .blog-hero {margin-block-start:0;}
+}
+@media (max-width:760px) {
+  :root {--breadcrumb-top:19px;}
+}
+@media print {
+  .resume-page .site-breadcrumbs {display:none!important;}
+}
+
+/* SEO 50 / accessibility: native skip link and local contrast corrections. */
+.site-skip-link {
+  position:fixed; inset-inline-start:16px; top:12px; z-index:10000;
+  transform:translateY(-180%); background:#fff; color:#102a43;
+  padding:10px 16px; border:2px solid #102a43; border-radius:10px;
+  font-weight:700; text-decoration:none;
+}
+.site-skip-link:focus {transform:none; outline:3px solid #102a43; outline-offset:3px;}
+@media print {.site-skip-link {display:none!important;}}
+html:not([data-color-scheme="dark"]) .public-project-card .public-project-url,
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .company,
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .resume-consulting-role span,
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .resume-other-heading h3,
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .resume-other-period,
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .resume-detail-card a,
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .independent-projects-section a {
+  color:#176e70;
+}
+html:not([data-color-scheme="dark"]) .resume-page #resume-root .resume-period {color:#95591f;}

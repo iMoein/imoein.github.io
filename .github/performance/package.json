@@ -1,0 +1,9 @@
+{
+  "name": "imoein-public-asset-build",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "axe-core": "4.14.1",
+    "esbuild": "0.25.12"
+  }
+}

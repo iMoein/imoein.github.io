@@ -52,7 +52,7 @@
       contactLead: 'Have an idea, a product challenge, or a project worth building? I would love to explore it with you.',
       telegram: 'Message on Telegram', telegramChannel:'Follow Telegram Channel', whatsapp: 'Chat on WhatsApp',
       title: 'Moein Ghezelbash | Senior Technical Product Manager',
-      description: 'Moein Ghezelbash is a Senior Technical Product Manager focused on B2B platforms, product strategy and AI-augmented development. Explore his portfolio, resume and writing.',
+      description: 'Meet Moein Ghezelbash, Senior Technical Product Manager focused on B2B platforms, product strategy and AI. Explore his portfolio, CV and articles.',
       copyright: 'Moein Ghezelbash'
     }
   };
@@ -100,13 +100,20 @@
     brand.append(node('span','landing-cover-brand-symbol'),node('span','landing-cover-brand-name','iMoein'));
     container.append(brand);
   };
-  const addCover = (container, url, alt='') => {
+  const addCover = (container, url, alt='', responsive=null) => {
     if (!url) {brandCover(container);return;}
     const img = node('img');
-    img.src = url;
-    img.alt = alt;
     img.loading = 'lazy';
     img.decoding = 'async';
+    if (responsive && responsive.coverSrcset && responsive.coverMiniSizes) {
+      const entries = responsive.coverSrcset.split(',').map(entry => entry.trim().split(/\s+/));
+      if (entries.every(([src,width]) => /^\/assets\/blog\/media\/(covers|images)\/[a-zA-Z0-9._-]+\.webp$/.test(src) && /^\d+w$/.test(width))) {
+        img.sizes = responsive.coverMiniSizes;
+        img.srcset = responsive.coverSrcset;
+      }
+    }
+    img.src = url;
+    img.alt = alt;
     img.referrerPolicy = 'no-referrer';
     img.addEventListener('error', () => brandCover(container), {once:true});
     container.append(img);
@@ -168,7 +175,7 @@
     // containing only the title conflicts with the link's other visible text.
     const coverUrl = safeCoverUrl(post.cover);
     const visual = node('div', 'landing-mini-cover' + (post.coverFit === 'contain' ? ' is-contained' : ''));
-    addCover(visual, coverUrl);
+    addCover(visual, coverUrl, '', post);
 
     const content = node('div', 'landing-mini-info');
     const meta = node('div', 'landing-mini-meta');
@@ -297,6 +304,8 @@
     refresh.setAttribute('aria-hidden', 'true');
     bar.append(left, address, refresh);
     const img = node('img', 'landing-time-screenshot');
+    img.loading = 'lazy';
+    img.decoding = 'async';
     const preview = typeof item.previewImage === 'string' &&
       /^\/?assets\/[a-zA-Z0-9/_-]+\.(webp|png|jpe?g)$/i.test(item.previewImage)
       && !item.previewImage.includes('..') ? item.previewImage : null;
@@ -305,8 +314,6 @@
     if (preview) img.src = '/' + preview.replace(/^\/+/, '') + '?v=time-preview-20261115-r1';
     else img.src = '/assets/logo/imoein-symbol.webp';
     img.alt = currentCopy().timePreviewAlt;
-    img.loading = 'lazy';
-    img.decoding = 'async';
     img.width = 1200;
     img.height = 1047;
     frame.append(bar, img);
@@ -398,7 +405,7 @@
       button.lang=value;
       button.classList.toggle('active',lang===value);
       button.setAttribute('aria-pressed',String(lang===value));
-      button.setAttribute('aria-label',value==='fa'?'نمایش فارسی':'Show English');
+      button.setAttribute('aria-label',value==='fa'?'فا — نمایش فارسی':'EN — Show English');
       button.addEventListener('click',()=>setLocale(value));
       switcher.append(button);
     });
@@ -410,19 +417,26 @@
     $('#meta-description').content=t.description;
     $('#og-title').content=t.title;
     $('#og-description').content=t.description;
+    $('#twitter-title').content=t.title;
+    $('#twitter-description').content=t.description;
     const ogImage=homeContent()?.seo?.ogImage;
     if (validHref(ogImage)) {
-      $('#og-image').content=ogImage;
-      $('#twitter-image').content=ogImage;
+      const imageUrl = new URL(ogImage, 'https://imoein.com/').href;
+      $('#og-image').content=imageUrl;
+      $('#twitter-image').content=imageUrl;
     }
     $('#og-locale').content=lang==='fa'?'fa_IR':'en_GB';
     const url='https://imoein.com' + (lang==='en'?'/en/':'/');
     $('#og-url').content=url;
+    $('#twitter-url').content=url;
     $('#canonical-url').href=url;
     $('#homepage-schema').textContent=JSON.stringify({
       '@context':'https://schema.org','@type':'WebPage',
-      name:t.title,description:t.description,url,
-      about:{'@id':'https://imoein.com/#person'}
+      '@id':url+'#webpage',name:t.title,description:t.description,url,inLanguage:lang,
+      about:{'@id':'https://imoein.com/#person'},
+      isPartOf:{'@type':'WebSite','@id':'https://imoein.com/#website',
+        name:'iMoein',url:'https://imoein.com/',inLanguage:['fa','en'],
+        publisher:{'@id':'https://imoein.com/#person'}}
     });
     const copyright = $('#landing-copyright');
     if (copyright) copyright.textContent='© ' + new Intl.NumberFormat(lang==='fa'?'fa-IR':'en-GB',{useGrouping:false}).format(new Date().getFullYear())+' '+t.copyright;

@@ -2,77 +2,274 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex, follow">
-  <meta http-equiv="refresh" content="0; url=/#about">
-  <title>انتقال به صفحه معرفی | معین قزلباش</title>
-  <link rel="canonical" href="https://imoein.com/#about">
+  <meta name="theme-color" content="#102A43">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/icon-32.png">
+  <title>صفحه پیدا نشد | معین قزلباش</title>
+  <script>
+    (() => {
+      const path = location.pathname;
+      const en = /^\/(?:en(?:\/|$)|blog\/en(?:\/|$)|resume\/[^/]*-en\.html$)/i.test(path);
+      document.documentElement.lang = en ? 'en' : 'fa';
+      document.documentElement.dir = en ? 'ltr' : 'rtl';
+      if (en) document.title = 'Page not found | Moein Ghezelbash';
+    })();
+  </script>
+  <script src="/site-theme.js?v=theme-cold-hydration-20261115-r3"></script>
   <style>
+    @font-face {
+      font-family: "IRANSansXFaNum";
+      src: url("/assets/IRANSansXFaNum-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-display: swap;
+    }
+    :root {
+      color-scheme: light;
+      --bg: #F9F6F0;
+      --bg-end: #f2eadf;
+      --surface: #ffffff;
+      --surface-soft: #f5f7f6;
+      --text: #102A43;
+      --muted: #526576;
+      --accent: #176e70;
+      --line: rgba(16,42,67,.13);
+      --shadow: 0 24px 70px rgba(16,42,67,.12);
+      --glow: rgba(31,138,138,.15);
+      --grid: rgba(16,42,67,.045);
+      --focus: #176e70;
+      --button-bg: #102A43;
+      --button-text: #fff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    html[data-color-scheme="dark"] {
+      color-scheme: dark;
+      --bg: #101D2B;
+      --bg-end: #122433;
+      --surface: #1b3142;
+      --surface-soft: #253e4f;
+      --text: #eef8fb;
+      --muted: #b9cdd4;
+      --accent: #95ede3;
+      --line: rgba(145,198,205,.24);
+      --shadow: 0 24px 70px rgba(0,12,24,.28);
+      --glow: rgba(44,154,161,.13);
+      --grid: rgba(145,198,205,.055);
+      --focus: #95ede3;
+      --button-bg: #95ede3;
+      --button-text: #102A43;
+    }
+    @media (prefers-color-scheme: dark) {
+      html:not([data-color-scheme]) {
+        color-scheme: dark;
+        --bg: #101D2B; --bg-end: #122433; --surface: #1b3142;
+        --surface-soft: #253e4f; --text: #eef8fb; --muted: #b9cdd4;
+        --accent: #95ede3; --line: rgba(145,198,205,.24);
+        --shadow: 0 24px 70px rgba(0,12,24,.28);
+        --glow: rgba(44,154,161,.13); --grid: rgba(145,198,205,.055);
+        --focus: #95ede3; --button-bg: #95ede3; --button-text: #102A43;
+      }
+    }
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      color: var(--text);
+      background: radial-gradient(ellipse at top left, var(--glow), transparent 35rem),
+        linear-gradient(180deg, var(--bg), var(--bg-end));
+      line-height: 1.7;
+    }
+    html[lang="fa"] body { font-family: "IRANSansXFaNum", Vazirmatn, system-ui, sans-serif; }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+      background-size: 44px 44px;
+      mask-image: linear-gradient(to bottom, #000, transparent 80%);
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; }
+    html[lang="fa"] [data-copy="en"],
+    html[lang="en"] [data-copy="fa"] { display: none; }
+    .shell { width: min(100% - 36px, 1080px); margin-inline: auto; }
+    .error-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-block: 25px 12px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+    }
+    .brand img {
+      display: block;
+      width: 124px;
+      height: 50px;
+      object-fit: contain;
+      padding: 5px 8px;
+      border: 1px solid rgba(16,42,67,.10);
+      border-radius: 13px;
+      background: #fff;
+    }
+    .language-home {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--muted);
+      font-size: .88rem;
+    }
+    .language-home:hover { color: var(--accent); border-color: var(--accent); }
+    .error-main {
+      flex: 1;
       display: grid;
       place-items: center;
-      padding: 24px;
-      color: #102A43;
-      background: #F9F6F0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      padding-block: clamp(30px, 7vh, 84px);
+    }
+    .error-card {
+      width: min(100%, 720px);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: clamp(25px, 5vw, 52px);
+      background: var(--surface);
+      box-shadow: var(--shadow);
       text-align: center;
     }
-
-    main {
-      max-width: 560px;
-      border: 1px solid rgba(16, 42, 67, 0.12);
-      border-radius: 28px;
-      padding: 32px;
-      background: #fff;
-      box-shadow: 0 24px 70px rgba(16, 42, 67, 0.12);
+    .error-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto;
+      height: 4px;
+      background: linear-gradient(90deg, #1F8A8A, #D8C3A5);
     }
-
-    h1 { margin: 0 0 12px; }
-    p { margin: 0 0 18px; line-height: 1.8; color: #5d6f7f; }
-    a { color: #1F8A8A; font-weight: 700; }
-    .footer {
-      margin-top: 24px;
-      color: #5d6f7f;
-      font-size: 0.94rem;
+    .error-code {
+      display: block;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-size: clamp(5rem, 14vw, 8.25rem);
+      font-weight: 800;
+      letter-spacing: -.08em;
+      line-height: 1.05;
+      color: var(--accent);
+      direction: ltr;
+      margin: 0 0 20px;
     }
-    .footer-nav {
-      display: flex;
-      flex-wrap: wrap;
+    h1 { margin: 0 0 14px; font-size: clamp(1.55rem, 4vw, 2.35rem); line-height: 1.4; letter-spacing: -.025em; }
+    .description { max-width: 490px; margin: 0 auto 27px; color: var(--muted); font-size: 1rem; }
+    .primary-action {
+      display: inline-flex;
       justify-content: center;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .footer-nav a {
-      color: #102A43;
-      text-decoration: none;
-      border: 1px solid rgba(16, 42, 67, 0.1);
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 11px 25px;
       border-radius: 999px;
-      padding: 8px 13px;
-      background: rgba(255, 255, 255, 0.72);
+      background: var(--button-bg);
+      color: var(--button-text);
+      font-weight: 700;
+    }
+    .primary-action:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .related {
+      border-top: 1px solid var(--line);
+      margin-top: 32px;
+      padding-top: 23px;
+    }
+    .related h2 { margin: 0 0 13px; font-size: .9rem; color: var(--muted); font-weight: 400; }
+    .related nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    .related nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 7px 15px;
+      background: var(--surface-soft);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      font-size: .92rem;
+    }
+    .related nav a:hover { border-color: var(--accent); color: var(--accent); }
+    .error-footer { padding: 15px 0 25px; text-align: center; color: var(--muted); font-size: .85rem; }
+    @media (max-width: 480px) {
+      .shell { width: calc(100% - 28px); }
+      .error-card { border-radius: 22px; }
+      .related nav { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .related nav a { padding-inline: 8px; }
+      .primary-action { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; }
     }
   </style>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelector("#year").textContent = new Date().getFullYear();
-    });
-    window.location.replace("/#about");
-  </script>
 </head>
 <body>
-  <main>
-    <h1>در حال انتقال به صفحه معرفی</h1>
-    <p>اگر به‌صورت خودکار منتقل نشدید، از لینک زیر وارد صفحه اصلی درباره من شوید.</p>
-    <a href="/#about">رفتن به معرفی معین قزلباش</a>
-    <footer class="footer">
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <a href="/">صفحه اصلی</a>
-        <a href="/resume/moein-ghezelbash-fa.html">رزومه فارسی</a>
-        <a href="/resume/moein-ghezelbash-en.html">رزومه انگلیسی</a>
-      </nav>
-      <div>© <span id="year"></span> Moein Ghezelbash.</div>
-    </footer>
+  <header class="shell error-header">
+    <a class="brand" data-copy="fa" href="/" aria-label="صفحه اصلی iMoein">
+      <img src="/assets/logo/imoein.com.webp" alt="iMoein" width="124" height="50">
+    </a>
+    <a class="brand" data-copy="en" href="/en/" aria-label="iMoein home">
+      <img src="/assets/logo/imoein.com.webp" alt="iMoein" width="124" height="50">
+    </a>
+    <a class="language-home" data-copy="fa" href="/en/" lang="en" dir="ltr">English</a>
+    <a class="language-home" data-copy="en" href="/" lang="fa" dir="rtl">فارسی</a>
+  </header>
+  <main class="shell error-main" id="main-content">
+    <div class="error-card">
+      <span class="error-code" aria-hidden="true">404</span>
+      <div data-copy="fa" lang="fa" dir="rtl">
+        <h1>صفحه مورد نظر پیدا نشد</h1>
+        <p class="description">ممکن است آدرس تغییر کرده باشد، صفحه حذف شده باشد یا آدرس را اشتباه وارد کرده باشید. از مسیرهای زیر می‌توانید به بخش‌های دیگر سایت دسترسی داشته باشید.</p>
+        <a class="primary-action" href="/">بازگشت به صفحه اصلی <span aria-hidden="true">←</span></a>
+        <div class="related">
+          <h2>دسترسی سریع</h2>
+          <nav aria-label="دسترسی سریع">
+            <a href="/about.html">درباره من</a>
+            <a href="/portfolio.html">پروژه‌ها</a>
+            <a href="/resume/moein-ghezelbash-fa.html">رزومه</a>
+            <a href="/blog/fa/">بلاگ</a>
+          </nav>
+        </div>
+      </div>
+      <div data-copy="en" lang="en" dir="ltr">
+        <h1>Page not found</h1>
+        <p class="description">The address may have changed, the page may have been removed, or the link may be incorrect. You can find your way back using the links below.</p>
+        <a class="primary-action" href="/en/">Back to homepage <span aria-hidden="true">→</span></a>
+        <div class="related">
+          <h2>Quick links</h2>
+          <nav aria-label="Quick links">
+            <a href="/en/about.html">About me</a>
+            <a href="/en/portfolio.html">Projects</a>
+            <a href="/resume/moein-ghezelbash-en.html">Resume</a>
+            <a href="/blog/en/">Blog</a>
+          </nav>
+        </div>
+      </div>
+    </div>
   </main>
+  <footer class="shell error-footer">
+    <small data-copy="fa">© <span class="error-year">۲۰۲۶</span> معین قزلباش</small>
+    <small data-copy="en">© <span class="error-year">2026</span> Moein Ghezelbash</small>
+  </footer>
+  <script>
+    document.querySelectorAll('.error-year').forEach((year) => {
+      year.textContent = new Date().getFullYear().toLocaleString(
+        year.closest('[data-copy]').dataset.copy === 'fa' ? 'fa-IR' : 'en-GB',
+        { useGrouping: false }
+      );
+    });
+  </script>
 </body>
 </html>

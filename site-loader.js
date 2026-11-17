@@ -1,6 +1,6 @@
 // Shared first-paint coordinator for every iMoein page, including generated Blog Studio pages.
-// Reveal only after page data has rendered, navigation/font metrics stabilise, and the
-// visible images are decoded. Never wait on below-the-fold lazy images or a failed service.
+// Keep the loading transition for data-dependent pages, but never block the
+// initial content paint on font downloads or image decoding.
 (() => {
   const root = document.documentElement;
   let requested = false;
@@ -38,32 +38,12 @@
     observer.observe(mount, {childList:true,subtree:true});
     setTimeout(() => {observer.disconnect();resolve();}, 2400);
   });
-  const imageReady = image => {
-    if (image.complete) {
-      return typeof image.decode === 'function'
-        ? within(image.decode(), 1000) : Promise.resolve();
-    }
-    return within(new Promise(resolve => {
-      image.addEventListener('load', resolve, {once:true});
-      image.addEventListener('error', resolve, {once:true});
-    }), 1650);
-  };
-  const visibleImagesReady = () => {
-    const cutoff = window.innerHeight + 140;
-    const candidates = [...document.images].filter(image => {
-      const rect = image.getBoundingClientRect();
-      return rect.width > 0 && rect.height > 0 && rect.top < cutoff && rect.bottom >= -20;
-    }).slice(0, 18);
-    return Promise.all(candidates.map(imageReady));
-  };
   const ready = async () => {
     if (requested || revealed) return;
     requested = true;
-    await within(Promise.all([
-      navigationReady(),
-      document.fonts?.ready || Promise.resolve()
-    ]), 2600);
-    await within(visibleImagesReady(), 1800);
+    // The caller has rendered the page data. Navigation is the only remaining
+    // prerequisite; fonts and images are progressively rendered by the browser.
+    await within(navigationReady(), 1200);
     await twoFrames();
     reveal();
   };

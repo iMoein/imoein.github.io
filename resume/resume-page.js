@@ -28,6 +28,8 @@ const logoBox = (logo, company) => {
   if (candidates.length) {
     const img = document.createElement('img');
     img.alt = `${company} logo`;
+    img.loading = 'eager';
+    img.decoding = 'async';
     let candidateIndex = 0;
     const tryNextLogo = () => {
       if (candidateIndex >= candidates.length) {
@@ -60,6 +62,8 @@ const profileMark = (data, content) => {
 
   const img = document.createElement('img');
   img.alt = content.profile.name;
+  img.loading = 'eager';
+  img.decoding = 'async';
   let candidateIndex = 0;
   const tryNextProfile = () => {
     if (candidateIndex >= candidates.length) {
@@ -152,8 +156,28 @@ const render = (data) => {
   const contact = data.contact;
 
   document.documentElement.dir = content.dir;
-  document.title = `${content.profile.name} | ${content.profile.title}`;
+  document.title = `${locale === "fa" ? "رزومه " : "CV: "}${content.profile.name} | ${content.profile.title}`;
   document.querySelector('meta[name="description"]').setAttribute('content', content.seo.description);
+  for (const [selector, value] of [
+    ['meta[property="og:title"]', document.title],
+    ['meta[property="og:description"]', content.seo.description],
+    ['meta[name="twitter:title"]', document.title],
+    ['meta[name="twitter:description"]', content.seo.description]
+  ]) {
+    const tag = document.querySelector(selector);
+    if (tag) tag.content = value;
+  }
+  const schema = document.getElementById("resume-schema");
+  if (schema) {
+    const url = "https://imoein.com/resume/moein-ghezelbash-" + locale + ".html";
+    schema.textContent = JSON.stringify({
+      "@context":"https://schema.org","@type":"WebPage","@id":url+"#webpage",
+      url, name:document.title, description:content.seo.description,inLanguage:locale,
+      isPartOf:{"@id":"https://imoein.com/#website"},
+      about:{"@type":"Person","@id":"https://imoein.com/#person",name:data.locales.en.profile.name,
+             alternateName:data.locales.fa.profile.name,url:"https://imoein.com/"}
+    });
+  }
 
   renderHero(data, content);
   renderContactPanel(content, contact, data);
@@ -298,7 +322,9 @@ const render = (data) => {
     wrapper.appendChild(grid);
   }
 
-  const details = section('', 'resume-details');
+  // The detail cards already have H2 headings; the wrapper needs no heading.
+  const details = create('div', '', 'resume-section resume-details');
+  root.appendChild(details);
   const detailsGrid = create('div', '', 'resume-details-grid');
   [
     [content.sections.technologies, tags(content.technologies)],
@@ -315,7 +341,7 @@ const render = (data) => {
   renderFooter(data, content);
 };
 
-fetch(dataUrl)
+fetch(dataUrl, {cache:"no-cache"})
   .then((response) => {
     if (!response.ok) throw new Error('Resume data could not be loaded.');
     return response.json();
