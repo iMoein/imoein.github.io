@@ -857,3 +857,11 @@ html[data-color-scheme="dark"] .landing-product-management > a:hover {background
 @media(prefers-reduced-motion:reduce) {
   .landing-product-management > a {transition:none;}
 }
+
+/* SEO 50 / mobile: enlarge standalone action hit areas without changing type. */
+@media screen and (max-width:768px) {
+  .landing-page .landing-read-link,
+  .landing-page .landing-project-link {
+    display:inline-flex; align-items:center; min-height:32px; max-width:100%;
+  }
+}

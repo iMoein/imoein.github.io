@@ -293,7 +293,7 @@
     // typing and paging. This stays small even if each article is 2,000 words.
     const fetchIndex = () => {
       if (!indexPromise) {
-        indexPromise = fetch(grid.dataset.indexUrl, { cache: 'force-cache' })
+        indexPromise = fetch(grid.dataset.indexUrl, { cache: 'no-cache' })
           .then(resp => {
             if (!resp.ok) throw new Error('Unable to load blog index');
             return resp.json();
@@ -322,8 +322,17 @@
         cover.href = post.url;
         cover.setAttribute('aria-label', post.title);
         const img = document.createElement('img');
+        img.loading = showFeatured ? 'eager' : 'lazy';
+        img.decoding = 'async';
+        if (post.coverSrcset && post.coverSizes) {
+          img.sizes = showFeatured ? '1200px' : post.coverSizes;
+          img.srcset = post.coverSrcset;
+          if (post.coverWidth && post.coverHeight) {
+            img.width = post.coverWidth;
+            img.height = post.coverHeight;
+          }
+        }
         img.src = post.cover; img.alt = post.coverAlt || '';
-        img.loading = 'lazy'; img.decoding = 'async';
         img.referrerPolicy = 'no-referrer';
         cover.append(img);
         article.append(cover);

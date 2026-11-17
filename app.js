@@ -57,7 +57,7 @@ const renderLocaleSwitcher = () => {
     button.dataset.lang = lang;
     button.lang = lang;
     button.setAttribute("aria-pressed", String(state.locale === lang));
-    button.setAttribute("aria-label", lang === "fa" ? "نمایش فارسی" : "Show English");
+    button.setAttribute("aria-label", lang === "fa" ? "فا — نمایش فارسی" : "EN — Show English");
   });
   switcher.append(english, persian);
 };
@@ -107,43 +107,30 @@ const renderStructuredData = (content, data) => {
     .flatMap((item) => (typeof item === "string" ? [item] : [item.title, item.body]))
     .filter(Boolean);
 
-  schema.textContent = JSON.stringify({
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://imoein.com/#person",
-    name: data.locales.en.profile.name,
-    alternateName: [
-      data.locales.fa.profile.name,
-      "معین قزلباش",
-      "Moein Ghezelbash"
-    ],
-    jobTitle: [data.locales.en.profile.title, data.locales.fa.profile.title].filter(Boolean),
-    hasOccupation: [
-      {"@type":"Occupation", name:"Senior Technical Product Manager"},
-      {"@type":"Occupation", name:"مدیر ارشد محصول فنی"},
-      {"@type":"Occupation", name:"مدیر محصول"}
-    ],
+  const url = "https://imoein.com" + (state.locale === "en" ? "/en/about.html" : "/about.html");
+  const name = data.locales.en.profile.name;
+  const person = {
+    "@type": "Person", "@id": "https://imoein.com/#person",
+    name, alternateName: data.locales.fa.profile.name,
+    jobTitle: [...new Set([data.locales.en.profile.title, data.locales.fa.profile.title].filter(Boolean))],
     description: content.seo.description,
     url: "https://imoein.com/",
-    image: "https://imoein.com/assets/profile.jpg?v=3567fit",
-    email: data.contact?.email?.display,
-    telephone: data.contact?.phone?.international,
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: data.locales.en.profile.location,
-      addressCountry: "IR"
-    },
-    sameAs,
-    knowsAbout,
-    alumniOf: data.locales.en.education?.map((item) => item.school || item.title).filter(Boolean),
-    worksFor: content.brands?.map((name) => ({ "@type": "Organization", name }))
+    image: new URL(data.profileImage || "/assets/profile-photo.webp?v=3567fit", "https://imoein.com").href,
+    sameAs: [...new Set(sameAs.filter(url => !url.startsWith("https://wa.me/")))],
+    knowsAbout
+  };
+  schema.textContent = JSON.stringify({
+    "@context":"https://schema.org", "@type":"ProfilePage", "@id":url+"#webpage",
+    url, name: document.title, description:content.seo.description,
+    inLanguage: state.locale, isPartOf:{"@id":"https://imoein.com/#website"},
+    mainEntity:person
   });
 };
 
 const renderSeo = (content, data) => {
   const title = state.locale === "fa"
     ? "درباره معین قزلباش | مدیر ارشد محصول فنی"
-    : "Moein Ghezelbash | Senior Technical Product Manager";
+    : "About Moein Ghezelbash | Technical Product Manager";
   const description = content.seo.description;
   const keywords = content.seo.keywords?.join(", ") || "";
   const url = state.locale === "en" ? "https://imoein.com/en/about.html" : "https://imoein.com/about.html";
@@ -153,7 +140,8 @@ const renderSeo = (content, data) => {
   setMetaContent("#og-title", title);
   setMetaContent("#og-description", description);
   setMetaContent("#og-url", url);
-  setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_US");
+  setMetaContent("#twitter-url", url);
+  setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_GB");
   setMetaContent("#twitter-title", title);
   setMetaContent("#twitter-description", description);
   setMetaContent("#meta-keywords", keywords);
@@ -309,6 +297,7 @@ const renderCompanyLogo = (logo, company) => {
   image.alt = `${company} logo`;
   image.width = 38;
   image.height = 38;
+  image.loading = "lazy";
   image.decoding = "async";
   let candidateIndex = 0;
   const tryNextLogo = () => {
@@ -432,7 +421,7 @@ const setLocale = (locale) => {
   window.location.assign((locale === "en" ? "/en/" : "/") + "about.html" + window.location.hash);
 };
 
-fetch("/resume/site-data.json?v=about-root-assets-20261115-r2")
+fetch("/resume/site-data.json?v=about-root-assets-20261115-r2", {cache:"no-cache"})
   .then((response) => {
     if (!response.ok) throw new Error("Site data could not be loaded.");
     return response.json();

@@ -29,13 +29,10 @@ html[data-color-scheme="dark"] .product-guide-page {
   --g-on-dark:#f4fbfd;
 }
 .product-guide-page :is(a,button,summary):focus-visible {outline:3px solid #39cabd;outline-offset:4px;}
-.product-guide-page .site-navigation {margin-bottom:13px;}
+.product-guide-page .site-navigation {margin-bottom:0;}
 .product-guide-skip {position:absolute;inset-inline-start:15px;top:-90px;z-index:50;padding:9px 15px;border-radius:12px;background:#f4ffff;color:#123447;}
 .product-guide-skip:focus {top:12px;}
-.product-guide-main {max-width:1180px;padding-top:13px;padding-bottom:56px;}
-.product-guide-breadcrumb {display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin:1px 0 19px;color:var(--muted);font-size:.77rem;}
-.product-guide-breadcrumb a {color:var(--g-highlight);font-weight:760;text-decoration:none;}
-.product-guide-breadcrumb a:hover {text-decoration:underline;}
+.product-guide-main {max-width:1180px;padding-top:0;padding-bottom:56px;}
 .product-guide-page a {text-underline-offset:3px;}
 .product-guide-page :is(.guide-role,.guide-case,.guide-read,.guide-faq-item) {min-width:0;}
 
@@ -261,7 +258,7 @@ html[lang="en"] .product-guide-main :is(p,li) {line-height:1.85;}
   .guide-metrics-list ul {grid-template-rows:auto;}
 }
 @media(max-width:700px) {
-  .product-guide-main {width:min(1180px,calc(100% - 26px));padding-block:13px 36px;}
+  .product-guide-main {width:min(1180px,calc(100% - 26px));padding-block:0 36px;}
   .product-guide-hero {padding:27px 23px;border-radius:23px;}
   .product-guide-hero h1 {font-size:clamp(1.9rem,7.2vw,2.67rem);}
   .product-guide-lead {font-size:.88rem;}
@@ -303,4 +300,12 @@ html[lang="en"] .product-guide-main :is(p,li) {line-height:1.85;}
 @media(prefers-reduced-motion:reduce) {
   .product-guide-page * {scroll-behavior:auto;}
   .product-guide-actions a,.guide-in-page a,.guide-read,.guide-faq-plus:after {transition:none;}
+}
+
+/* SEO 50 / mobile: independent reading and portfolio actions. */
+@media screen and (max-width:768px) {
+  .product-guide-main .guide-subtle-link,
+  .product-guide-main .guide-reading-top a {
+    display:inline-flex; align-items:center; min-height:32px; max-width:100%;
+  }
 }

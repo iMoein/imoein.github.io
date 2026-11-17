@@ -207,7 +207,7 @@
         link.lang = lng;
         link.dataset.lang = lng;
         link.setAttribute('hreflang', lng);
-        link.setAttribute('aria-label', lng === 'fa' ? 'مطالب فارسی' : 'English articles');
+        link.setAttribute('aria-label', lng === 'fa' ? 'فا — مطالب فارسی' : 'EN — English articles');
         if (lng === lang) {
           link.className = 'active';
           link.setAttribute('aria-current', 'true');
@@ -226,7 +226,7 @@
         link.dataset.lang = lng;
         link.hreflang = lng;
         link.textContent = lng === 'fa' ? 'فا' : 'EN';
-        link.setAttribute('aria-label', lng === 'fa' ? 'نسخه فارسی صفحه' : 'English version');
+        link.setAttribute('aria-label', lng === 'fa' ? 'فا — نسخه فارسی صفحه' : 'EN — English version');
         if (lng === lang) {
           link.className = 'active';
           link.setAttribute('aria-current', 'true');
@@ -246,7 +246,7 @@
           link.setAttribute('aria-current', 'true');
         }
         link.setAttribute('hreflang', lng);
-        link.setAttribute('aria-label', lng === 'fa' ? 'رزومه فارسی' : 'English resume');
+        link.setAttribute('aria-label', lng === 'fa' ? 'فا — رزومه فارسی' : 'EN — English resume');
         link.addEventListener('click', () => {
           try { localStorage.setItem('site-locale', lng); } catch (_) {}
         });
@@ -297,7 +297,7 @@
   // if they differ, without a redundant DOM replacement on ordinary loads.
   let navigationReady = true;
   draw();
-  fetch('/resume/site-data.json')
+  fetch('/resume/site-data.json', {cache:'no-cache'})
     .then(response => response.ok ? response.json() : null)
     .then(data => {
       if (!data?.siteNavigation) return;

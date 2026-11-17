@@ -47,7 +47,7 @@ const renderLocaleSwitcher = () => {
     button.dataset.lang = lang;
     button.lang = lang;
     button.setAttribute("aria-pressed", String(state.locale === lang));
-    button.setAttribute("aria-label", lang === "fa" ? "نمایش فارسی" : "Show English");
+    button.setAttribute("aria-label", lang === "fa" ? "فا — نمایش فارسی" : "EN — Show English");
   });
   switcher.append(english, persian);
 };
@@ -65,7 +65,8 @@ const renderSeo = (content) => {
   setMetaContent("#og-title", title);
   setMetaContent("#og-description", content.seo.description);
   setMetaContent("#og-url", url);
-  setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_US");
+  setMetaContent("#twitter-url", url);
+  setMetaContent("#og-locale", state.locale === "fa" ? "fa_IR" : "en_GB");
   setMetaContent("#twitter-title", title);
   setMetaContent("#twitter-description", content.seo.description);
   setLinkHref("#canonical-url", url);
@@ -89,14 +90,16 @@ const renderSchema = (content) => {
       name: "Moein Ghezelbash",
       alternateName: "معین قزلباش"
     },
-    about: content.seo.keywords,
-    mainEntity: content.projects.map((project) => ({
-      "@type": "CreativeWork",
-      name: project.title,
-      description: project.description,
-      creator: { "@id": "https://imoein.com/#person" },
-      keywords: content.seo.keywords.join(", ")
-    }))
+    isPartOf: {"@id":"https://imoein.com/#website"},
+    about: {"@id":"https://imoein.com/#person"},
+    keywords: content.seo.keywords,
+    mainEntity: {"@type":"ItemList", numberOfItems:content.projects.length,
+      itemListElement: content.projects.map((project, i) => ({
+        "@type":"ListItem", position:i+1,
+        item:{"@type":"CreativeWork",name:project.title,description:project.description,
+              creator:{"@id":"https://imoein.com/#person"}}
+      }))
+    }
   });
 };
 
@@ -198,7 +201,7 @@ const setLocale = (locale) => {
   window.location.assign((locale === "en" ? "/en/" : "/") + "portfolio.html" + window.location.hash);
 };
 
-fetch("/portfolio.json")
+fetch("/portfolio.json", {cache:"no-cache"})
   .then((response) => {
     if (!response.ok) throw new Error("Portfolio data could not be loaded.");
     return response.json();
